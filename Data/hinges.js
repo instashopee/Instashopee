@@ -1,0 +1,93 @@
+export const hinges=[
+    {
+        "imageUrl":"https://catalog.wlimg.com/1/7550086/other-images/483314.jpg",
+        "brand":"STELOCASA",
+        "title":"Hydraulic Hinges",
+        "color":"",
+        "discountedprice":"",
+        "price":"",
+        "discountPresent":"",
+        "size":[
+            {
+                "name":"",
+                "quantity":""
+            }
+        ],
+    },
+    {
+        "imageUrl":"https://catalog.wlimg.com/1/7550086/other-images/483314.jpg",
+        "brand":"STELOCASA",
+        "title":"Hydraulic Hinges",
+        "color":"",
+        "discountedprice":"",
+        "price":"",
+        "discountPresent":"",
+        "size":[
+            {
+                "name":"",
+                "quantity":""
+            }
+        ],
+    },
+    {
+        "imageUrl":"https://catalog.wlimg.com/1/7550086/other-images/483314.jpg",
+        "brand":"STELOCASA",
+        "title":"Hydraulic Hinges",
+        "color":"",
+        "discountedprice":"",
+        "price":"",
+        "discountPresent":"",
+        "size":[
+            {
+                "name":"",
+                "quantity":""
+            }
+        ],
+    },
+    {
+        "imageUrl":"https://catalog.wlimg.com/1/7550086/other-images/483314.jpg",
+        "brand":"STELOCASA",
+        "title":"Hydraulic Hinges",
+        "color":"",
+        "discountedprice":"",
+        "price":"",
+        "discountPresent":"",
+        "size":[
+            {
+                "name":"",
+                "quantity":""
+            }
+        ],
+    },
+    {
+        "imageUrl":"https://catalog.wlimg.com/1/7550086/other-images/483314.jpg",
+        "brand":"STELOCASA",
+        "title":"Hydraulic Hinges",
+        "color":"",
+        "discountedprice":"",
+        "price":"",
+        "discountPresent":"",
+        "size":[
+            {
+                "name":"",
+                "quantity":""
+            }
+        ],
+    },
+    {
+        "imageUrl":"https://catalog.wlimg.com/1/7550086/other-images/483314.jpg",
+        "brand":"STELOCASA",
+        "title":"Hydraulic Hinges",
+        "color":"",
+        "discountedprice":"",
+        "price":"",
+        "discountPresent":"",
+        "size":[
+            {
+                "name":"",
+                "quantity":""
+            }
+        ],
+    },
+    
+]
