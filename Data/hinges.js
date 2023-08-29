@@ -77,7 +77,7 @@ export const hinges=[
     {
         "imageUrl":"https://rukminim2.flixcart.com/image/850/1000/jpodaq80/hinge/v/b/v/hydraulic-hinge-ss304-full-over-lay-crank-0-4piece-mobily-original-imafbrqew4nbujfy.jpeg",
         "brand":"STELOCASA",
-        "title":"Hydraulic Hinges",
+        "title":"HydraulicHinges",
         "color":"",
         "discountedprice":"",
         "price":"",
