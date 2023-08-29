@@ -12,8 +12,8 @@ const Hinges = ({products}) => {
     <div className="flex flex-wrap -m-4 justify-center">
     {Object.keys(products).length==0 && <p>Sorry, All Hinges Out Of Stock, New Hinges Comming Soon !!</p>}
     {Object.keys(products).map((item)=>{
-// id inside key of link
-return <Link key={products[item]._id} passHref={true} legacyBehavior href={`product/${products[item].slug}`}>
+// _id inside key of link
+return <Link key={products[item].id} passHref={true} legacyBehavior href={`product/${products[item].slug}`}>
   <div className="lg:w-1/5 md:w-1/2 p-4 w-full cursor-pointer shadow-lg m-5 productCard transition-all">
     <a className="block relative rounded overflow-hidden">
       <img alt="ecommerce" className="m-auto block" src={products[item].img}/>
