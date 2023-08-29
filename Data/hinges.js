@@ -1,6 +1,6 @@
 export const hinges=[
     {
-        "imageUrl":"https://4.imimg.com/data4/EL/HM/MY-6622326/door-butt-hinges.gif",
+        "imageUrl":"https://rukminim2.flixcart.com/image/850/1000/jpodaq80/hinge/v/b/v/hydraulic-hinge-ss304-full-over-lay-crank-0-4piece-mobily-original-imafbrqew4nbujfy.jpeg",
         "brand":"STELOCASA",
         "title":"Hydraulic Hinges",
         "color":"",
@@ -15,7 +15,7 @@ export const hinges=[
         ],
     },
     {
-        "imageUrl":"https://4.imimg.com/data4/EL/HM/MY-6622326/door-butt-hinges.gif",
+        "imageUrl":"https://rukminim2.flixcart.com/image/850/1000/jpodaq80/hinge/v/b/v/hydraulic-hinge-ss304-full-over-lay-crank-0-4piece-mobily-original-imafbrqew4nbujfy.jpeg",
         "brand":"STELOCASA",
         "title":"Hydraulic Hinges",
         "color":"",
@@ -30,7 +30,7 @@ export const hinges=[
         ],
     },
     {
-        "imageUrl":"https://4.imimg.com/data4/EL/HM/MY-6622326/door-butt-hinges.gif",
+        "imageUrl":"https://rukminim2.flixcart.com/image/850/1000/jpodaq80/hinge/v/b/v/hydraulic-hinge-ss304-full-over-lay-crank-0-4piece-mobily-original-imafbrqew4nbujfy.jpeg",
         "brand":"STELOCASA",
         "title":"Hydraulic Hinges",
         "color":"",
@@ -45,7 +45,7 @@ export const hinges=[
         ],
     },
     {
-        "imageUrl":"https://4.imimg.com/data4/EL/HM/MY-6622326/door-butt-hinges.gif",
+        "imageUrl":"https://rukminim2.flixcart.com/image/850/1000/jpodaq80/hinge/v/b/v/hydraulic-hinge-ss304-full-over-lay-crank-0-4piece-mobily-original-imafbrqew4nbujfy.jpeg",
         "brand":"STELOCASA",
         "title":"Hydraulic Hinges",
         "color":"",
@@ -60,7 +60,7 @@ export const hinges=[
         ],
     },
     {
-        "imageUrl":"https://4.imimg.com/data4/EL/HM/MY-6622326/door-butt-hinges.gif",
+        "imageUrl":"https://rukminim2.flixcart.com/image/850/1000/jpodaq80/hinge/v/b/v/hydraulic-hinge-ss304-full-over-lay-crank-0-4piece-mobily-original-imafbrqew4nbujfy.jpeg",
         "brand":"STELOCASA",
         "title":"Hydraulic Hinges",
         "color":"",
@@ -75,7 +75,7 @@ export const hinges=[
         ],
     },
     {
-        "imageUrl":"https://4.imimg.com/data4/EL/HM/MY-6622326/door-butt-hinges.gif",
+        "imageUrl":"https://rukminim2.flixcart.com/image/850/1000/jpodaq80/hinge/v/b/v/hydraulic-hinge-ss304-full-over-lay-crank-0-4piece-mobily-original-imafbrqew4nbujfy.jpeg",
         "brand":"STELOCASA",
         "title":"Hydraulic Hinges",
         "color":"",
