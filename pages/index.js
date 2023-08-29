@@ -27,7 +27,7 @@ export default function Home(){
   {/* <div className=" 2xl:container px-5 py-24 mx-auto"> */}
     <div className="flex flex-wrap w-full mb-2 flex-col items-center text-center">
       {/* <h1 className="sm:text-3xl text-2xl title-font mb-2 text-gray-900 font-bold">INSTASHOPEE</h1> */}
-      <img src="/logo3.png" alt="" />
+      <img src="/logo3.png" alt="" className='mx-2'/>
       <p className="lg:w-1/2 w-full leading-relaxed text-gray-500 text-lg">Having your home fitted with the right accessories comprises the most important aspect of decorating and making your personal space your home. </p>
     
     {/* </div> */}
