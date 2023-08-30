@@ -7,6 +7,7 @@ const UserSchema = new mongoose.Schema({
     address: {type: String, default: ''},
     pincode: {type: String, default: ''},
     phone: {type: String, default: ''},
+    type: {type: String, default: 'regular_user'},
     //rePassword: {type: String, required: true},
 },{timestamps: true});
 // mongoose.models= {}

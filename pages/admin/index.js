@@ -3,14 +3,24 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Link from "next/link";
 import { useRouter } from "next/router";
+
+import mongoose from "mongoose";
+// import User from "@/models/User";
+
 const index = () => {
   const router=useRouter()
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   useEffect(() => {
+
     if(localStorage.getItem("myuser")){
-      router.push('/admin/main')
+      router.push('/admin')
     }
+    else if(window.location=`${process.env.NEXT_PUBLIC_HOST}/admin`&&(!localStorage.getItem("myuser"))){
+      router.push(`${process.env.NEXT_PUBLIC_HOST}`)
+    }
+
+
   
  
   }, [])
@@ -24,6 +34,7 @@ const index = () => {
     }
   };
   const handleSubmit = async (e) => {
+    if(email=="abhishekjain4548@gmail.com"){
     e.preventDefault();
     const data = {email, password };
 
@@ -67,9 +78,23 @@ const index = () => {
         draggable: true,
         progress: undefined,
         theme: "light",
-        });
-    }
+        });}}
+        else{
+          toast.error("You are not admin", {
+            position: "top-center",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+            });
+        }
+    
     };
+   
+    
   return (
     <div>
       <ToastContainer
@@ -85,7 +110,7 @@ const index = () => {
         theme="light"
       />
  
-  <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
+  {/* <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
     <div class="sm:mx-auto sm:w-full sm:max-w-sm">
       <img class="mx-auto h-10 w-auto" src="/logo2.png" alt="Your Company"/>
       <h2 class="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">Login Admin Account</h2>
@@ -122,7 +147,72 @@ const index = () => {
         <Link legacyBehavior href={'/signup'}><a href="#" class="font-semibold leading-6 text-red-600 hover:text-red-500">Sign Up</a></Link>
       </p>
     </div>
-  </div>
+  </div> */}
+  
+  <div className="text-3xl font-bold text-center my-5 text-decoration-line: underline">INSTASHOPEE ADMIN PANEL
+    <div className="min-h-screen justify-center my-5">
+      <style jsx global>{`
+      footer {
+        display: none;
+      }
+  
+      `}</style>
+      
+    <div className="flex flex-col md:justify-start justify-center items-center py-5 top-0 sticky bg-white">
+      <div className="nav ">
+        <ul className="hidden text-sm md:flex items-center space-x-6 top-0">
+
+         
+            
+          
+          <Link legacyBehavior href={"/admin/add"}>
+            <a>
+              <li className="hover:text-red-800 text-3xl font-semibold p-2 border-4">Add Products</li>
+            </a>
+          </Link>
+          <Link legacyBehavior href={"/admin/allproducts"}>
+            <a>
+              <li className="hover:text-red-800 text-3xl font-semibold p-2 border-4">View All Products</li>
+            </a>
+          </Link>
+          {/* <Link legacyBehavior href={"/admin/imageuploaders"}>
+            <a>
+              <li className="hover:text-red-800">Image Uploader</li>
+            </a>
+          </Link> */}
+
+          <Link legacyBehavior href={"/admin/allorders"}>
+            <a>
+              <li className="hover:text-red-800 text-3xl font-semibold p-2 border-4">All Orders</li>
+            </a>
+          </Link>
+
+
+        </ul>
+        
+      </div>
+      <br />
+      <div className="space-x-6">
+
+      {/* <Link legacyBehavior href={"/admin/delete"}>
+            <a
+               className="hover:text-red-800 text-3xl font-semibold p-2 border-4">Delete Product
+            </a>
+          </Link>
+      <Link legacyBehavior href={"/admin/allorders"}>
+            <a
+               className="hover:text-red-800 text-3xl font-semibold p-2 border-4">Update Product
+            </a>
+          </Link> */}
+      {/* <Link legacyBehavior href={"/admin/allorders"}>
+            <a
+               className="hover:text-red-800 text-3xl font-semibold p-2 border-4">Delete Product
+            </a>
+          </Link> */}
+      </div>
+    </div>
+    </div>
+    </div>
   </div>
 
   )
