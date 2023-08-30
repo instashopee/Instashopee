@@ -6,7 +6,6 @@ import 'react-toastify/dist/ReactToastify.css';
 import Glide from "@glidejs/glide"
 import Error from "next/error";
 import Product from "@/models/Product";
-import Product_Slider from "@/components/ProductSlider";
 const Post = ({buyNow, addToCart, product, variants,error }) => {
   const router = useRouter();
   const { slug } = router.query;
