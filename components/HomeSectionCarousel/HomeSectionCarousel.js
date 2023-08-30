@@ -4,11 +4,6 @@ import 'react-alice-carousel/lib/alice-carousel.css';
 
 const handleDragStart = (e) => e.preventDefault();
 
-const items = [
-  <img src="logo.png" onDragStart={handleDragStart} role="presentation" />,
-  <img src="logo.png" onDragStart={handleDragStart} role="presentation" />,
-  <img src="logo.png" onDragStart={handleDragStart} role="presentation" />,
-];
 
 import HomeSectionCard from "../HomeSectionCard/HomeSectionCard";
 import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
@@ -19,7 +14,7 @@ import { Button } from "@mui/material";
 const HomeSectionCarousel = ({data,sectionName}) => {
   const[activeIndex,setActiveIndex]=useState(0);
 const responsive = {
-  0: { items: 1.5 },
+  0: { items: 1.25 },
   720: { items: 3 },
   1024: { items: 5.5 },
 };

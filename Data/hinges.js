@@ -1,6 +1,6 @@
 export const hinges=[
     {
-        "imageUrl":"https://4.imimg.com/data4/EL/HM/MY-6622326/door-butt-hinges.gif",
+        "imageUrl":"https://cdn.moglix.com/p/usvntpvqImMav-xxlarge.jpg",
         "brand":"STELOCASA",
         "title":"Hydraulic Hinges",
         "color":"",
@@ -15,7 +15,7 @@ export const hinges=[
         ],
     },
     {
-        "imageUrl":"https://4.imimg.com/data4/EL/HM/MY-6622326/door-butt-hinges.gif",
+        "imageUrl":"https://cdn.moglix.com/p/usvntpvqImMav-xxlarge.jpg",
         "brand":"STELOCASA",
         "title":"Hydraulic Hinges",
         "color":"",
@@ -30,7 +30,7 @@ export const hinges=[
         ],
     },
     {
-        "imageUrl":"https://4.imimg.com/data4/EL/HM/MY-6622326/door-butt-hinges.gif",
+        "imageUrl":"https://cdn.moglix.com/p/usvntpvqImMav-xxlarge.jpg",
         "brand":"STELOCASA",
         "title":"Hydraulic Hinges",
         "color":"",
@@ -45,7 +45,7 @@ export const hinges=[
         ],
     },
     {
-        "imageUrl":"https://4.imimg.com/data4/EL/HM/MY-6622326/door-butt-hinges.gif",
+        "imageUrl":"https://cdn.moglix.com/p/usvntpvqImMav-xxlarge.jpg",
         "brand":"STELOCASA",
         "title":"Hydraulic Hinges",
         "color":"",
@@ -60,7 +60,7 @@ export const hinges=[
         ],
     },
     {
-        "imageUrl":"https://4.imimg.com/data4/EL/HM/MY-6622326/door-butt-hinges.gif",
+        "imageUrl":"https://cdn.moglix.com/p/usvntpvqImMav-xxlarge.jpg",
         "brand":"STELOCASA",
         "title":"Hydraulic Hinges",
         "color":"",
@@ -75,7 +75,7 @@ export const hinges=[
         ],
     },
     {
-        "imageUrl":"https://4.imimg.com/data4/EL/HM/MY-6622326/door-butt-hinges.gif",
+        "imageUrl":"https://cdn.moglix.com/p/usvntpvqImMav-xxlarge.jpg",
         "brand":"STELOCASA",
         "title":"Hydraulic Hinges",
         "color":"",
