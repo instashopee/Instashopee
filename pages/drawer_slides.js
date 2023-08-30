@@ -38,6 +38,7 @@ return <Link key={products[item].id} passHref={true} legacyBehavior href={`produ
       {products[item].size.includes("14") && (<span className="border border-gray-300 px-1 mx-1">14"</span>)}
       {products[item].size.includes("16") && (<span className="border border-gray-300 px-1 mx-1">16"</span>)}
       {products[item].size.includes("18") && (<span className="border border-gray-300 px-1 mx-1">18"</span>)}
+      {products[item].size.includes("20") && (<span className="border border-gray-300 px-1 mx-1">18"</span>)}
       {products[item].size.includes("24") && (<span className="border border-gray-300 px-1 mx-1">24"</span>)}
       {products[item].size.includes("30") && (<span className="border border-gray-300 px-1 mx-1">30"</span>)}
       {products[item].size.includes("36") && (<span className="border border-gray-300 px-1 mx-1">36"</span>)}
