@@ -36,8 +36,8 @@ export const navigation = {
             id: 'drawer_slides',
             name: 'Drawer Slides',
             items: [
-              { name: 'Teliscopic Channel',id:'tc', href: 'drawer_slides' },
-              { name: 'Soft Close Channel',id:'top', href: 'drawer_slides' },
+              { name: 'MS Drawer Channel',id:'tc', href: 'drawer_slides' },
+              { name: 'SS Drawer Channel',id:'scc', href: 'drawer_slides' },
 
             ],
           },
