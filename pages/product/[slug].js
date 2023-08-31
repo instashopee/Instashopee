@@ -26,7 +26,7 @@ if(!error){
       focusAt: "center",
       perView: 1,
       autoplay: 3000,
-      animationDuration: 1500,
+      animationDuration: 1000,
       gap: 0,
       classes: {
         nav: {
@@ -115,6 +115,12 @@ if(!error){
           <ul className="whitespace-no-wrap flex-no-wrap [backface-visibility: hidden] [transform-style: preserve-3d] [touch-action: pan-Y] [will-change: transform] relative flex w-full overflow-hidden p-0">
             <li >
               <img
+                src={product.img}
+                className="hover:scale-105 transition-all duration-500 cursor-pointer w-full max-w-full max-h-full m-auto"
+              />
+            </li>
+            <li>
+              <img
                 src={product.img1}
                 className="hover:scale-105 transition-all duration-500 cursor-pointer w-full max-w-full max-h-full m-auto"
               />
@@ -125,18 +131,12 @@ if(!error){
                 className="hover:scale-105 transition-all duration-500 cursor-pointer w-full max-w-full max-h-full m-auto"
               />
             </li>
-            <li>
-              <img
-                src={product.img3}
-                className="hover:scale-105 transition-all duration-500 cursor-pointer w-full max-w-full max-h-full m-auto"
-              />
-            </li>
-            <li>
+            {/* <li>
               <img
                 src={product.img4}
                 className="hover:scale-105 transition-all duration-500 cursor-pointer w-full max-w-full max-h-full m-auto"
               />
-            </li>
+            </li> */}
             {/* <li>
               <img
                 src={product.img5}
@@ -219,13 +219,13 @@ if(!error){
           >
             <span className="block w-2 h-2 transition-colors duration-300 rounded-full bg-white/20 ring-2 ring-slate-700 focus:outline-none"></span>
           </button>
-          <button
+          {/* <button
             className="p-4 group"
             data-glide-dir="=3"
             aria-label="goto slide 4"
           >
             <span className="block w-2 h-2 transition-colors duration-300 rounded-full bg-white/20 ring-2 ring-slate-700 focus:outline-none"></span>
-          </button>
+          </button> */}
           {/* <button
             className="p-4 group"
             data-glide-dir="=4"
@@ -382,8 +382,8 @@ if(!error){
                       {color && Object.keys(variants[color]).includes('10') && (
                         <option value={'10"'}>10 "</option>
                       )}
-                      {color && Object.keys(variants[color]).includes('4"') && (
-                        <option value={'4"'}>4 "</option>
+                      {color && Object.keys(variants[color]).includes('20') && (
+                        <option value={'20'}>4 "</option>
                       )}
                       {color && Object.keys(variants[color]).includes('4"') && (
                         <option value={'4"'}>4 "</option>

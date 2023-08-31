@@ -19,6 +19,8 @@
     "@mui/material": "^5.14.5",
     "crypto-js": "^4.1.1",
     "formidable": "^3.5.1",
+    "fs": "^0.0.1-security",
+    "fs.promises": "^0.1.2",
     "glidejs": "^2.1.0",
     "jsonwebtoken": "^9.0.1",
     "mongoose": "^7.4.2",

@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const add = () => {
+const edit = () => {
   const [title, setTitle] = useState("");
   const [slug, setSlug] = useState("");
   const [desc, setDesc] = useState("");
@@ -136,7 +136,7 @@ const add = () => {
       
    
     };
-    let a = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/addproducts`, {
+    let a = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/updateproduct`, {
       method: "POST", // or 'PUT'
       headers: {
         "Content-Type": "application/json",
@@ -165,7 +165,7 @@ const add = () => {
     // setImg("");
 
     if (res.success) {
-      toast.success("Successfully Added Product", {
+      toast.success("Successfully Updated Product", {
         position: "top-left",
         autoClose: 3000,
         hideProgressBar: false,
@@ -176,7 +176,7 @@ const add = () => {
         theme: "light",
       });
     } else {
-      toast.error("Error Adding Product", {
+      toast.error("Error Updating Product", {
         position: "top-left",
         autoClose: 5000,
         hideProgressBar: false,
@@ -206,7 +206,7 @@ const add = () => {
       
    
     };
-    let a = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/addproducts`, {
+    let a = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/updateproduct`, {
       method: "POST", // or 'PUT'
       headers: {
         "Content-Type": "application/json",
@@ -331,7 +331,7 @@ const add = () => {
                </svg>
                <a href="/admin/add"><span class="ml-3 p-2 hover:bg-gray-100 dark:hover:bg-gray-700 group text-blue-500 rounded-md">ADD</span></a>
                <span className="ml-3 font-semibold ">PRODUCTS</span>
-               <a href="/admin/edit"><span class="ml-3 p-2 hover:bg-gray-100 dark:hover:bg-gray-700 group text-blue-500 rounded-md">EDIT</span></a>
+               <a href="/admin/add"><span class="ml-3 p-2 hover:bg-gray-100 dark:hover:bg-gray-700 group text-blue-500 rounded-md">EDIT</span></a>
             </div>
          </li>
        
@@ -412,11 +412,26 @@ const add = () => {
 
 
     </div>
-    <h1 className="text-2xl text-center font-bold">ADD PRODUCTS</h1>
+    <h1 className="text-2xl text-center font-bold">EDIT PRODUCTS</h1>
     <br />
     <div class="lg:w-1/2 md:w-1/2 bg-white flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0 float-right p-5 shadow-2xl">
-      <h2 class="text-gray-900 text-lg mb-1 font-medium title-font">Add Product Details</h2>
+      <h2 class="text-gray-900 text-lg mb-1 font-medium title-font">Update Product Details</h2>
       <div className="flex">
+      <div className="px-2 w-1/2 ">
+           <div class=" mb-4">
+             <label for="_id" class="leading-7 text-sm text-gray-600">
+               Given Id
+             </label>
+             <input
+               onChange={handleChange}
+               value={title}
+               type="_id"
+               id="_id"
+               name="_id"
+               class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+             />
+           </div>
+         </div>
       <div className="px-2 w-1/2 ">
            <div class=" mb-4">
              <label for="title" class="leading-7 text-sm text-gray-600">
@@ -1040,4 +1055,4 @@ const add = () => {
   );
 };
 
-export default add;
+export default edit;

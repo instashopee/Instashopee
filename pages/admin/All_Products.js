@@ -62,7 +62,7 @@ const All_Products = ({products}) => {
               
             </TableRow>
           </TableHead>
-          {/* <TableBody>
+          <TableBody>
             {Object.values(products).map(product => (
               <TableRow key={product.slug}>
                 <TableCell>
@@ -100,7 +100,7 @@ const All_Products = ({products}) => {
 
               </TableRow>
             ))}
-          </TableBody> */}
+          </TableBody>
         </Table>
       </TableContainer>
     </DashboardCard>
