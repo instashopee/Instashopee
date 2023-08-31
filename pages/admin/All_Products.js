@@ -63,7 +63,7 @@ const All_Products = ({products}) => {
             </TableRow>
           </TableHead>
           <TableBody>
-            {Object.values(products).map(product => (
+            {Object.values({products}).map(product => (
               <TableRow key={product.slug}>
                 <TableCell>
                   <Typography fontSize="15px" fontWeight={500}>
