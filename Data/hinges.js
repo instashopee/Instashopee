@@ -1,13 +1,14 @@
 export const hinges=[
+
     {
-        "imageUrl":"/images/ms-telescopic-channel-500x500.webp",
-        "brand":"STELOCASA - Drawer Slides",
-        "title":"MS Telescopic Channel",
-        "mrp":350,
-        "price":175,
+        "imageUrl":"/images/ss_clip_hinges.jpg",
+        "brand":"STELOCASA - Hinges",
+        "title":"SS Clip On Hinges",
+        "mrp":300,
+        "price":150,
         "color":"",
-        "href":"drawer_slides",
-        "size":'12"',
+        "href":"hinges",
+        "size":'0 CRANK"',
     },
 
 

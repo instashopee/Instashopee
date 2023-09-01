@@ -7,6 +7,7 @@ import Link from 'next/link'
 import HomeSectionCarousel from '@/components/HomeSectionCarousel/HomeSectionCarousel'
 import { hinges } from '@/Data/hinges'
 import Banner1 from '@/components/Banner'
+import { drawer_slides } from '@/Data/drawer_slides'
 export default function Home(){
    return(
      <div className='bg-white'>
@@ -35,7 +36,7 @@ export default function Home(){
 
       {/* <h1 className="sm:text-3xl text-2xl text-center title-font text-gray-400 font-bold">!! Top Selling Products !!</h1> */}
       <div className='space-y-5 flex flex-col justify-center px-5 lg:px-10'>
-            <HomeSectionCarousel data={hinges} sectionName={"TOP SELLING DRAWER SLIDES"}/>
+            <HomeSectionCarousel data={drawer_slides} sectionName={"TOP SELLING DRAWER SLIDES"}/>
             <Banner1 banner={'/banners/static_banner1.jpg'}/>
             <HomeSectionCarousel data={hinges} sectionName={"TOP SELLING HINGES"}/>
             <Banner1 banner={'/banners/static_banner1.jpg'}/>
