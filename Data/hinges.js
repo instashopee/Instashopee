@@ -1,64 +1,15 @@
 export const hinges=[
     {
-        "imageUrl":"https://4.imimg.com/data4/EL/HM/MY-6622326/door-butt-hinges.gif",
-        "brand":"STELOCASA",
-        "title":"Hydraulic Hinges",
-        "mrp":200,
-        "price":100,
+        "imageUrl":"/images/ms-telescopic-channel-500x500.webp",
+        "brand":"STELOCASA - Drawer Slides",
+        "title":"MS Telescopic Channel",
+        "mrp":350,
+        "price":175,
         "color":"",
-        "href":"butt_hinges",
-        "size":[
-            {
-                "name":"",
-                "quantity":""
-            }
-        ],
+        "href":"drawer_slides",
+        "size":'12"',
     },
-    {
-        "imageUrl":"https://4.imimg.com/data4/EL/HM/MY-6622326/door-butt-hinges.gif",
-        "brand":"STELOCASA",
-        "title":"Hydraulic Hinges",
-        "mrp":200,
-        "price":100,
-        "color":"",
-       
-        "size":[
-            {
-                "name":"",
-                "quantity":""
-            }
-        ],
-    },
-    {
-        "imageUrl":"https://4.imimg.com/data4/EL/HM/MY-6622326/door-butt-hinges.gif",
-        "brand":"STELOCASA",
-        "title":"Hydraulic Hinges",
-        "mrp":200,
-        "price":100,
-        "color":"",
-       
-        "size":[
-            {
-                "name":"",
-                "quantity":""
-            }
-        ],
-    },
-    {
-        "imageUrl":"https://4.imimg.com/data4/EL/HM/MY-6622326/door-butt-hinges.gif",
-        "brand":"STELOCASA",
-        "title":"Hydraulic Hinges",
-        "mrp":200,
-        "price":100,
-        "color":"",
-       
-        "size":[
-            {
-                "name":"",
-                "quantity":""
-            }
-        ],
-    },
+
 
     
 ]

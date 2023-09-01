@@ -1,12 +1,9 @@
 import React, { useEffect } from "react"
-import Glide from "@glidejs/glide"
-// import Banner from "@/models/Banner";
-import mongoose from "mongoose";
 
 export default function Banner1({banner}) {
   return(
     <div>
-        <img src="Hardware_banner.png" alt="" />
+        <img className="w-full" src={banner} alt="" />
     </div>
   )
 }

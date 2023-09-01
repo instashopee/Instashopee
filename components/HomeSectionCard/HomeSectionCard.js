@@ -24,6 +24,7 @@ const HomeSectionCard = ({ product }) => {
                 <span className="font-small text-md ml-2 mt-1 text-orange-600 textPart">
                 (-{Math.floor(((product.mrp-product.price)/product.mrp)*100)}% off){/* (-70% Off) */}
                 </span></div>
+      <p className="mt-1 textPart border-2 p-2 text-center">Size - {product.size}</p>
       </div>
     </div></Link>
   );
