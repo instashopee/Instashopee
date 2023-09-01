@@ -10,7 +10,7 @@ const Hinges = ({products}) => {
       <section className="text-gray-600 body-font">
   <div className="container px-5 py-24 mx-auto ">
     <div className="flex flex-wrap -m-4 justify-center">
-    {Object.keys(products).length==0 && <p>Sorry, All Hinges Out Of Stock, New Hinges Comming Soon !!</p>}
+    {Object.keys(products).length==0 && <p>Sorry, All Items Out Of Stock, New Products Comming Soon !!</p>}
     {Object.keys(products).map((item)=>{
 // _id inside key of link
 return <Link key={products[item].id} passHref={true} legacyBehavior href={`product/${products[item].slug}`}>
@@ -19,7 +19,7 @@ return <Link key={products[item].id} passHref={true} legacyBehavior href={`produ
       <img alt="ecommerce" className="m-auto block" src={products[item].img}/>
     </a>
     <div className="mt-4 text-center md:text-left">
-      <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1 textPart">HINGES</h3>
+      <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1 textPart">{products[item].category}</h3>
       <h2 className="text-gray-900 title-font text-lg font-medium textPart">{products[item].title}</h2>
       <div className='flex'>
         <p className="mt-1 textPart">₹{products[item].price}/-</p>
@@ -76,7 +76,7 @@ export async function getServerSideProps(context) {
     await mongoose.connect(process.env.MONGO_URI)
 }
 
-  let products = await Product.find({category:'HINGES'})
+  let products = await Product.find({sub_category:'butt hinges'})
   let hinges = {}
   for(let item of products){
     if(item.title in hinges){

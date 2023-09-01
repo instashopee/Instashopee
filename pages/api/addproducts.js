@@ -20,7 +20,22 @@ const handler = async (req, res) => {
         mrp: req.body.mrp,
         availableQty: req.body.availableQty,
         size: req.body.size,
+        // size2: req.body.size2,
+        // size3: req.body.size3,
+        // size4: req.body.size4,
+        // size5: req.body.size5,
+        // size6: req.body.size6,
+        // size7: req.body.size7,
+        // size8: req.body.size8,
+        // size9: req.body.size9,
+        // size10:req.body.size10,
+        // size11:req.body.size11,
+        // size12:req.body.size12,
         color: req.body.color,
+        banner1: req.body.banner1,
+        banner2: req.body.banner2,
+        banner3: req.body.banner3,
+        banner4: req.body.banner4,
       });
       await p.save();
     // }

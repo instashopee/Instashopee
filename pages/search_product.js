@@ -3,8 +3,9 @@ import React from 'react'
 import Product from "@/models/Product";
 import connectDb from "@/middleware/mongoose";
 import mongoose from 'mongoose';
-
-const Hinges = ({products}) => {
+// const {Search} = require('../pages/search.js');
+import { name } from '../pages/search.js'
+const search_product = ({products}) => {
   return (
     <div>
       <section className="text-gray-600 body-font">
@@ -71,37 +72,37 @@ return <Link key={products[item].id} passHref={true} legacyBehavior href={`produ
     </div>
   )
 }
-export async function getServerSideProps(context) {
+export async function getServerSideProps() {
   if(!mongoose.connections[0].readystate){
     await mongoose.connect(process.env.MONGO_URI)
 }
 
-  let products = await Product.find({sub_category:'drawer slides'})
-  let hinges = {}
+  let products = await Product.find({title: name})
+  let search_product = {}
   for(let item of products){
-    if(item.title in hinges){
-        if(!hinges[item.title].color.includes(item.color) && item.availableQty > 0){
-          hinges[item.title].color.push(item.color)
+    if(item.title in search_product){
+        if(!search_product[item.title].color.includes(item.color) && item.availableQty > 0){
+          search_product[item.title].color.push(item.color)
         }
-        if(!hinges[item.title].size.includes(item.size) && item.availableQty > 0){
-          hinges[item.title].size.push(item.size)
+        if(!search_product[item.title].size.includes(item.size) && item.availableQty > 0){
+          search_product[item.title].size.push(item.size)
         }
     }
 
     else{
-      hinges[item.title] = JSON.parse(JSON.stringify(item))
+      search_product[item.title] = JSON.parse(JSON.stringify(item))
       if(item.availableQty >0){
-            hinges[item.title].color = [item.color]
-            hinges[item.title].size = [item.size]
+            search_product[item.title].color = [item.color]
+            search_product[item.title].size = [item.size]
           }else{
-            hinges[item.title].color = []
-            hinges[item.title].size = []
+            search_product[item.title].color = []
+            search_product[item.title].size = []
           }
     }
   }
 
   return{
-    props:{products:JSON.parse(JSON.stringify(hinges))},
+    props:{products:JSON.parse(JSON.stringify(search_product))},
   }
   }
-export default Hinges
+export default search_product

@@ -15,7 +15,22 @@ const ProductSchema = new mongoose.Schema({
     mrp: {type: Number, required: true},
     availableQty: {type: Number, required: true},
     size: {type: String},
+    // size2: {type: String},
+    // size3: {type: String},
+    // size4: {type: String},
+    // size5: {type: String},
+    // size6: {type: String},
+    // size7: {type: String},
+    // size8: {type: String},
+    // size9: {type: String},
+    // size10: {type: String},
+    // size11: {type: String},
+    // size12: {type: String},
     color: {type: String},
+    banner1: {type: String},
+    banner2: {type: String},
+    banner3: {type: String},
+    banner4: {type: String},
 },{timestamps: true});
 // mongoose.models= {}
 // export default mongoose.model('Product', ProductSchema);

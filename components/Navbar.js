@@ -40,7 +40,7 @@ const Navbar = ({Logout,user,cart,addToCart,removeFromCart,clearCart,subTotal}) 
   
   return (
     <div>
-   
+         
     <div className="bg-white">
       {/* Mobile menu */}
       <Transition.Root show={open} as={Fragment}>
@@ -217,11 +217,17 @@ const Navbar = ({Logout,user,cart,addToCart,removeFromCart,clearCart,subTotal}) 
         <p className="flex h-7 items-center justify-center bg-rose-500 px-4 text-sm font-medium text-white sm:px-6 lg:px-8">
           Instashopee - The Ecommerce Store !!
         </p>
-
         <nav
           aria-label="Top"
-          className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
+          className=" max-w-7xl px-4 sm:px-6 lg:px-8"
         >
+        <div className=" float-left flex left-0 mt-1">
+                <Link legacyBehavior href={"/"}>
+                <a >
+                  <span className="sr-only">Instashopee</span>
+                  <img className="left-0 h-12 w-auto" src="/logo3.png" alt="Logo"  />
+                </a></Link>
+              </div>
           <div className="border-b border-gray-200">
             <div className="flex h-16 items-center">
               <button
@@ -235,13 +241,7 @@ const Navbar = ({Logout,user,cart,addToCart,removeFromCart,clearCart,subTotal}) 
               </button>
 
               {/* Logo */}
-              <div className="ml-4 flex lg:ml-0">
-                <Link legacyBehavior href={"/"}>
-                <a >
-                  <span className="sr-only">Instashopee</span>
-                  <img className="h-8 w-auto" src="/logo1.png" alt="Logo" />
-                </a></Link>
-              </div>
+
 
               {/* Flyout menus */}
               <Popover.Group className="hidden lg:ml-8 lg:block lg:self-stretch z-10">
@@ -381,10 +381,10 @@ const Navbar = ({Logout,user,cart,addToCart,removeFromCart,clearCart,subTotal}) 
               <div className="ml-auto flex items-center">
               
       <div  className="hidden xl:flex cursor-pointer items-center cart absolute right-0 top-12 mx-5">
-      <Link legacyBehavior href={'/search'}><a><div className="border-red-400 flex mx-1 border-1 md:mx-2  border-2 rounded-lg px-2 ">
+      {/* <Link legacyBehavior href={'/search'}><a><div className="border-red-400 flex mx-1 border-1 md:mx-2  border-2 rounded-lg px-2 ">
       <AiOutlineSearch className="text-sm md:text-md mx-1 m-auto"/>
       <label className="text-sm md:text-md mx-1 cursor-pointer font-semibold" htmlFor="">Search</label>
-        </div></a></Link>
+        </div></a></Link> */}
 
         {<Link legacyBehavior href={'/cart'}><a><div className="border-red-400 flex mx-1 border-1 md:mx-2  border-2 rounded-lg px-2 ">
         <AiOutlineShoppingCart  className="text-sm md:text-md mx-1 m-auto" />

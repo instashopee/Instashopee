@@ -7,6 +7,7 @@ import Link from 'next/link'
 import HomeSectionCarousel from '@/components/HomeSectionCarousel/HomeSectionCarousel'
 import { hinges } from '@/Data/hinges'
 import Banner from '@/components/Banner'
+import Banner1 from '@/components/Banner'
 export default function Home(){
    return(
      <div className='bg-white'>
@@ -16,7 +17,7 @@ export default function Home(){
          <link rel= "icon" href ="/favicon.ico" />
        </Head>
        <div className='2xl:mx-10 my-5'>
-
+      
        <SliderIndicatorsControlsInside/>
        </div>
 {/* <div>
@@ -25,19 +26,19 @@ export default function Home(){
 
           
   {/* <div className=" 2xl:container px-5 py-24 mx-auto"> */}
-    <div className="flex flex-wrap w-full mb-2 flex-col items-center text-center">
+    {/* <div className="flex flex-wrap w-full mb-2 flex-col items-center text-center">
       {/* <h1 className="sm:text-3xl text-2xl title-font mb-2 text-gray-900 font-bold">INSTASHOPEE</h1> */}
-      <img src="/logo3.png" alt="" className='mx-2'/>
+      {/* <img src="/logo3.png" alt="" className='mx-2'/>
       <p className="lg:w-1/2 w-full leading-relaxed text-gray-500 text-lg">Having your home fitted with the right accessories comprises the most important aspect of decorating and making your personal space your home. </p>
-    
+     */}
     {/* </div> */}
-  </div>
+  {/* </div>  */}
 
       {/* <h1 className="sm:text-3xl text-2xl text-center title-font text-gray-400 font-bold">!! Top Selling Products !!</h1> */}
       <div className='space-y-5 flex flex-col justify-center px-5 lg:px-10'>
             <HomeSectionCarousel data={hinges} sectionName={"TOP SELLING PRODUCTS"}/>
             <HomeSectionCarousel data={hinges} sectionName={"TOP SELLING PRODUCTS"}/>
-            <Banner/>
+            <Banner1/>
             <HomeSectionCarousel data={hinges} sectionName={"TOP SELLING PRODUCTS"}/>
             <HomeSectionCarousel data={hinges} sectionName={"TOP SELLING PRODUCTS"}/>
             <Banner/>

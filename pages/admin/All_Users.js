@@ -18,27 +18,27 @@ import Link from "next/link"
 import Admin_sidebar from "@/components/Admin_sidebar";
 
 
-const All_Order = () => {
+const All_Users = () => {
   const router=useRouter()
-  const [orders, setOrders] = useState({})
+  const [users, setUsers] = useState({})
   
   useEffect(() => {
-    const fetchOrders=async()=>{
-      let a= await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/myorders`, {
+    const fetchUsers=async()=>{
+      let a= await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/get_all_users`, {
         method: "POST", // or 'PUT'
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({token:JSON.parse(localStorage.getItem('myuser')).token}),
+        body: JSON.stringify({users}),
       });
     
       let res=await a.json()
-      setOrders(res.orders)
+      setUsers(res.users)
     }
     if(!localStorage.getItem("myuser")){
       router.push('/')
     }else{
-      fetchOrders()
+      fetchUsers()
   }
 
      
@@ -62,7 +62,7 @@ const All_Order = () => {
     <Admin_sidebar/>
   
   <div className="ml-80 w-[80rem] shadow-none">
-    <DashboardCard title={'All Orders'}>
+    <DashboardCard title={'All Users'}>
       <TableContainer className="min-h-screen"
         sx={{
           width: {
@@ -82,12 +82,12 @@ const All_Order = () => {
             <TableRow>
               <TableCell>
                 <Typography color="textSecondary" variant="h6">
-                  Email
+                  Name
                 </Typography>
               </TableCell>
               <TableCell>
                 <Typography color="textSecondary" variant="h6">
-                  Name
+                  Email
                 </Typography>
               </TableCell>
              
@@ -104,31 +104,32 @@ const All_Order = () => {
               
               <TableCell>
                 <Typography color="textSecondary" variant="h6">
-                  Amount
+                  Pincode
                 </Typography>
               </TableCell>
-              <TableCell>
-                <Typography color="textSecondary" variant="h6">
-                  View All Details
-                </Typography>
-              </TableCell>
+          
               
             </TableRow>
           </TableHead>
           <TableBody>
-            {Object.values(orders).map(item => (
-              <TableRow key={item.OrderId}>
-                <TableCell>
-                  <Typography fontSize="15px" fontWeight={500}>
-                    {item.email}
-                  </Typography>
-                </TableCell>
+            {Object.values(users).map(item => (
+              <TableRow key={item._id}>
+             
 
                 <TableCell>
                   <Box display="flex" alignItems="center">
                     <Box>
                       <Typography variant="h6" fontWeight={600}>
                         {item.name}
+                      </Typography>
+                    </Box>
+                  </Box>
+                </TableCell>
+                <TableCell>
+                  <Box display="flex" alignItems="center">
+                    <Box>
+                      <Typography variant="h6" fontWeight={600}>
+                        {item.email}
                       </Typography>
                     </Box>
                   </Box>
@@ -155,20 +156,12 @@ const All_Order = () => {
                   <Box display="flex" alignItems="center">
                     <Box>
                       <Typography variant="h6" fontWeight={600}>
-                        Rs.{item.amount}/-
+                        {item.pincode}
                       </Typography>
                     </Box>
                   </Box>
                 </TableCell>
-                <TableCell>
-                  <Box display="flex" alignItems="center">
-                    <Box>
-                      <Typography variant="h6" fontWeight={600}>
-                        <Link legacyBehavior href={'/admin/admin_all_orders'}><a><button className="text-rose-500">More Details</button></a></Link>
-                      </Typography>
-                    </Box>
-                  </Box>
-                </TableCell>
+        
                 
                
 
@@ -184,4 +177,4 @@ const All_Order = () => {
   )
 }
 
-export default All_Order
+export default All_Users

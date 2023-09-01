@@ -370,9 +370,7 @@ if(!error){
                       }}
                       className="rounded border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-200 focus:border-indigo-500 text-base pl-3 pr-10"
                     >
-                      {color && Object.keys(variants[color]).includes('4') && (
-                        <option value={'4"'}>4 "</option>
-                      )}
+                   
                       {color && Object.keys(variants[color]).includes('6') && (
                         <option value={'6"'}>6 "</option>
                       )}

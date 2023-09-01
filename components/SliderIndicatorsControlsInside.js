@@ -1,7 +1,7 @@
 import React, { useEffect } from "react"
 import Glide from "@glidejs/glide"
-
-export default function SliderIndicatorsControlsInside() {
+import Banner from "@/models/Banner"
+export default function SliderIndicatorsControlsInside({banner}) {
   useEffect(() => {
     const slider = new Glide(".glide-03", {
       type: "slider",
@@ -30,8 +30,9 @@ export default function SliderIndicatorsControlsInside() {
         <div className="overflow-hidden" data-glide-el="track">
           <ul className="whitespace-no-wrap flex-no-wrap [backface-visibility: hidden] [transform-style: preserve-3d] [touch-action: pan-Y] [will-change: transform] relative flex w-full overflow-hidden p-0">
             <li >
+              
               <img
-                src="/Hardware.png"
+                src='/Hardware.png'
                 className="hover:scale-105 transition-all duration-500 cursor-pointer w-full max-w-full max-h-full m-auto"
               />
             </li>
@@ -147,4 +148,17 @@ export default function SliderIndicatorsControlsInside() {
       {/*<!-- End Slider with indicators & controls inside --> */}
     </>
   )
+}
+export async function getServerSideProps(context) {
+  if (!mongoose.connections[0].readystate) {
+    await mongoose.connect(process.env.MONGO_URI);
+  }
+
+  let banner = await Banner.find();
+
+  return {
+    props: {
+      banner: JSON.parse(JSON.stringify(banner)),
+    }, //
+  };
 }
