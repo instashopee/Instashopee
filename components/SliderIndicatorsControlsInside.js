@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React, { useEffect, useRef } from "react"
 import Glide from "@glidejs/glide"
 import ReactPlayer from "react-player"
 
@@ -22,7 +22,9 @@ export default function SliderIndicatorsControlsInside() {
       slider.destroy()
     }
   }, [])
+  const vidRef=useRef();
 
+  useEffect(() => { vidRef.current.play(); },[]);
   return (
    
    
@@ -35,7 +37,7 @@ export default function SliderIndicatorsControlsInside() {
             <li >
               
               
-            <video className="w-full" muted  autoPlay={true} loop src="/banners/banner_vid.mp4" ></video>
+            <video ref={ vidRef } className="w-full" muted  autoPlay={true} loop src="/banners/banner_vid.mp4" ></video>
 
             {/* <ReactPlayer url='/banners/banner_vid.mp4' /> */}
 
@@ -45,7 +47,7 @@ export default function SliderIndicatorsControlsInside() {
               /> */}
             </li>
             <li>
-            <video className="w-full" muted  autoPlay={true} loop src="/banners/banner2.mp4" ></video>
+            <video ref={ vidRef } className="w-full" muted  autoPlay={true} loop src="/banners/banner2.mp4" ></video>
 
               {/* <img
                 src="/banners/banner2.jpg"
