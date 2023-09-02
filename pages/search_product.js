@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 import Product from "@/models/Product";
-import connectDb from "@/middleware/mongoose";
+
 import mongoose from 'mongoose';
 // const {Search} = require('../pages/search.js');
 import { name } from '../pages/search.js'
