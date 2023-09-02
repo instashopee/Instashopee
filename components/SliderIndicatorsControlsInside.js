@@ -33,7 +33,9 @@ export default function SliderIndicatorsControlsInside() {
         <div className="overflow-hidden" data-glide-el="track">
           <ul className="whitespace-no-wrap flex-no-wrap [backface-visibility: hidden] [transform-style: preserve-3d] [touch-action: pan-Y] [will-change: transform] relative flex w-full overflow-hidden p-0">
             <li >
-            <video className="w-full" autoPlay loop src="/banners/banner_vid.mp4" ></video>
+              
+              
+            <video className="w-full" muted  autoPlay={true} loop src="/banners/banner_vid.mp4" ></video>
 
             {/* <ReactPlayer url='/banners/banner_vid.mp4' /> */}
 
@@ -43,7 +45,7 @@ export default function SliderIndicatorsControlsInside() {
               /> */}
             </li>
             <li>
-            <video className="w-full" autoPlay loop src="/banners/banner2.mp4" ></video>
+            <video className="w-full" muted  autoPlay={true} loop src="/banners/banner2.mp4" ></video>
 
               {/* <img
                 src="/banners/banner2.jpg"
