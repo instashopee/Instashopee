@@ -381,10 +381,10 @@ const Navbar = ({Logout,user,cart,addToCart,removeFromCart,clearCart,subTotal}) 
               <div className="ml-auto flex items-center">
               
       <div  className="hidden xl:flex cursor-pointer items-center cart absolute right-0 top-12 mx-5">
-      {/* <Link legacyBehavior href={'/search'}><a><div className="border-red-400 flex mx-1 border-1 md:mx-2  border-2 rounded-lg px-2 ">
+      <Link legacyBehavior href={'/search'}><a><div className="border-red-400 flex mx-1 border-1 md:mx-2  border-2 rounded-lg px-2 ">
       <AiOutlineSearch className="text-sm md:text-md mx-1 m-auto"/>
       <label className="text-sm md:text-md mx-1 cursor-pointer font-semibold" htmlFor="">Search</label>
-        </div></a></Link> */}
+        </div></a></Link>
 
         {<Link legacyBehavior href={'/cart'}><a><div className="border-red-400 flex mx-1 border-1 md:mx-2  border-2 rounded-lg px-2 ">
         <AiOutlineShoppingCart  className="text-sm md:text-md mx-1 m-auto" />
@@ -397,6 +397,7 @@ const Navbar = ({Logout,user,cart,addToCart,removeFromCart,clearCart,subTotal}) 
             <ul>
         <Link legacyBehavior href={'/myaccount'}><a><li className="py-1 font-semibold hover:text-red-500 text-center text-md">Account Page</li></a></Link>
         <Link legacyBehavior href={'/orders'}><a><li className="py-1 font-semibold hover:text-red-500 text-center text-md">Orders</li></a></Link>
+        {user.email=="abhishekjain4548@gmail.com" &&<Link legacyBehavior href={'/admin'}><a><li className="py-1 font-semibold hover:text-red-500 text-center text-md">Admin</li></a></Link>}
         <li onClick={Logout} className="py-1 font-semibold hover:text-red-500 text-center text-md">Logout</li></ul>
       </div>}
 

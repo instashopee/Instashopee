@@ -44,7 +44,7 @@ const Login = () => {
       localStorage.setItem('myuser', JSON.stringify({token:response.token,email:response.email}))
     toast.success('Logged In Successfully', {
       position: "top-center",
-      autoClose: 3000,
+      autoClose: 1000,
       hideProgressBar: false,
       closeOnClick: true,
       pauseOnHover: true,
@@ -55,12 +55,12 @@ const Login = () => {
       setTimeout(() => {
         
         router.push(process.env.NEXT_PUBLIC_HOST)
-      }, 2500);
+      }, 1000);
       
     }else{
       toast.error(response.error, {
         position: "top-center",
-        autoClose: 3000,
+        autoClose: 1000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
@@ -74,7 +74,7 @@ const Login = () => {
     <div>
       <ToastContainer
         position="top-center"
-        autoClose={3000}
+        autoClose={1000}
         hideProgressBar={false}
         newestOnTop={false}
         closeOnClick

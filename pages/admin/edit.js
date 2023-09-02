@@ -7,6 +7,7 @@ import Admin_sidebar from "@/components/Admin_sidebar";
 
 const edit = () => {
   const [title, setTitle] = useState("");
+  const [type, settype] = useState("");
   const [slug, setSlug] = useState("");
   const [desc, setDesc] = useState("");
   const [category, setCategory] = useState("");
@@ -24,16 +25,17 @@ const edit = () => {
   // const [img4, setImg4] = useState("");
 
   const router = useRouter();
+  let email='abhishekjain4548@gmail.com'
   useEffect(() => {
-    const myuser = JSON.parse(localStorage.getItem("myuser"));
-    if (!myuser) {
-      router.push("/");
+    if(email=="abhishekjain4548@gmail.com"){
+      router.push('/admin/edit')
     }
-    // setImg("/images/");
-    // setImg1("/images/");
-    // setImg2("/images/");
-    // setImg3("/images/");
-    // setImg4("/images/");
+    else{
+      router.push(`${process.env.NEXT_PUBLIC_HOST}`)
+    }
+
+    settype("normal");
+    
   
   }, []);
   const [image, setImage] = useState(null);
@@ -111,6 +113,7 @@ const edit = () => {
   const handleUserSubmit = async () => {
     let data = {
       title,
+      type,
       slug,
       desc,
       category,
@@ -140,6 +143,7 @@ const edit = () => {
 
 
     setTitle("");
+    settype("normal");
     setSlug("");
     setDesc("");
     setCategory("");
@@ -193,6 +197,7 @@ const edit = () => {
       size,
       color,
       img,
+      type,
       img1,
       img2,
       _id,
@@ -219,6 +224,7 @@ const edit = () => {
     // setSub_Category("");
     setPrice("");
     setSize("");
+    settype("");
     setMrp("");
     setColor("");
     setAvailableQty("");
@@ -258,6 +264,8 @@ const edit = () => {
       setTitle(e.target.value);
     } else if (e.target.name == "slug") {
       setSlug(e.target.value);
+    } else if (e.target.name == "type") {
+      settype(e.target.value);
     } else if (e.target.name == "desc") {
       setDesc(e.target.value);
     } else if (e.target.name == "category") {
@@ -339,6 +347,22 @@ const edit = () => {
                type="name"
                id="title"
                name="title"
+               class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+             />
+           </div>
+         </div>
+      <div className="px-2 w-1/2 ">
+           <div class=" mb-4">
+             <label for="type" class="leading-7 text-sm text-gray-600">
+             Type
+             </label>
+             <input
+               onChange={handleChange}
+               value={type}
+               placeholder="normal / top selling"
+               type="type"
+               id="type"
+               name="type"
                class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
              />
            </div>

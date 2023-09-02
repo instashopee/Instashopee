@@ -25,6 +25,7 @@ const All_Products = () => {
   const [products, setProducts] = useState({})
   
   useEffect(() => {
+    
     const fetchProducts=async()=>{
       let a= await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/getproducts`, {
         method: "POST", // or 'PUT'
@@ -84,7 +85,17 @@ const All_Products = () => {
             <TableRow >
               <TableCell >
                 <Typography color="textSecondary" variant="h6">
+                 Given Id
+                </Typography>
+              </TableCell>
+              <TableCell >
+                <Typography color="textSecondary" variant="h6">
                   Title
+                </Typography>
+              </TableCell>
+              <TableCell >
+                <Typography color="textSecondary" variant="h6">
+                  Type
                 </Typography>
               </TableCell>
               <TableCell>
@@ -116,7 +127,17 @@ const All_Products = () => {
               <TableRow className="cursor-pointer" key={item.slug}>
                 <TableCell>
                   <Typography fontSize="15px" fontWeight={500}>
+                  {item._id}
+                  </Typography>
+                </TableCell>
+                <TableCell>
+                  <Typography fontSize="15px" fontWeight={500}>
                     {item.title}
+                  </Typography>
+                </TableCell>
+                <TableCell>
+                  <Typography fontSize="15px" fontWeight={500}>
+                    {item.type}
                   </Typography>
                 </TableCell>
 

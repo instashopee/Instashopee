@@ -3,10 +3,12 @@ import { useEffect, useState } from "react";
 import mongoose from "mongoose";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { AiFillPlusCircle, AiFillMinusCircle } from "react-icons/ai";
+import { BsFillBagCheckFill } from "react-icons/bs";
 import Glide from "@glidejs/glide"
 import Error from "next/error";
 import Product from "@/models/Product";
-const Post = ({buyNow, addToCart, product, variants,error }) => {
+const Post = ({buyNow, addToCart, product, variants,error,cart ,removeFromCart}) => {
   const router = useRouter();
   const { slug } = router.query;
   const [pin, setPin] = useState();
@@ -92,6 +94,21 @@ if(!error){
   return (
     <>
       <section className="text-gray-600 body-font overflow-hidden min-h-screen">
+      {/* <div className="flex flex-col justify-center mt-12 mx-5 space-y-5 float-left">
+              <img
+                src={product.img}
+                className="border-2 p-3 border-black hover:scale-105 transition-all duration-500 cursor-pointer  h-32 w-32 "
+              />
+              <img
+                src={product.img1}
+                className="border-2 p-3 border-black hover:scale-105 transition-all duration-500 cursor-pointer  h-32 w-32 "
+              />
+              <img
+                src={product.img2}
+                className="border-2 border-black p-3 hover:scale-105 transition-all duration-500 cursor-pointer  h-32 w-32 "
+              />
+              
+          </div> */}
       <ToastContainer
         position="bottom-center"
         autoClose={3000}
@@ -105,7 +122,7 @@ if(!error){
         theme="light"
         />
         <div className="container px-5 mx-auto">
-          <div className="lg:w-4/5 mx-auto flex flex-wrap">
+          <div className="ml-4 mx-auto flex flex-wrap">
           <div className="py-16">
           <>
       {/*<!-- Component: Slider with indicators & controls inside --> */}
@@ -116,19 +133,20 @@ if(!error){
             <li >
               <img
                 src={product.img}
-                className="hover:scale-105 transition-all duration-500 cursor-pointer w-full max-w-full max-h-full m-auto"
+                className="hover:scale-105 transition-all duration-500 cursor-pointer h-80 w-80 m-auto"
               />
             </li>
             <li>
               <img
                 src={product.img1}
-                className="hover:scale-105 transition-all duration-500 cursor-pointer w-full max-w-full max-h-full m-auto"
+                className="hover:scale-105 transition-all duration-500 cursor-pointer  h-80 w-80 m-auto"
               />
             </li>
             <li>
               <img
+              
                 src={product.img2}
-                className="hover:scale-105 transition-all duration-500 cursor-pointer w-full max-w-full max-h-full m-auto"
+                className="hover:scale-105 transition-all duration-500 cursor-pointer  h-80 w-80 m-auto"
               />
             </li>
             {/* <li>
@@ -203,22 +221,29 @@ if(!error){
             data-glide-dir="=0"
             aria-label="goto slide 1"
           >
-            <span className="block w-2 h-2 transition-colors duration-300 rounded-full bg-white/20 ring-2 ring-slate-700 focus:outline-none"></span>
-          </button>
+            <img
+                src={product.img}
+                className="border-2 p-3 border-black hover:scale-105 transition-all duration-500 cursor-pointer  h-32 w-32 "
+              />          </button>
           <button
             className="p-4 group"
             data-glide-dir="=1"
             aria-label="goto slide 2"
           >
-            <span className="block w-2 h-2 transition-colors duration-300 rounded-full bg-white/20 ring-2 ring-slate-700 focus:outline-none"></span>
-          </button>
+                    <img
+                src={product.img1}
+                className="border-2 p-3 border-black hover:scale-105 transition-all duration-500 cursor-pointer  h-32 w-32 "
+              />          </button>
           <button
             className="p-4 group"
             data-glide-dir="=2"
             aria-label="goto slide 3"
           >
-            <span className="block w-2 h-2 transition-colors duration-300 rounded-full bg-white/20 ring-2 ring-slate-700 focus:outline-none"></span>
-          </button>
+          <img
+                src={product.img2}
+                className="border-2 border-black p-3 hover:scale-105 transition-all duration-500 cursor-pointer  h-32 w-32 "
+              />         
+              </button>
           {/* <button
             className="p-4 group"
             data-glide-dir="=3"
@@ -235,6 +260,8 @@ if(!error){
           </button> */}
         </div>
       </div>
+     
+            
       {/*<!-- End Slider with indicators & controls inside --> */}
     </>
             </div>
@@ -243,7 +270,7 @@ if(!error){
               className="lg:w-1/2 w-full lg:h-auto px-24 object-cover object-top rounded"
               src={product.img}
             /> */}
-            <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+            <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-5">
               <h2 className="text-sm title-font text-gray-500 tracking-widest">
                 INSTASHOPEE
               </h2>
@@ -371,38 +398,122 @@ if(!error){
                       className="rounded border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-200 focus:border-indigo-500 text-base pl-3 pr-10"
                     >
                    
-                      {color && Object.keys(variants[color]).includes('6') && (
-                        <option value={'6"'}>6 "</option>
+                      {color && Object.keys(variants[color]).includes('0') && (
+                        <option value={'0'}>0</option>
+                      )}
+                      {color && Object.keys(variants[color]).includes('4') && (
+                        <option value={'5'}>5</option>
+                      )}
+                      {color && Object.keys(variants[color]).includes('5') && (
+                        <option value={'4'}>4</option>
                       )}
                       {color && Object.keys(variants[color]).includes('8') && (
-                        <option value={'8"'}>8 "</option>
+                        <option value={'8'}>8</option>
                       )}
                       {color && Object.keys(variants[color]).includes('10') && (
-                        <option value={'10"'}>10 "</option>
+                        <option value={'10'}>10</option>
+                      )}
+                      {color && Object.keys(variants[color]).includes('12') && (
+                        <option value={'12'}>12</option>
+                      )}
+                      {color && Object.keys(variants[color]).includes('14') && (
+                        <option value={'14'}>14</option>
+                      )}
+                      {color && Object.keys(variants[color]).includes('15') && (
+                        <option value={'15'}>15</option>
+                      )}
+                      {color && Object.keys(variants[color]).includes('16') && (
+                        <option value={'16'}>16</option>
+                      )}
+                      {color && Object.keys(variants[color]).includes('18') && (
+                        <option value={'18'}>18</option>
                       )}
                       {color && Object.keys(variants[color]).includes('20') && (
-                        <option value={'20'}>4 "</option>
+                        <option value={'20'}>20</option>
                       )}
-                      {color && Object.keys(variants[color]).includes('4"') && (
-                        <option value={'4"'}>4 "</option>
+                      {color && Object.keys(variants[color]).includes('22') && (
+                        <option value={'22'}>22</option>
                       )}
-                      {color && Object.keys(variants[color]).includes('4"') && (
-                        <option value={'4"'}>4 "</option>
+                      {color && Object.keys(variants[color]).includes('24') && (
+                        <option value={'24'}>24</option>
                       )}
-                      {color && Object.keys(variants[color]).includes('4"') && (
-                        <option value={'4"'}>4 "</option>
+                      {color && Object.keys(variants[color]).includes('26') && (
+                        <option value={'26'}>26</option>
                       )}
-                      {color && Object.keys(variants[color]).includes('4"') && (
-                        <option value={'4"'}>4 "</option>
+                      {color && Object.keys(variants[color]).includes('28') && (
+                        <option value={'28'}>28</option>
                       )}
-                      {color && Object.keys(variants[color]).includes('4"') && (
-                        <option value={'4"'}>4 "</option>
+                      {color && Object.keys(variants[color]).includes('32') && (
+                        <option value={'32'}>32</option>
                       )}
-                      {color && Object.keys(variants[color]).includes('4"') && (
-                        <option value={'4"'}>4 "</option>
+                      {color && Object.keys(variants[color]).includes('34') && (
+                        <option value={'34'}>34</option>
                       )}
-                      {color && Object.keys(variants[color]).includes('4"') && (
-                        <option value={'4"'}>4 "</option>
+                      {color && Object.keys(variants[color]).includes('36') && (
+                        <option value={'36'}>36</option>
+                      )}
+                      {color && Object.keys(variants[color]).includes('38') && (
+                        <option value={'38'}>38</option>
+                      )}
+                      {color && Object.keys(variants[color]).includes('40') && (
+                        <option value={'40'}>40</option>
+                      )}
+                      {color && Object.keys(variants[color]).includes('42') && (
+                        <option value={'42'}>42</option>
+                      )}
+                      {color && Object.keys(variants[color]).includes('44') && (
+                        <option value={'44'}>44</option>
+                      )}
+                      {color && Object.keys(variants[color]).includes('46') && (
+                        <option value={'46'}>46</option>
+                      )}
+                      {color && Object.keys(variants[color]).includes('48') && (
+                        <option value={'48'}>48</option>
+                      )}
+                      {color && Object.keys(variants[color]).includes('96') && (
+                        <option value={'96'}>96</option>
+                      )}
+                      {color && Object.keys(variants[color]).includes('100') && (
+                        <option value={'100'}>100</option>
+                      )}
+                      {color && Object.keys(variants[color]).includes('128') && (
+                        <option value={'128'}>128</option>
+                      )}
+                      {color && Object.keys(variants[color]).includes('160') && (
+                        <option value={'160'}>160</option>
+                      )}
+                      {color && Object.keys(variants[color]).includes('224') && (
+                        <option value={'224'}>224</option>
+                      )}
+                      {color && Object.keys(variants[color]).includes('288') && (
+                        <option value={'288'}>288</option>
+                      )}
+                      {color && Object.keys(variants[color]).includes('450') && (
+                        <option value={'450'}>450</option>
+                      )}
+                      {color && Object.keys(variants[color]).includes('600') && (
+                        <option value={'600'}>600</option>
+                      )}
+                      {color && Object.keys(variants[color]).includes('900') && (
+                        <option value={'900'}>900</option>
+                      )}
+                      {color && Object.keys(variants[color]).includes('S') && (
+                        <option value={'S'}>S</option>
+                      )}
+                      {color && Object.keys(variants[color]).includes('M') && (
+                        <option value={'M'}>M</option>
+                      )}
+                      {color && Object.keys(variants[color]).includes('L') && (
+                        <option value={'L'}>L</option>
+                      )}
+                      {color && Object.keys(variants[color]).includes('XL') && (
+                        <option value={'XL'}>XL</option>
+                      )}
+                      {color && Object.keys(variants[color]).includes('2XL') && (
+                        <option value={'2XL'}>2XL</option>
+                      )}
+                      {color && Object.keys(variants[color]).includes('3XL') && (
+                        <option value={'3XL'}>3XL</option>
                       )}
                      
                     </select>
@@ -415,15 +526,17 @@ if(!error){
                         stroke-width="2"
                         className="w-4 h-4"
                         viewBox="0 0 24 24"
-                      >
+                        >
                         <path d="M6 9l6 6 6-6"></path>
                       </svg>
                     </span>
                   </div>
                 </div>
+              <span className="mx-2 border-2 p-2">{product.unit}</span>
+              <span className="mx-2 border-2 p-2 text-green-500 font-semibold">Qty Left - {product.availableQty}</span>
               </div>
-             
-                
+          
+        
 
               <div className="flex mt-2">
               {product.availableQty >0&&<span className="title-font font-medium text-2xl text-gray-900">
@@ -440,7 +553,7 @@ if(!error){
                 </div>
                 <br />
                 <div className="flex">
-                {product.availableQty <=0 &&<span className="title-font font-medium text-2xl text-gray-900">
+                {product.availableQty <=0 &&<span className="title-font font-medium text-2xl text-red-700">
                 OUT OF STOCK !
                 </span>}
                 <button disabled={product.availableQty <=0?true:false} onClick={() =>
@@ -469,7 +582,7 @@ if(!error){
                   </svg>
                 </button> */}
               </div>
-              <div className="pin mt-8 flex space-x-2 text-sm">
+              <div className="hidden pin mt-8  space-x-2 text-sm">
                 <input
                   placeholder="Enter your pincode"
                   onChange={onChangePin}

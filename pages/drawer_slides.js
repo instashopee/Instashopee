@@ -3,13 +3,16 @@ import React from 'react'
 import Product from "@/models/Product";
 import connectDb from "@/middleware/mongoose";
 import mongoose from 'mongoose';
-
+// import filterss from '@/components/filters';
 const Hinges = ({products}) => {
   return (
     <div>
       <section className="text-gray-600 body-font">
+{/* <filterss/> */}
   <div className="container px-5 py-24 mx-auto ">
     <div className="flex flex-wrap -m-4 justify-center">
+     
+      
     {Object.keys(products).length==0 && <p>Sorry, All Items Out Of Stock, New Products Comming Soon !!</p>}
     {Object.keys(products).map((item)=>{
 // _id inside key of link
@@ -76,7 +79,7 @@ export async function getServerSideProps(context) {
     await mongoose.connect(process.env.MONGO_URI)
 }
 
-  let products = await Product.find({sub_category:'drawer slides'})
+  let products = await Product.find({sub_category:'ms drawer channel'})
   let hinges = {}
   for(let item of products){
     if(item.title in hinges){

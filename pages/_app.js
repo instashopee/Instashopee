@@ -41,7 +41,7 @@ const Logout=()=>{
   router.push('/')
   toast('Logged Out Successfully', {
     position: "top-center",
-    autoClose: 3000,
+    autoClose: 1000,
     hideProgressBar: false,
     closeOnClick: true,
     pauseOnHover: true,
@@ -106,7 +106,7 @@ const Logout=()=>{
   return <>
         <ToastContainer
         position="top-center"
-        autoClose={3000}
+        autoClose={2000}
         hideProgressBar={false}
         newestOnTop={false}
         closeOnClick

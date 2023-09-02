@@ -16,8 +16,10 @@ const Checkout = ({ cart, clearCart, addToCart, removeFromCart, subTotal }) => {
   const [pincode, setPincode] = useState("");
   const [city, setCity] = useState("");
   const [state, setState] = useState("");
+  const [promocode, setpromocode] = useState("");
   const [disabled, setDisabled] = useState(true);
   const [user, setUser] = useState({ value: null });
+
   useEffect(() => {
     const myuser = JSON.parse(localStorage.getItem("myuser"));
     if (myuser && myuser.token) {
@@ -78,8 +80,12 @@ const getpincode=async(pin)=>{
       setPhone(e.target.value);
     } else if (e.target.name == "address") {
       setAddress(e.target.value);
+    }
+      else if (e.target.name == "promocode") {
+        setpromocode(e.target.value);
     } else if (e.target.name == "pincode") {
       setPincode(e.target.value);
+    
       if (e.target.value.length == 6) {
           getpincode(e.target.value)
       } else {
@@ -312,7 +318,7 @@ const getpincode=async(pin)=>{
       </div>
 
       <h2 className="font-semibold text-xl">2. Review Cart Items & Pay</h2>
-      <div className="sideCart bg-red-100 p-6 m-2 ">
+      <div className="sideCart shadow-sm p-6 m-2 ">
         <h2 className="font-bold text-xl text-center">
           Review Your Shopping Cart
         </h2>
@@ -364,8 +370,26 @@ const getpincode=async(pin)=>{
             );
           })}
         </ol>
+          <div className="flex flex-col">
 
-        <span className="font-bold">Subtotal: ₹{subTotal}</span>
+          <br />
+        <span className="font-semibold text-green-500">Check Promocode: </span>
+        <div className="w-1/4">
+          
+           
+            <input
+              onChange={handleChange}
+              value={promocode}
+              type="promocode"
+              id="promocode"
+              name="promocode"
+              class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+            />
+     
+        </div>
+        <br />
+        {promocode=='INSTA100'?<span className="font-bold">Subtotal: ₹{subTotal-100}</span>:<span className="font-bold">Subtotal: ₹{subTotal}</span>}
+          </div>
       </div>
 
       <div className="mx-4 flex p-2 my-4">

@@ -7,12 +7,14 @@ import Admin_sidebar from "@/components/Admin_sidebar";
 
 const add = () => {
   const [title, setTitle] = useState("");
+  const [type, settype] = useState("");
   const [slug, setSlug] = useState("");
   const [desc, setDesc] = useState("");
   const [category, setCategory] = useState("");
   const [sub_category, setSub_Category] = useState("");
   const [price, setPrice] = useState("");
   const [mrp, setMrp] = useState("");
+  const [unit, setUnit] = useState("");
   const [size, setSize] = useState("");
   const [color, setColor] = useState("");
   const [availableQty, setAvailableQty] = useState("");
@@ -23,16 +25,17 @@ const add = () => {
   // const [img4, setImg4] = useState("");
 
   const router = useRouter();
+  let email='abhishekjain4548@gmail.com'
   useEffect(() => {
-    const myuser = JSON.parse(localStorage.getItem("myuser"));
-    if (!myuser) {
-      router.push("/");
+    if(email=="abhishekjain4548@gmail.com"){
+      router.push('/admin/add')
     }
-    // setImg("/images/");
-    // setImg1("/images/");
-    // setImg2("/images/");
-    // setImg3("/images/");
-    // setImg4("/images/");
+    else{
+      router.push(`${process.env.NEXT_PUBLIC_HOST}`)
+    }
+
+  
+    settype("normal");
   
   }, []);
   const [image, setImage] = useState(null);
@@ -131,10 +134,12 @@ const add = () => {
       mrp,
       availableQty,
       size,
+      unit,
       color,
       img,
       img1,
       img2,
+      type,
       
    
     };
@@ -151,12 +156,14 @@ const add = () => {
 
 
     setTitle("");
+    settype("normal");
     setSlug("");
     setDesc("");
     setCategory("");
     setSub_Category("");
     setPrice("");
     setSize("");
+    setUnit("");
     setMrp("");
     setColor("");
     setAvailableQty("");
@@ -201,10 +208,12 @@ const add = () => {
       mrp,
       availableQty,
       size,
+      unit,
       color,
       img,
       img1,
       img2,
+      type,
       
    
     };
@@ -226,8 +235,10 @@ const add = () => {
     // setCategory("");
     // setSub_Category("");
     setPrice("");
+    
     setSize("");
     setMrp("");
+    settype("");
     setColor("");
     setAvailableQty("");
     // setImg("");
@@ -266,6 +277,8 @@ const add = () => {
       setTitle(e.target.value);
     } else if (e.target.name == "slug") {
       setSlug(e.target.value);
+    } else if (e.target.name == "type") {
+      settype(e.target.value);
     } else if (e.target.name == "desc") {
       setDesc(e.target.value);
     } else if (e.target.name == "category") {
@@ -280,6 +293,8 @@ const add = () => {
     //   setDiscount(e.target.value);
     } else if (e.target.name == "size") {
       setSize(e.target.value);
+    } else if (e.target.name == "unit") {
+      setUnit(e.target.value);
     } else if (e.target.name == "color") {
       setColor(e.target.value);
     } else if (e.target.name == "availableQty") {
@@ -350,6 +365,22 @@ const add = () => {
              />
            </div>
          </div>
+      <div className="px-2 w-1/2">
+           <div class=" mb-4">
+             <label for="type" class="leading-7 text-sm text-gray-600">
+             Type
+             </label>
+             <input
+               onChange={handleChange}
+               placeholder="normal / top selling"
+               value={type}
+               type="type"
+               id="type"
+               name="type"
+               class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+             />
+           </div>
+         </div>
          </div>
       <div className="flex">
          <div className="px-2 w-full">
@@ -408,6 +439,36 @@ const add = () => {
       <svg onClick={handleSizeSubmit} xmlns="http://www.w3.org/2000/svg"  width="30" height="30" viewBox="0 0 50 50">
 <path d="M 25 2 C 12.309295 2 2 12.309295 2 25 C 2 37.690705 12.309295 48 25 48 C 37.690705 48 48 37.690705 48 25 C 48 12.309295 37.690705 2 25 2 z M 25 4 C 36.609824 4 46 13.390176 46 25 C 46 36.609824 36.609824 46 25 46 C 13.390176 46 4 36.609824 4 25 C 4 13.390176 13.390176 4 25 4 z M 24 13 L 24 24 L 13 24 L 13 26 L 24 26 L 24 37 L 26 37 L 26 26 L 37 26 L 37 24 L 26 24 L 26 13 L 24 13 z"></path>
 </svg></div>
+<div className="px-2 w-1/2">
+           <div class=" mb-4">
+             <label for="size" class="leading-7 text-sm text-gray-600">
+               Size
+             </label>
+             <input
+               onChange={handleChange}
+               value={size}
+               type="size"
+               id="size"
+               name="size"
+               class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+             />
+           </div>
+         </div>
+<div className="px-2 w-1/2">
+           <div class=" mb-4">
+             <label for="unit" class="leading-7 text-sm text-gray-600">
+               Unit
+             </label>
+             <input
+               onChange={handleChange}
+               value={unit}
+               type="unit"
+               id="unit"
+               name="unit"
+               class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+             />
+           </div>
+         </div>
       <div className="px-2 w-1/2">
            <div class=" mb-4">
 
@@ -439,21 +500,7 @@ const add = () => {
             />
           </div>
         </div>
-        <div className="px-2 w-1/2">
-           <div class=" mb-4">
-             <label for="size" class="leading-7 text-sm text-gray-600">
-               Size
-             </label>
-             <input
-               onChange={handleChange}
-               value={size}
-               type="size"
-               id="size"
-               name="size"
-               class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-             />
-           </div>
-         </div>
+        
          <div className="px-2 w-1/2">
            <div class=" mb-4">
              <label for="color" class="leading-7 text-sm text-gray-600">

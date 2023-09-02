@@ -29,10 +29,10 @@ const Add_Banner = () => {
     
     
     
-        setbanner1("");
-        setbanner2("");
-        setbanner3("");
-        setbanner4("");
+        // setbanner1("");
+        // setbanner2("");
+        // setbanner3("");
+        // setbanner4("");
 
 
 
@@ -205,15 +205,15 @@ const Add_Banner = () => {
 
   
           <section class="p-2 w-full h-full flex flex-wrap">
-            <header class="border-dashed border-2 border-gray-400 ">
+            <div class="border-dashed border-2 border-gray-400">
              
        
-              <input id="fileInput" type="file" name="myImage" onChange={uploadToClient} style={{margin:"1.5rem"}}/>
+             <input id="fileInput" type="file" name="myImage" onChange={uploadToClient} style={{margin:"1.5rem"}}/>
               <input id="fileInput2" type="file" name="myImage" onChange={uploadToClient2} style={{margin:"1.5rem"}}/>
               <input id="fileInput3" type="file" name="myImage" onChange={uploadToClient3} style={{margin:"1.5rem"}}/>
               <input id="fileInput4" type="file" name="myImage" onChange={uploadToClient4} style={{margin:"1.5rem"}}/>
        
-            </header>
+            </div>
 
           </section>
      
@@ -226,15 +226,18 @@ const Add_Banner = () => {
 
             </div>
           <footer class="flex justify-end px-8 pb-8 pt-4 space-x-2">
+          <p className="float-left mx-12 text-gray-500 text-center font-bold">!! Make sure image format is .jpg and rename your 
+          banner name as banner1, banner 2, banner3, banner4 ... !!</p>
+        
             <button onClick={refresh} id="submit" class="rounded-sm px-3 py-1 bg-gray-500 hover:bg-gray-400 text-white focus:shadow-outline focus:outline-none">
               Refresh
             </button>
             <button onClick={uploadToServer} id="submit" class="rounded-sm px-3 py-1 bg-blue-700 hover:bg-blue-500 text-white focus:shadow-outline focus:outline-none">
               Upload now
             </button>
-            <button onClick={handleUserSubmit} id="submit" class="rounded-sm px-3 py-1 bg-blue-700 hover:bg-blue-500 text-white focus:shadow-outline focus:outline-none">
+            {/* <button onClick={handleUserSubmit} id="submit" class="rounded-sm px-3 py-1 bg-blue-700 hover:bg-blue-500 text-white focus:shadow-outline focus:outline-none">
               Change Banners
-            </button>
+            </button> */}
             {/* <button onClick={myFunction} id="cancel" class="ml-3 rounded-sm px-3 py-1 hover:bg-gray-300 focus:shadow-outline focus:outline-none">
               Cancel
             </button> */}
@@ -246,7 +249,7 @@ const Add_Banner = () => {
         </div>
 
         
-        <div className="float-right hidden">
+        <div className="hidden float-right">
          <div className="px-2 w-1/2">
            <div class=" mb-4">
              <label for="banner1" class="leading-7 text-sm text-gray-600">

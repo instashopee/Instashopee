@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import DashboardCard from './BaseCard'
 import { Grid, Paper } from "@mui/material"
@@ -6,9 +6,19 @@ import { createTheme, styled } from "@mui/material"
 import All_Users from './All_Users'
 import mongoose from 'mongoose'
 import User from '@/models/User'
+import { useRouter } from 'next/router'
 const all_users = ({users}) => {
  
-  
+  let email='abhishekjain4548@gmail.com'
+  const router = useRouter();
+  useEffect(() => {
+    if(email=="abhishekjain4548@gmail.com"){
+      router.push('/admin/allusers')
+    }
+    else{
+      router.push(`${process.env.NEXT_PUBLIC_HOST}`)
+    }
+  }, [])
     return (
         <Grid container spacing={0}>
           <Grid item xs={12} lg={12}>

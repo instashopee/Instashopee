@@ -1,13 +1,14 @@
 import React, { useEffect } from "react"
 import Glide from "@glidejs/glide"
-import Banner from "@/models/Banner"
-export default function SliderIndicatorsControlsInside({banner}) {
+import ReactPlayer from "react-player"
+
+export default function SliderIndicatorsControlsInside() {
   useEffect(() => {
     const slider = new Glide(".glide-03", {
       type: "slider",
       focusAt: "center",
       perView: 1,
-      autoplay: 3000,
+      autoplay: 13000,
       animationDuration: 2000,
       gap: 0,
       classes: {
@@ -23,6 +24,8 @@ export default function SliderIndicatorsControlsInside({banner}) {
   }, [])
 
   return (
+   
+   
     <>
       {/*<!-- Component: Slider with indicators & controls inside --> */}
       <div className="relative w-full glide-03">
@@ -30,27 +33,32 @@ export default function SliderIndicatorsControlsInside({banner}) {
         <div className="overflow-hidden" data-glide-el="track">
           <ul className="whitespace-no-wrap flex-no-wrap [backface-visibility: hidden] [transform-style: preserve-3d] [touch-action: pan-Y] [will-change: transform] relative flex w-full overflow-hidden p-0">
             <li >
-              
+            <video className="w-full" autoPlay loop src="/banners/banner_vid.mp4" ></video>
+
+            {/* <ReactPlayer url='/banners/banner_vid.mp4' /> */}
+
+              {/* <img
+                src='/banners/banner1.gif'
+                className="hover:scale-105 transition-all duration-500 cursor-pointer w-full m-auto"
+              /> */}
+            </li>
+            <li>
+            <video className="w-full" autoPlay loop src="/banners/banner2.mp4" ></video>
+
+              {/* <img
+                src="/banners/banner2.jpg"
+                className="hover:scale-105 transition-all duration-500 cursor-pointer w-full max-w-full max-h-full m-auto"
+              /> */}
+            </li>
+            <li>
               <img
-                src='/Hardware.png'
+                src="/banners/banner3.jpg"
                 className="hover:scale-105 transition-all duration-500 cursor-pointer w-full max-w-full max-h-full m-auto"
               />
             </li>
             <li>
               <img
-                src="/KITCHEN.png"
-                className="hover:scale-105 transition-all duration-500 cursor-pointer w-full max-w-full max-h-full m-auto"
-              />
-            </li>
-            <li>
-              <img
-                src="/BATHROOM.png"
-                className="hover:scale-105 transition-all duration-500 cursor-pointer w-full max-w-full max-h-full m-auto"
-              />
-            </li>
-            <li>
-              <img
-                src="/CLOTHES.png"
+                src='/banners/banner4.jpg'
                 className="hover:scale-105 transition-all duration-500 cursor-pointer w-full max-w-full max-h-full m-auto"
               />
             </li>
@@ -149,16 +157,51 @@ export default function SliderIndicatorsControlsInside({banner}) {
     </>
   )
 }
-export async function getServerSideProps(context) {
-  if (!mongoose.connections[0].readystate) {
-    await mongoose.connect(process.env.MONGO_URI);
-  }
 
-  let banner = await Banner.find();
+//  export async function getServerSideProps(context) {
+//    if (!mongoose.connections[0].readystate) {
+//      await mongoose.connect(process.env.MONGO_URI);
+//    }
+//    let banner = await Banner.find({type:'normal'});
+//    return {
+//      props: {
+//  banner:JSON.parse(JSON.stringify(banner)),
+       
+//      }, //
+//    };
+//  }
 
-  return {
-    props: {
-      banner: JSON.parse(JSON.stringify(banner)),
-    }, //
-  };
-}
+
+// export async function getServerSideProps(context) {
+//   if(!mongoose.connections[0].readystate){
+//     await mongoose.connect(process.env.MONGO_URI)
+// }
+
+//   let products = await Product.find({type:'top selling'})
+//   let hinges = {}
+//   for(let item of products){
+//     if(item.title in hinges){
+//         if(!hinges[item.title].color.includes(item.color) && item.availableQty > 0){
+//           hinges[item.title].color.push(item.color)
+//         }
+//         if(!hinges[item.title].size.includes(item.size) && item.availableQty > 0){
+//           hinges[item.title].size.push(item.size)
+//         }
+//     }
+
+//     else{
+//       hinges[item.title] = JSON.parse(JSON.stringify(item))
+//       if(item.availableQty >0){
+//             hinges[item.title].color = [item.color]
+//             hinges[item.title].size = [item.size]
+//           }else{
+//             hinges[item.title].color = []
+//             hinges[item.title].size = []
+//           }
+//     }
+//   }
+
+//   return{
+//     props:{products:JSON.parse(JSON.stringify(hinges))},
+//   }
+//   }

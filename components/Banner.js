@@ -2,8 +2,9 @@ import React, { useEffect } from "react"
 
 export default function Banner1({banner}) {
   return(
-    <div>
-        <img className="w-full" src={banner} alt="" />
+    <div className="flex justify-center">
+        <img className="" src={banner} alt="" />
+        <img className="" src={banner} alt="" />
     </div>
   )
 }

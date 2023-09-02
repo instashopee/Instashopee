@@ -44,7 +44,7 @@ const SignUp = () => {
 
     toast.success("Your Account has been created!", {
       position: "top-center",
-      autoClose: 3000,
+      autoClose: 1000,
       hideProgressBar: false,
       closeOnClick: true,
       pauseOnHover: true,
@@ -55,13 +55,13 @@ const SignUp = () => {
     setTimeout(() => {
         
       router.push(process.env.NEXT_PUBLIC_HOST)
-    }, 2500);
+    }, 1000);
   };
   return (
     <div>
       <ToastContainer
         position="top-center"
-        autoClose={3000}
+        autoClose={1000}
         hideProgressBar={false}
         newestOnTop={false}
         closeOnClick
