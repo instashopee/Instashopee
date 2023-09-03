@@ -83,7 +83,7 @@ const Navbar = ({Logout,user,cart,addToCart,removeFromCart,clearCart,subTotal}) 
                 {/* Links */}
                 <Tab.Group as="div" className="">
                   <div className="border-b border-gray-200">
-                    <Tab.List className="flex flex-col">
+                    <Tab.List className="flex flex-col ">
                       {navigation.categories.map((category) => (
                         <Tab
                           key={category.name}
@@ -91,7 +91,7 @@ const Navbar = ({Logout,user,cart,addToCart,removeFromCart,clearCart,subTotal}) 
                             classNames(
                               selected
                                 ? "border-indigo-600 text-indigo-600"
-                                : "border-transparent text-gray-900",
+                                : "border-transparent text-amber-900",
                               "flex-1 whitespace-nowrap border-b-2 px-1 py-4 text-base font-medium"
                             )
                           }
@@ -215,7 +215,7 @@ const Navbar = ({Logout,user,cart,addToCart,removeFromCart,clearCart,subTotal}) 
 
       <header className="relative bg-white">
         <p className="flex h-7 items-center justify-center bg-rose-500 px-4 text-sm font-medium text-white sm:px-6 lg:px-8">
-          Instashopee - The Hardware Store !!
+          Instashopee
         </p>
         <nav
           aria-label="Top"
@@ -237,9 +237,9 @@ const Navbar = ({Logout,user,cart,addToCart,removeFromCart,clearCart,subTotal}) 
               >
                 <span className="absolute -inset-0.5" />
                 <span className="sr-only">Open menu</span>
-                <Bars3Icon className="h-8 w-12 -mx-36" aria-hidden="true" />
+                <Bars3Icon className="h-8 w-12 -mx-40"  />
               </button>
-                <img className="sm:hidden -mx-24 h-12 z-10" src="/logo3.png" alt="Logo"  />
+                <img className="sm:hidden -mx-28 h-12 z-10" src="/logo3.png" alt="Logo"  />
 
               {/* Logo */}
 

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
+import Head from "next/head";
 
 const MyAccount = () => {
   const [name, setName] = useState("");
@@ -159,6 +159,13 @@ setNpassword('')
         pauseOnHover
         theme="light"
       />
+      <Head>
+        <title>My Account -  Instashopee</title>
+        <meta
+          name="viewport"
+          content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0"
+        />
+      </Head>
       <h1 className="text-3xl text-center font-bold">My Account</h1>
       <h2 className="font-semibold text-xl">Update Your Account Details</h2>
       <div className="mx-auto flex my-2">

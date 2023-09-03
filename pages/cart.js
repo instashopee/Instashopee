@@ -4,11 +4,18 @@ import React, { useRef } from "react";
 import { AiOutlineShoppingCart,AiFillPlusCircle, AiFillMinusCircle, AiFillCloseCircle,AiOutlineSearch } from "react-icons/ai";
 import {MdAccountCircle} from "react-icons/md"
 import {BsFillBagCheckFill} from "react-icons/bs"
-
+import Head from "next/head";
 const cart = ({cart,addToCart,removeFromCart,clearCart,subTotal}) => {
   return (
 
     <div className={`h-screen p-10 bg-white z-10 backdrop-filter backdrop-blur-lg shadow-xl ring-1 ring-gray-900/5 }`}>
+    <Head>
+        <title>Cart -  Instashopee</title>
+        <meta
+          name="viewport"
+          content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0"
+        />
+      </Head>
     <h2 className="text-4xl font-bold text-center">My Shopping Cart</h2>
     {/* <span className="absolute top-5 right-2 cursor-pointer text-2xl text-red-500"><AiFillCloseCircle/></span> */}
     <ol className="text-2xl list-decimal font-semibold">

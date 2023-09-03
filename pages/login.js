@@ -3,6 +3,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import Head from "next/head";
 const Login = () => {
   const router=useRouter()
   const [email, setEmail] = useState('');
@@ -84,7 +85,13 @@ const Login = () => {
         pauseOnHover
         theme="light"
       />
- 
+ <Head>
+        <title>Login -  Instashopee</title>
+        <meta
+          name="viewport"
+          content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0"
+        />
+      </Head>
   <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
     <div class="sm:mx-auto sm:w-full sm:max-w-sm">
       <img class="mx-auto h-10 w-auto" src="/logo2.png" alt="Your Company"/>

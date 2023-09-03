@@ -3,10 +3,18 @@ import React from 'react'
 import Product from "@/models/Product";
 import connectDb from "@/middleware/mongoose";
 import mongoose from 'mongoose';
+import Head from "next/head";
 // import filterss from '@/components/filters';
 const Hinges = ({products}) => {
   return (
     <div>
+      <Head>
+        <title>Products -  Instashopee</title>
+        <meta
+          name="viewport"
+          content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0"
+        />
+      </Head>
       <section className="text-gray-600 body-font">
 {/* <filterss/> */}
   <div className="container px-5 py-24 mx-auto ">

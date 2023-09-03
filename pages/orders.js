@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import Head from "next/head";
 const Orders = () => {
 
   const router=useRouter()
@@ -29,6 +30,13 @@ const Orders = () => {
 }, [])
 return (
   <div className="min-h-screen">
+    <Head>
+        <title>Orders Details -  Instashopee</title>
+        <meta
+          name="viewport"
+          content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0"
+        />
+      </Head>
     <h1 className="font-bold text-center text-3xl p-8">My Orders</h1>
     <div className="container mx-auto">
       <div class="flex flex-col">

@@ -1,7 +1,15 @@
+import Head from "next/head";
 import Link from "next/link";
 
 export default function Custom404(){
     return <section class="bg-white min-h-screen ">
+        <Head>
+        <title>404 Page Not Found -  Instashopee</title>
+        <meta
+          name="viewport"
+          content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0"
+        />
+      </Head>
         <div class="flex flex-col items-center max-w-sm mx-auto text-center my-[6rem]">
             <p class="p-3 text-sm font-medium text-blue-500 rounded-full bg-blue-50 dark:bg-gray-800">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">

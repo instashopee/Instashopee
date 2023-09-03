@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Link from "next/link";
+import Head from "next/head";
 import { useRouter } from "next/router";
 const SignUp = () => {
   const router=useRouter()
@@ -71,6 +72,13 @@ const SignUp = () => {
         pauseOnHover
         theme="light"
       />
+      <Head>
+        <title>SignUp -  Instashopee</title>
+        <meta
+          name="viewport"
+          content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0"
+        />
+      </Head>
       <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
         <div class="sm:mx-auto sm:w-full sm:max-w-sm">
           <img

@@ -19,7 +19,7 @@ export default function Home({products}){
      <div className='bg-white min-h-screen'>
        <Head>
         <title>Instashopee</title>
-         <meta name ="description" content ="Instashopee - A Hardware Store" />
+         <meta name ="description" content ="Instashopee" />
          <link rel= "icon" href ="/favicon.ico" />
        </Head>
        <div className='2xl:mx-10 my-5'>

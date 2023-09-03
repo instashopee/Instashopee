@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import Head from "next/head";
 const Forgot = () => {
   const router = useRouter();
   const [email, setEmail] = useState("");
@@ -55,6 +56,13 @@ const Forgot = () => {
   };
   return (
     <div class="flex min-h-[100vh] flex-col justify-center px-6 py-12 lg:px-8">
+      <Head>
+        <title>Forgot Password -  Instashopee</title>
+        <meta
+          name="viewport"
+          content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0"
+        />
+      </Head>
       <div class="sm:mx-auto sm:w-full sm:max-w-sm">
         <img class="mx-auto h-10 w-auto" src="/logo1.png" alt="" />
         <h2 class="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">

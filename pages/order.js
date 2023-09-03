@@ -2,6 +2,7 @@ import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import Order from "@/models/Order";
 import mongoose from "mongoose";
+import Head from "next/head";
 const MyOrder = ({ order, clearCart }) => {
   const products = order.products;
   const [date, setDate] = useState();
@@ -16,6 +17,13 @@ const MyOrder = ({ order, clearCart }) => {
   }, []);
   return (
     <section className="text-gray-600 body-font overflow-hidden">
+      <Head>
+        <title>My Orders -  Instashopee</title>
+        <meta
+          name="viewport"
+          content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0"
+        />
+      </Head>
       <div className="container px-5 py-24 mx-auto">
         <div className="lg:w-4/5 mx-auto flex flex-wrap">
           <div className="lg:w-1/2 w-full lg:pr-10 lg:py-6 mb-6 lg:mb-0">

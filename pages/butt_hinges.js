@@ -7,6 +7,7 @@ import { Fragment, useState } from 'react'
 import { Dialog, Disclosure, Menu, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, FunnelIcon, MinusIcon, PlusIcon, Squares2X2Icon } from '@heroicons/react/20/solid'
+import Head from "next/head";
 const sortOptions = [
   { name: 'Option1', href: '#', current: true },
   { name: 'Option2', href: '#', current: true },
@@ -66,6 +67,13 @@ const Hinges = ({products}) => {
   }
   return (
     <div>
+      <Head>
+        <title>Products -  Instashopee</title>
+        <meta
+          name="viewport"
+          content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0"
+        />
+      </Head>
 <div className="bg-white">
       <div>
         {/* Mobile filter dialog */}

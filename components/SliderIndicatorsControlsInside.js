@@ -22,9 +22,9 @@ export default function SliderIndicatorsControlsInside() {
       slider.destroy()
     }
   }, [])
-  // const vidRef=useRef();
+  const vidRef=useRef();
 
-  // useEffect(() => { vidRef.current.play(); },[]);
+  useEffect(() => { vidRef.current.play(); },[]);
   return (
    
    
@@ -37,7 +37,7 @@ export default function SliderIndicatorsControlsInside() {
             <li >
               
               
-            <video className="2xl:w-full 2xl:h-full" muted  autoPlay={true} loop src="/banners/banner1.mp4" ></video>
+            <video ref={vidRef} className="2xl:w-full 2xl:h-full" muted  autoPlay={true} loop src="/banners/banner1.mp4" ></video>
 
             {/* <ReactPlayer url='/banners/banner_vid.mp4' /> */}
 
@@ -47,7 +47,7 @@ export default function SliderIndicatorsControlsInside() {
               /> */}
             </li>
             <li>
-            <video className="w-full h-full" muted  autoPlay={true} loop src="/banners/banner2.mp4" ></video>
+            <video ref={vidRef} className="w-full h-full" muted  autoPlay={true} loop src="/banners/banner2.mp4" ></video>
 
               {/* <img
                 src="/banners/banner2.jpg"
@@ -55,7 +55,7 @@ export default function SliderIndicatorsControlsInside() {
               /> */}
             </li>
             <li>
-            <video className="w-full h-full" muted  autoPlay={true} loop src="/banners/banner3.mp4" ></video>
+            <video ref={vidRef} className="w-full h-full" muted  autoPlay={true} loop src="/banners/banner3.mp4" ></video>
 
               {/* <img
                 src="/banners/banner1.gif"
@@ -68,7 +68,7 @@ export default function SliderIndicatorsControlsInside() {
                 src='/banners/banner4.jpg'
                 className="hover:scale-105 transition-all duration-500 cursor-pointer w-full max-w-full max-h-full m-auto"
               /> */}
-            <video className="w-full h-full" muted  autoPlay={true} loop src="/banners/banner4.mp4" ></video>
+            <video ref={vidRef} className="w-full h-full" muted  autoPlay={true} loop src="/banners/banner4.mp4" ></video>
 
             </li>
             {/* <li>
