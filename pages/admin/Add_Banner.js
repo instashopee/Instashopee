@@ -226,7 +226,7 @@ const Add_Banner = () => {
 
             </div>
           <footer class="flex justify-end px-8 pb-8 pt-4 space-x-2">
-          <p className="float-left mx-12 text-gray-500 text-center font-bold">!! Make sure image format is .jpg and rename your 
+          <p className="float-left mx-12 text-gray-500 text-center font-bold">!! Make sure image format is .mp4 and rename your 
           banner name as banner1, banner 2, banner3, banner4 ... !!</p>
         
             <button onClick={refresh} id="submit" class="rounded-sm px-3 py-1 bg-gray-500 hover:bg-gray-400 text-white focus:shadow-outline focus:outline-none">

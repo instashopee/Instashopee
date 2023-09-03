@@ -8,8 +8,8 @@ export default function SliderIndicatorsControlsInside() {
       type: "slider",
       focusAt: "center",
       perView: 1,
-      autoplay: 13000,
-      animationDuration: 2000,
+      autoplay: 5000,
+      animationDuration: 1000,
       gap: 0,
       classes: {
         nav: {
@@ -55,6 +55,8 @@ export default function SliderIndicatorsControlsInside() {
               /> */}
             </li>
             <li>
+            <video className="w-full h-full" muted  autoPlay={true} loop src="/banners/banner3.mp4" ></video>
+
               {/* <img
                 src="/banners/banner1.gif"
                 className="hover:scale-105 transition-all duration-500 cursor-pointer w-full max-w-full max-h-full m-auto"
@@ -66,6 +68,8 @@ export default function SliderIndicatorsControlsInside() {
                 src='/banners/banner4.jpg'
                 className="hover:scale-105 transition-all duration-500 cursor-pointer w-full max-w-full max-h-full m-auto"
               /> */}
+            <video className="w-full h-full" muted  autoPlay={true} loop src="/banners/banner4.mp4" ></video>
+
             </li>
             {/* <li>
               <img

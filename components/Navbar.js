@@ -81,9 +81,9 @@ const Navbar = ({Logout,user,cart,addToCart,removeFromCart,clearCart,subTotal}) 
                 </div>
 
                 {/* Links */}
-                <Tab.Group as="div" className="mt-2">
+                <Tab.Group as="div" className="">
                   <div className="border-b border-gray-200">
-                    <Tab.List className="-mb-px flex space-x-8 px-4">
+                    <Tab.List className="flex flex-col">
                       {navigation.categories.map((category) => (
                         <Tab
                           key={category.name}
@@ -215,7 +215,7 @@ const Navbar = ({Logout,user,cart,addToCart,removeFromCart,clearCart,subTotal}) 
 
       <header className="relative bg-white">
         <p className="flex h-7 items-center justify-center bg-rose-500 px-4 text-sm font-medium text-white sm:px-6 lg:px-8">
-          Instashopee - The Ecommerce Store !!
+          Instashopee - The Hardware Store !!
         </p>
         <nav
           aria-label="Top"
@@ -239,6 +239,7 @@ const Navbar = ({Logout,user,cart,addToCart,removeFromCart,clearCart,subTotal}) 
                 <span className="sr-only">Open menu</span>
                 <Bars3Icon className="h-8 w-12 -mx-36" aria-hidden="true" />
               </button>
+                <img className="sm:hidden -mx-24 h-12 z-10" src="/logo3.png" alt="Logo"  />
 
               {/* Logo */}
 

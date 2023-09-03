@@ -14,16 +14,16 @@ import HomeSectionCarousel from '@/components/HomeSectionCarousel/HomeSectionCar
 import Banner1 from '@/components/Banner'
 import { drawer_slides } from '@/Data/drawer_slides'
 import { hinges } from '@/Data/hinges'
-export default function Home({products,banner}){
+export default function Home({products}){
    return(
-     <div className='bg-white'>
+     <div className='bg-white min-h-screen'>
        <Head>
         <title>Instashopee</title>
-         <meta name ="description" content ="Instashopee - A Ecommerce Store" />
+         <meta name ="description" content ="Instashopee - A Hardware Store" />
          <link rel= "icon" href ="/favicon.ico" />
        </Head>
        <div className='2xl:mx-10 my-5'>
-      <img className='' src="/banners/banner_gif.webp" alt="" />
+      {/* <img className='' src="/banners/banner_gif.webp" alt="" /> */}
 
 
 
@@ -54,12 +54,12 @@ export default function Home({products,banner}){
 
             
         </div> */}
-        <div className='border p-3 m-10'>
+        <div className='border p-3 sm:m-10'>
           <h1 className='text-2xl font-extrabold text-gray-800 p-5'>TOP SELLING PRODUCTS</h1>
       <section className="text-gray-600 body-font">
   <div className="container px-5 mx-auto ">
     <div className="flex flex-wrap -m-4">
-    {Object.keys(products).length==0 && <p className='p-3'>Sorry, All Items Out Of Stock, New Products Comming Soon !!</p>}
+    {Object.keys(products).length==0 && <p className='p-3 text-center'>Sorry, All Items Out Of Stock, New Products Comming Soon !!</p>}
     {Object.keys(products).map((item)=>{
 // _id inside key of link
 return <Link key={products[item].id} passHref={true} legacyBehavior href={`product/${products[item].slug}`}>
