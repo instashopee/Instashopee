@@ -22,9 +22,9 @@ export default function SliderIndicatorsControlsInside() {
       slider.destroy()
     }
   }, [])
-  const vidRef=useRef();
+  // const vidRef=useRef();
 
-  useEffect(() => { vidRef.current.play(); },[]);
+  // useEffect(() => { vidRef.current.play(); },[]);
   return (
    
    
@@ -37,7 +37,7 @@ export default function SliderIndicatorsControlsInside() {
             <li >
               
               
-            <video ref={ vidRef } className="w-full" muted  autoPlay={true} loop src="/banners/banner_vid.mp4" ></video>
+            <video className="w-full h-full" muted  autoPlay={true} loop src="/banners/banner_vid.mp4" ></video>
 
             {/* <ReactPlayer url='/banners/banner_vid.mp4' /> */}
 
@@ -47,7 +47,7 @@ export default function SliderIndicatorsControlsInside() {
               /> */}
             </li>
             <li>
-            <video ref={ vidRef } className="w-full" muted  autoPlay={true} loop src="/banners/banner2.mp4" ></video>
+            <video className="w-full h-full" muted  autoPlay={true} loop src="/banners/banner2.mp4" ></video>
 
               {/* <img
                 src="/banners/banner2.jpg"
