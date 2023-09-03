@@ -37,7 +37,7 @@ export default function SliderIndicatorsControlsInside() {
             <li >
               
               
-            <video className="w-full h-full" muted  autoPlay={true} loop src="/banners/banner_vid.mp4" ></video>
+            <video className="2xl:w-full 2xl:h-full" muted  autoPlay={true} loop src="/banners/banner1.mp4" ></video>
 
             {/* <ReactPlayer url='/banners/banner_vid.mp4' /> */}
 
@@ -55,16 +55,17 @@ export default function SliderIndicatorsControlsInside() {
               /> */}
             </li>
             <li>
-              <img
+              {/* <img
                 src="/banners/banner1.gif"
                 className="hover:scale-105 transition-all duration-500 cursor-pointer w-full max-w-full max-h-full m-auto"
-              />
+              /> */}
             </li>
             <li>
-              <img
+            {/* <video className="w-full h-full" muted  autoPlay={true} loop src="/banners/banner3.mp4" ></video> */}
+              {/* <img
                 src='/banners/banner4.jpg'
                 className="hover:scale-105 transition-all duration-500 cursor-pointer w-full max-w-full max-h-full m-auto"
-              />
+              /> */}
             </li>
             {/* <li>
               <img

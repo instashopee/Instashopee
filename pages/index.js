@@ -23,7 +23,7 @@ export default function Home({products,banner}){
          <link rel= "icon" href ="/favicon.ico" />
        </Head>
        <div className='2xl:mx-10 my-5'>
-      {/* <img className='' src="/banners/banner_gif.webp" alt="" /> */}
+      <img className='' src="/banners/banner_gif.webp" alt="" />
 
 
 
