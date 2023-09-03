@@ -465,7 +465,7 @@ const add = () => {
 <div className="px-2 w-1/2">
            <div class=" mb-4">
              <label for="mqty" class="leading-7 text-sm text-gray-600">
-             Min Qty
+             Min Order Qty
              </label>
              <input
                onChange={handleChange}

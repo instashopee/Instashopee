@@ -225,7 +225,7 @@ const Navbar = ({Logout,user,cart,addToCart,removeFromCart,clearCart,subTotal}) 
                 <Link legacyBehavior href={"/"}>
                 <a >
                   <span className="sr-only">Instashopee</span>
-                  <img className="invisible 2xl:visible 2xl:left-0 h-12 w-auto" src="/logo3.png" alt="Logo"  />
+                  <img className="invisible md:visible md:left-0 h-12 w-auto" src="/logo3.png" alt="Logo"  />
                 </a></Link>
               </div>
           <div className="border-b border-gray-200">
