@@ -37,7 +37,7 @@ export default function SliderIndicatorsControlsInside() {
             <li >
               
               
-            <video ref={vidRef} className="2xl:w-full 2xl:h-full" muted  autoPlay={true} loop src="/banners/banner1.mp4" ></video>
+            <video ref={vidRef} className="w-full h-full" muted  autoPlay={true} loop src="/banners/banner1.mp4" ></video>
 
             {/* <ReactPlayer url='/banners/banner_vid.mp4' /> */}
 
