@@ -416,7 +416,7 @@ const Navbar = ({Logout,user,cart,addToCart,removeFromCart,clearCart,subTotal}) 
 
       </div>
       
-<div class="2xl:hidden fixed bottom-0 left-0 z-50 w-full h-16 bg-white border-t border-gray-200">
+<div class="md:hidden fixed bottom-0 left-0 z-50 w-full h-16 bg-white border-t border-gray-200">
     <div class="grid h-full max-w-lg grid-cols-4 mx-auto font-medium">
     <Link legacyBehavior href={'/'}><a>{<button type="button" class="my-4 inline-flex flex-col items-center justify-center px-5">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16 group">
