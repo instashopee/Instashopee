@@ -56,7 +56,7 @@ export default function SliderIndicatorsControlsInside() {
             </li>
             <li>
               <img
-                src="/banners/banner3.jpg"
+                src="/banners/ajio.gif"
                 className="hover:scale-105 transition-all duration-500 cursor-pointer w-full max-w-full max-h-full m-auto"
               />
             </li>
