@@ -16,6 +16,7 @@ const add = () => {
   const [mrp, setMrp] = useState("");
   const [unit, setUnit] = useState("");
   const [size, setSize] = useState("");
+  const [mqty, setmqty] = useState("");
   const [color, setColor] = useState("");
   const [availableQty, setAvailableQty] = useState("");
   const [img, setImg] = useState("");
@@ -36,6 +37,7 @@ const add = () => {
 
   
     settype("normal");
+    setmqty("1")
   
   }, []);
   const [image, setImage] = useState(null);
@@ -135,6 +137,7 @@ const add = () => {
       availableQty,
       size,
       unit,
+      mqty,
       color,
       img,
       img1,
@@ -157,6 +160,7 @@ const add = () => {
 
     setTitle("");
     settype("normal");
+    setmqty("1");
     setSlug("");
     setDesc("");
     setCategory("");
@@ -201,6 +205,7 @@ const add = () => {
     let data = {
       title,
       slug,
+      mqty,
       desc,
       category,
       sub_category,
@@ -239,6 +244,7 @@ const add = () => {
     setSize("");
     setMrp("");
     settype("");
+    setmqty("1");
     setColor("");
     setAvailableQty("");
     // setImg("");
@@ -281,6 +287,8 @@ const add = () => {
       settype(e.target.value);
     } else if (e.target.name == "desc") {
       setDesc(e.target.value);
+    } else if (e.target.name == "mqty") {
+      setmqty(e.target.value);
     } else if (e.target.name == "category") {
       setCategory(e.target.value);
     } else if (e.target.name == "sub_category") {
@@ -450,6 +458,21 @@ const add = () => {
                type="size"
                id="size"
                name="size"
+               class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+             />
+           </div>
+         </div>
+<div className="px-2 w-1/2">
+           <div class=" mb-4">
+             <label for="mqty" class="leading-7 text-sm text-gray-600">
+             Min Qty
+             </label>
+             <input
+               onChange={handleChange}
+               value={mqty}
+               type="mqty"
+               id="mqty"
+               name="mqty"
                class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
              />
            </div>

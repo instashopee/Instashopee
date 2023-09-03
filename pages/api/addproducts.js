@@ -20,6 +20,7 @@ const handler = async (req, res) => {
         mrp: req.body.mrp,
         availableQty: req.body.availableQty,
         size: req.body.size,
+        mqty: req.body.mqty,
         unit: req.body.unit,
         type: req.body.type,
         // _id: req.body._id,

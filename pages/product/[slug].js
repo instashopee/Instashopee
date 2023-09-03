@@ -533,7 +533,7 @@ if(!error){
                   </div>
                 </div>
               <span className="mx-2 border-2 p-2">{product.unit}</span>
-              <span className="mx-2 border-2 p-2 text-green-500 font-semibold">Qty Left - {product.availableQty}</span>
+              <span className="mx-2 border-2 p-2 text-green-500 font-semibold">Min Order Qty - {product.mqty}</span>
               </div>
           
         
