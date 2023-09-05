@@ -239,7 +239,9 @@ const Navbar = ({Logout,user,cart,addToCart,removeFromCart,clearCart,subTotal}) 
                 <span className="sr-only">Open menu</span>
                 <Bars3Icon className="h-8 w-12 -mx-40"  />
               </button>
+              <Link legacyBehavior href={"/"}>
                 <img className="sm:hidden -mx-28 h-12 z-10" src="/logo3.png" alt="Logo"  />
+                </Link>
 
               {/* Logo */}
 

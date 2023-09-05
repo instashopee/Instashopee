@@ -57,28 +57,28 @@ export default function Home({products}){
         <div className='border p-3 sm:m-10'>
           <h1 className='text-2xl font-extrabold text-gray-800 p-5'>TOP SELLING PRODUCTS</h1>
       <section className="text-gray-600 body-font">
-  <div className="container px-5 mx-auto ">
-    <div className="flex flex-wrap -m-4">
+  <div className="container mx-auto 2xl:justify-start lg:justify-start md:justify-start justify-center">
+    <div className="flex flex-row ">
     {Object.keys(products).length==0 && <p className='p-3 text-center'>Sorry, All Items Out Of Stock, New Products Comming Soon !!</p>}
     {Object.keys(products).map((item)=>{
 // _id inside key of link
 return <Link key={products[item].id} passHref={true} legacyBehavior href={`product/${products[item].slug}`}>
-  <div className="lg:w-1/5 md:w-1/2 p-4 w-full cursor-pointer shadow-lg m-5 productCard transition-all">
+  <div className="2xl:w-1/5 2xl:h-[22rem] lg:w-1/5 lg:h-96 md:w-1/2 md:h-1/2 p-4 w-36 h-56 cursor-pointer shadow-lg m-5 productCard transition-all">
     <a className="block relative rounded overflow-hidden">
-      <img alt="" className="m-auto block w-30 h-32" src={products[item].img}/>
+      <img alt="" className="2xl:w-40 2xl:h-32 lg:w-40 lg:h-32 md:w-40 md:h-32 w-12 h-12 m-auto block " src={products[item].img}/>
     </a>
-    <div className="mt-4 text-center md:text-left">
-      <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1 textPart">{products[item].category}</h3>
-      <h2 className="text-gray-900 title-font text-lg font-medium textPart">{products[item].title}</h2>
+    <div className="mt-4 text-left">
+      <h3 className="2xl:text-sm lg:text-sm md:text-sm text-xs text-gray-500 title-font mb-1 textPart">{products[item].category}</h3>
+      <h2 className="title-font 2xl:text-lg lg:text-lg md:text-lg text-xs text-gray-900 title-font font-medium textPart">{products[item].title}</h2>
       <div className='flex'>
-        <p className="mt-1 textPart">₹{products[item].price}/-</p>
-      <span className="font-small text-md ml-2 mt-1 text-green-600 line-through textPart">
+        <p className="title-font 2xl:text-lg lg:text-lg md:text-lg text-xs mt-1 textPart">₹{products[item].price}/-</p>
+      <span className="font-small title-font 2xl:text-lg lg:text-lg md:text-lg text-xs ml-2 mt-1 text-green-600 line-through textPart">
                 ₹MRP {products[item].mrp}/-
                 </span>
-                <span className="font-small text-md ml-2 mt-1 text-orange-600 textPart">
+                <span className="title-font 2xl:text-lg lg:text-lg md:text-lg text-xs font-small text-md ml-2 mt-1 text-orange-600 textPart">
                 (-{Math.floor(((products[item].mrp-products[item].price)/products[item].mrp)*100)}% off){/* (-70% Off) */}
                 </span></div>
-      <div className="mt-1 textPart">
+      <div className="mt-1 title-font 2xl:text-lg lg:text-lg md:text-lg text-xs textPart">
       {products[item].size.includes("4") && (<span className="border border-gray-300 px-1 mx-1">4</span>)}
       {products[item].size.includes("6") && (<span className="border border-gray-300 px-1 mx-1">6</span>)}
       {products[item].size.includes("8") && (<span className="border border-gray-300 px-1 mx-1">8</span>)}
@@ -94,7 +94,7 @@ return <Link key={products[item].id} passHref={true} legacyBehavior href={`produ
       </div>
 
       
-      <div className="mt-1 text-gray-600 text-sm space-x-1 textPart">
+      <div className="mt-1 text-gray-600 title-font 2xl:text-lg lg:text-lg md:text-lg text-xs space-x-1 textPart">
       {products[item].color.includes("zinc") && (<button className="border-2 border-gray-300 rounded-full bg-none bg-[#BAC4C8] hover:bg-[#BAC4C8] w-6 h-6 focus:outline-none"></button>)}
       {products[item].color.includes("rose_gold") && (<button className="border-2 border-gray-300 rounded-full bg-none bg-[#B76E79] hover:bg-[#B76E79] w-6 h-6 focus:outline-none"></button>)}
       {products[item].color.includes("black") && (<button className="border-2 border-gray-300 rounded-full bg-none bg-black hover:bg-black w-6 h-6 focus:outline-none"></button>)}

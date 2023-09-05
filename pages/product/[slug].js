@@ -126,9 +126,9 @@ if(!error){
           <div className="py-16">
           <>
       {/*<!-- Component: Slider with indicators & controls inside --> */}
-      <div className="relative w-[70vh] glide-03">
+      <div className="2xl:w-[70vh] xl:w-[70vh] lg:w-[60vh] md:relative md:w-[32vh] w-[40vh] items-center glide-03 ">
         {/*    <!-- Slides --> */}
-        <div className="overflow-hidden" data-glide-el="track">
+        <div className="overflow-hidden " data-glide-el="track">
           <ul className="whitespace-no-wrap flex-no-wrap [backface-visibility: hidden] [transform-style: preserve-3d] [touch-action: pan-Y] [will-change: transform] relative flex w-full overflow-hidden p-0">
             <li >
               <img
@@ -165,7 +165,7 @@ if(!error){
         </div>
         {/*    <!-- Controls --> */}
         <div
-          className="absolute left-0 flex items-center justify-between w-full h-0 px-4 top-1/2 "
+          className="md:absolute left-0 flex items-center justify-between w-full h-0 px-4 top-1/2 mt-3 sm: "
           data-glide-el="controls"
         >
           <button
@@ -213,7 +213,7 @@ if(!error){
         </div>
         {/*    <!-- Indicators --> */}
         <div
-          className="absolute flex items-center justify-center w-full gap-2 bottom-15"
+          className=" flex items-center justify-center w-full gap-2 mt-10"
           data-glide-el="controls[nav]"
         >
           <button
@@ -270,7 +270,7 @@ if(!error){
               className="lg:w-1/2 w-full lg:h-auto px-24 object-cover object-top rounded"
               src={product.img}
             /> */}
-            <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-5">
+            <div className="md:w-[60vh] w-full md:pl-10 md:py-6 md:mt-5">
               <h2 className="text-sm title-font text-gray-500 tracking-widest">
                 INSTASHOPEE
               </h2>
@@ -533,7 +533,6 @@ if(!error){
                   </div>
                 </div>
               <span className="mx-2 border-2 p-2">{product.unit}</span>
-              <span className="mx-2 border-2 p-2 text-green-500 font-semibold">Min Order Qty - {product.mqty}</span>
               </div>
           
         
@@ -551,6 +550,9 @@ if(!error){
 
                 
                 </div>
+                <br />
+              <span className="mx-2 border-2 p-2 text-green-500 font-semibold text-sm">Min Order Qty - {product.mqty}</span>
+                <br />
                 <br />
                 <div className="flex">
                 {product.availableQty <=0 &&<span className="title-font font-medium text-2xl text-red-700">

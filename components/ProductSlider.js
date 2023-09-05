@@ -8,7 +8,7 @@ export default function Product_Slider() {
       focusAt: "center",
       perView: 1,
       autoplay: 3000,
-      animationDuration: 1500,
+      animationDuration: 100,
       gap: 0,
       classes: {
         nav: {
