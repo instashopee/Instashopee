@@ -13,20 +13,14 @@ const index = () => {
   const router=useRouter()
   // const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  let email='abhishekjain4548@gmail.com'
   useEffect(() => {
-
-    if(email=="abhishekjain4548@gmail.com"){
-      router.push('/admin')
+    const myuser = JSON.parse(localStorage.getItem("myuser"));
+    if (!myuser) {
+      router.push("/");
     }
-    else{
-      router.push(`${process.env.NEXT_PUBLIC_HOST}`)
-    }
-
 
   
- 
-  }, [])
+  }, []);
   
 
   const handleChange = (e) => {

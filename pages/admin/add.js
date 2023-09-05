@@ -27,17 +27,15 @@ const add = () => {
 
   const router = useRouter();
   let email='abhishekjain4548@gmail.com'
-  useEffect(() => {
-    if(email=="abhishekjain4548@gmail.com"){
-      router.push('/admin/add')
-    }
-    else{
-      router.push(`${process.env.NEXT_PUBLIC_HOST}`)
-    }
 
-  
+  useEffect(() => {
+    const myuser = JSON.parse(localStorage.getItem("myuser"));
+    if (!myuser) {
+      router.push("/");
+    }
     settype("normal");
     setmqty("1")
+
   
   }, []);
   const [image, setImage] = useState(null);
@@ -465,7 +463,7 @@ const add = () => {
 <div className="px-2 w-1/2">
            <div class=" mb-4">
              <label for="mqty" class="leading-7 text-sm text-gray-600">
-             Min Order Qty
+             Min Qty
              </label>
              <input
                onChange={handleChange}

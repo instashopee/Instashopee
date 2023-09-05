@@ -26,17 +26,16 @@ const edit = () => {
 
   const router = useRouter();
   let email='abhishekjain4548@gmail.com'
+
   useEffect(() => {
-    if(email=="abhishekjain4548@gmail.com"){
-      router.push('/admin/edit')
-    }
-    else{
-      router.push(`${process.env.NEXT_PUBLIC_HOST}`)
+    const myuser = JSON.parse(localStorage.getItem("myuser"));
+    if (!myuser) {
+      router.push("/");
     }
 
-    settype("normal");
-    
   
+    settype("normal");
+    setmqty("1")
   }, []);
   const [image, setImage] = useState(null);
   const [image2, setImage2] = useState(null);

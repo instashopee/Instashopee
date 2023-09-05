@@ -14,6 +14,28 @@ function MyApp({ Component, pageProps }) {
   const [key, setKey] = useState()
   const router=useRouter()
 
+
+  useEffect(() => {
+    if(!(user.email=="abhishekjain4548@gmail.com")&&window.location==`${process.env.NEXT_PUBLIC_HOST}/admin`)
+    {(window.location==`${process.env.NEXT_PUBLIC_HOST}/`)
+     
+    }
+    else if((user.email=="abhishekjain4548@gmail.com")&&window.location==`${process.env.NEXT_PUBLIC_HOST}/admin`){
+      window.location==`${process.env.NEXT_PUBLIC_HOST}/admin`
+      toast('Hello Admin !!', {
+        position: "top-center",
+        autoClose: 1000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        });
+    }
+  
+  }, []);
+
   useEffect(() => {
     router.events.on('routeChangeStart',()=>{setProgress(40)})
     router.events.on('routeChangeComplete',()=>{setProgress(100)})

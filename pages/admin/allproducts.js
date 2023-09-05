@@ -11,13 +11,13 @@ const allproducts = ({products}) => {
   let email='abhishekjain4548@gmail.com'
   const router = useRouter();
   useEffect(() => {
-    if(email=="abhishekjain4548@gmail.com"){
-      router.push('/admin/allproducts')
+    const myuser = JSON.parse(localStorage.getItem("myuser"));
+    if (!myuser) {
+      router.push("/");
     }
-    else{
-      router.push(`${process.env.NEXT_PUBLIC_HOST}`)
-    }
-  }, [])
+
+  
+  }, []);
   
     return (
         <Grid container spacing={0}>

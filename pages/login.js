@@ -10,7 +10,7 @@ const Login = () => {
   const [password, setPassword] = useState('');
   useEffect(() => {
     if(localStorage.getItem("myuser")){
-      router.push('/')
+      router.push('/details')
     }
   
  

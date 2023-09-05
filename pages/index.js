@@ -14,7 +14,21 @@ import HomeSectionCarousel from '@/components/HomeSectionCarousel/HomeSectionCar
 import Banner1 from '@/components/Banner'
 import { drawer_slides } from '@/Data/drawer_slides'
 import { hinges } from '@/Data/hinges'
+import { useEffect, useState } from 'react'
+import { useRouter } from 'next/router'
 export default function Home({products}){
+  const router=useRouter()
+  const [user, setUser] = useState({value:null})
+    const [key, setKey] = useState()
+  useEffect(() => {
+
+    const myuser=JSON.parse(localStorage.getItem('myuser'))
+    if(myuser){
+      setUser({value:myuser.token, email:myuser.email})
+    }
+    setKey(Math.random())
+  }, [router.query])
+
    return(
      <div className='bg-white min-h-screen'>
        <Head>
