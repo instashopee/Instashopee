@@ -76,7 +76,7 @@ const Footer = () => {
         <h4 className='font-semibold'>Whataspp Us</h4>
       </div></a></Link>}
       <br />
-      {<Link legacyBehavior href={'https://instagram.com/'} target="_blank"><a target="_blank"><div className="flex sticky cursor-pointer mr-4 float-right shadow-xl py-3 border rounded-3xl p-10 bg-pink-500 ">
+      {<Link legacyBehavior href={'https://www.instagram.com/instashopeeonline/'} target="_blank"><a target="_blank"><div className="flex sticky cursor-pointer mr-4 float-right shadow-xl py-3 border rounded-3xl p-10 bg-pink-500 ">
         <Image className='px-1' width={30} height={20} src="/instagram.webp" alt="" />
         <h4 className='font-semibold'>Instagram Us</h4>
       </div></a></Link>}
