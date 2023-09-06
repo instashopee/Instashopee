@@ -384,10 +384,10 @@ const Navbar = ({Logout,user,cart,addToCart,removeFromCart,clearCart,subTotal}) 
               <div className="ml-auto flex items-center">
               
       <div  className="hidden xl:flex cursor-pointer items-center cart absolute right-0 top-12 mx-5">
-      <Link legacyBehavior href={'/search'}><a><div className="border-red-400 flex mx-1 border-1 md:mx-2  border-2 rounded-lg px-2 ">
+      {/* <Link legacyBehavior href={'/search'}><a><div className="border-red-400 flex mx-1 border-1 md:mx-2  border-2 rounded-lg px-2 ">
       <AiOutlineSearch className="text-sm md:text-md mx-1 m-auto"/>
       <label className="text-sm md:text-md mx-1 cursor-pointer font-semibold" htmlFor="">Search</label>
-        </div></a></Link>
+        </div></a></Link> */}
 
         {<Link legacyBehavior href={'/cart'}><a><div className="border-red-400 flex mx-1 border-1 md:mx-2  border-2 rounded-lg px-2 ">
         <AiOutlineShoppingCart  className="text-sm md:text-md mx-1 m-auto" />
