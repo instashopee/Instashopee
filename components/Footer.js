@@ -81,10 +81,10 @@ const Footer = () => {
         <h4 className='font-semibold'>Instagram Us</h4>
       </div></a></Link>}
       <br />
-      {<Link legacyBehavior href={'https://facebook.com/'} target="_blank"><a target="_blank"><div className="flex sticky cursor-pointer mr-4 float-right shadow-xl py-3 border rounded-3xl p-10 bg-blue-500 ">
+      {/* {<Link legacyBehavior href={'https://facebook.com/'} target="_blank"><a target="_blank"><div className="flex sticky cursor-pointer mr-4 float-right shadow-xl py-3 border rounded-3xl p-10 bg-blue-500 ">
         <Image className='px-1' width={30} height={20} src="/facebook1.png" alt="" />
         <h4 className='font-semibold'>Facebook Us</h4>
-      </div></a></Link>}</div>
+      </div></a></Link>} */}</div>
       <p className="xl:hidden sm:text-gray-700 font font-semibold text-sm text-center">Developed By - ABHISHEK JAIN
         {/* <a href="https://twitter.com/knyttneve" rel="noopener noreferrer" className="text-gray-600 ml-1" target="_blank">@knyttneve</a> */}
       </p>
