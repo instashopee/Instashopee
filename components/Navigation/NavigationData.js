@@ -111,13 +111,13 @@ export const navigation = {
             id: 'kitchem_accessories',
             name: 'Kitchen Accessories',
             items: [
-              { name: 'Tandem Box',id:'bh', href: 'hinges' },
-              { name: 'Corner units',id:'ah', href: 'hinges' },
-              { name: 'Tall Units',id:'hh', href: 'hinges' },
-              { name: 'Uplifts',id:'ps', href: 'hinges' },
-              { name: 'Rolling Shutters',id:'os', href: 'hinges' },
-              { name: 'ACP Baskets',id:'os', href: 'hinges' },
-              { name: 'Wire Baskets',id:'os', href: 'hinges' },
+              { name: 'Tandem Box',id:'bh', href: 'tandom_box' },
+              { name: 'Corner units',id:'ah', href: 'corner_units' },
+              { name: 'Tall Units',id:'hh', href: 'tall_units' },
+              { name: 'Uplifts',id:'ps', href: 'uplifts' },
+              { name: 'Rolling Shutters',id:'os', href: 'rolling_shutters' },
+              { name: 'ACP Baskets',id:'os', href: 'acp_baskets' },
+              { name: 'Wire Baskets',id:'os', href: 'wire_baskets' },
 
             ],
           },
@@ -126,11 +126,11 @@ export const navigation = {
             id: 'wardrobe_acessories',
             name: 'Wardrobe Accessories',
             items: [
-              { name: 'Jewellery Box',id:'tc', href: 'aluminium_profile' },
-              { name: 'Shirt Pullout',id:'scc', href: 'aluminium_profile' },
-              { name: 'Trouser Pullout',id:'scc', href: 'aluminium_profile' },
-              { name: 'Shoe Rack',id:'scc', href: 'aluminium_profile' },
-              { name: 'Pulldown',id:'scc', href: 'aluminium_profile' },
+              { name: 'Jewellery Box',id:'tc', href: 'jewellery_box' },
+              { name: 'Shirt Pullout',id:'scc', href: 'shirt_pullout' },
+              { name: 'Trouser Pullout',id:'scc', href: 'trouser_pullout' },
+              { name: 'Shoe Rack',id:'scc', href: 'shoe_rack' },
+              { name: 'Pulldown',id:'scc', href: 'pulldown' },
 
             ],
           },
@@ -162,11 +162,11 @@ export const navigation = {
             id: 'bathroom_fittings',
             name: 'Bathroom Fittings',
             items: [
-              { name: 'Wash Basins',id:'bh', href: 'hinges' },
-              { name: 'Water Closet',id:'ah', href: 'hinges' },
-              { name: 'Vanities',id:'hh', href: 'hinges' },
-              { name: 'Shower Panels',id:'ps', href: 'hinges' },
-              { name: 'General Accessories',id:'os', href: 'hinges' },
+              { name: 'Wash Basin',id:'bh', href: 'wash_basin' },
+              { name: 'Water Closet',id:'ah', href: 'water_closet' },
+              { name: 'Vanities',id:'hh', href: 'vanities' },
+              { name: 'Shower Panels',id:'ps', href: 'shower_panels' },
+              { name: 'General Accessories',id:'os', href: 'general_accessories' },
           
 
             ],
@@ -196,10 +196,10 @@ export const navigation = {
             id: 'decorative_panels',
             name: 'Decorative Panels',
             items: [
-              { name: 'Louvers',id:'bh', href: 'hinges' },
-              { name: 'Mouldings',id:'ah', href: 'hinges' },
-              { name: 'Acrylic Sheets',id:'hh', href: 'hinges' },
-              { name: 'Laminates',id:'ps', href: 'hinges' },
+              { name: 'Louvers',id:'bh', href: 'louvers' },
+              { name: 'Mouldings',id:'ah', href: 'mouldings' },
+              { name: 'Acrylic Sheets',id:'hh', href: 'acrylic_sheets' },
+              { name: 'Laminates',id:'ps', href: 'laminates' },
 
           
 
@@ -230,11 +230,11 @@ export const navigation = {
             id: 'men',
             name: 'Men',
             items: [
-              { name: 'Shirts',id:'bh', href: 'hinges' },
-              { name: 'T-Shirts',id:'ah', href: 'hinges' },
-              { name: 'Jackets',id:'hh', href: 'hinges' },
-              { name: 'Jeans',id:'ps', href: 'hinges' },
-              { name: 'Trousers',id:'ps', href: 'hinges' },
+              { name: 'Shirts',id:'bh', href: 'shirts' },
+              { name: 'T-Shirts',id:'ah', href: 'tshirts' },
+              { name: 'Jackets',id:'hh', href: 'jackets' },
+              { name: 'Jeans',id:'ps', href: 'jeans' },
+              { name: 'Trousers',id:'ps', href: 'trousers' },
 
           
 
@@ -244,9 +244,9 @@ export const navigation = {
             id: 'women',
             name: 'Women',
             items: [
-              { name: 'Suits',id:'bh', href: 'hinges' },
-              { name: 'Sarees',id:'ah', href: 'hinges' },
-              { name: 'Western Wear',id:'hh', href: 'hinges' },
+              { name: 'Suits',id:'bh', href: 'suits' },
+              { name: 'Sarees',id:'ah', href: 'sarees' },
+              { name: 'Western Wear',id:'hh', href: 'western_wear' },
          
           
 
