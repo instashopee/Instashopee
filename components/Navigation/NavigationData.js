@@ -25,10 +25,10 @@ export const navigation = {
             name: 'Hinges',
             items: [
               { name: 'Butt Hinges',id:'bh', href: 'butt_hinges' },
-              { name: 'Auto Hinges',id:'ah', href: 'hinges' },
-              { name: 'Hydraulic Hinges',id:'hh', href: 'hinges' },
-              { name: 'Piano Slides',id:'ps', href: 'hinges' },
-              { name: 'Other Slides',id:'os', href: 'hinges' },
+              { name: 'Auto Hinges',id:'ah', href: 'auto_hinges' },
+              { name: 'Hydraulic Hinges',id:'hh', href: 'hydraulic_hinges' },
+              { name: 'Piano Slides',id:'ps', href: 'piano_slides' },
+              { name: 'Other Slides',id:'os', href: 'other_slides' },
 
             ],
           },
@@ -36,8 +36,8 @@ export const navigation = {
             id: 'drawer_slides',
             name: 'Drawer Slides',
             items: [
-              { name: 'MS Drawer Channel',id:'tc', href: 'drawer_slides' },
-              { name: 'SS Drawer Channel',id:'scc', href: 'drawer_slides' },
+              { name: 'MS Drawer Channel',id:'tc', href: 'ms_drawer_channel' },
+              { name: 'SS Drawer Channel',id:'scc', href: 'ss_drawer_channel' },
 
             ],
           },
@@ -45,9 +45,9 @@ export const navigation = {
             id: 'aluminium_profile',
             name: 'Aluminium Profile',
             items: [
-              { name: 'Frame Profile',id:'tc', href: 'aluminium_profile' },
-              { name: 'Frame With Hnadle Profile',id:'scc', href: 'aluminium_profile' },
-              { name: 'Handle profile',id:'scc', href: 'aluminium_profile' },
+              { name: 'Frame Profile',id:'tc', href: 'frame_profile' },
+              { name: 'Frame With Hnadle Profile',id:'scc', href: 'frame_with_hadle_profile' },
+              { name: 'Handle profile',id:'scc', href: 'handle_profile' },
 
             ],
           },
@@ -55,8 +55,8 @@ export const navigation = {
             id: 'door_accessories',
             name: 'Door  Accessories',
             items: [
-              { name: 'Door Stopper',id:'tc', href: 'door_accessories' },
-              { name: 'Door Closer',id:'scc', href: 'door_accessories' },
+              { name: 'Door Stopper',id:'tc', href: 'door_stopper' },
+              { name: 'Door Closer',id:'scc', href: 'door_closer' },
              
 
             ],
@@ -65,11 +65,11 @@ export const navigation = {
             id: 'handles_knobs',
             name: 'Handles & Knobs',
             items: [
-              { name: 'Cabinet Handles',id:'tc', href: 'general_hardware' },
-              { name: 'Main Door Handles',id:'tc', href: 'general_hardware' },
-              { name: 'Mortice Handles',id:'tc', href: 'general_hardware' },
-              { name: 'Glass Door Handles',id:'tc', href: 'general_hardware' },
-              { name: 'Knobs',id:'tc', href: 'general_hardware' },
+              { name: 'Cabinet Handles',id:'tc', href: 'cabinet_handles' },
+              { name: 'Main Door Handles',id:'tc', href: 'main_door_handles' },
+              { name: 'Mortice Handles',id:'tc', href: 'mortice_handles' },
+              { name: 'Glass Door Handles',id:'tc', href: 'glass_door_handles' },
+              { name: 'Knobs',id:'tc', href: 'knobs' },
              
              
 
