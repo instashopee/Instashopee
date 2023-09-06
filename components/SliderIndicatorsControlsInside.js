@@ -37,7 +37,7 @@ export default function SliderIndicatorsControlsInside() {
           <ul className="whitespace-no-wrap flex-no-wrap [backface-visibility: hidden] [transform-style: preserve-3d] [touch-action: pan-Y] [will-change: transform] relative flex w-full overflow-hidden p-0">
             <li >
               
-            <img className="2xl:hidden w-full h-[20rem]" src="/banners/st_b1.png" alt="" />
+            <img className="2xl:hidden w-full h-[10rem]" src="/banners/st_b1.png" alt="" />
 
             {/* <video ref={vidRef} className="w-full h-full" muted  autoPlay={true} loop src="/banners/banner3.mp4" ></video> */}
 
@@ -49,7 +49,7 @@ export default function SliderIndicatorsControlsInside() {
               /> */}
             </li>
             <li>
-            <img className="2xl:hidden w-full h-[20rem]" src="/banners/st_b2.png" alt="" />
+            <img className="2xl:hidden w-full h-[10rem]" src="/banners/st_b2.png" alt="" />
 
             {/* <video ref={vidRef} className="w-full h-full" muted  autoPlay={true} loop src="/banners/banner2.mp4" ></video> */}
 
@@ -59,7 +59,7 @@ export default function SliderIndicatorsControlsInside() {
               /> */}
             </li>
             <li>
-            <img className="2xl:hidden w-full h-[20rem]" src="/banners/st_b3.png" alt="" />
+            <img className="2xl:hidden w-full h-[10rem]" src="/banners/st_b3.png" alt="" />
 
             {/* <video ref={vidRef} className="w-full h-full" muted  autoPlay={true} loop src="/banners/banner1.mp4" ></video> */}
 
