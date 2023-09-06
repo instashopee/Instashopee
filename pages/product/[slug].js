@@ -223,7 +223,7 @@ if(!error){
           >
             <img
                 src={product.img}
-                className="border-2 p-3 border-black hover:scale-105 transition-all duration-500 cursor-pointer  h-32 w-32 "
+                className="border-2 p-3 border-black hover:scale-105 transition-all duration-500 cursor-pointer  h-24 w-24 "
               />          </button>
           <button
             className="p-4 group"
@@ -232,7 +232,7 @@ if(!error){
           >
                     <img
                 src={product.img1}
-                className="border-2 p-3 border-black hover:scale-105 transition-all duration-500 cursor-pointer  h-32 w-32 "
+                className="border-2 p-3 border-black hover:scale-105 transition-all duration-500 cursor-pointer  h-24 w-24 "
               />          </button>
           <button
             className="p-4 group"
@@ -241,7 +241,7 @@ if(!error){
           >
           <img
                 src={product.img2}
-                className="border-2 border-black p-3 hover:scale-105 transition-all duration-500 cursor-pointer  h-32 w-32 "
+                className="border-2 border-black p-3 hover:scale-105 transition-all duration-500 cursor-pointer  h-24 w-24 "
               />         
               </button>
           {/* <button
