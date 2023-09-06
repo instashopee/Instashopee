@@ -24,7 +24,7 @@ export default function SliderIndicatorsControlsInside() {
   }, [])
   const vidRef=useRef();
 
-  useEffect(() => { vidRef.current.play(); },[]);
+  // useEffect(() => { vidRef.current.play(); },[]);
   return (
    
    
