@@ -77,7 +77,7 @@ export default function Home({products}){
     {Object.keys(products).map((item)=>{
 // _id inside key of link
 return <Link key={products[item].id} passHref={true} legacyBehavior href={`product/${products[item].slug}`}>
-  <div className="2xl:w-1/5 2xl:h-[22rem] lg:w-1/5 lg:h-96 md:w-1/2 md:h-1/2 p-4 w-36 h-56 cursor-pointer shadow-lg m-5 productCard transition-all">
+  <div className="2xl:w-1/4 2xl:h-[22rem] lg:w-1/5 lg:h-96 md:w-1/2 md:h-1/2 p-4 w-36 h-56 cursor-pointer shadow-lg m-5 productCard transition-all">
     <a className="block relative rounded overflow-hidden">
       <img alt="" className="2xl:w-40 2xl:h-32 lg:w-40 lg:h-32 md:w-40 md:h-32 w-12 h-12 m-auto block " src={products[item].img}/>
     </a>
