@@ -397,10 +397,10 @@ const getpincode=async(pin)=>{
           <button
             disabled={disabled}
             onClick={initiatePayment}
-            className="disabled:bg-red-200 flex mx-2 text-white bg-red-500 border-0 py-2 px-1 focus:outline-none hover:bg-red-600 rounded text-sm"
+            className="disabled:bg-red-200 flex mx-2 text-white bg-red-500 border-0 p-2 focus:outline-none hover:bg-red-600 rounded text-sm"
           >
             <BsFillBagCheckFill className="m-1" />
-            Pay Now Via Online₹{subTotal}
+            Pay Now ₹{subTotal}
           </button>
         </Link>
         {/* <br /> */}
