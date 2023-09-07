@@ -31,10 +31,10 @@ return <Link key={products[item].id} passHref={true} legacyBehavior href={`produ
     <a className="block relative rounded overflow-hidden">
       <img alt="ecommerce" className="m-auto block" src={products[item].img}/>
     </a>
-    <div className="mt-4 text-center md:text-left">
+    <div className="mt-4 text-center md:text-center">
       <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1 textPart">{products[item].category}</h3>
       <h2 className="text-gray-900 title-font text-lg font-medium textPart">{products[item].title}</h2>
-      <div className='flex'>
+      <div className='flex justify-center'>
         <p className="mt-1 textPart">₹{products[item].price}/-</p>
       <span className="font-small text-md ml-2 mt-1 text-green-600 line-through textPart">
                 ₹MRP {products[item].mrp}/-
