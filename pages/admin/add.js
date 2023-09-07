@@ -7,6 +7,7 @@ import Admin_sidebar from "@/components/Admin_sidebar";
 
 const add = () => {
   const [title, setTitle] = useState("");
+  const [edt, setedt] = useState("");
   const [type, settype] = useState("");
   const [slug, setSlug] = useState("");
   const [desc, setDesc] = useState("");
@@ -131,6 +132,7 @@ const add = () => {
       category,
       sub_category,
       price,
+      edt,
       mrp,
       availableQty,
       size,
@@ -163,6 +165,7 @@ const add = () => {
     setDesc("");
     setCategory("");
     setSub_Category("");
+    setedt("");
     setPrice("");
     setSize("");
     setUnit("");
@@ -209,6 +212,7 @@ const add = () => {
       sub_category,
       price,
       mrp,
+      edt,
       availableQty,
       size,
       unit,
@@ -303,6 +307,8 @@ const add = () => {
       setUnit(e.target.value);
     } else if (e.target.name == "color") {
       setColor(e.target.value);
+    } else if (e.target.name == "edt") {
+      setedt(e.target.value);
     } else if (e.target.name == "availableQty") {
       setAvailableQty(e.target.value);
     } else if (e.target.name == "img") {
@@ -469,6 +475,7 @@ const add = () => {
                onChange={handleChange}
                value={mqty}
                type="mqty"
+               placeholder="Min Order Qty"
                id="mqty"
                name="mqty"
                class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
@@ -605,8 +612,26 @@ const add = () => {
                class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
              />
            </div>
-         </div></div>
+         </div>
 
+         </div>
+<div className="flex">
+         <div className="px-2 w-full">
+         <div class="mb-4">
+           <label for="edt" class="leading-7 text-sm text-gray-600">
+             Estimated Delivery Time For This Product
+           </label>
+           <input
+             onChange={handleChange}
+             value={edt}
+             id="edt"
+             name="edt"
+             class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+           ></input>
+         </div>
+       </div>
+    
+         </div>
       <button onClick={handleUserSubmit} class="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">FINAL SUBMIT</button>
       
     </div>

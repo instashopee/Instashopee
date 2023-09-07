@@ -562,6 +562,9 @@ if(!error){
               <span className="mx-2 border-2 p-2 text-green-500 font-semibold text-sm">Min Order Qty - {product.mqty}</span>
                 <br />
                 <br />
+              <span className="mx-2 border-2 p-2 text-red-500 font-semibold text-sm">Estimated Delivery Time - {product.edt}</span>
+              <br />
+                <br />
                 <div className="flex">
                 {product.availableQty <=0 &&<span className="title-font font-medium text-2xl text-red-700">
                 OUT OF STOCK !
