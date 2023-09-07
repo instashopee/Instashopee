@@ -79,7 +79,7 @@ export default function Home({products}){
 return <Link key={products[item].id} passHref={true} legacyBehavior href={`product/${products[item].slug}`}>
   <div className="2xl:w-1/4 2xl:h-[22rem] lg:w-1/5 lg:h-96 md:w-1/2 md:h-1/2 p-4 w-36 h-56 cursor-pointer shadow-lg m-5 productCard transition-all">
     <a className="block relative rounded overflow-hidden">
-      <img alt="" className="2xl:w-40 2xl:h-32 lg:w-40 lg:h-32 md:w-40 md:h-32 w-12 h-12 m-auto block " src={products[item].img}/>
+      <img alt="" className="2xl:w-40 2xl:h-32 lg:w-40 lg:h-32 md:w-40 md:h-32 w-14 h-14 m-auto block " src={products[item].img}/>
     </a>
     <div className="mt-4 text-left">
       <h3 className="2xl:text-sm lg:text-sm md:text-sm text-xs text-gray-500 title-font mb-1 textPart">{products[item].category}</h3>
