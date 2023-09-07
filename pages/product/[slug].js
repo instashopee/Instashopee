@@ -367,6 +367,19 @@ if(!error){
                         }`}
                       ></button>
                     )}
+                  {Object.keys(variants).includes("mocha brown") &&
+                    Object.keys(variants["mocha brown"]).includes(size) && (
+                      <button
+                        onClick={() => {
+                          refreshVariant(size, "mocha brown");
+                        }}
+                        className={`border-2 rounded-full bg-[#664F40] hover:bg-[#664F40] w-6 h-6 focus:outline-none ${
+                          color === "mocha brown"
+                            ? "border-black"
+                            : "border-yellow-300"
+                        }`}
+                      ></button>
+                    )}
                   {Object.keys(variants).includes("wenge") &&
                     Object.keys(variants["wenge"]).includes(size) && (
                       <button
