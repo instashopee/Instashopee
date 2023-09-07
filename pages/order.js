@@ -72,9 +72,9 @@ const MyOrder = ({ order, clearCart }) => {
               <a className="flex-grow text-indigo-500 py-2 text-lg px-1">
                 Price
               </a>
-              <a className="flex-grow text-indigo-500 py-2 text-lg px-1">
+              {/* <a className="flex-grow text-indigo-500 py-2 text-lg px-1">
                 Estimated Delivery Time
-              </a>
+              </a> */}
             </div>
 
             {Object.keys(products).map((key) => {
@@ -93,9 +93,9 @@ const MyOrder = ({ order, clearCart }) => {
                   ₹{products[key].price} X {products[key].qty} = ₹
                     {products[key].price * products[key].qty}
                   </span>
-                  <span className="m-auto float-left text-gray-900">
+                  {/* <span className="m-auto float-left text-gray-900">
                   {products[key].edt}
-                  </span>
+                  </span> */}
                  
                 </div>
               );
