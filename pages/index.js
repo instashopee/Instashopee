@@ -34,7 +34,7 @@ export default function Home({products}){
        <Head>
         <title>Instashopee</title>
          <meta name ="description" content ="Instashopee" />
-         <link rel= "icon" href ="/favicon.ico" />
+         <link rel= "icon" href ="/logo_icon.ico" />
        </Head>
        <div className='2xl:mx-10 my-5'>
       {/* <img className='' src="/banners/banner_gif.webp" alt="" /> */}

@@ -6,6 +6,7 @@ import { useRouter } from 'next/router'
 import LoadingBar from 'react-top-loading-bar'
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Head from 'next/head'
 function MyApp({ Component, pageProps }) {
   const [cart,setCart]=useState({})
   const [subTotal, setsubTotal] = useState(0)
@@ -138,6 +139,10 @@ const Logout=()=>{
         pauseOnHover
         theme="light"
       />
+      <Head>
+         <meta name ="description" content ="Instashopee" />
+         <link rel= "icon" href ="/logo_icon.ico" />
+       </Head>
   <LoadingBar
         color='white'
         progress={progress}

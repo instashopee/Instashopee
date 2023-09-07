@@ -8,6 +8,7 @@ import { BsFillBagCheckFill } from "react-icons/bs";
 import Glide from "@glidejs/glide"
 import Error from "next/error";
 import Product from "@/models/Product";
+import Head from "next/head";
 const Post = ({buyNow, addToCart, product, variants,error,cart ,removeFromCart}) => {
   const router = useRouter();
   const { slug } = router.query;
@@ -94,6 +95,13 @@ if(!error){
   return (
     <>
       <section className="text-gray-600 body-font overflow-hidden min-h-screen">
+    <Head>
+        <title>Product Details -  Instashopee</title>
+        <meta
+          name="viewport"
+          content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0"
+        />
+      </Head>
       {/* <div className="flex flex-col justify-center mt-12 mx-5 space-y-5 float-left">
               <img
                 src={product.img}
