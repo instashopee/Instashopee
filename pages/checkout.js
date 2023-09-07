@@ -393,7 +393,7 @@ const getpincode=async(pin)=>{
       </div>
 
       <div className="mx-4 flex p-2 my-4">
-        <Link href={"/checkout"}>
+        <Link href={"/success"}>
           <button
             disabled={disabled}
             onClick={initiatePayment}

@@ -13,7 +13,7 @@ const OrderSchema = new mongoose.Schema({
     name: {type: String, required: true},
     transactionId: {type: String, default:""},
     amount: {type: Number, required: true},
-    status: {type: String, default:'Initiated',required: true},
+    status: {type: String, default:'Pending',required: true},
     deliveryStatus: {type: String, default:'UnShipped',required: true},
 },{timestamps: true});
 // mongoose.models= {}
