@@ -94,9 +94,7 @@ const getpincode=async(pin)=>{
       }
     }
   };
-  const initiatePaymentcod = async () => {
-    let oid = Math.floor(Math.random() * Date.now());
-  };
+
   const initiatePayment = async () => {
     let oid = Math.floor(Math.random() * Date.now());
 

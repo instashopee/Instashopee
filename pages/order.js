@@ -30,6 +30,9 @@ const MyOrder = ({ order, clearCart }) => {
             <h2 className="text-sm title-font text-gray-500 tracking-widest">
               INSTASHOPEE
             </h2>
+            {/* <span className="mb-2 mt-2 font-medium text-lg text-blue-800">
+                SHARE OTP ON DELIVERY TO COMPLETE ORDER: {order.otp}
+              </span> */}
             <h1 className="text-gray-900 text-3xl title-font font-medium mb-4">
               Order Id: #{order.orderId}
             </h1>
@@ -102,6 +105,7 @@ const MyOrder = ({ order, clearCart }) => {
               <span className="title-font font-medium text-2xl text-gray-900">
                 Subtotal: ₹{order.amount}
               </span>
+              
               {/* <button className="flex ml-auto text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded">
                 Track Order
               </button> */}

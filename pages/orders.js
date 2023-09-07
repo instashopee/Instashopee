@@ -53,7 +53,7 @@ return (
                         Email
                       </th>
                       <th scope="col" class="px-6 py-4">
-                        Qty
+                        Amount
                       </th>
                       <th scope="col" class="px-6 py-4">
                         Details
