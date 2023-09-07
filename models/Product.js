@@ -11,7 +11,7 @@ const ProductSchema = new mongoose.Schema({
     // img4: {type: String, required: true},
     category: {type: String, required: true},
     sub_category: {type: String, required: true},
-    edt: {type: String, required: true},
+    edt: {type: String},
     type: {type: String, default:"normal"},
     price: {type: Number, required: true},
     mrp: {type: Number, required: true},
