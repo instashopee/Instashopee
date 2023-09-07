@@ -165,7 +165,7 @@ if(!error){
         </div>
         {/*    <!-- Controls --> */}
         <div
-          className="md:absolute left-0 flex items-center justify-between w-full h-0 px-4 top-1/2 mt-3 sm: "
+          className="md:absolute left-0 flex items-center justify-between w-full h-8 px-4 top-1/2 mt-3 sm: "
           data-glide-el="controls"
         >
           <button
@@ -223,7 +223,7 @@ if(!error){
           >
             <img
                 src={product.img}
-                className="border-2 p-3 border-black hover:scale-105 transition-all duration-500 cursor-pointer  h-12 w-12 "
+                className="border-2 p-3 border-black hover:scale-105 transition-all duration-500 cursor-pointer  h-24 w-24 "
               />          </button>
           <button
             className="p-4 group"
@@ -232,7 +232,7 @@ if(!error){
           >
                     <img
                 src={product.img1}
-                className="border-2 p-3 border-black hover:scale-105 transition-all duration-500 cursor-pointer  h-12 w-12 "
+                className="border-2 p-3 border-black hover:scale-105 transition-all duration-500 cursor-pointer  h-24 w-24 "
               />          </button>
           <button
             className="p-4 group"
@@ -241,7 +241,7 @@ if(!error){
           >
           <img
                 src={product.img2}
-                className="border-2 border-black p-3 hover:scale-105 transition-all duration-500 cursor-pointer  h-12 w-12 "
+                className="border-2 border-black p-3 hover:scale-105 transition-all duration-500 cursor-pointer  h-24 w-24 "
               />         
               </button>
           {/* <button

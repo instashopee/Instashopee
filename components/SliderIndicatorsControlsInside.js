@@ -8,7 +8,7 @@ export default function SliderIndicatorsControlsInside() {
       type: "slider",
       focusAt: "center",
       perView: 1,
-      autoplay: 5000,
+      autoplay: 6000,
       animationDuration: 1000,
       gap: 0,
       classes: {
