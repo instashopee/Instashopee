@@ -78,7 +78,7 @@ export default function Home({products}){
       
     {Object.keys(products).length==0 && <p>Sorry, All Items Out Of Stock, New Products Comming Soon !!</p>}
     {Object.keys(products).map((item)=>{
-// _id inside key of link
+// _id inside key of lin
 return <Link key={products[item].id} passHref={true} legacyBehavior href={`product/${products[item].slug}`}>
   <div className="lg:w-1/4 md:w-1/2 p-4 w-1/2 cursor-pointer shadow-lg  productCard transition-all">
     <a className="block relative rounded overflow-hidden">
