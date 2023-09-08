@@ -1,66 +1,9 @@
-import Head from 'next/head'
-import SliderIndicatorsControlsInside from '@/components/SliderIndicatorsControlsInside'
+import React from 'react'
 
-import Link from 'next/link'
-import Product from "@/models/Product";
-import connectDb from "@/middleware/mongoose";
-import mongoose from 'mongoose';
-import { useEffect, useState } from 'react'
-import { useRouter } from 'next/router'
-export default function Home({products}){
-  const router=useRouter()
-  const [user, setUser] = useState({value:null})
-    const [key, setKey] = useState()
-  useEffect(() => {
-
-    const myuser=JSON.parse(localStorage.getItem('myuser'))
-    if(myuser){
-      setUser({value:myuser.token, email:myuser.email})
-    }
-    setKey(Math.random())
-  }, [router.query])
-
-   return(
-     <div className='bg-white min-h-screen'>
-       <Head>
-        <title>Instashopee</title>
-         <meta name ="description" content ="Instashopee" />
-         <link rel= "icon" href ="/logo_icon.ico" />
-       </Head>
-       <div className='2xl:mx-10 my-5'>
-       <SliderIndicatorsControlsInside/>
-     
-       </div>
-        <div className='border p-3 sm:m-10'>
-          <h1 className='text-2xl font-extrabold text-gray-800 p-5'>TOP SELLING PRODUCTS</h1>
-          <section className="text-gray-600 body-font ">
-
-  <div className="container px-5 py-3 mx-auto  ">
-    <div className="flex flex-wrap -m-4 justify-center space-x-20 space-y-8">
-     
-      
-    {Object.keys(products).length==0 && <p>Sorry, All Items Out Of Stock, New Products Comming Soon !!</p>}
-    {Object.keys(products).map((item)=>{
-// _id inside key of link
-return <Link key={products[item].id} passHref={true} legacyBehavior href={`product/${products[item].slug}`}>
-  <div className="lg:w-1/5 md:w-1/2 p-4 w-1/2 cursor-pointer shadow-lg  productCard transition-all">
-    <a className="block relative rounded overflow-hidden">
-      <img alt="" className="w-40 h-40 m-auto block" src={products[item].img}/>
-    </a>
-    <div className="mt-4 text-center md:text-left">
-      <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1 textPart">{products[item].category}</h3>
-      <h2 className="text-gray-900 title-font text-lg font-medium textPart">{products[item].title}</h2>
-      <div className='flex flex-row'>
-        <p className="mt-1 textPart text-lg font-semibold">₹{products[item].price}/-</p>
-        <span className="font-small text-md ml-2 mt-1 text-green-600 textPart">₹MRP</span>
-      <span className="font-small text-md ml-2 mt-1 text-green-600 line-through textPart">
-                 {products[item].mrp}/-
-                </span>
-                <span className="font-small text-md mr-16 float-right mt-1 text-orange-600 textPart">
-                (-{Math.floor(((products[item].mrp-products[item].price)/products[item].mrp)*100)}%){/* (-70% Off) */}
-                </span>
-                </div>
-                <div className="mt-1 textPart">
+export default function Size() {
+  return (
+    <div>
+                        <div className="mt-1 textPart">
         {products[item].size.includes("0") && (<span className="border border-gray-300 px-1 mx-1">0</span>)}
         {products[item].size.includes("1") && (<span className="border border-gray-300 px-1 mx-1">1</span>)}
         {products[item].size.includes("2") && (<span className="border border-gray-300 px-1 mx-1">2</span>)}
@@ -122,56 +65,6 @@ return <Link key={products[item].id} passHref={true} legacyBehavior href={`produ
         {products[item].color.includes("mocha brown") && (<button className="border-2 border-gray-300 rounded-full bg-none bg-[#664F40] hover:bg-[#664F40] w-6 h-6 focus:outline-none"></button>)}
                 
         </div>
-
     </div>
-  </div>
-  </Link>})}
-
-
-
-
-      
-    </div>
-  </div>
-</section>
-    </div>
-       
-       
-       
-      
-     </div>
-   )
-  }
-  export async function getServerSideProps(context) {
-    if(!mongoose.connections[0].readystate){
-      await mongoose.connect(process.env.MONGO_URI)
-  }
-  
-    let products = await Product.find({type:'top selling'})
-    let hinges = {}
-    for(let item of products){
-      if(item.title in hinges){
-          if(!hinges[item.title].color.includes(item.color) && item.availableQty > 0){
-            hinges[item.title].color.push(item.color)
-          }
-          if(!hinges[item.title].size.includes(item.size) && item.availableQty > 0){
-            hinges[item.title].size.push(item.size)
-          }
-      }
-  
-      else{
-        hinges[item.title] = JSON.parse(JSON.stringify(item))
-        if(item.availableQty >0){
-              hinges[item.title].color = [item.color]
-              hinges[item.title].size = [item.size]
-            }else{
-              hinges[item.title].color = []
-              hinges[item.title].size = []
-            }
-      }
-    }
-  
-    return{
-      props:{products:JSON.parse(JSON.stringify(hinges))},
-    }
-    }
+  )
+}
