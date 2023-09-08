@@ -1,11 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useRef } from "react";
-import { AiOutlineShoppingCart,AiFillPlusCircle, AiFillMinusCircle, AiFillCloseCircle,AiOutlineSearch } from "react-icons/ai";
+import { AiOutlineShoppingCart,AiOutlineHeart,AiFillPlusCircle, AiFillMinusCircle, AiFillCloseCircle,AiOutlineSearch } from "react-icons/ai";
 import {MdAccountCircle} from "react-icons/md"
 import {BsFillBagCheckFill} from "react-icons/bs"
 import Head from "next/head";
-const cart = ({cart,addToCart,removeFromCart,clearCart,subTotal}) => {
+const cart = ({cart,addToCart,removeFromCart,clearCart,subTotal,addTowishlist}) => {
   return (
     <div>
     <Head>
@@ -35,12 +35,17 @@ const cart = ({cart,addToCart,removeFromCart,clearCart,subTotal}) => {
             </div>
             <div class="mt-4 flex justify-between sm:space-y-6 sm:mt-0 sm:block sm:space-x-6">
               <div class="flex items-center border-gray-100">
-                <span onClick={()=>{removeFromCart(k,1,cart[k].price,cart[k].name,cart[k].size,cart[k].variant,cart[k].del_ch)}} class="cursor-pointer rounded-l bg-gray-100 py-1 px-3.5 duration-100 hover:bg-blue-500 hover:text-blue-50"> - </span>
+                <span onClick={()=>{removeFromCart(k,1,cart[k].price,cart[k].name,cart[k].size,cart[k].variant,cart[k].del_ch,cart[k].img)}} class="cursor-pointer rounded-l bg-gray-100 py-1 px-3.5 duration-100 hover:bg-blue-500 hover:text-blue-50"> - </span>
                 <span className="mx-1">{cart[k].qty}</span>
-                <span onClick={()=>{addToCart(k,1,cart[k].price,cart[k].name,cart[k].size,cart[k].variant,cart[k].del_ch)}} class="cursor-pointer rounded-r bg-gray-100 py-1 px-3 duration-100 hover:bg-blue-500 hover:text-blue-50"> + </span>
+                <span onClick={()=>{addToCart(k,1,cart[k].price,cart[k].name,cart[k].size,cart[k].variant,cart[k].del_ch,cart[k].img)}} class="cursor-pointer rounded-r bg-gray-100 py-1 px-3 duration-100 hover:bg-blue-500 hover:text-blue-50"> + </span>
+                <span class="hover:text-gray-700"><AiOutlineHeart onClick={() => {
+                    addTowishlist(k,1,cart[k].price,cart[k].name,cart[k].size,cart[k].variant,cart[k].del_ch,cart[k].img);
+                  }} className="text-2xl cursor-pointer" />
+                           </span>
+
               </div>
-              
             </div>
+              
           </div>
         </div>
         </div>})}

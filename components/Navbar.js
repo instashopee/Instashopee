@@ -1,8 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useRef, useState } from "react";
-import { AiOutlineShoppingCart,AiFillPlusCircle, AiFillMinusCircle, AiFillCloseCircle,AiOutlineSearch } from "react-icons/ai";
+import { AiOutlineShoppingCart,AiOutlineHeart, AiFillMinusCircle, AiFillCloseCircle,AiOutlineSearch } from "react-icons/ai";
 import {MdAccountCircle} from "react-icons/md"
+
 import {BsFillBagCheckFill} from "react-icons/bs"
 import Hardware_Fittings from "@/sub_category_pg/hardware_fittings";
 import Kitchen_Acc from "@/sub_category_pg/kitchen_acc";
@@ -393,6 +394,10 @@ const Navbar = ({Logout,user,cart,addToCart,removeFromCart,clearCart,subTotal}) 
         <AiOutlineShoppingCart  className="text-sm md:text-md mx-1 m-auto" />
         <label className="text-sm md:text-md mx-1 cursor-pointer font-semibold" htmlFor="">Cart</label>
         </div></a></Link>}
+        {<Link legacyBehavior href={'/wishlist'}><a><div className="border-red-400 flex mx-1 border-1 md:mx-2  border-2 rounded-lg px-2 ">
+        <AiOutlineHeart className="text-sm md:text-md mx-1 cursor-pointer font-semibold mt-1" />
+        <label className="text-sm md:text-md mx-1 cursor-pointer font-semibold" htmlFor="">Wishlist</label>
+        </div></a></Link>}
 
         
         <span onMouseOver={()=>{setDropdown(true)}} onMouseLeave={()=>{setDropdown(false)}} >
@@ -419,7 +424,7 @@ const Navbar = ({Logout,user,cart,addToCart,removeFromCart,clearCart,subTotal}) 
       </div>
       
 <div class="md:hidden fixed bottom-0 left-0 z-50 w-full h-16 bg-white border-t border-gray-200">
-    <div class="grid h-full max-w-lg grid-cols-4 mx-auto font-medium">
+    <div class="grid h-full max-w-lg grid-cols-5 mx-auto font-medium">
     <Link legacyBehavior href={'/'}><a>{<button type="button" class="my-4 inline-flex flex-col items-center justify-center px-5">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16 group">
   <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5Z"/>
@@ -432,12 +437,17 @@ const Navbar = ({Logout,user,cart,addToCart,removeFromCart,clearCart,subTotal}) 
 </svg>
             <span class="text-sm text-gray-500 dark:text-gray-400">Products</span>
         </button>}</a></Link>
-        <Link legacyBehavior href={'/cart'}><a>{<button type="button" class="my-4 inline-flex flex-col items-center justify-center px-5 group">
+        <Link legacyBehavior href={'/cart'}><a>{<button type="button" class="my-4 inline-flex flex-col items-center justify-center px-5 mx-4 group">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
   <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
 </svg>
 
             <span class="text-sm text-gray-500 dark:text-gray-400 ">Cart</span>
+        </button>}</a></Link>
+        <Link legacyBehavior href={'/wishlist'}><a>{<button type="button" class="my-3.5 inline-flex flex-col items-center justify-center px-5 group">
+        <AiOutlineHeart className="text-lg"/>
+
+            <span class="text-sm text-gray-500 dark:text-gray-400 ">Wishlist</span>
         </button>}</a></Link>
         <Link legacyBehavior href={'/login'}><a>{<button type="button" class="my-4 inline-flex flex-col items-center justify-center px-5 group">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">

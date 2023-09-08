@@ -9,7 +9,9 @@ import "react-toastify/dist/ReactToastify.css";
 import Head from 'next/head'
 function MyApp({ Component, pageProps }) {
   const [cart,setCart]=useState({})
+  const [wishlist,setwishlist]=useState({})
   const [subTotal, setsubTotal] = useState(0)
+  const [subTotalwishlist, setsubTotalwishlist] = useState(0)
   const [progress, setProgress] = useState(0)
   const [user, setUser] = useState({value:null})
   const [key, setKey] = useState()
@@ -45,6 +47,10 @@ function MyApp({ Component, pageProps }) {
       if(localStorage.getItem("cart")){
         setCart(JSON.parse(localStorage.getItem("cart")))
         saveCart(JSON.parse(localStorage.getItem("cart")))
+      }
+      if(localStorage.getItem("wishlist")){
+        setwishlist(JSON.parse(localStorage.getItem("wishlist")))
+        savewishlist(JSON.parse(localStorage.getItem("wishlist")))
       }
     } catch (error) {
       console.error(error);
@@ -83,6 +89,16 @@ const Logout=()=>{
     setsubTotal(subt)
 
   }
+  const savewishlist=(mywishlist)=>{
+    localStorage.setItem("wishlist",JSON.stringify(mywishlist))
+    let subtt=0
+    let keys=Object.keys(mywishlist)
+    for(let i=0;i<keys.length;i++){
+      subtt+=(mywishlist[keys[i]].price * mywishlist[keys[i]].qty)+mywishlist[keys[i]].del_ch
+    }
+    setsubTotalwishlist(subtt)
+
+  }
 
   const addToCart=(itemCode, qty, price, name, size, variant,del_ch,img)=>{
     let newCart=cart;
@@ -94,7 +110,7 @@ const Logout=()=>{
     setCart(newCart)
     toast.success('Added To Cart Successfully', {
       position: "top-center",
-      autoClose: 2000,
+      autoClose: 1000,
       hideProgressBar: false,
       closeOnClick: true,
       pauseOnHover: true,
@@ -103,6 +119,26 @@ const Logout=()=>{
       theme: "light",
       });
     saveCart(newCart)
+  }
+  const addTowishlist=(itemCode, qty, price, name, size, variant,del_ch,img)=>{
+    let newwishlist=wishlist;
+    if(itemCode in wishlist){
+      newwishlist[itemCode].qty=wishlist[itemCode].qty + qty
+    }else{
+      newwishlist[itemCode]={qty: 1,price,name,size,variant,del_ch,img}
+    }
+    setwishlist(newwishlist)
+    toast.success('Added To Wishlist Successfully', {
+      position: "top-center",
+      autoClose: 1000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      });
+    savewishlist(newwishlist)
   }
   const buyNow = (itemCode, qty, price, name, size, variant,del_ch,img) => {
     let newCart={}
@@ -115,6 +151,10 @@ const Logout=()=>{
     setCart({})
     saveCart({})
   }
+  const clearwishlist=()=>{
+    setwishlist({})
+    savewishlist({})
+  }
   const removeFromCart=(itemCode, qty, price, name, size, variant,del_ch,img)=>{
     let newCart=cart;
     if(itemCode in cart){
@@ -124,7 +164,38 @@ const Logout=()=>{
       delete newCart[itemCode]
     }
     setCart(newCart)
+    toast.success('Removed From Cart Successfully', {
+      position: "top-center",
+      autoClose: 1000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      });
     saveCart(newCart)
+  }
+  const removeFromwishlist=(itemCode, qty, price, name, size, variant,del_ch,img)=>{
+    let newwishlist=wishlist;
+    if(itemCode in wishlist){
+      newwishlist[itemCode].qty=wishlist[itemCode].qty - qty
+    }
+    if(newwishlist[itemCode]["qty"]<=0){
+      delete newwishlist[itemCode]
+    }
+    setwishlist(newwishlist)
+    toast.success('Removed From Wishlist Successfully', {
+      position: "top-center",
+      autoClose: 1000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      });
+    savewishlist(newwishlist)
   }
   return <>
         <ToastContainer
@@ -151,8 +222,8 @@ const Logout=()=>{
         shadow={true}
         onLoaderFinished={() => setProgress(0)}
       />
-  {key&&<Navbar Logout={Logout} user={user} key={key} cart={cart} addToCart={addToCart} removeFromCart={removeFromCart} clearCart={clearCart} subTotal={subTotal}/>}
-  <Component buyNow={buyNow} cart={cart} addToCart={addToCart} removeFromCart={removeFromCart} clearCart={clearCart} subTotal={subTotal} {...pageProps} />
+  {key&&<Navbar Logout={Logout} user={user} key={key} cart={cart} wishlist={wishlist} addToCart={addToCart} addTowishlist={addTowishlist} removeFromCart={removeFromCart} removeFromwishlist={removeFromwishlist} clearCart={clearCart} clearwishlist={clearwishlist} subTotal={subTotal} subTotalwishlist={subTotalwishlist}/>}
+  <Component buyNow={buyNow} wishlist={wishlist} cart={cart} addTowishlist={addTowishlist} addToCart={addToCart} removeFromCart={removeFromCart} removeFromwishlist={removeFromwishlist} clearCart={clearCart} clearwishlist={clearwishlist} subTotal={subTotal} subTotalwishlist={subTotalwishlist} {...pageProps} />
   <hr/>
   <Footer/>
   </>
