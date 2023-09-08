@@ -290,14 +290,25 @@ if(!error){
                       ></button>
                     )}
 
-                  {Object.keys(variants).includes("RoseGold") &&
-                    Object.keys(variants["RoseGold"]).includes(size) && (
+                  {Object.keys(variants).includes("rose gold") &&
+                    Object.keys(variants["rose gold"]).includes(size) && (
                       <button
                         onClick={() => {
-                          refreshVariant("RoseGold");
+                          refreshVariant("rose gold");
                         }}
                         className={`border-2 rounded-full bg-[#B76E79] hover:bg-[#B76E79] w-6 h-6 focus:outline-none ${
-                          color === "RoseGold" ? "border-black" : "border-yellow-200"
+                          color === "rose gold" ? "border-black" : "border-yellow-200"
+                        }`}
+                      ></button>
+                    )}
+                  {Object.keys(variants).includes("antique") &&
+                    Object.keys(variants["antique"]).includes(size) && (
+                      <button
+                        onClick={() => {
+                          refreshVariant("antique");
+                        }}
+                        className={`border-2 rounded-full bg-[#986335] hover:bg-[#986335] w-6 h-6 focus:outline-none ${
+                          color === "antique" ? "border-black" : "border-yellow-200"
                         }`}
                       ></button>
                     )}
