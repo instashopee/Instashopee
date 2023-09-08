@@ -8,7 +8,13 @@ import Head from "next/head";
 const cart = ({cart,addToCart,removeFromCart,clearCart,subTotal}) => {
   return (
     <div>
-
+    <Head>
+    <title>Cart -  Instashopee</title>
+    <meta
+      name="viewport"
+      content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0"
+     />
+   </Head>
   <div class="min-h-screen bg-gray-100 pt-10">
     <h1 class="mb-10 text-center text-2xl font-bold">My Shopping Cart</h1>
     <div class="mx-auto max-w-5xl justify-center px-6 md:flex md:space-x-6 xl:px-0">
@@ -22,7 +28,7 @@ const cart = ({cart,addToCart,removeFromCart,clearCart,subTotal}) => {
             <div class="mt-5 sm:mt-0">
             <div className="w-2/3 font-semibold text-2xl">{cart[k].name}({cart[k].size}/{cart[k].variant})</div>
             <div class="flex flex-col mt-5">
-                <p class="text-sm">Price - Rs.{cart[k].price}/-</p>
+                <p class="text-sm">Price Of Each - Rs.{cart[k].price}/-</p>
                 
                 <p class="text-sm">Delivery Charge - Rs.{cart[k].del_ch}/-</p>
               </div>
@@ -53,7 +59,7 @@ const cart = ({cart,addToCart,removeFromCart,clearCart,subTotal}) => {
         <div class="flex justify-between">
           <p class="text-lg font-bold">Total</p>
           <div class="">
-            <p class="mb-1 text-lg font-bold">{subTotal}</p>
+            <p class="mb-1 text-lg font-bold">Rs.{subTotal}/-</p>
             {/* <p class="text-sm text-gray-700">including VAT</p> */}
           </div>
         </div>
