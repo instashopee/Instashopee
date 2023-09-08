@@ -55,17 +55,17 @@ const handler = async (req, res) => {
         return;
       }
     }
-    if (sumTotal !== req.body.subTotal) {
-      res
-        .status(200)
-        .json({
-          success: false,
-          error:
-            "The Price of some items in your cart have changed. Please add items in cart again or try making payment again.",
-            cartClear:true
-          });
-      return;
-    }
+    // if (sumTotal !== req.body.subTotal) {
+    //   res
+    //     .status(200)
+    //     .json({
+    //       success: false,
+    //       error:
+    //         "The Price of some items in your cart have changed. Please add items in cart again or try making payment again.",
+    //         cartClear:true
+    //       });
+    //   return;
+    // }
     if (req.body.phone.length !== 10 || !Number.isInteger(Number(req.body.phone))) {
       res
         .status(200)
