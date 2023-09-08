@@ -7,6 +7,7 @@ import Script from "next/script";
 import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useRouter } from "next/router";
 
 const Checkout = ({ cart, clearCart, addToCart, removeFromCart, subTotal }) => {
   const [name, setName] = useState("");
@@ -19,14 +20,28 @@ const Checkout = ({ cart, clearCart, addToCart, removeFromCart, subTotal }) => {
   const [promocode, setpromocode] = useState("");
   const [disabled, setDisabled] = useState(true);
   const [user, setUser] = useState({ value: null });
-
+  const router=useRouter()
   useEffect(() => {
+    if((localStorage.getItem("myuser"))){
     const myuser = JSON.parse(localStorage.getItem("myuser"));
     if (myuser && myuser.token) {
       setUser(myuser);
       setEmail(myuser.email);
       fetchData(myuser.token);
-      
+    }
+    }else{
+      router.push('/')
+      toast.error('Please Create An Account or Login to Checkout !!', {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+
     }
   }, []);
 
