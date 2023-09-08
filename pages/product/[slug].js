@@ -559,6 +559,8 @@ if(!error){
                 </div>
                 <br />
               <span className="mx-2 border-2 p-2 text-green-500 font-semibold text-sm">Min Order Qty - {product.mqty}</span>
+              <br className="xl:hidden" />
+                <br className="xl:hidden"/>
               <span className="mx-2 border-2 p-2 text-blue-500 font-semibold text-sm">Delivery Charge For This Product - Rs.{product.del_ch}/-</span>
                 <br />
                 <br />
