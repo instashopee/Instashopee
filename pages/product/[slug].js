@@ -419,17 +419,26 @@ if(!error){
                       {color && Object.keys(variants[color]).includes('0') && (
                         <option value={'0'}>0</option>
                       )}
-                      {color && Object.keys(variants[color]).includes('4') && (
+                      {color && Object.keys(variants[color]).includes('3') && (
+                        <option value={'3'}>3</option>
+                      )}
+                      {color && Object.keys(variants[color]).includes('5') && (
                         <option value={'5'}>5</option>
                       )}
-                      {color && Object.keys(variants[color]).includes('5') && (
+                      {color && Object.keys(variants[color]).includes('4') && (
                         <option value={'4'}>4</option>
                       )}
-                      {color && Object.keys(variants[color]).includes('5') && (
-                        <option value={'4'}>6</option>
+                      {color && Object.keys(variants[color]).includes('6') && (
+                        <option value={'6'}>6</option>
+                      )}
+                      {color && Object.keys(variants[color]).includes('7') && (
+                        <option value={'7'}>7</option>
                       )}
                       {color && Object.keys(variants[color]).includes('8') && (
                         <option value={'8'}>8</option>
+                      )}
+                      {color && Object.keys(variants[color]).includes('9') && (
+                        <option value={'9'}>9</option>
                       )}
                       {color && Object.keys(variants[color]).includes('10') && (
                         <option value={'10'}>10</option>
