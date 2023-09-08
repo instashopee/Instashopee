@@ -43,7 +43,7 @@ export default function Home({products}){
     {Object.keys(products).map((item)=>{
 // _id inside key of link
 return <Link key={products[item].id} passHref={true} legacyBehavior href={`product/${products[item].slug}`}>
-  <div className="lg:w-[20rem] md:w-1/2 p-4 w-full cursor-pointer shadow-lg  productCard transition-all">
+  <div className="lg:w-[20rem] md:w-1/2 p-4 w-[14rem] cursor-pointer shadow-lg  productCard transition-all">
     <a className="block relative rounded overflow-hidden">
       <img alt="" className="w-40 h-40 m-auto block" src={products[item].img}/>
     </a>
@@ -57,7 +57,7 @@ return <Link key={products[item].id} passHref={true} legacyBehavior href={`produ
                  {products[item].mrp}/-
                 </span>
                 <span className="font-small text-md mr-16 float-right mt-1 text-orange-600 textPart">
-                (-{Math.floor(((products[item].price)/products[item].mrp)*100)}%){/* (-70% Off) */}
+                ({Math.floor(((products[item].price-products[item].mrp)/products[item].mrp)*100)}%){/* (-70% Off) */}
                 </span>
                 </div>
                 <div className="mt-1 textPart">
