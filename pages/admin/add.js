@@ -7,6 +7,7 @@ import Admin_sidebar from "@/components/Admin_sidebar";
 
 const add = () => {
   const [title, setTitle] = useState("");
+  const [del_ch, setdel_ch] = useState("");
   const [edt, setedt] = useState("");
   const [type, settype] = useState("");
   const [slug, setSlug] = useState("");
@@ -127,6 +128,7 @@ const add = () => {
   const handleUserSubmit = async () => {
     let data = {
       title,
+      del_ch,
       slug,
       desc,
       category,
@@ -170,6 +172,7 @@ const add = () => {
     setSize("");
     setUnit("");
     setMrp("");
+    setdel_ch("");
     setColor("");
     setAvailableQty("");
     // setImg("");
@@ -210,6 +213,7 @@ const add = () => {
       desc,
       category,
       sub_category,
+      del_ch,
       price,
       mrp,
       edt,
@@ -287,6 +291,8 @@ const add = () => {
       setSlug(e.target.value);
     } else if (e.target.name == "type") {
       settype(e.target.value);
+    } else if (e.target.name == "del_ch") {
+      setdel_ch(e.target.value);
     } else if (e.target.name == "desc") {
       setDesc(e.target.value);
     } else if (e.target.name == "mqty") {
@@ -616,7 +622,7 @@ const add = () => {
 
          </div>
 <div className="flex">
-         <div className="px-2 w-full">
+         <div className="px-2 w-1/2">
          <div class="mb-4">
            <label for="edt" class="leading-7 text-sm text-gray-600">
              Estimated Delivery Time For This Product
@@ -626,6 +632,20 @@ const add = () => {
              value={edt}
              id="edt"
              name="edt"
+             class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+           ></input>
+         </div>
+       </div>
+         <div className="px-2 w-1/2">
+         <div class="mb-4">
+           <label for="del_ch" class="leading-7 text-sm text-gray-600">
+             Delivery Charge For This Product
+           </label>
+           <input
+             onChange={handleChange}
+             value={del_ch}
+             id="del_ch"
+             name="del_ch"
              class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
            ></input>
          </div>

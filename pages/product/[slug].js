@@ -102,21 +102,7 @@ if(!error){
           content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0"
         />
       </Head>
-      {/* <div className="flex flex-col justify-center mt-12 mx-5 space-y-5 float-left">
-              <img
-                src={product.img}
-                className="border-2 p-3 border-black hover:scale-105 transition-all duration-500 cursor-pointer  h-32 w-32 "
-              />
-              <img
-                src={product.img1}
-                className="border-2 p-3 border-black hover:scale-105 transition-all duration-500 cursor-pointer  h-32 w-32 "
-              />
-              <img
-                src={product.img2}
-                className="border-2 border-black p-3 hover:scale-105 transition-all duration-500 cursor-pointer  h-32 w-32 "
-              />
-              
-          </div> */}
+
       <ToastContainer
         position="bottom-center"
         autoClose={3000}
@@ -278,7 +264,7 @@ if(!error){
               className="lg:w-1/2 w-full lg:h-auto px-24 object-cover object-top rounded"
               src={product.img}
             /> */}
-            <div className="md:w-[60vh] w-full md:pl-10 md:py-6 md:mt-5">
+            <div className="md:w-[60vh] 2xl:w-[90vh] w-full md:pl-10 md:py-6 md:mt-5">
               <h2 className="text-sm title-font text-gray-500 tracking-widest">
                 INSTASHOPEE
               </h2>
@@ -573,6 +559,7 @@ if(!error){
                 </div>
                 <br />
               <span className="mx-2 border-2 p-2 text-green-500 font-semibold text-sm">Min Order Qty - {product.mqty}</span>
+              <span className="mx-2 border-2 p-2 text-blue-500 font-semibold text-sm">Delivery Charge For This Product - Rs.{product.del_ch}/-</span>
                 <br />
                 <br />
               <span className="mx-2 border-2 p-2 text-red-500 font-semibold text-sm">Estimated Delivery Time - {product.edt}</span>
@@ -583,13 +570,13 @@ if(!error){
                 OUT OF STOCK !
                 </span>}
                 <button disabled={product.availableQty <=0?true:false} onClick={() =>
-                    buyNow(slug, 1, product.price, product.title, size, color)
+                    buyNow(slug, 1, product.price, product.title, size, color,product.del_ch,product.img)
                   } className="flex ml-1 mb-5 text-white bg-red-500 disabled:bg-red-300  border-0 py-2 px-2 md:px-6 focus:outline-none hover:bg-red-600 rounded">
                   Buy Now
                 </button>
                 <button disabled={product.availableQty <=0?true:false} 
                   onClick={() => {
-                    addToCart(slug, 1, product.price, product.title, size, color);
+                    addToCart(slug, 1, product.price, product.title, size, color,product.del_ch,product.img);
                   }}
                   className="flex ml-5 mb-5 text-white bg-red-500 disabled:bg-red-300  border-0 py-2 px-2 md:px-6 focus:outline-none hover:bg-red-600 rounded"
                 >

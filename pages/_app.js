@@ -78,18 +78,18 @@ const Logout=()=>{
     let subt=0
     let keys=Object.keys(myCart)
     for(let i=0;i<keys.length;i++){
-      subt+=myCart[keys[i]].price * myCart[keys[i]].qty
+      subt+=(myCart[keys[i]].price * myCart[keys[i]].qty)+myCart[keys[i]].del_ch
     }
     setsubTotal(subt)
 
   }
 
-  const addToCart=(itemCode, qty, price, name, size, variant)=>{
+  const addToCart=(itemCode, qty, price, name, size, variant,del_ch,img)=>{
     let newCart=cart;
     if(itemCode in cart){
       newCart[itemCode].qty=cart[itemCode].qty + qty
     }else{
-      newCart[itemCode]={qty: 1,price,name,size,variant}
+      newCart[itemCode]={qty: 1,price,name,size,variant,del_ch,img}
     }
     setCart(newCart)
     toast.success('Added To Cart Successfully', {
@@ -104,9 +104,9 @@ const Logout=()=>{
       });
     saveCart(newCart)
   }
-  const buyNow = (itemCode, qty, price, name, size, variant) => {
+  const buyNow = (itemCode, qty, price, name, size, variant,del_ch,img) => {
     let newCart={}
-    newCart[itemCode]={ qty: 1, price, name, size, variant };
+    newCart[itemCode]={ qty: 1, price, name, size, variant ,del_ch,img};
     setCart(newCart);
     saveCart(newCart);
     router.push("/checkout");
@@ -115,7 +115,7 @@ const Logout=()=>{
     setCart({})
     saveCart({})
   }
-  const removeFromCart=(itemCode, qty, price, name, size, variant)=>{
+  const removeFromCart=(itemCode, qty, price, name, size, variant,del_ch,img)=>{
     let newCart=cart;
     if(itemCode in cart){
       newCart[itemCode].qty=cart[itemCode].qty - qty

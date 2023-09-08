@@ -16,6 +16,7 @@ const handler = async (req, res) => {
         // img4: req.body.img4,
         category: req.body.category,
         sub_category: req.body.sub_category,
+        del_ch: req.body.del_ch,
         price: req.body.price,
         mrp: req.body.mrp,
         availableQty: req.body.availableQty,
