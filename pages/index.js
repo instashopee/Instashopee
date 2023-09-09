@@ -135,6 +135,7 @@ return <Link key={products[item].id} passHref={true} legacyBehavior href={`produ
   </div>
 </section>
     </div>
+  <img className="w-full h-full" src="/banners/gif/banner1.gif" alt="" />
        
        
        
