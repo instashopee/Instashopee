@@ -136,7 +136,7 @@ return <Link key={products[item].id} passHref={true} legacyBehavior href={`produ
 </section>
     </div>
   
-             <div className='2xl:m-10 mb-10'>
+             <div className='2xl:m-10'>
             <img className="w-full 2xl:h-full h-[16rem]" src="/banners/gif/banner3.gif" alt="" />
 
             {/* <video ref={vidRef} className="w-full h-full" muted  autoPlay={true} loop src="/banners/banner3.mp4" ></video> */}
