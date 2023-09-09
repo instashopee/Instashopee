@@ -19,9 +19,7 @@ export default function Top_selling({products}){
     }
     setKey(Math.random())
   }, [router.query])
-  const vidRef=useRef();
 
-  useEffect(() => { vidRef.current.play(); },[]);
    return(
      <div className='bg-white min-h-screen'>
 
@@ -138,10 +136,10 @@ return <Link key={products[item].id} passHref={true} legacyBehavior href={`produ
 </section>
     </div>
   
-             <div className='mx-10 mb-10'>
-            <img className="sm:hidden w-full h-full" src="/banners/gif/banner1.gif" alt="" />
+             <div className='2xl:m-10 mb-10'>
+            <img className="w-full h-full" src="/banners/gif/banner1.gif" alt="" />
 
-            <video ref={vidRef} className="w-full h-full" muted  autoPlay={true} loop src="/banners/banner3.mp4" ></video>
+            {/* <video ref={vidRef} className="w-full h-full" muted  autoPlay={true} loop src="/banners/banner3.mp4" ></video> */}
          
  
             </div> 
