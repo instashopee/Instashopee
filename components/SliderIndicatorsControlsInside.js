@@ -22,9 +22,9 @@ export default function SliderIndicatorsControlsInside() {
       slider.destroy()
     }
   }, [])
-  const vidRef=useRef();
+ const vidRef=useRef();
 
-  useEffect(() => { vidRef.current.play(); },[]);
+  useEffect(() => { vidRef.current.play(); },[]); 
   return (
    
    

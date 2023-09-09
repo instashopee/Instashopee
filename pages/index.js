@@ -5,7 +5,7 @@ import Link from 'next/link'
 import Product from "@/models/Product";
 import connectDb from "@/middleware/mongoose";
 import mongoose from 'mongoose';
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useRouter } from 'next/router'
 export default function Home({products}){
   const router=useRouter()
@@ -19,7 +19,9 @@ export default function Home({products}){
     }
     setKey(Math.random())
   }, [router.query])
+  const vidRef=useRef();
 
+  useEffect(() => { vidRef.current.play(); },[]);
    return(
      <div className='bg-white min-h-screen'>
        <Head>
@@ -139,8 +141,14 @@ return <Link key={products[item].id} passHref={true} legacyBehavior href={`produ
   </div>
 </section>
     </div>
-  <img className="w-full h-full" src="/banners/gif/banner1.gif" alt="" />
-       
+  
+             <div className='mx-10 mb-10'>
+            <img className="sm:hidden w-full h-full" src="/banners/gif/banner1.gif" alt="" />
+
+            <video ref={vidRef} className="w-full h-full" muted  autoPlay={true} loop src="/banners/banner3.mp4" ></video>
+         
+ 
+            </div> 
        
        
       
