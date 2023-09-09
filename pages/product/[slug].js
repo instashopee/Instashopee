@@ -581,7 +581,7 @@ if(!error){
                 ₹MRP {product.mrp}/-
                 </span>
                 <span className="font-small text-md ml-2 mt-1 text-orange-600">
-                (-{Math.floor(((product.price-product.mrp)/product.mrp)*100)}% off){/* (-70% Off) */}
+                ({Math.floor(((product.price-product.mrp)/product.mrp)*100)}% off){/* (-70% Off) */}
                 </span>
 
                 
