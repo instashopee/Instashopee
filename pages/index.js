@@ -93,9 +93,12 @@ return <Link key={products[item].id} passHref={true} legacyBehavior href={`produ
         {products[item].size.includes("44") && (<span className="border border-gray-300 px-1 mx-1">44</span>)}
         {products[item].size.includes("46") && (<span className="border border-gray-300 px-1 mx-1">46</span>)}
         {products[item].size.includes("48") && (<span className="border border-gray-300 px-1 mx-1">48</span>)}
+        {products[item].size.includes("86") && (<span className="border border-gray-300 px-1 mx-1">86</span>)}
         {products[item].size.includes("96") && (<span className="border border-gray-300 px-1 mx-1">96</span>)}
         {products[item].size.includes("100") && (<span className="border border-gray-300 px-1 mx-1">100</span>)}
         {products[item].size.includes("128") && (<span className="border border-gray-300 px-1 mx-1">128</span>)}
+        {products[item].size.includes("150") && (<span className="border border-gray-300 px-1 mx-1">150</span>)}
+        {products[item].size.includes("182") && (<span className="border border-gray-300 px-1 mx-1">182</span>)}
         {products[item].size.includes("288") && (<span className="border border-gray-300 px-1 mx-1">288</span>)}
         {products[item].size.includes("450") && (<span className="border border-gray-300 px-1 mx-1">450</span>)}
         {products[item].size.includes("600") && (<span className="border border-gray-300 px-1 mx-1">600</span>)}
@@ -120,6 +123,7 @@ return <Link key={products[item].id} passHref={true} legacyBehavior href={`produ
         {products[item].color.includes("wenge") && (<button className="border-2 border-gray-300 rounded-full bg-none bg-[#645452] hover:bg-[#645452] w-6 h-6 focus:outline-none"></button>)}
         {products[item].color.includes("ss") && (<button className="border-2 border-gray-300 rounded-full bg-none bg-[#b4bdc7] hover:bg-[#b4bdc7] w-6 h-6 focus:outline-none"></button>)}
         {products[item].color.includes("mocha brown") && (<button className="border-2 border-gray-300 rounded-full bg-none bg-[#664F40] hover:bg-[#664F40] w-6 h-6 focus:outline-none"></button>)}
+        {products[item].color.includes("grey") && (<button className="border-2 border-gray-300 rounded-full bg-none bg-gray-500 hover:bg-gray-500 w-6 h-6 focus:outline-none"></button>)}
                 
         </div>
 

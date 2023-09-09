@@ -289,6 +289,17 @@ if(!error){
                         }`}
                       ></button>
                     )}
+                  {Object.keys(variants).includes("grey") &&
+                    Object.keys(variants["grey"]).includes(size) && (
+                      <button
+                        onClick={() => {
+                          refreshVariant(size, "grey");
+                        }}
+                        className={`border-2 rounded-full bg-gray-500 hover:bg-gray-500 w-6 h-6 focus:outline-none ${
+                          color === "grey" ? "border-black" : "border-yellow-200"
+                        }`}
+                      ></button>
+                    )}
 
                   {Object.keys(variants).includes("rose gold") &&
                     Object.keys(variants["rose gold"]).includes(size) && (
@@ -518,8 +529,14 @@ if(!error){
                       {color && Object.keys(variants[color]).includes('128') && (
                         <option value={'128'}>128</option>
                       )}
+                      {color && Object.keys(variants[color]).includes('150') && (
+                        <option value={'150'}>150</option>
+                      )}
                       {color && Object.keys(variants[color]).includes('160') && (
                         <option value={'160'}>160</option>
+                      )}
+                      {color && Object.keys(variants[color]).includes('182') && (
+                        <option value={'182'}>182</option>
                       )}
                       {color && Object.keys(variants[color]).includes('224') && (
                         <option value={'224'}>224</option>
