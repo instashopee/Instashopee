@@ -428,11 +428,11 @@ if(!error){
                       {color && Object.keys(variants[color]).includes('3') && (
                         <option value={'3'}>3</option>
                       )}
+                      {color && Object.keys(variants[color]).includes('4') && (
+                          <option value={'4'}>4</option>
+                        )}
                       {color && Object.keys(variants[color]).includes('5') && (
                         <option value={'5'}>5</option>
-                      )}
-                      {color && Object.keys(variants[color]).includes('4') && (
-                        <option value={'4'}>4</option>
                       )}
                       {color && Object.keys(variants[color]).includes('6') && (
                         <option value={'6'}>6</option>
@@ -505,6 +505,9 @@ if(!error){
                       )}
                       {color && Object.keys(variants[color]).includes('48') && (
                         <option value={'48'}>48</option>
+                      )}
+                      {color && Object.keys(variants[color]).includes('86') && (
+                        <option value={'86'}>86</option>
                       )}
                       {color && Object.keys(variants[color]).includes('96') && (
                         <option value={'96'}>96</option>
