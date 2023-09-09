@@ -409,10 +409,10 @@ const Navbar = ({Logout,user,cart,addToCart,removeFromCart,clearCart,subTotal}) 
         <li onClick={Logout} className="py-1 font-semibold hover:text-red-500 text-center text-md">Logout</li></ul>
       </div>}
 
-        {user.value &&<Link legacyBehavior href={'/'}><a><div className=" border-red-400 flex mx-1 border-1 md:mx-2  border-2 rounded-lg px-2 ">
+        {user.value &&<a><div className=" border-red-400 flex mx-1 border-1 md:mx-2  border-2 rounded-lg px-2 ">
         <MdAccountCircle   className="text-sm md:text-md mx-1 m-auto"/>
         <label className="text-sm md:text-md mx-1 cursor-pointer font-semibold" htmlFor="">MyAccount</label>
-        </div></a></Link>
+        </div></a>
         }</span>
         
 
@@ -456,7 +456,7 @@ const Navbar = ({Logout,user,cart,addToCart,removeFromCart,clearCart,subTotal}) 
 </svg>
 
 
-            <span class="text-sm text-gray-500 dark:text-gray-400">Profile</span>
+            <span class="text-sm text-gray-500 dark:text-gray-400">Account</span>
         </button>}</a></Link>
     </div>
 </div>

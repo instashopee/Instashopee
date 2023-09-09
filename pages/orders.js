@@ -38,50 +38,31 @@ return (
         />
       </Head>
     <h1 className="font-bold text-center text-3xl p-8">My Orders</h1>
-    <div className="container mx-auto">
-      <div class="flex flex-col">
-        <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
-          <div class="inline-block min-w-full py-2 sm:px-6 lg:px-8">
-            <div class="overflow-hidden">
-              <table class="min-w-full text-left text-sm font-light">
-                <thead class="border-b font-medium dark:border-neutral-500">
-                  <tr>
-                      <th scope="col" class="px-6 py-4">
-                        #Order Id
-                      </th>
-                      <th scope="col" class="px-6 py-4">
-                        Email
-                      </th>
-                      <th scope="col" class="px-6 py-4">
-                        Amount
-                      </th>
-                      <th scope="col" class="px-6 py-4">
-                        Details
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    
+    <div class="mx-auto max-w-10xl justify-center px-6 md:flex md:space-x-6 xl:px-0">
+
+      <div class="rounded-lg md:w-2/3">
                   {Object.values(orders).map((item)=>{
                     
-                    return <tr key={item._id} class="border-b transition duration-300 ease-in-out hover:bg-neutral-100 dark:border-neutral-500 dark:hover:bg-neutral-300">
-                    
-                      <td class="whitespace-nowrap px-6 py-4 font-medium">{item.orderId}</td>
-                      <td class="whitespace-nowrap px-6 py-4">{item.email}</td>
-                      <td class="whitespace-nowrap px-6 py-4">{item.amount}</td>
-                      <td class="whitespace-nowrap px-6 py-4"><Link legacyBehavior href={'/order?id='+item._id}><a>Click Here To View Details</a></Link></td>
-                    </tr>
+              
+                    return <div key={item._id} class="">
+                      <div class="justify-between mb-6 rounded-lg bg-gray-100 p-6 shadow-md sm:flex sm:justify-start">
+                 
+                      <div class="px-6 py-4 font-bold underline hover:text-red-500 cursor-pointer">ORDER ID # {item.orderId}</div>
+                      <div class="px-6 py-4 font-semibold">Name: {item.name}</div>
+                      <div class="px-6 py-4 font-semibold">Email: {item.email}</div>
+                      <div class="px-6 py-4 font-semibold">Total Amount To Pay: Rs.{item.amount}/-</div>
+                      <Link legacyBehavior href={'/order?id='+item._id}><div class="px-6 py-4 bg-red-200 font-semibold rounded-lg cursor-pointer hover:text-red-500"><a>View Order Details</a></div></Link>
+                </div>
+                    </div>
                   })}
                     
-                    
-                  </tbody>
-                </table>
+                  
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+              </div>
+              </div>
+           
+
+
   );
 };
 

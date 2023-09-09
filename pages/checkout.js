@@ -401,7 +401,7 @@ const getpincode=async(pin)=>{
      
         </div>
         <br />
-        {promocode=='INSTA100'?<span className="font-bold">Subtotal: ₹{subTotal-100}</span>:<span className="font-bold">Subtotal: ₹{subTotal}</span>}
+        {promocode=='INSTA100'?<span className="font-bold">Subtotal: ₹{subTotal=(subTotal-100)}</span>:<span className="font-bold">Subtotal: ₹{subTotal}</span>}
           </div>
       </div>
 

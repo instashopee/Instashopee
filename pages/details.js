@@ -49,10 +49,11 @@ const details = () => {
       />
     <div className=" bg-white  p-5  mt-3">
       <ul>
-  <Link legacyBehavior href={'/myaccount'}><a><li className="py-1 font-semibold hover:text-red-500  text-2xl">Account Page</li></a></Link>
-  <Link legacyBehavior href={'/orders'}><a><li className="py-1 font-semibold hover:text-red-500  text-2xl">Orders</li></a></Link>
-  {user.email=="abhishekjain4548@gmail.com" &&<Link legacyBehavior href={'/admin'}><a><li className="py-1 font-semibold hover:text-red-500  text-2xl">Admin</li></a></Link>}
-  <li onClick={Logout} className="py-1 font-semibold hover:text-red-500  text-2xl">Logout</li></ul>
+      <Link legacyBehavior href={'/myaccount'}><div class="justify-between mb-6 rounded-lg bg-gray-100 p-6 shadow-md sm:flex sm:justify-start">
+  <a><li className="py-1 font-semibold hover:text-red-500  text-2xl">Account Page</li></a></div></Link>
+  <Link legacyBehavior href={'/orders'}><div class="justify-between mb-6 rounded-lg bg-gray-100 p-6 shadow-md sm:flex sm:justify-start"><a><li className="py-1 font-semibold hover:text-red-500  text-2xl">Orders</li></a></div></Link>
+  {user.email=="abhishekjain4548@gmail.com" &&<Link legacyBehavior href={'/admin'}><div class="justify-between mb-6 rounded-lg bg-gray-100 p-6 shadow-md sm:flex sm:justify-start"><a><li className="py-1 font-semibold hover:text-red-500  text-2xl">Admin</li></a></div></Link>}
+  <div class="justify-between mb-6 rounded-lg bg-gray-100 p-6 shadow-md sm:flex sm:justify-start"><li onClick={Logout} className="py-1 font-semibold hover:text-red-500  text-2xl">Logout</li></div></ul>
 </div>
 </span></div>
   )

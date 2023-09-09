@@ -54,10 +54,10 @@ return <Link key={products[item].id} passHref={true} legacyBehavior href={`produ
         <p className="mt-1 textPart md:text-lg font-semibold">₹{products[item].price}/-</p>
         
       <span className="font-small text-md mr-2 mt-1 text-green-600 line-through textPart">
-      MRP ₹{products[item].mrp}/-
+      ₹{products[item].mrp}/-
                 </span>
                 <span className="font-small text-md mt-1 text-orange-600 textPart">
-                ({Math.floor(((products[item].price-products[item].mrp)/products[item].mrp)*100)}%){/* (-70% Off) */}
+                ({Math.floor(((products[item].price-products[item].mrp)/products[item].mrp)*100)}% Off){/* (-70% Off) */}
                 </span>
                 </div>
                 <div className="mt-1 textPart">
