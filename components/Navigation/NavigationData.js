@@ -27,8 +27,8 @@ export const navigation = {
               { name: 'Butt Hinges',id:'bh', href: 'butt_hinges' },
               { name: 'Auto Hinges',id:'ah', href: 'auto_hinges' },
               { name: 'Hydraulic Hinges',id:'hh', href: 'hydraulic_hinges' },
-              { name: 'Piano Slides',id:'ps', href: 'piano_slides' },
-              { name: 'Other Slides',id:'os', href: 'other_slides' },
+              { name: 'Piano Hinges',id:'ps', href: 'piano_slides' },
+              { name: 'Other Hinges',id:'os', href: 'other_slides' },
 
             ],
           },

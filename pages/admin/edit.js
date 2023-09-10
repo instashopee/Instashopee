@@ -35,7 +35,7 @@ const edit = () => {
 
   
     settype("normal");
-    setmqty("1")
+ 
   }, []);
   const [image, setImage] = useState(null);
   const [image2, setImage2] = useState(null);
@@ -136,6 +136,7 @@ const edit = () => {
       },
       body: JSON.stringify(data),
     });
+    console.log(data)
     
     let res = await a.json();
 
