@@ -11,6 +11,7 @@ const OrderSchema = new mongoose.Schema({
     pincode: {type: String, required: true},
     phone: {type: String, required: true},
     name: {type: String, required: true},
+    img: {type: String},
     transactionId: {type: String, default:""},
     amount: {type: Number, required: true},
     status: {type: String, default:'Pending',required: true},

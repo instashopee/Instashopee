@@ -28,7 +28,7 @@ const wishlist = ({wishlist,cart,addTowishlist,removeFromwishlist,clearwishlist,
             <div class="mt-5 sm:mt-0">
             <div className="w-2/3 font-semibold text-2xl">{wishlist[k].name}({wishlist[k].size}/{wishlist[k].variant})</div>
             <div class="flex flex-col mt-5">
-                <p class="text-sm">Price Of Each - Rs.{wishlist[k].price}/-</p>
+                <p class="text-sm">Price - Rs.{wishlist[k].price}/-</p>
                 
                 <p class="text-sm">Delivery Charge - Rs.{wishlist[k].del_ch}/-</p>
               </div>

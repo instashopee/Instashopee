@@ -28,7 +28,7 @@ const cart = ({cart,addToCart,removeFromCart,clearCart,subTotal,addTowishlist}) 
             <div class="mt-5 sm:mt-0">
             <div className="w-2/3 font-semibold text-2xl">{cart[k].name}({cart[k].size}/{cart[k].variant})</div>
             <div class="flex flex-col mt-5">
-                <p class="text-sm">Price Of Each - Rs.{cart[k].price}/-</p>
+                <p class="text-sm">Price - Rs.{cart[k].price}/-</p>
                 
                 <p class="text-sm">Delivery Charge - Rs.{cart[k].del_ch}/-</p>
               </div>

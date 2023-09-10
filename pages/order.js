@@ -16,7 +16,7 @@ const MyOrder = ({ order, clearCart }) => {
     }
   }, []);
   return (
-    <section className="text-gray-600 body-font overflow-hidden">
+    <section className="text-gray-600 body-font overflow-hidden min-h-screen">
       <Head>
         <title>My Orders -  Instashopee</title>
         <meta
@@ -24,30 +24,14 @@ const MyOrder = ({ order, clearCart }) => {
           content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0"
         />
       </Head>
-      <div className="container px-5 py-24 mx-auto">
-        <div className="lg:w-4/5 mx-auto flex flex-wrap">
-          <div className="lg:w-1/2 w-full  lg:py-6 mb-6 lg:mb-0">
-            <h2 className="text-sm title-font text-gray-500 tracking-widest">
-              INSTASHOPEE
-            </h2>
-            {/* <span className="mb-2 mt-2 font-medium text-lg text-blue-800">
-                SHARE OTP ON DELIVERY TO COMPLETE ORDER: {order.otp}
-              </span> */}
-            <h1 className="text-gray-900 text-3xl title-font font-medium mb-4">
-              Order Id: #{order.orderId}
-            </h1>
-            <p className="leading-relaxed mb-4">
-              Your Order Has Been Placed Successfully !!.{" "}
-            </p>
-            <p>
-              Your Payment Status is:{" "}
-              <span className="font-semibold text-green-600 text-lg">
-                {order.status}
-              </span>
-            </p>
-            <p className="leading-relaxed">
-              Your Order was placed on:{" "}
-              <span className="font-semibold text-red-600 text-lg">
+      <div class="mx-auto max-w-5xl justify-center px-6 md:flex md:space-x-6 xl:px-0">
+    
+      <div class="rounded-lg md:w-2/3">
+        <h1 className="font-bold mx-5 my-5 text-2xl text-black">View Order Details</h1>
+        <div className="border-2 justify-between mb-6 rounded-lg bg-white p-6 shadow-md sm:flex sm:justify-start">
+            <div className="flex flex-col">
+            <div className="text-black font-semibold">ORDER DATE:{" "}
+              <span className=" text-black">
                 {date &&
                   date.toLocaleString("en-IN", {
                     weekday: "long",
@@ -55,69 +39,48 @@ const MyOrder = ({ order, clearCart }) => {
                     month: "long",
                     day: "numeric",
                   })}
-              </span>
-            </p>
-            
-                  <p className="leading-relaxed mb-4 font-bold">
-                  YOUR ORDER IS {order.deliveryStatus}
-                  </p>
-
-            <div className="flex mb-4">
-              <a className="flex-grow text-indigo-500 py-2 text-lg px-1">
-                Item Description
-              </a>
-              <a className="flex-grow  text-indigo-500 py-2 text-lg px-1">
-                Quantity
-              </a>
-              <a className="flex-grow text-indigo-500 py-2 text-lg px-1">
-                Price
-              </a>
-              {/* <a className="flex-grow text-indigo-500 py-2 text-lg px-1">
-                Estimated Delivery Time
-              </a> */}
-            </div>
-
-            {Object.keys(products).map((key) => {
+              </span></div>
+            <div className="text-black font-semibold">ORDER ID: #{order.orderId}</div>
+            <div className="text-black font-semibold">ORDER TOTAL: Rs.{order.amount}/-</div>
+            <div className="text-green-500 font-semibold">YOUR PAYMENT STATUS: {order.status}</div>
+            <div className="text-red-500 font-semibold">YOUR DELIVERY STATUS: {order.deliveryStatus}</div>
+        </div>
+        </div>
+        <div className="text-black font-semibold">YOUR ORDERED PRODUCTS DETAILS :-</div>
+        {Object.keys(products).map((key) => {
               return (
-                <div key={key} className="flex border-t border-gray-200 py-3">
-                  <span className="text-gray-500">
-                    {products[key].name}
-                    <br />
-                    ({products[key].size}/
-                    {products[key].variant})
-                  </span>
-                  <span className="m-auto text-gray-900">
-                    {products[key].qty}
-                  </span>
-                  <span className="m-auto text-gray-900">
-                  ₹{products[key].price} X {products[key].qty} = ₹
-                    {products[key].price * products[key].qty}
-                  </span>
-                  {/* <span className="m-auto float-left text-gray-900">
-                  {products[key].edt}
-                  </span> */}
-                 
+                <div key={key} className="border-2 justify-between mb-6 rounded-lg bg-white p-6 shadow-md sm:flex sm:justify-start">
+                 <img src={products[key].img} alt="product-image" class="w-full rounded-lg sm:w-40" />
+                <div class="sm:ml-4 sm:flex sm:w-full sm:justify-between">
+            <div class="mt-5 sm:mt-0">
+            <div className="w-2/3 font-semibold text-2xl">{products[key].name}({products[key].size}/{products[key].variant})</div>
+            <div class="flex flex-col mt-5">
+                 <p class="text-sm">Price - Rs.{products[key].price}/-</p>
+                 <p class="text-sm">Qty - {products[key].qty}</p>
+                
+                {/*<p class="text-sm">Delivery Charge - Rs.{cart[k].del_ch}/-</p> */}
+              </div>
+            </div>
+            <div class="mt-4 flex justify-between sm:space-y-6 sm:mt-0 sm:block sm:space-x-6">
+              <div class="flex items-center border-gray-100">
+                {/* <span onClick={()=>{removeFromCart(k,1,cart[k].price,cart[k].name,cart[k].size,cart[k].variant,cart[k].del_ch,cart[k].img)}} class="cursor-pointer rounded-l bg-gray-100 py-1 px-3.5 duration-100 hover:bg-blue-500 hover:text-blue-50"> - </span>
+                <span className="mx-1">{cart[k].qty}</span>
+                <span onClick={()=>{addToCart(k,1,cart[k].price,cart[k].name,cart[k].size,cart[k].variant,cart[k].del_ch,cart[k].img)}} class="cursor-pointer rounded-r bg-gray-100 py-1 px-3 duration-100 hover:bg-blue-500 hover:text-blue-50"> + </span>
+                <span class="hover:text-gray-700"><AiOutlineHeart onClick={() => {
+                    addTowishlist(k,1,cart[k].price,cart[k].name,cart[k].size,cart[k].variant,cart[k].del_ch,cart[k].img);
+                  }} className="text-2xl cursor-pointer" />
+                           </span> */}
+
+              </div>
+            </div>
+              
+          </div>
                 </div>
               );
             })}
-
-            <div className="flex my-8">
-              <span className="title-font font-medium text-2xl text-gray-900">
-                Subtotal: ₹{order.amount}
-              </span>
-              
-              {/* <button className="flex ml-auto text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded">
-                Track Order
-              </button> */}
-            </div>
-          </div>
-          <img
-            alt="ecommerce"
-            className="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded"
-            src="https://cdni.iconscout.com/illustration/premium/thumb/order-placed-4283423-3581435.png"
-          />
-        </div>
-      </div>
+     </div>
+     </div>
+     
     </section>
   );
 };
