@@ -46,7 +46,7 @@ export const navigation = {
             name: 'Aluminium Profile',
             items: [
               { name: 'Frame Profile',id:'tc', href: 'frame_profile' },
-              { name: 'Frame With Hnadle Profile',id:'scc', href: 'frame_with_hadle_profile' },
+              { name: 'Frame With Handle Profile',id:'scc', href: 'frame_with_hadle_profile' },
               { name: 'Handle profile',id:'scc', href: 'handle_profile' },
 
             ],
@@ -139,40 +139,40 @@ export const navigation = {
 
         ],
       },
-      {
-        id: 'bathroom_fittings',
-        name: 'Bathroom Fittings',
-        // featured: [
-        //   {
-        //     name: 'New Arrivals',
-        //     href: '/',
-        //     // imageSrc: 'https://tailwindui.com/img/ecommerce-images/mega-menu-category-01.jpg',
-        //     imageSrc: 'https://tailwindui.com/img/ecommerce-images/mega-menu-category-02.jpg',
-        //     imageAlt: 'Models sitting back to back, wearing Basic Tee in black and bone.',
-        //   },
-        //   {
-        //     name: 'Basic Tees',
-        //     href: '#',
-        //     imageSrc: 'https://tailwindui.com/img/ecommerce-images/mega-menu-category-02.jpg',
-        //     imageAlt: 'Close up of Basic Tee fall bundle with off-white, ochre, olive, and black tees.',
-        //   },
-        // ],
-        sections: [
-          {
-            id: 'bathroom_fittings',
-            name: 'Bathroom Fittings',
-            items: [
-              { name: 'Wash Basin',id:'bh', href: 'wash_basin' },
-              { name: 'Water Closet',id:'ah', href: 'water_closet' },
-              { name: 'Vanities',id:'hh', href: 'vanities' },
-              { name: 'Shower Panels',id:'ps', href: 'shower_panels' },
-              { name: 'General Accessories',id:'os', href: 'general_accessories' },
+      // {
+      //   id: 'bathroom_fittings',
+      //   name: 'Bathroom Fittings',
+      //   // featured: [
+      //   //   {
+      //   //     name: 'New Arrivals',
+      //   //     href: '/',
+      //   //     // imageSrc: 'https://tailwindui.com/img/ecommerce-images/mega-menu-category-01.jpg',
+      //   //     imageSrc: 'https://tailwindui.com/img/ecommerce-images/mega-menu-category-02.jpg',
+      //   //     imageAlt: 'Models sitting back to back, wearing Basic Tee in black and bone.',
+      //   //   },
+      //   //   {
+      //   //     name: 'Basic Tees',
+      //   //     href: '#',
+      //   //     imageSrc: 'https://tailwindui.com/img/ecommerce-images/mega-menu-category-02.jpg',
+      //   //     imageAlt: 'Close up of Basic Tee fall bundle with off-white, ochre, olive, and black tees.',
+      //   //   },
+      //   // ],
+      //   sections: [
+      //     {
+      //       id: 'bathroom_fittings',
+      //       name: 'Bathroom Fittings',
+      //       items: [
+      //         { name: 'Wash Basin',id:'bh', href: 'wash_basin' },
+      //         { name: 'Water Closet',id:'ah', href: 'water_closet' },
+      //         { name: 'Vanities',id:'hh', href: 'vanities' },
+      //         { name: 'Shower Panels',id:'ps', href: 'shower_panels' },
+      //         { name: 'General Accessories',id:'os', href: 'general_accessories' },
           
 
-            ],
-          }
-        ],
-      },
+      //       ],
+      //     }
+      //   ],
+      // },
       {
         id: 'decorative_panels',
         name: 'Decorative Panels',
@@ -207,53 +207,53 @@ export const navigation = {
           }
         ],
       },
-      {
-        id: 'garments',
-        name: 'Clothes',
-        // featured: [
-        //   {
-        //     name: 'New Arrivals',
-        //     href: '/',
-        //     // imageSrc: 'https://tailwindui.com/img/ecommerce-images/mega-menu-category-01.jpg',
-        //     imageSrc: 'https://tailwindui.com/img/ecommerce-images/mega-menu-category-02.jpg',
-        //     imageAlt: 'Models sitting back to back, wearing Basic Tee in black and bone.',
-        //   },
-        //   {
-        //     name: 'Basic Tees',
-        //     href: '#',
-        //     imageSrc: 'https://tailwindui.com/img/ecommerce-images/mega-menu-category-02.jpg',
-        //     imageAlt: 'Close up of Basic Tee fall bundle with off-white, ochre, olive, and black tees.',
-        //   },
-        // ],
-        sections: [
-          {
-            id: 'men',
-            name: 'Men',
-            items: [
-              { name: 'Shirts',id:'bh', href: 'shirts' },
-              { name: 'T-Shirts',id:'ah', href: 'tshirts' },
-              { name: 'Jackets',id:'hh', href: 'jackets' },
-              { name: 'Jeans',id:'ps', href: 'jeans' },
-              { name: 'Trousers',id:'ps', href: 'trousers' },
+      // {
+      //   id: 'garments',
+      //   name: 'Clothes',
+      //   // featured: [
+      //   //   {
+      //   //     name: 'New Arrivals',
+      //   //     href: '/',
+      //   //     // imageSrc: 'https://tailwindui.com/img/ecommerce-images/mega-menu-category-01.jpg',
+      //   //     imageSrc: 'https://tailwindui.com/img/ecommerce-images/mega-menu-category-02.jpg',
+      //   //     imageAlt: 'Models sitting back to back, wearing Basic Tee in black and bone.',
+      //   //   },
+      //   //   {
+      //   //     name: 'Basic Tees',
+      //   //     href: '#',
+      //   //     imageSrc: 'https://tailwindui.com/img/ecommerce-images/mega-menu-category-02.jpg',
+      //   //     imageAlt: 'Close up of Basic Tee fall bundle with off-white, ochre, olive, and black tees.',
+      //   //   },
+      //   // ],
+      //   sections: [
+      //     {
+      //       id: 'men',
+      //       name: 'Men',
+      //       items: [
+      //         { name: 'Shirts',id:'bh', href: 'shirts' },
+      //         { name: 'T-Shirts',id:'ah', href: 'tshirts' },
+      //         { name: 'Jackets',id:'hh', href: 'jackets' },
+      //         { name: 'Jeans',id:'ps', href: 'jeans' },
+      //         { name: 'Trousers',id:'ps', href: 'trousers' },
 
           
 
-            ],
-          },
-          {
-            id: 'women',
-            name: 'Women',
-            items: [
-              { name: 'Suits',id:'bh', href: 'suits' },
-              { name: 'Sarees',id:'ah', href: 'sarees' },
-              { name: 'Western Wear',id:'hh', href: 'western_wear' },
+      //       ],
+      //     },
+      //     {
+      //       id: 'women',
+      //       name: 'Women',
+      //       items: [
+      //         { name: 'Suits',id:'bh', href: 'suits' },
+      //         { name: 'Sarees',id:'ah', href: 'sarees' },
+      //         { name: 'Western Wear',id:'hh', href: 'western_wear' },
          
           
 
-            ],
-          }
-        ],
-      },
+      //       ],
+      //     }
+      //   ],
+      // },
 
     ],
     pages: [
