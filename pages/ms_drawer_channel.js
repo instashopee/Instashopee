@@ -3,9 +3,18 @@ import React from 'react'
 import Product from "@/models/Product";
 import connectDb from "@/middleware/mongoose";
 import mongoose from 'mongoose';
+import { Fragment, useState } from 'react'
+import { Dialog, Disclosure, Menu, Transition } from '@headlessui/react'
+import { XMarkIcon } from '@heroicons/react/24/outline'
+import { ChevronDownIcon, FunnelIcon, MinusIcon, PlusIcon, Squares2X2Icon } from '@heroicons/react/20/solid'
 import Head from "next/head";
-// import filterss from '@/components/filters';
+
 const Hinges = ({products}) => {
+  const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
+
+  function classNames(...classes) {
+    return classes.filter(Boolean).join(' ')
+  }
   return (
     <div>
       <Head>
@@ -15,34 +24,94 @@ const Hinges = ({products}) => {
           content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0"
         />
       </Head>
-      <section className="text-gray-600 body-font ">
+<div className="bg-white">
+      <div>
+        {/* Mobile filter dialog */}
+        <Transition.Root show={mobileFiltersOpen} as={Fragment}>
+          <Dialog as="div" className="relative z-40 lg:hidden" onClose={setMobileFiltersOpen}>
+            <Transition.Child
+              as={Fragment}
+              enter="transition-opacity ease-linear duration-300"
+              enterFrom="opacity-0"
+              enterTo="opacity-100"
+              leave="transition-opacity ease-linear duration-300"
+              leaveFrom="opacity-100"
+              leaveTo="opacity-0"
+            >
+              <div className="fixed inset-0 bg-black bg-opacity-25" />
+            </Transition.Child>
 
-  <div className="container px-5 py-3 mx-auto  ">
-    <div className="flex flex-wrap -m-4 justify-center">
-     
-      
-    {Object.keys(products).length==0 && <p>Sorry, All Items Out Of Stock, New Products Comming Soon !!</p>}
-    {Object.keys(products).map((item)=>{
+            <div className="fixed inset-0 z-40 flex">
+              <Transition.Child
+                as={Fragment}
+                enter="transition ease-in-out duration-300 transform"
+                enterFrom="translate-x-full"
+                enterTo="translate-x-0"
+                leave="transition ease-in-out duration-300 transform"
+                leaveFrom="translate-x-0"
+                leaveTo="translate-x-full"
+              >
+                <Dialog.Panel className="relative ml-auto flex h-full w-full max-w-xs flex-col overflow-y-auto bg-white py-4 pb-12 shadow-xl">
+                  <div className="flex items-center justify-between px-4">
+                    <h2 className="text-lg font-medium text-gray-900">Filters</h2>
+                    <button
+                      type="button"
+                      className="-mr-2 flex h-10 w-10 items-center justify-center rounded-md bg-white p-2 text-gray-400"
+                      onClick={() => setMobileFiltersOpen(false)}
+                    >
+                      <span className="sr-only">Close menu</span>
+                      <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+                    </button>
+                    </div>
+
+                </Dialog.Panel>
+              </Transition.Child>
+            </div>
+          </Dialog>
+        </Transition.Root>
+
+        <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="flex items-baseline justify-between border-b border-gray-200 pb-6 pt-4">
+            <h1 className="text-4xl font-bold tracking-tight text-gray-900">New Arrivals</h1>
+
+          </div>
+
+          <section aria-labelledby="products-heading" className="pb-24 pt-6">
+            <h2 id="products-heading" className="sr-only">
+              Products
+            </h2>
+
+            <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-4">
+              <div className="lg:col-span-4 w-full items-center">
+               
+              <section className="text-gray-600 body-font ">
+
+<div className="container px-5 py-3 mx-auto  ">
+  <div className="flex flex-wrap -m-4 justify-center">
+   
+    
+  {Object.keys(products).length==0 && <p>Sorry, All Items Out Of Stock, New Products Comming Soon !!</p>}
+  {Object.keys(products).map((item)=>{
 // _id inside key of link
 return <Link key={products[item].id} passHref={true} legacyBehavior href={`product/${products[item].slug}`}>
-  <div className="lg:w-[20rem] md:w-1/2 p-4 w-1/2 h-[26rem] cursor-pointer shadow-lg  productCard transition-all">
-    <a className="block relative rounded overflow-hidden">
-      <img alt="" className="w-40 h-40 m-auto block" src={products[item].img}/>
-    </a>
-    <div className="mt-4 text-center md:text-left">
-      <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1 textPart">{products[item].category}</h3>
-      <h2 className="text-gray-900 title-font md:text-lg font-medium textPart">{products[item].title}</h2>
-      <div className=''>
-        <p className="mt-1 textPart md:text-lg font-semibold">₹{products[item].price}/-</p>
-        
-      <span className="font-small text-md mr-2 mt-1 text-green-600 line-through textPart">
-      ₹{products[item].mrp}/-
-                </span>
-                <span className="font-small text-md mt-1 text-orange-600 textPart">
-                ({Math.floor(((products[item].price-products[item].mrp)/products[item].mrp)*100)}% Off){/* (-70% Off) */}
-                </span>
-                </div>
-                <div className="mt-1 textPart">
+<div className="lg:w-[20rem] md:w-1/2 p-4 w-1/2 h-[26rem] cursor-pointer shadow-lg  productCard transition-all">
+  <a className="block relative rounded overflow-hidden">
+    <img alt="" className="w-40 h-40 m-auto block" src={products[item].img}/>
+  </a>
+  <div className="mt-4 text-center md:text-left">
+    <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1 textPart">{products[item].category}</h3>
+    <h2 className="text-gray-900 title-font md:text-lg font-medium textPart">{products[item].title}</h2>
+    <div className=''>
+      <p className="mt-1 textPart md:text-lg font-semibold">₹{products[item].price}/-</p>
+      
+    <span className="font-small text-md mr-2 mt-1 text-green-600 line-through textPart">
+    ₹{products[item].mrp}/-
+              </span>
+              <span className="font-small text-md mt-1 text-orange-600 textPart">
+              ({Math.floor(((products[item].price-products[item].mrp)/products[item].mrp)*100)}% Off){/* (-70% Off) */}
+              </span>
+              </div>
+              <div className="mt-1 textPart">
         {products[item].size.includes("0") && (<span className="border border-gray-300 px-1 mx-1">0</span>)}
         {products[item].size.includes("1") && (<span className="border border-gray-300 px-1 mx-1">1</span>)}
         {products[item].size.includes("2") && (<span className="border border-gray-300 px-1 mx-1">2</span>)}
@@ -75,9 +144,12 @@ return <Link key={products[item].id} passHref={true} legacyBehavior href={`produ
         {products[item].size.includes("44") && (<span className="border border-gray-300 px-1 mx-1">44</span>)}
         {products[item].size.includes("46") && (<span className="border border-gray-300 px-1 mx-1">46</span>)}
         {products[item].size.includes("48") && (<span className="border border-gray-300 px-1 mx-1">48</span>)}
+        {products[item].size.includes("86") && (<span className="border border-gray-300 px-1 mx-1">86</span>)}
         {products[item].size.includes("96") && (<span className="border border-gray-300 px-1 mx-1">96</span>)}
         {products[item].size.includes("100") && (<span className="border border-gray-300 px-1 mx-1">100</span>)}
         {products[item].size.includes("128") && (<span className="border border-gray-300 px-1 mx-1">128</span>)}
+        {products[item].size.includes("150") && (<span className="border border-gray-300 px-1 mx-1">150</span>)}
+        {products[item].size.includes("182") && (<span className="border border-gray-300 px-1 mx-1">182</span>)}
         {products[item].size.includes("288") && (<span className="border border-gray-300 px-1 mx-1">288</span>)}
         {products[item].size.includes("450") && (<span className="border border-gray-300 px-1 mx-1">450</span>)}
         {products[item].size.includes("600") && (<span className="border border-gray-300 px-1 mx-1">600</span>)}
@@ -102,20 +174,28 @@ return <Link key={products[item].id} passHref={true} legacyBehavior href={`produ
         {products[item].color.includes("wenge") && (<button className="border-2 border-gray-300 rounded-full bg-none bg-[#645452] hover:bg-[#645452] w-6 h-6 focus:outline-none"></button>)}
         {products[item].color.includes("ss") && (<button className="border-2 border-gray-300 rounded-full bg-none bg-[#b4bdc7] hover:bg-[#b4bdc7] w-6 h-6 focus:outline-none"></button>)}
         {products[item].color.includes("mocha brown") && (<button className="border-2 border-gray-300 rounded-full bg-none bg-[#664F40] hover:bg-[#664F40] w-6 h-6 focus:outline-none"></button>)}
+        {products[item].color.includes("grey") && (<button className="border-2 border-gray-300 rounded-full bg-none bg-gray-500 hover:bg-gray-500 w-6 h-6 focus:outline-none"></button>)}
                 
         </div>
 
-    </div>
   </div>
-  </Link>})}
+</div>
+</Link>})}
 
 
 
 
-      
-    </div>
+    
   </div>
+</div>
 </section>
+                </div>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+
     </div>
   )
 }
