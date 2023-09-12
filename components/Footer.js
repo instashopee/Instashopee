@@ -17,21 +17,19 @@ const Footer = () => {
       <p className="mt-2 text-sm text-gray-500 px-5">Instashopee - A Hardware Ecommerce Store</p>
     </div>
     <div className="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
-      <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-        <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CONTACT US</h2>
-        <nav className="list-none mb-10">
+      <div className=" w-full px-4">
+        <h2 className="title-font text-center font-medium text-gray-900 tracking-widest text-sm mb-3">CONTACT US</h2>
+        <nav className="list-none mb-10 text-center">
           <li>
-            <a className="text-gray-600 hover:text-gray-800">Address: 326, Industrial Area, Patparganj, Delhi - 110092, India</a>
+            <a className="text-gray-600 text-center hover:text-gray-800">Address: 326, Industrial Area, Patparganj, Delhi - 110092, India</a>
           </li>
           <li>
-            <a className="text-gray-600 hover:text-gray-800">Phone: 9871525579,011 35004656</a>
+            <a className="text-gray-600 text-center hover:text-gray-800">Phone: 9871525579,011 35004656   Email: varunjainhome@gmail.com, abhishekjain4548@gmail.com</a>
           </li>
-          <li>
-            <a className="text-gray-600 hover:text-gray-800">Email: varunjainhome@gmail.com, abhishekjain4548@gmail.com</a>
-          </li>
+    
         </nav>
       </div>
-      <div className="lg:w-1/4 md:w-1/2 w-full px-4">
+      {/* <div className="lg:w-1/4 md:w-1/2 w-full px-4">
         <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">ABOUT US</h2>
         <nav className="list-none mb-10">
           <li>
@@ -39,8 +37,8 @@ const Footer = () => {
           </li>
 
         </nav>
-      </div>
-      <div className="lg:w-1/4 md:w-1/2 w-full px-4">
+      </div> */}
+      {/* <div className="lg:w-1/4 md:w-1/2 w-full px-4">
         <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">OUR POLICY</h2>
         <nav className="list-none mb-10">
           <li>
@@ -51,7 +49,7 @@ const Footer = () => {
           </li>
 
         </nav>
-      </div>
+      </div> */}
       {/* <div className="lg:w-1/4 md:w-1/2 w-full px-4">
         <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
         <nav className="list-none mb-10">
