@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import Head from "next/head";
 const Forgot = () => {
   const router = useRouter();
@@ -24,6 +26,7 @@ const Forgot = () => {
     }
   }, []);
   const sendEmail = async () => {
+  
     let data = { email, sendMail: true };
     let a = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/forgot`, {
       method: "POST", // or 'PUT'
@@ -34,7 +37,29 @@ const Forgot = () => {
     });
     let res = await a.json();
     if (res.success) {
+      toast.success('Forgot Password Email Sent Successfully', {
+        position: "top-center",
+        autoClose: 1000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        });
+        
+      
     } else {
+      toast.error('Forgot Password Email Was Not Sent, Try Again Later', {
+        position: "top-center",
+        autoClose: 1000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        });
     }
   };
   const resetPassword = async () => {
@@ -49,13 +74,44 @@ const Forgot = () => {
       });
       let res = await a.json();
       if (res.success) {
+        toast.success('Password Reset Successfull', {
+          position: "top-center",
+          autoClose: 1000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+          });
       } else {
+        toast.error('Password Was Not Reset, Try Again Later', {
+          position: "top-center",
+          autoClose: 1000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+          });
       }
-    } else {
-    }
+    } 
   };
   return (
     <div class="flex min-h-[100vh] flex-col justify-center px-6 py-12 lg:px-8">
+      <ToastContainer
+        position="top-center"
+        autoClose={1000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
       <Head>
         <title>Forgot Password -  Instashopee</title>
         <meta
