@@ -122,13 +122,13 @@ if(!error){
                         smallImage: {
                             alt: '',
                             src: image,
-                            width: 350,
-                            height: 350
+                            width: 450,
+                            height: 450
                         },
                         largeImage: {
                             src: image,
-                            width: 550,
-                            height: 550
+                            width: 850,
+                            height: 850
                         },
                         isHintEnabled: true
                     }} />
