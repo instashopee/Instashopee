@@ -117,7 +117,7 @@ if(!error){
      
 
 
-       <div className="items-center justify-center">
+       <div className="items-center justify-center ">
        <ReactImageMagnify  {...{
                         smallImage: {
                             alt: '',
