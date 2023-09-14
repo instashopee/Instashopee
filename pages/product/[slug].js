@@ -7,6 +7,7 @@ import { AiFillPlusCircle, AiFillMinusCircle } from "react-icons/ai";
 import { BsFillBagCheckFill } from "react-icons/bs";
 import Glide from "@glidejs/glide"
 import Error from "next/error";
+import ReactImageMagnify from 'react-image-magnify';
 import Product from "@/models/Product";
 import Head from "next/head";
 const Post = ({buyNow, addToCart,addTowishlist, product, variants,error,cart ,removeFromCart}) => {
@@ -16,6 +17,7 @@ const Post = ({buyNow, addToCart,addTowishlist, product, variants,error,cart ,re
   const [service, setservice] = useState();
   const [color, setColor] = useState();
   const [size, setSize] = useState();
+  const [image, setImage] = useState(product.img);
   useEffect(() => {
 if(!error){
     setColor(product.color)
@@ -23,25 +25,7 @@ if(!error){
 }
  
   }, [router.query])
-  useEffect(() => {
-    const slider = new Glide(".glide-03", {
-      type: "slider",
-      focusAt: "center",
-      perView: 1,
-      autoplay: 3000,
-      animationDuration: 1000,
-      gap: 0,
-      classes: {
-        nav: {
-          active: "[&>*]:bg-wuiSlate-700",
-        },
-      },
-    }).mount()
 
-    return () => {
-      slider.destroy()
-    }
-  }, [])
   const checkServicability = async () => {
     let pins = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/pincode`);
     let pinJson = await pins.json();
@@ -92,6 +76,15 @@ if(!error){
   if(error==404){
     return <Error statusCode={404}/>
   }
+  const handleImage=()=>{
+    setImage(product.img)
+  }
+  const handleImage1=()=>{
+    setImage(product.img1)
+  }
+  const handleImage2=()=>{
+    setImage(product.img2)
+  }
   return (
     <>
       <section className="text-gray-600 body-font overflow-hidden min-h-screen">
@@ -115,105 +108,40 @@ if(!error){
         pauseOnHover
         theme="light"
         />
-        <div className="container px-5 mx-auto">
-          <div className="ml-4 mx-auto flex flex-wrap">
+        <div className="container px-5 mx-auto ">
+          <div className="mx-auto flex flex-wrap justify-center">
           <div className="py-16">
-          <>
+     
       {/*<!-- Component: Slider with indicators & controls inside --> */}
-      <div className="2xl:w-[70vh] xl:w-[70vh] lg:w-[60vh] md:relative md:w-[32vh] w-[40vh] items-center glide-03 ">
-        {/*    <!-- Slides --> */}
-        <div className="overflow-hidden " data-glide-el="track">
-          <ul className="whitespace-no-wrap flex-no-wrap [backface-visibility: hidden] [transform-style: preserve-3d] [touch-action: pan-Y] [will-change: transform] relative flex w-full overflow-hidden p-0">
-            <li >
-              <img
-                src={product.img}
-                className="hover:scale-105 transition-all duration-500 cursor-pointer h-80 w-80 m-auto"
-              />
-            </li>
-            <li>
-              <img
-                src={product.img1}
-                className="hover:scale-105 transition-all duration-500 cursor-pointer  h-80 w-80 m-auto"
-              />
-            </li>
-            <li>
-              <img
-              
-                src={product.img2}
-                className="hover:scale-105 transition-all duration-500 cursor-pointer  h-80 w-80 m-auto"
-              />
-            </li>
-            {/* <li>
-              <img
-                src={product.img4}
-                className="hover:scale-105 transition-all duration-500 cursor-pointer w-full max-w-full max-h-full m-auto"
-              />
-            </li> */}
-            {/* <li>
-              <img
-                src={product.img5}
-                className="w-full max-w-full max-h-full m-auto"
-              />
-            </li> */}
-          </ul>
-        </div>
-        {/*    <!-- Controls --> */}
-        <div
-          className="md:absolute left-0 flex items-center justify-between w-full h-8 px-4 top-1/2 mt-3 sm: "
-          data-glide-el="controls"
-        >
-          <button
-            className="inline-flex items-center justify-center w-8 h-8 transition duration-300 border rounded-full border-slate-700 bg-white/20 text-slate-700 hover:border-slate-900 hover:text-slate-900 focus-visible:outline-none lg:h-12 lg:w-12"
-            data-glide-dir="<"
-            aria-label="prev slide"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth="1.5"
-              stroke="currentColor"
-              className="w-5 h-5"
-            >
-              <title>prev slide</title>
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18"
-              />
-            </svg>
-          </button>
-          <button
-            className="inline-flex items-center justify-center w-8 h-8 transition duration-300 border rounded-full border-slate-700 bg-white/20 text-slate-700 hover:border-slate-900 hover:text-slate-900 focus-visible:outline-none lg:h-12 lg:w-12"
-            data-glide-dir=">"
-            aria-label="next slide"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth="1.5"
-              stroke="currentColor"
-              className="w-5 h-5"
-            >
-              <title>next slide</title>
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
-              />
-            </svg>
-          </button>
-        </div>
-        {/*    <!-- Indicators --> */}
+      <div className="items-center justify-center w-full ">
+     
+
+
+       <div className="items-center justify-center">
+       <ReactImageMagnify  {...{
+                        smallImage: {
+                            alt: 'Wristwatch by Ted Baker London',
+                            src: image,
+                            width: 350,
+                            height: 350
+                        },
+                        largeImage: {
+                            src: image,
+                            width: 550,
+                            height: 550
+                        },
+                        isHintEnabled: true
+                    }} />
+        {/* <img src={image} className="h-72 w-80" alt="" /> */}
+       </div>
         <div
           className=" flex items-center justify-center w-full gap-2 mt-10"
-          data-glide-el="controls[nav]"
+        
         >
           <button
             className="p-4 group"
-            data-glide-dir="=0"
-            aria-label="goto slide 1"
+            onClick={handleImage}
+           
           >
             <img
                 src={product.img}
@@ -221,8 +149,7 @@ if(!error){
               />          </button>
           <button
             className="p-4 group"
-            data-glide-dir="=1"
-            aria-label="goto slide 2"
+            onClick={handleImage1}
           >
                     <img
                 src={product.img1}
@@ -230,34 +157,20 @@ if(!error){
               />          </button>
           <button
             className="p-4 group"
-            data-glide-dir="=2"
-            aria-label="goto slide 3"
+            onClick={handleImage2}
           >
           <img
                 src={product.img2}
                 className="border-2 border-black p-3 hover:scale-105 transition-all duration-500 cursor-pointer  h-20 w-20 "
               />         
               </button>
-          {/* <button
-            className="p-4 group"
-            data-glide-dir="=3"
-            aria-label="goto slide 4"
-          >
-            <span className="block w-2 h-2 transition-colors duration-300 rounded-full bg-white/20 ring-2 ring-slate-700 focus:outline-none"></span>
-          </button> */}
-          {/* <button
-            className="p-4 group"
-            data-glide-dir="=4"
-            aria-label="goto slide 5"
-          >
-            <span className="block w-2 h-2 transition-colors duration-300 rounded-full bg-white/20 ring-2 ring-slate-700 focus:outline-none"></span>
-          </button> */}
+       
         </div>
       </div>
      
             
       {/*<!-- End Slider with indicators & controls inside --> */}
-    </>
+   
             </div>
             {/* <img
               alt="image"
@@ -416,7 +329,7 @@ if(!error){
                     )}
                 </div>
 
-                <div className="flex ml-6 items-center">
+                <div className="flex ml-6 items-center -z-10">
                   <span className="mr-3">Size</span>
                   <div className="relative">
                     <select
