@@ -140,7 +140,7 @@ if(!error){
                             height: "100%",
                           },
                         isHintEnabled: true,
-                        lensStyle: { backgroundColor: 'rgba(0,0,0,0)' }
+                        // lensStyle: { backgroundColor: 'rgba(0,0,0,0)' }
                         
                     }} />
         {/* <img src={image} className="h-72 w-80" alt="" /> */}
