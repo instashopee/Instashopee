@@ -122,6 +122,8 @@ if(!error){
                         smallImage: {
                             alt: '',
                             src: image,
+                           
+                            sizes: '(max-width: 480px) 100vw, (max-width: 1200px) 30vw, 360px',
                             width: 450,
                             height: 450
                         },
@@ -129,8 +131,17 @@ if(!error){
                             src: image,
                             width: 850,
                             height: 850
-                        },
-                        isHintEnabled: true
+                          },
+                          enlargedImageContainerStyle: {
+                            zIndex: "1500",
+                          },
+                          enlargedImageContainerDimensions: {
+                            width: "100%",
+                            height: "100%",
+                          },
+                        isHintEnabled: true,
+                        lensStyle: { backgroundColor: 'rgba(0,0,0,0)' }
+                        
                     }} />
         {/* <img src={image} className="h-72 w-80" alt="" /> */}
        </div>
