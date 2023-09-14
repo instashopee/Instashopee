@@ -127,10 +127,11 @@ if(!error){
                         },
                         largeImage: {
                             src: image,
-                            width: 550,
-                            height: 550
+                            width: 850,
+                            height: 850
                         },
-                        isHintEnabled: true
+                        isHintEnabled: true,
+                        lensStyle:{ backgroundColor: 'rgba(0,0,0,.6)' }
                     }} />
         {/* <img src={image} className="h-72 w-80" alt="" /> */}
        </div>
