@@ -120,7 +120,7 @@ if(!error){
        <div className="items-center justify-center">
        <ReactImageMagnify  {...{
                         smallImage: {
-                            alt: 'Wristwatch by Ted Baker London',
+                            alt: '',
                             src: image,
                             width: 350,
                             height: 350
