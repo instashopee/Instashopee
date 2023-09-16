@@ -410,7 +410,7 @@ const Navbar = ({Logout,user,cart,addToCart,removeFromCart,clearCart,subTotal}) 
         <li onClick={Logout} className="py-1 font-semibold hover:text-red-500 text-center text-md">Logout</li></ul>
       </div>}
 
-        {user.value &&<a><div className="flex mx-1  md:mx-2  border-2 rounded-lg px-2 ">
+        {user.value &&<a><div className="flex rounded-lg px-2 ">
         <MdAccountCircle   className="text-2xl text-gray-500 mx-1 m-auto"/>
         {/* <label className="text-sm md:text-md mx-1 cursor-pointer font-semibold" htmlFor="">MyAccount</label> */}
         </div></a>
