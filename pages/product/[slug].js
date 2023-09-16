@@ -110,7 +110,7 @@ if(!error){
         />
         <div className="container px-5 mx-auto ">
           <div className="mx-auto flex flex-wrap justify-center">
-          <div className="py-16">
+          <div className="sm:py-16 py-2">
      
       {/*<!-- Component: Slider with indicators & controls inside --> */}
       <div className="items-center justify-center w-full ">
@@ -118,7 +118,7 @@ if(!error){
 
 
        <div className="items-center justify-center ">
-       <ReactImageMagnify  {...{
+       {/* <ReactImageMagnify  {...{
                         smallImage: {
                             alt: '',
                             src: image,
@@ -139,11 +139,11 @@ if(!error){
                             width: "100%",
                             height: "100%",
                           },
-                        isHintEnabled: true,
+                        
                         // lensStyle: { backgroundColor: 'rgba(0,0,0,0)' }
                         
-                    }} />
-        {/* <img src={image} className="h-72 w-80" alt="" /> */}
+                    }} /> */}
+        <img src={image} className="sm:h-[35rem] h-72 sm:w-[35rem]  w-80 mx-3" alt="" />
        </div>
         <div
           className=" flex items-center justify-center w-full gap-2 mt-10"
