@@ -391,13 +391,13 @@ const Navbar = ({Logout,user,cart,addToCart,removeFromCart,clearCart,subTotal}) 
       <label className="text-sm md:text-md mx-1 cursor-pointer font-semibold" htmlFor="">Search</label>
         </div></a></Link> */}
 
-        {<Link legacyBehavior href={'/cart'}><a><div className="border-red-400 flex mx-1 border-1 md:mx-2  border-2 rounded-lg px-2 ">
-        <AiOutlineShoppingCart  className="text-sm md:text-md mx-1 m-auto" />
-        <label className="text-sm md:text-md mx-1 cursor-pointer font-semibold" htmlFor="">Cart</label>
+        {<Link legacyBehavior href={'/cart'}><a><div className=" flex   rounded-lg px-2 ">
+        <AiOutlineShoppingCart  className="text-2xl text-gray-500 mx-1 m-auto" />
+        {/* <label className="text-sm md:text-md mx-1 cursor-pointer font-semibold" htmlFor="">Cart</label> */}
         </div></a></Link>}
-        {<Link legacyBehavior href={'/wishlist'}><a><div className="border-red-400 flex mx-1 border-1 md:mx-2  border-2 rounded-lg px-2 ">
-        <AiOutlineHeart className="text-sm md:text-md mx-1 cursor-pointer font-semibold mt-1" />
-        <label className="text-sm md:text-md mx-1 cursor-pointer font-semibold" htmlFor="">Wishlist</label>
+        {<Link legacyBehavior href={'/wishlist'}><a><div className="flex  rounded-lg px-2 ">
+        <AiOutlineHeart className="text-2xl text-gray-500 mx-1 cursor-pointer font-semibold mt-1" />
+        {/* <label className="text-sm md:text-md mx-1 cursor-pointer font-semibold" htmlFor="">Wishlist</label> */}
         </div></a></Link>}
 
         
@@ -410,16 +410,16 @@ const Navbar = ({Logout,user,cart,addToCart,removeFromCart,clearCart,subTotal}) 
         <li onClick={Logout} className="py-1 font-semibold hover:text-red-500 text-center text-md">Logout</li></ul>
       </div>}
 
-        {user.value &&<a><div className=" border-red-400 flex mx-1 border-1 md:mx-2  border-2 rounded-lg px-2 ">
-        <MdAccountCircle   className="text-sm md:text-md mx-1 m-auto"/>
-        <label className="text-sm md:text-md mx-1 cursor-pointer font-semibold" htmlFor="">MyAccount</label>
+        {user.value &&<a><div className="flex mx-1  md:mx-2  border-2 rounded-lg px-2 ">
+        <MdAccountCircle   className="text-2xl text-gray-500 mx-1 m-auto"/>
+        {/* <label className="text-sm md:text-md mx-1 cursor-pointer font-semibold" htmlFor="">MyAccount</label> */}
         </div></a>
         }</span>
         
 
-        {!user.value &&<Link legacyBehavior href={'/login'}><a><div className=" border-red-400 flex mx-1 border-1 md:mx-2  border-2 rounded-lg px-2 ">
-        <MdAccountCircle className="text-sm md:text-md mx-1 m-auto"/>
-        <label className="text-sm md:text-md mx-1 cursor-pointer font-semibold" htmlFor="">Login</label>
+        {!user.value &&<Link legacyBehavior href={'/login'}><a><div className=" flex rounded-lg px-2 ">
+        <MdAccountCircle className="text-2xl text-gray-500 mx-1 m-auto"/>
+        {/* <label className="text-sm md:text-md mx-1 cursor-pointer font-semibold" htmlFor="">Login</label> */}
         </div></a></Link>}
 
       </div>

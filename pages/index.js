@@ -34,7 +34,7 @@ export default function Home({products,products2,products3}){
          <meta name ="description" content ="Instashopee" />
          <link rel= "icon" href ="/logo_icon.ico" />
        </Head>
-       <div className='2xl:mx-10'>
+       <div >
        <SliderIndicatorsControlsInside/>
        </div>
 
