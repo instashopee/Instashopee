@@ -124,8 +124,8 @@ if(!error){
                             src: image,
                            
                             sizes: '(max-width: 480px) 100vw, (max-width: 1200px) 30vw, 360px',
-                            width: 450,
-                            height: 450
+                            width: 600,
+                            height: 550
                         },
                         largeImage: {
                             src: image,
