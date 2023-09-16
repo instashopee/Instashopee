@@ -29,20 +29,21 @@ const Checkout = ({ cart, clearCart, addToCart, removeFromCart, subTotal }) => {
       setEmail(myuser.email);
       fetchData(myuser.token);
     }
-    }else{
-      router.push('/')
-      toast.error('Please Create An Account or Login to Checkout !!', {
-        position: "top-center",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-      });
-
     }
+    // }else{
+    //   router.push('/')
+    //   toast.error('Please Create An Account or Login to Checkout !!', {
+    //     position: "top-center",
+    //     autoClose: 5000,
+    //     hideProgressBar: false,
+    //     closeOnClick: true,
+    //     pauseOnHover: true,
+    //     draggable: true,
+    //     progress: undefined,
+    //     theme: "light",
+    //   });
+
+    // }
   }, []);
 
   useEffect(() => {

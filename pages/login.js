@@ -109,12 +109,12 @@ const Login = () => {
         </div>
                       
         <div>
-          {/* <div class="flex items-center justify-between">
+          <div class="flex items-center justify-between">
             <label for="password" class="block text-sm font-medium leading-6 text-gray-900">Password</label>
-            <div class="text-sm">
+            {/* <div class="text-sm">
               <Link legacyBehavior href={'/forgot'}><a href="#" class="font-semibold text-red-600 hover:text-red-500">Forgot password?</a></Link>
-            </div>
-          </div> */}
+            </div> */}
+          </div>
           <div class="mt-2">
             <input value={password} onChange={handleChange} id="password" name="password" type="password" autocomplete="current-password" required class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-red-600 sm:text-sm sm:leading-6"/>
           </div>
@@ -123,14 +123,14 @@ const Login = () => {
         <div>
           <button type="submit" class="flex w-full justify-center rounded-md bg-red-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600">Sign in</button>
         </div>
-      <p >Or sign up with</p>
+      {/* <p >Or sign up with</p>
               <button
                 type="button"
                 className="btn btn-link btn-floating-mx-1"
                 onClick={() => signIn("google")}
               >
                 <div className="border-2 p-2 text-green-500">Google</div>
-              </button>
+              </button> */}
       </form>
       <p class="mt-10 text-center text-sm text-gray-500">
         Not a user?

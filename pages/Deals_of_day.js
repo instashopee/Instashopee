@@ -20,43 +20,36 @@ export default function Deals_of_day({products2}){
     setKey(Math.random())
   }, [router.query])
 
-
-  
    return(
      <div className='bg-white min-h-screen'>
 
-       <div className='2xl:mx-10 my-5'>
-
-     
-       </div>
-        <div className='border p-3 sm:m-10'>
-          <h1 className='text-2xl font-extrabold text-gray-800 p-5'>DEALS OF THE DAY</h1>
+        <div className='border rounded-sm sm:m-10'>
+          <h1 className='text-2xl font-extrabold text-gray-800 p-5'>Deals Of Day</h1>
           <section className="text-gray-600 body-font ">
 
-  <div className="container px-5 py-3 mx-auto  ">
-    <div className="flex flex-wrap -m-4 justify-center">
+  <div className="containerpy-3 mx-auto  ">
+    <div className="flex flex-wrap  justify-center">
      
       
-    {Object.keys(products2).length==0 && <p>Sorry, All Items Out Of Stock, New products Comming Soon !!</p>}
+    {Object.keys(products2).length==0 && <p>Sorry, All Items Out Of Stock, New Products Comming Soon !!</p>}
     {Object.keys(products2).map((item)=>{
 // _id inside key of link
 return <Link key={products2[item].id} passHref={true} legacyBehavior href={`product/${products2[item].slug}`}>
-  <div className="lg:w-[20rem] md:w-1/2 p-4 w-1/2 h-[26rem] cursor-pointer shadow-lg  productCard transition-all">
-    <a className="block relative rounded overflow-hidden">
-      <img alt="" className="w-40 h-40 m-auto block" src={products2[item].img}/>
-    </a>
-    <div className="mt-4 text-center md:text-left">
+  <div className="lg:w-[20rem] md:w-1/2 p-4 w-1/2 sm:h-[30rem] h-[27rem] sm:m-2 cursor-pointer shadow-lg  productCard transition-all">
+     <div className='z-50 textPart'><span class="rounded-md bg-red-500 p-1 text-sm text-white ">{Math.floor(((products2[item].price-products2[item].mrp)/products2[item].mrp)*100)}% Off</span></div>
+    <div className="block relative rounded textPart mt-1">
+      <img alt="Instashopee" className="w-56 sm:h-64 h-52 m-auto block" src={products2[item].img}/>
+    </div>
+    <div className="mt-2 text-center md:text-left">
       <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1 textPart">{products2[item].category}</h3>
       <h2 className="text-gray-900 title-font md:text-lg font-medium textPart">{products2[item].title}</h2>
-      <div className=''>
-        <p className="mt-1 textPart md:text-lg font-semibold">₹{products2[item].price}/-</p>
+      <div className='flex'>
+      <span className="text-md mr-2 text-gray-400 line-through textPart">
         
-      <span className="font-small text-md mr-2 mt-1 text-green-600 line-through textPart">
       ₹{products2[item].mrp}/-
                 </span>
-                <span className="font-small text-md mt-1 text-orange-600 textPart">
-                ({Math.floor(((products2[item].price-products2[item].mrp)/products2[item].mrp)*100)}% Off){/* (-70% Off) */}
-                </span>
+        <span className="textPart md:text-lg text-green-600 font-semibold">₹{products2[item].price}/-</span>
+               
                 </div>
                 <div className="mt-1 textPart">
         {products2[item].size.includes("0") && (<span className="border border-gray-300 px-1 mx-1">0</span>)}
@@ -138,11 +131,10 @@ return <Link key={products2[item].id} passHref={true} legacyBehavior href={`prod
 </section>
     </div>
   
-        
-             <div className='2xl:m-10'>
-            <img className="w-full 2xl:h-full h-[16rem]" src="/banners/gif/banner1.gif" alt="" />
+             <div className='2xl:m-10 my-4'>
+            <img className="w-full 2xl:h-full h-[16rem]" src="/banners/gif/banner3.gif" alt="" />
 
-            {/* <video ref={vidRef} className="w-full h-full" muted  autoPlay={true} loop src="/banners/banner1.mp4" ></video> */}
+            {/* <video ref={vidRef} className="w-full h-full" muted  autoPlay={true} loop src="/banners/banner3.mp4" ></video> */}
          
  
             </div> 

@@ -10,8 +10,9 @@ import { useRouter } from 'next/router'
 
 import Deals_of_day from './Deals_of_day';
 import Top_selling from './Top_selling';
+import Economy_Sales from './Economy_Sales';
 
-export default function Home({products,products2}){
+export default function Home({products,products2,products3}){
   const router=useRouter()
   const [user, setUser] = useState({value:null})
     const [key, setKey] = useState()
@@ -33,12 +34,13 @@ export default function Home({products,products2}){
          <meta name ="description" content ="Instashopee" />
          <link rel= "icon" href ="/logo_icon.ico" />
        </Head>
-       <div className='2xl:mx-10 my-5'>
+       <div className='2xl:mx-10'>
        <SliderIndicatorsControlsInside/>
        </div>
 
       <Top_selling products={products} />
       <Deals_of_day products2={products2}/>
+      <Economy_Sales products3={products3}/>
      </div>
    )
   }
@@ -51,8 +53,10 @@ export default function Home({products,products2}){
   
     let products = await Product.find({type:'top selling'})
     let products2 = await Product.find({type:'deals'})
+    let products3 = await Product.find({type:'economy'})
     let hinges = {}
     let hinges2 = {}
+    let hinges3 = {}
     for(let item of products){
       if(item.title in hinges){
           if(!hinges[item.title].color.includes(item.color) && item.availableQty > 0){
@@ -95,9 +99,30 @@ export default function Home({products,products2}){
             }
       }
     }
+    for(let item of products3){
+      if(item.title in hinges3){
+          if(!hinges3[item.title].color.includes(item.color) && item.availableQty > 0){
+            hinges3[item.title].color.push(item.color)
+          }
+          if(!hinges3[item.title].size.includes(item.size) && item.availableQty > 0){
+            hinges3[item.title].size.push(item.size)
+          }
+      }
+  
+      else{
+        hinges3[item.title] = JSON.parse(JSON.stringify(item))
+        if(item.availableQty >0){
+              hinges3[item.title].color = [item.color]
+              hinges3[item.title].size = [item.size]
+            }else{
+              hinges3[item.title].color = []
+              hinges3[item.title].size = []
+            }
+      }
+    }
   
     return{
-      props:{products:JSON.parse(JSON.stringify(hinges)),products2:JSON.parse(JSON.stringify(hinges2))},
+      props:{products:JSON.parse(JSON.stringify(hinges)),products2:JSON.parse(JSON.stringify(hinges2)),products3:JSON.parse(JSON.stringify(hinges3))},
     }
 
     }

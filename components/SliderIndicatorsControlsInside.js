@@ -37,7 +37,7 @@ export default function SliderIndicatorsControlsInside() {
           <ul className="whitespace-no-wrap flex-no-wrap [backface-visibility: hidden] [transform-style: preserve-3d] [touch-action: pan-Y] [will-change: transform] relative flex w-full overflow-hidden p-0">
             <li >
               
-            <img className="sm:hidden w-full h-full" src="/banners/gif/banner1.gif" alt="" />
+            <img className="sm:hidden w-full h-[90%]" src="/banners/gif/banner1.gif" alt="" />
 
             <video ref={vidRef} className="w-full h-full" muted  autoPlay={true} loop src="/banners/banner3.mp4" ></video>
 
@@ -50,7 +50,7 @@ export default function SliderIndicatorsControlsInside() {
             </li>
             <li>
             {/* <img className="2xl:hidden w-full h-[5rem]" src="/banners/st_b2.png" alt="" /> */}
-            <img className="sm:hidden w-full h-full" src="/banners/gif/banner2.gif" alt="" />
+            <img className="sm:hidden w-full h-[90%]" src="/banners/gif/banner2.gif" alt="" />
 
             <video ref={vidRef} className="w-full h-full" muted  autoPlay={true} loop src="/banners/banner2.mp4" ></video>
 
@@ -61,7 +61,7 @@ export default function SliderIndicatorsControlsInside() {
             </li>
             <li>
             {/* <img className="2xl:hidden w-full h-[5rem]" src="/banners/st_b3.png" alt="" /> */}
-            <img className="sm:hidden w-full h-full" src="/banners/gif/banner3.gif" alt="" />
+            <img className="sm:hidden w-full h-[90%]" src="/banners/gif/banner3.gif" alt="" />
 
             <video ref={vidRef} className="w-full h-full" muted  autoPlay={true} loop src="/banners/banner1.mp4" ></video>
 
@@ -77,17 +77,12 @@ export default function SliderIndicatorsControlsInside() {
                 className="hover:scale-105 transition-all duration-500 cursor-pointer w-full max-w-full max-h-full m-auto"
               /> */}
                           {/* <img className="2xl:hidden w-full h-[5rem]" src="/banners/st_b4.png" alt="" /> */}
-                          <img className="sm:hidden w-full h-full" src="/banners/gif/banner4.gif" alt="" />
+                          <img className="sm:hidden w-full h-[90%]" src="/banners/gif/banner4.gif" alt="" />
 
             <video ref={vidRef} className="w-full h-full" muted  autoPlay={true} loop src="/banners/banner4.mp4" ></video>
 
             </li>
-            {/* <li>
-              <img
-                src="/Hardware.png"
-                className="w-full max-w-full max-h-full m-auto"
-              />
-            </li> */}
+         
           </ul>
         </div>
           {/* <img className="sm:hidden w-full h-[5rem]" src="/banners/static_banner.jpg" alt="" /> */}
@@ -141,7 +136,7 @@ export default function SliderIndicatorsControlsInside() {
         </div>
         {/*    <!-- Indicators --> */}
         <div
-          className="absolute bottom-0 flex items-center justify-center w-full gap-2"
+          className="bottom-0 absolute flex items-center justify-center w-full gap-2"
           data-glide-el="controls[nav]"
         >
           <button
@@ -178,51 +173,3 @@ export default function SliderIndicatorsControlsInside() {
     </>
   )
 }
-
-//  export async function getServerSideProps(context) {
-//    if (!mongoose.connections[0].readystate) {
-//      await mongoose.connect(process.env.MONGO_URI);
-//    }
-//    let banner = await Banner.find({type:'normal'});
-//    return {
-//      props: {
-//  banner:JSON.parse(JSON.stringify(banner)),
-       
-//      }, //
-//    };
-//  }
-
-
-// export async function getServerSideProps(context) {
-//   if(!mongoose.connections[0].readystate){
-//     await mongoose.connect(process.env.MONGO_URI)
-// }
-
-//   let products = await Product.find({type:'top selling'})
-//   let hinges = {}
-//   for(let item of products){
-//     if(item.title in hinges){
-//         if(!hinges[item.title].color.includes(item.color) && item.availableQty > 0){
-//           hinges[item.title].color.push(item.color)
-//         }
-//         if(!hinges[item.title].size.includes(item.size) && item.availableQty > 0){
-//           hinges[item.title].size.push(item.size)
-//         }
-//     }
-
-//     else{
-//       hinges[item.title] = JSON.parse(JSON.stringify(item))
-//       if(item.availableQty >0){
-//             hinges[item.title].color = [item.color]
-//             hinges[item.title].size = [item.size]
-//           }else{
-//             hinges[item.title].color = []
-//             hinges[item.title].size = []
-//           }
-//     }
-//   }
-
-//   return{
-//     props:{products:JSON.parse(JSON.stringify(hinges))},
-//   }
-//   }

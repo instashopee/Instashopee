@@ -215,8 +215,9 @@ const Navbar = ({Logout,user,cart,addToCart,removeFromCart,clearCart,subTotal}) 
       </Transition.Root>
 
       <header className="relative bg-white">
-        <p className="flex h-7 items-center justify-center bg-rose-500 px-4 text-sm font-medium text-white sm:px-6 lg:px-8">
-          Instashopee
+        
+        <p className=" w-full  flex h-8 items-center justify-center bg-rose-500 px-4  font-medium text-white sm:px-6 lg:px-8">
+          <span className="animate-pulse text-lg animate ">Instashopee</span>
         </p>
         <nav
           aria-label="Top"
@@ -258,8 +259,8 @@ const Navbar = ({Logout,user,cart,addToCart,removeFromCart,clearCart,subTotal}) 
                             <Popover.Button
                               className={classNames(
                                 open
-                                  ? "border-indigo-600 text-indigo-600"
-                                  : "border-transparent text-gray-700 hover:text-gray-800",
+                                  ? "border-transparent text-gray-700 hover:underline decoration-black decoration-2"
+                                  : "border-transparent text-gray-700 hover:underline decoration-black decoration-2",
                                 "relative z-10 -mb-px flex items-center border-b-2 pt-px text-sm font-medium transition-colors duration-200 ease-out"
                               )}
                             >
