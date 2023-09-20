@@ -7,7 +7,7 @@ import { AiFillPlusCircle, AiFillMinusCircle } from "react-icons/ai";
 import { BsFillBagCheckFill } from "react-icons/bs";
 import Glide from "@glidejs/glide"
 import Error from "next/error";
-import ReactImageMagnify from 'react-image-magnify';
+// import ReactImageMagnify from 'react-image-magnify';
 import Product from "@/models/Product";
 import Head from "next/head";
 const Post = ({buyNow, addToCart,addTowishlist, product, variants,error,cart ,removeFromCart}) => {
