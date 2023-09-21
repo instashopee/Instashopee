@@ -19,6 +19,7 @@ const Footer = () => {
     <div className="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
       <div className=" w-full px-4">
         <h2 className="title-font text-center font-medium text-gray-900 tracking-widest text-sm mb-3">CONTACT US</h2>
+        <h2 className="title-font text-center text-orange-500 tracking-widest text-2xl mb-3 font-extrabold">HOME CREATION</h2>
         <nav className="list-none mb-10 text-center">
           <li>
             <a className="text-gray-600 text-center hover:text-gray-800">Address: 326, Industrial Area, Patparganj, Delhi - 110092, India</a>
