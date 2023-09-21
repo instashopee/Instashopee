@@ -2,18 +2,18 @@ import User from "@/models/User";
 import connectDb from "@/middleware/mongoose";
 var CryptoJS = require("crypto-js");
 var jwt = require('jsonwebtoken');
-import GoogleProvider from "next-auth/providers/google";
+// import GoogleProvider from "next-auth/providers/google";
 
 
 const handler = async (req, res) => {
 
   
-  providers: [
-    GoogleProvider({
-      clientId: process.env.GOOGLE_CLIENT_ID,
-      clientSecret: process.env.GOOGLE_CLIENT_SECRET
-    })
-  ]
+  // providers: [
+  //   GoogleProvider({
+  //     clientId: process.env.GOOGLE_CLIENT_ID,
+  //     clientSecret: process.env.GOOGLE_CLIENT_SECRET
+  //   })
+  // ]
   try {
     if (req.method == "POST") {
       let user = await User.findOne({ "email": req.body.email })
