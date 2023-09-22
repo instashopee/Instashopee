@@ -214,7 +214,9 @@ const Forgot = () => {
                 Passwords matched
               </span>
               }
-
+              <div className="bg-red-100 text-black border-4 p-5">
+                After entering correct details and clicking continue your password would be reset and you can login again with new password.
+              </div>
             </form>
           </div>
         )}
@@ -251,7 +253,12 @@ const Forgot = () => {
                 Continue
               </button>
             </div>
+            <div className="bg-red-100 text-black border-4 p-5">
+                An email will be sent to your registered email for password reset. If you do not see email in your Inbox then check your spam folder...
+                Password Reset link will be vaild for 1 hour.
+              </div>
           </form>
+          
         )}
 
         <p class="mt-10 text-center text-sm text-gray-500">
