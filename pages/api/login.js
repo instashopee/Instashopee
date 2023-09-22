@@ -8,12 +8,6 @@ var jwt = require('jsonwebtoken');
 const handler = async (req, res) => {
 
   
-  // providers: [
-  //   GoogleProvider({
-  //     clientId: process.env.GOOGLE_CLIENT_ID,
-  //     clientSecret: process.env.GOOGLE_CLIENT_SECRET
-  //   })
-  // ]
   try {
     if (req.method == "POST") {
       let user = await User.findOne({ "email": req.body.email })

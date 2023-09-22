@@ -32,10 +32,10 @@ const Forgot = () => {
   
     let data = { email, sendMail: true };
     let a = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/forgot`, {
-      // method: "POST", // or 'PUT'
-      // headers: {
-      //   "Content-Type": "application/json",
-      // },
+      method: "POST", // or 'PUT'
+      headers: {
+        "Content-Type": "application/json",
+      },
       body: JSON.stringify(data),
     });
     let res = await a.json();
@@ -70,10 +70,10 @@ const Forgot = () => {
     if (password == cpassword) {
       let data = { email,password, sendMail: false };
       let a = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/forgot`, {
-        // method: "POST", // or 'PUT'
-        // headers: {
-        //   "Content-Type": "application/json",
-        // },
+        method: "POST", // or 'PUT'
+        headers: {
+          "Content-Type": "application/json",
+        },
         body: JSON.stringify(data),
       });
       let res = await a.json();
