@@ -16,7 +16,7 @@ export default async function handler(req,res){
         email:req.body.email,
         token:token
     })
-    let email=`Reset Your Password - <a href="http://127.0.0.1:3000/forgot?token=${token}">RESET PASSWORD</a> `
+    let email=`Reset Your Password - <a href="https://instashopeeonline.com/forgot?token=${token}">RESET PASSWORD</a> `
 
     try {
         const transporter=nodemailer.createTransport({
