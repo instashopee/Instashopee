@@ -12,7 +12,7 @@ export default async function handler(req,res){
     let token = jwt.sign({email: req.body.email}, process.env.JWT_SECRET, {expiresIn:"1h"});
    
     if(req.body.sendMail){
-
+ 
     let forgot=new Forgot({
         email:req.body.email,
         token:token
