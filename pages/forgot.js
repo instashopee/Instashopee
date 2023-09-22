@@ -23,11 +23,11 @@ const Forgot = () => {
       setEmail(e.target.value);
     }
   }
-  // useEffect(() => {
-  //   if (localStorage.getItem("token")) {
-  //     router.push("/");
-  //   }
-  // }, []);
+  useEffect(() => {
+    if (localStorage.getItem("token")) {
+      router.push("/");
+    }
+  }, []);
   const sendEmail = async () => {
   
     let data = { email, sendMail: true };
@@ -51,7 +51,8 @@ const Forgot = () => {
         theme: "light",
         });
         
-      
+        const url = `${process.env.NEXT_PUBLIC_HOST}`;
+        window.location = url;
     } else {
       toast.error('Forgot Password Email Was Not Sent, Try Again Later', {
         position: "top-center",
@@ -64,7 +65,7 @@ const Forgot = () => {
         theme: "light",
         });
     }
-    router.push("/")
+  
 
   };
   const resetPassword = async () => {
@@ -89,6 +90,8 @@ const Forgot = () => {
           progress: undefined,
           theme: "light",
           });
+          const url = `${process.env.NEXT_PUBLIC_HOST}`;
+        window.location = url;
       } else {
         toast.error('Password Was Not Reset, Try Again Later', {
           position: "top-center",
