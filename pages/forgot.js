@@ -23,11 +23,11 @@ const Forgot = () => {
       setEmail(e.target.value);
     }
   }
-  useEffect(() => {
-    if (localStorage.getItem("token")) {
-      router.push("/");
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (localStorage.getItem("token")) {
+  //     router.push("/");
+  //   }
+  // }, []);
   const sendEmail = async () => {
   
     let data = { email, sendMail: true };
@@ -39,32 +39,33 @@ const Forgot = () => {
       body: JSON.stringify(data),
     });
     let res = await a.json();
-    router.push('/')
-    // if (res.success) {
-    //   toast.success('Forgot Password Email Sent Successfully', {
-    //     position: "top-center",
-    //     autoClose: 1000,
-    //     hideProgressBar: false,
-    //     closeOnClick: true,
-    //     pauseOnHover: true,
-    //     draggable: true,
-    //     progress: undefined,
-    //     theme: "light",
-    //     });
+    if (res.success) {
+      toast.success('Forgot Password Email Sent Successfully', {
+        position: "top-center",
+        autoClose: 1000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        });
         
       
-    // } else {
-    //   toast.error('Forgot Password Email Was Not Sent, Try Again Later', {
-    //     position: "top-center",
-    //     autoClose: 1000,
-    //     hideProgressBar: false,
-    //     closeOnClick: true,
-    //     pauseOnHover: true,
-    //     draggable: true,
-    //     progress: undefined,
-    //     theme: "light",
-    //     });
-    // }
+    } else {
+      toast.error('Forgot Password Email Was Not Sent, Try Again Later', {
+        position: "top-center",
+        autoClose: 1000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        });
+    }
+    router.push("/")
+
   };
   const resetPassword = async () => {
     if (password == cpassword) {
@@ -77,30 +78,30 @@ const Forgot = () => {
         body: JSON.stringify(data),
       });
       let res = await a.json();
-      router.push('/')
-      // if (res.success) {
-      //   toast.success('Password Reset Successfull', {
-      //     position: "top-center",
-      //     autoClose: 1000,
-      //     hideProgressBar: false,
-      //     closeOnClick: true,
-      //     pauseOnHover: true,
-      //     draggable: true,
-      //     progress: undefined,
-      //     theme: "light",
-      //     });
-      // } else {
-      //   toast.error('Password Was Not Reset, Try Again Later', {
-      //     position: "top-center",
-      //     autoClose: 1000,
-      //     hideProgressBar: false,
-      //     closeOnClick: true,
-      //     pauseOnHover: true,
-      //     draggable: true,
-      //     progress: undefined,
-      //     theme: "light",
-      //     });
-      // }
+      if (res.success) {
+        toast.success('Password Reset Successfull', {
+          position: "top-center",
+          autoClose: 1000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+          });
+      } else {
+        toast.error('Password Was Not Reset, Try Again Later', {
+          position: "top-center",
+          autoClose: 1000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+          });
+      }
+      router.push("/")
     } 
   };
   return (
