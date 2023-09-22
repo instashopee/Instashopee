@@ -83,7 +83,7 @@ const SignUp = () => {
         <div class="sm:mx-auto sm:w-full sm:max-w-sm">
           <img
             class="mx-auto h-10 w-auto"
-            src="/logo2.png"
+            src="/logo1.png"
             alt="Your Company"
           />
           <h2 class="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">

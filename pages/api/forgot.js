@@ -1,46 +1,62 @@
-// import Forgot from "@/models/Forgot"
-// import User from "@/models/User"
-// import jsonwebtoken from "jsonwebtoken";
-// import { useRouter } from "next/router";
-// const router = useRouter();
-// var CryptoJS = require("crypto-js");
-// export default async function handler(req,res){
-//     if(req.body.sendMail){
 
-//     let token='wefgbvnjjmkjhtgr3ert5yuhsdfgjgtfrdes'
-//     let forgot=new Forgot({
-//         email:req.body.email,
-//         token:token
-//     })
-//     let email=`Reset Your Password - <a href="https://instashopee.com/forgot?token=${token}">RESET PASSWORD</a> `}
-//     else{
-//         // if(req.method =="POST"){
-         
-            
-//         //     if( req.body.password=== req.body.cpassword){
-    
-//         //         await User.findOneAndUpdate({email:router.query.email},{password: CryptoJS.AES.encrypt(req.body.password, process.env.AES_SECRET).toString()})
-               
-                
-//         //     }
-            
-//         // }
-//     }
-//     res.status(200).json({success:true})
-// }
+import User from "@/models/User";
+import connectDb from "@/middleware/mongoose";
+const nodemailer = require("nodemailer");
+
+var CryptoJS = require("crypto-js");
 import Forgot from "@/models/Forgot"
-import User from "@/models/User"
+var jwt = require('jsonwebtoken');
+
 export default async function handler(req,res){
+    let token = jwt.sign({email: req.body.email}, process.env.JWT_SECRET, {expiresIn:"1h"});
+   
     if(req.body.sendMail){
 
-    
-    let token='wefgbvnjmkjhtgr3ert5yuhjgtfrdecs'
     let forgot=new Forgot({
         email:req.body.email,
         token:token
     })
-    let email=`Reset Your Password - <a href="https://instashopee.com/forgot?token=${token}">RESET PASSWORD</a> `}
+    let email=`Reset Your Password - <a href="http://127.0.0.1:3000/forgot?token=${token}">RESET PASSWORD</a> `
+
+    try {
+        const transporter=nodemailer.createTransport({
+            service:'gmail',
+            auth:{
+                user:'instashopeeonline@gmail.com',
+                pass:'tiwh husu ilkx ovbe'
+            }
+        });
+        const mailOptions={
+            from:'instashopeeonline@gmail.com',
+            to:req.body.email,
+            subject:'RESET PASSWORD LINK',
+            html:email
+        }
+        transporter.sendMail(mailOptions,(error,info)=> {
+            if(error){
+                // console.log('Error',error)
+            }
+            else{
+                // console.log('Email sent '+info.response)
+                res.status(201).json({staus:201,info})
+            }
+        })
+    } catch (error) {
+        res.status(201).json({staus:401,error})
+
+    }
+    
+
+
+    }
     else{
+        if(req.method =="POST"){
+        let user = await User.findOne({ "email": req.body.email })
+        
+                await User.findOneAndUpdate({email:user.email},{password: CryptoJS.AES.encrypt(req.body.password, process.env.AES_SECRET).toString()})
+       
+    
+        }
         
     }
     res.status(200).json({success:true})

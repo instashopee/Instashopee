@@ -7,6 +7,7 @@ import Head from "next/head";
 const Forgot = () => {
   const router = useRouter();
   const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
   const [password, setpassword] = useState("");
   const [cpassword, setCpassword] = useState("");
   const handleChange = async (e) => {
@@ -16,6 +17,8 @@ const Forgot = () => {
     else if (e.target.name == "cpassword") {
       setCpassword(e.target.value);
     }
+    
+    
     else if (e.target.name == "email") {
       setEmail(e.target.value);
     }
@@ -64,7 +67,7 @@ const Forgot = () => {
   };
   const resetPassword = async () => {
     if (password == cpassword) {
-      let data = { password, sendMail: false };
+      let data = { email,password, sendMail: false };
       let a = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/forgot`, {
         method: "POST", // or 'PUT'
         headers: {
@@ -99,7 +102,7 @@ const Forgot = () => {
     } 
   };
   return (
-    <div class="flex min-h-[100vh] flex-col justify-center px-6 py-12 lg:px-8">
+    <div class="flex  flex-col justify-center px-6 py-12 lg:px-8">
       <ToastContainer
         position="top-center"
         autoClose={1000}
@@ -130,6 +133,26 @@ const Forgot = () => {
         {router.query.token && (
           <div>
             <form class="space-y-6" action="" method="POST">
+        
+              <div>
+                <label
+                  for="email"
+                  class="block text-sm font-medium leading-6 text-gray-900"
+                >
+                  Rewrite Your Email
+                </label>
+                <div class="mt-2">
+                  <input onChange={handleChange}
+                  value={email}
+                    id="email"
+                    name="email"
+                    type="email"
+                    autocomplete="email"
+                    required
+                    class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-red-600 sm:text-sm sm:leading-6"
+                  />
+                </div>
+              </div>
               <div>
                 <label
                   for="password"
