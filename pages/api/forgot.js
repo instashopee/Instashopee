@@ -18,7 +18,7 @@ export default async function handler(req,res){
     })
     let email=`Reset Your Password - <a href="https://instashopeeonline.com/forgot?token=${token}">RESET PASSWORD</a> `
 
-    try {
+ 
         const transporter=nodemailer.createTransport({
             service:'gmail',
             auth:{
@@ -32,20 +32,8 @@ export default async function handler(req,res){
             subject:'RESET PASSWORD LINK',
             html:email
         }
-        transporter.sendMail(mailOptions,(error,info)=> {
-            if(error){
-                // console.log('Error',error)
-            }
-            else{
-                // console.log('Email sent '+info.response)
-                res.status(201).json({staus:201,info})
-            }
-        })
-    } catch (error) {
-        res.status(201).json({staus:401,error})
-
-    }
-    res.status(200).json({success:true})
+        transporter.sendMail(mailOptions)
+    
 
     
 

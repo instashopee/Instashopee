@@ -39,6 +39,7 @@ const Forgot = () => {
       body: JSON.stringify(data),
     });
     let res = await a.json();
+    router.push('/')
     // if (res.success) {
     //   toast.success('Forgot Password Email Sent Successfully', {
     //     position: "top-center",
@@ -76,6 +77,7 @@ const Forgot = () => {
         body: JSON.stringify(data),
       });
       let res = await a.json();
+      router.push('/')
       // if (res.success) {
       //   toast.success('Password Reset Successfull', {
       //     position: "top-center",
