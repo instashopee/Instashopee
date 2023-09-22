@@ -3,8 +3,8 @@ import React from 'react'
 import Product from "@/models/Product";
 
 import mongoose from 'mongoose';
-// const {Search} = require('../pages/search.js');
-import { name } from '../pages/search.js'
+const {updated} = require('../pages/search.js');
+// import { updated } from '../pages/search.js'
 const search_product = ({products}) => {
   return (
     <div>
@@ -77,7 +77,7 @@ export async function getServerSideProps() {
     await mongoose.connect(process.env.MONGO_URI)
 }
 
-  let products = await Product.find({title: name})
+  let products = await Product.find({title: updated})
   let search_product = {}
   for(let item of products){
     if(item.title in search_product){

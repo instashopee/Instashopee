@@ -7,6 +7,8 @@ import Script from "next/script";
 import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { AiOutlineShoppingCart,AiOutlineHeart, AiFillCloseCircle,AiOutlineSearch } from "react-icons/ai";
+
 import { useRouter } from "next/router";
 
 const Checkout = ({ cart, clearCart, addToCart, removeFromCart, subTotal }) => {
@@ -204,7 +206,172 @@ const getpincode=async(pin)=>{
         crossorigin="anonymous"
       />
       <h1 className="font-bold text-3xl my-8 text-center">Checkout</h1>
-      <h2 className="font-semibold text-xl">1. Delivery Details</h2>
+
+
+      <h2 className="font-semibold text-xl">1. Review Cart Items</h2>
+      <div className="sideCart shadow-sm my-2">
+        {/* <h2 className="font-bold text-xl text-center">
+          Review Your Shopping Cart
+        </h2> */}
+ <div class=" max-w-6xl justify-center px-6 md:flex md:space-x-6 xl:px-0">
+    
+    <div class="rounded-lg md:w-2/3">
+    
+   {Object.keys(cart).map((k)=>{return <div key={k}>
+      <div class="justify-between mb-6 rounded-lg bg-white p-6 shadow-md sm:flex sm:justify-start">
+        <img src={cart[k].img} alt="product-image" class="w-full h-72 rounded-lg sm:w-40 sm:h-40" />
+        <div class="sm:ml-4 sm:flex sm:w-full sm:justify-between">
+          <div class="mt-5 sm:mt-0">
+          <p className="font-semibold text-xl">{cart[k].name}</p>
+          <p className="font-semibold text-xl">({cart[k].size}/{cart[k].variant})</p>
+          <div class="flex flex-col mt-5">
+          <table class="table-fixed">
+
+  <tbody>
+    <tr>
+      <td>Price</td>
+    
+      <td>Rs.{cart[k].price}/-</td>
+    </tr>
+    <tr>
+      <td>Delivery Charge</td>
+ 
+      <td>Rs.{cart[k].del_ch}/-</td>
+    </tr>
+    <tr>
+      <td>Amount</td>
+    
+      <td>Rs.{cart[k].del_ch + (cart[k].price * cart[k].qty)}/-</td>
+    </tr>
+  </tbody>
+</table>
+              {/* <p class="">Price - Rs.{cart[k].price}/-</p>
+              
+              <p class="">Delivery Charge - Rs.{cart[k].del_ch}/-</p>
+              <p className="">Amount - Rs.{cart[k].del_ch + (cart[k].price * cart[k].qty)}</p> */}
+
+            </div>
+          </div>
+          <div class="mt-4 flex justify-between sm:space-y-6 sm:mt-0 sm:block sm:space-x-6">
+            <div class="flex items-center border-gray-100">
+              <span onClick={()=>{removeFromCart(k,1,cart[k].price,cart[k].name,cart[k].size,cart[k].variant,cart[k].del_ch,cart[k].img)}} class="cursor-pointer rounded-l bg-gray-100 py-1 px-3.5 duration-100 hover:bg-blue-500 hover:text-blue-50"> - </span>
+              <span className="mx-1">{cart[k].qty}</span>
+              <span onClick={()=>{addToCart(k,1,cart[k].price,cart[k].name,cart[k].size,cart[k].variant,cart[k].del_ch,cart[k].img)}} class="cursor-pointer rounded-r bg-gray-100 py-1 px-3 duration-100 hover:bg-blue-500 hover:text-blue-50"> + </span>
+             
+
+            </div>
+          </div>
+            
+        </div>
+      </div>
+      </div>})}
+    </div>
+    <div class="mt-6 h-full rounded-lg border bg-white p-6 shadow-md md:mt-0 md:w-1/3">
+      {/* <div class="mb-2 flex justify-between">
+        <p class="text-gray-700">Subtotal</p>
+        <p class="text-gray-700">$129.99</p>
+      </div>
+      <div class="flex justify-between">
+        <p class="text-gray-700">Delivery Charge</p>
+        <p class="text-gray-700">{cart[del_ch]}</p>
+      </div> */}
+      {Object.keys(cart).length==0&& <div className="font-semibold text-center text-2xl">YOUR CART IS EMPTY !!</div>}
+   
+      <div className="flex flex-col">
+
+
+<span className="font-semibold text-green-500">Check Promocode: </span>
+<div className="">
+
+ 
+  <input
+    onChange={handleChange}
+    value={promocode}
+    type="promocode"
+    id="promocode"
+    name="promocode"
+    class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+  />
+
+</div>
+
+{promocode=='INSTA100'?<><span className="text-green-500">Promocode Entered Available</span><br/></>:<div/>}
+{promocode=='INSTA100'?<span className="font-bold">Subtotal: ₹{subTotal = (subTotal - 100)}</span>:<><span className="text-red-400">No Promocode Entered OR Not Available</span><br/><span className="font-bold">Subtotal: ₹{subTotal}</span></>}
+
+</div>
+<hr class="my-4" />
+    
+   
+  
+    </div>
+  </div>
+        {/* <ol className=" font-semibold">
+          {Object.keys(cart).length == 0 && (
+            <div className="my-4 font-semibold text-center">
+              YOUR CART IS EMPTY !!
+            </div>
+          )}
+          {Object.keys(cart).map((k) => {
+            return (
+              <li key={k}>
+                <div className="item flex my-5 rounded-lg shadow-lg p-5 w-full h-full">
+                  <div className="font-semibold flex">
+                  <img class="mx-4 h-32 w-32" src={cart[k].img} alt="Product Image"/>
+                    </div>
+
+                  <div className="flex flex-col font-semibold text-lg">
+                    {cart[k].name}({cart[k].size}/{cart[k].variant})
+                    <div className="flex font-light items-center mt-4 ml-1">
+                    <span className="mr-2">Quantity</span><AiFillMinusCircle
+                    
+                      onClick={() => {
+                        removeFromCart(
+                          k,
+                          1,
+                          cart[k].price,
+                          cart[k].name,
+                          cart[k].size,
+                          cart[k].variant,
+                          cart[k].img,
+                          cart[k].del_ch
+                        );
+                      }}
+                      className="cursor-pointer text-red-400"
+                    />
+                    <span className="mx-1">{cart[k].qty}</span>
+                    <AiFillPlusCircle
+                      onClick={() => {
+                        addToCart(
+                          k,
+                          1,
+                          cart[k].price,
+                          cart[k].name,
+                          cart[k].size,
+                          cart[k].variant,
+                          cart[k].img,
+                          cart[k].del_ch
+
+                        );
+                      }}
+                      className="cursor-pointer text-red-400"
+                    />
+                  <div className="ml-4 mx-1">Rs.{cart[k].price * cart[k].qty}</div>
+
+
+                  </div>
+                  <div className="font-light mx-1">Delivery Charge - Rs.{cart[k].del_ch}</div>
+                  <div className=" mx-1">Amount - Rs.{cart[k].del_ch + (cart[k].price * cart[k].qty)}</div>
+
+                  </div>
+                
+                </div>
+              </li>
+            );
+          })}
+        </ol> */}
+         
+      </div>
+      <h2 className="font-semibold text-xl">2. Delivery Details</h2>
       <div className="mx-auto flex my-2">
         <div className="px-2 w-1/2">
           <div class=" mb-4">
@@ -330,82 +497,6 @@ const getpincode=async(pin)=>{
           </div>
         </div>
       </div>
-
-      <h2 className="font-semibold text-xl">2. Review Cart Items & Pay</h2>
-      <div className="sideCart shadow-sm p-6 m-2 ">
-        <h2 className="font-bold text-xl text-center">
-          Review Your Shopping Cart
-        </h2>
-
-        <ol className="list-decimal font-semibold">
-          {Object.keys(cart).length == 0 && (
-            <div className="my-4 font-semibold text-center">
-              YOUR CART IS EMPTY !!
-            </div>
-          )}
-          {Object.keys(cart).map((k) => {
-            return (
-              <li key={k}>
-                <div className="item flex my-5">
-                  <div className="font-semibold">
-                    {cart[k].name}({cart[k].size}/{cart[k].variant})
-                  </div>
-                  <div className="flex font-semibold items-center justify-center w-1/3 text-lg">
-                    <AiFillMinusCircle
-                      onClick={() => {
-                        removeFromCart(
-                          k,
-                          1,
-                          cart[k].price,
-                          cart[k].name,
-                          cart[k].size,
-                          cart[k].variant
-                        );
-                      }}
-                      className="cursor-pointer text-red-400"
-                    />
-                    <span className="mx-1">{cart[k].qty}</span>
-                    <AiFillPlusCircle
-                      onClick={() => {
-                        addToCart(
-                          k,
-                          1,
-                          cart[k].price,
-                          cart[k].name,
-                          cart[k].size,
-                          cart[k].variant
-                        );
-                      }}
-                      className="cursor-pointer text-red-400"
-                    />
-                  </div>
-                </div>
-              </li>
-            );
-          })}
-        </ol>
-          <div className="flex flex-col">
-
-          <br />
-        <span className="font-semibold text-green-500">Check Promocode: </span>
-        <div className="w-1/4">
-          
-           
-            <input
-              onChange={handleChange}
-              value={promocode}
-              type="promocode"
-              id="promocode"
-              name="promocode"
-              class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-            />
-     
-        </div>
-        <br />
-        {promocode=='INSTA100'?<span className="font-bold">Subtotal: ₹{subTotal=(subTotal-100)}</span>:<span className="font-bold">Subtotal: ₹{subTotal}</span>}
-          </div>
-      </div>
-
       <div className="mx-4 flex p-2 my-4">
         <Link href={"/success"}>
           <button

@@ -24,7 +24,7 @@ export default function Top_selling({products}){
     <div>
      <div className='bg-white min-h-screen'>
 
-        <div className='border rounded-sm sm:m-10'>
+        <div className='border rounded-sm sm:m-1'>
           <h1 className='text-2xl font-extrabold text-gray-800 p-5'>TOP SELLING PRODUCTS</h1>
           <section className="text-gray-600 body-font ">
 
@@ -137,7 +137,7 @@ return <Link key={products[item].id} passHref={true} legacyBehavior href={`produ
       
      </div>
              <div className='my-4'>
-            <img className="w-full 2xl:h-full h-[16rem]" src="/banners/gif/banner3.gif" alt="" />
+            <img className="w-full 2xl:h-full h-[16rem]" src="/banners/gif/banner1.gif" alt="" />
             </div> </div>
    )
   }

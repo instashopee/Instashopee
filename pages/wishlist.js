@@ -23,10 +23,10 @@ const wishlist = ({wishlist,cart,addTowishlist,removeFromwishlist,clearwishlist,
       
      {Object.keys(wishlist).map((k)=>{return <div key={k}>
         <div class="justify-between mb-6 rounded-lg bg-white p-6 shadow-md sm:flex sm:justify-start">
-          <img src={wishlist[k].img} alt="product-image" class="w-full rounded-lg sm:w-40" />
+          <img src={wishlist[k].img} alt="product-image" class="w-full h-72 rounded-lg sm:w-40 sm:h-40" />
           <div class="sm:ml-4 sm:flex sm:w-full sm:justify-between">
             <div class="mt-5 sm:mt-0">
-            <div className="w-2/3 font-semibold text-2xl">{wishlist[k].name}({wishlist[k].size}/{wishlist[k].variant})</div>
+            <div className="font-semibold text-xl">{wishlist[k].name}({wishlist[k].size}/{wishlist[k].variant})</div>
             <div class="flex flex-col mt-5">
                 <p class="text-sm">Price - Rs.{wishlist[k].price}/-</p>
                 

@@ -4,6 +4,7 @@ import "react-toastify/dist/ReactToastify.css";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import Head from "next/head";
+
 import { signIn } from "next-auth/react";
 const Login = () => {
   const router=useRouter()
@@ -88,11 +89,16 @@ const Login = () => {
       />
  <Head>
         <title>Login -  Instashopee</title>
+        {/* <meta name="google-signin-client_id" content="289837370605-v1sqe6kutl8nmf3v01hj5alqsb8ciobb.apps.googleusercontent.com"></meta>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"/> */}
         <meta
           name="viewport"
           content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0"
         />
       </Head>
+  
+   
+    
   <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
     <div class="sm:mx-auto sm:w-full sm:max-w-sm">
       <img class="mx-auto h-10 w-auto" src="/logo2.png" alt="Your Company"/>
@@ -125,12 +131,12 @@ const Login = () => {
         </div>   
       {/* <p >Or sign up with </p>
               <button
-                type="button"
-                className="btn btn-link btn-floating-mx-1"
-                onClick={() => signIn("google")}
+              type="button"
+              className="btn btn-link btn-floating-mx-1"
+              onClick={() => signIn("google")}
               >
-                <div className="border-2 p-2 text-green-500">Google</div>
-              </button> */}
+              <div className="border-2 p-2 text-green-500">Google</div>
+            </button> */}
       </form>
       <p class="mt-10 text-center text-sm text-gray-500">
         Not a user?
@@ -138,6 +144,9 @@ const Login = () => {
       </p>
     </div>
   </div>
+{/* <script src="https://apis.google.com/js/platform.js" async defer></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> */}
   </div>
 
   )

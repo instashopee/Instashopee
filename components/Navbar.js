@@ -391,6 +391,11 @@ const Navbar = ({Logout,user,cart,addToCart,removeFromCart,clearCart,subTotal}) 
       <label className="text-sm md:text-md mx-1 cursor-pointer font-semibold" htmlFor="">Search</label>
         </div></a></Link> */}
 
+        {/* <input type="search" id="default-search" class="" placeholder="Type Here..." required/> */}
+        {/* {<Link legacyBehavior href={'/search'}><a><div className=" flex  rounded-lg px-2 ">
+        <AiOutlineSearch className="text-2xl text-gray-500 mx-1 m-auto"/>
+
+        </div></a></Link>} */}
         {<Link legacyBehavior href={'/cart'}><a><div className=" flex   rounded-lg px-2 ">
         <AiOutlineShoppingCart  className="text-2xl text-gray-500 mx-1 m-auto" />
         {/* <label className="text-sm md:text-md mx-1 cursor-pointer font-semibold" htmlFor="">Cart</label> */}

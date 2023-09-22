@@ -23,7 +23,7 @@ export default function Deals_of_day({products2}){
    return(
      <div className='bg-white min-h-screen'>
 
-        <div className='border rounded-sm sm:m-10'>
+        <div className='border rounded-sm sm:m-1'>
           <h1 className='text-2xl font-extrabold text-gray-800 p-5'>Deals Of Day</h1>
           <section className="text-gray-600 body-font ">
 

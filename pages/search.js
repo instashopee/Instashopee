@@ -4,12 +4,26 @@ import Head from "next/head";
 import Product from "@/models/Product";
 import mongoose from 'mongoose'
 
+import { useState } from "react";
 
+ 
+ 
 var input='ms drawer channel'
 const search = ({products}) => {
+  const [message, setMessage] = useState('');
+
+  const [updated, setUpdated] = useState(message);
+
+  const handleChange = (event) => {
+    setMessage(event.target.value);
+  };
+
+  const handleClick = () => {
+    // 👇 "message" stores input field value
+    setUpdated(message);
+  };
   
-  
-  
+  module.exports={updated}
   
   return (
 
@@ -22,6 +36,19 @@ const search = ({products}) => {
           content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0"
         />
       </Head>
+      {/* <input
+        type="text"
+        id="message"
+        name="message"
+        onChange={handleChange}
+        value={message}
+      />
+
+      <h2>Message: {message}</h2>
+
+      <h2>Updated: {updated}</h2> */}
+
+      {/* <button onClick={handleClick}>Update</button> */}
     <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
     <div class="relative">
         <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
@@ -31,7 +58,7 @@ const search = ({products}) => {
         </div>
         <input type="search" id="userInputt" class="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-white dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search Any Products here..." required/>
         
-       {<Link href={'/'}><button  type="submit" class="text-black absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button></Link>}
+       {<Link href={'/search_product'}><button  type="submit" class="text-black absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button></Link>}
     </div>
 
 

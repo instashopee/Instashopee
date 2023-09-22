@@ -23,10 +23,10 @@ const cart = ({cart,addToCart,removeFromCart,clearCart,subTotal,addTowishlist}) 
       
      {Object.keys(cart).map((k)=>{return <div key={k}>
         <div class="justify-between mb-6 rounded-lg bg-white p-6 shadow-md sm:flex sm:justify-start">
-          <img src={cart[k].img} alt="product-image" class="w-full rounded-lg sm:w-40" />
+          <img src={cart[k].img} alt="product-image" class="w-full h-72 rounded-lg sm:w-40 sm:h-40" />
           <div class="sm:ml-4 sm:flex sm:w-full sm:justify-between">
             <div class="mt-5 sm:mt-0">
-            <div className="w-2/3 font-semibold text-2xl">{cart[k].name}({cart[k].size}/{cart[k].variant})</div>
+            <div className="font-semibold text-xl">{cart[k].name}({cart[k].size}/{cart[k].variant})</div>
             <div class="flex flex-col mt-5">
                 <p class="text-sm">Price - Rs.{cart[k].price}/-</p>
                 

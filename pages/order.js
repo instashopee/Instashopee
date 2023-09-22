@@ -50,7 +50,7 @@ const MyOrder = ({ order, clearCart }) => {
         {Object.keys(products).map((key) => {
               return (
                 <div key={key} className="border-2 justify-between mb-6 rounded-lg bg-white p-6 shadow-md sm:flex sm:justify-start">
-                 <img src={products[key].img} alt="product-image" class="w-full rounded-lg sm:w-40" />
+                 <img src={products[key].img} alt="product-image" class="w-full h-72 rounded-lg sm:w-40 sm:h-40" />
                 <div class="sm:ml-4 sm:flex sm:w-full sm:justify-between">
             <div class="mt-5 sm:mt-0">
             <div className="w-2/3 font-semibold text-2xl">{products[key].name}({products[key].size}/{products[key].variant})</div>
