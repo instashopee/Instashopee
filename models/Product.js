@@ -19,6 +19,7 @@ const ProductSchema = new mongoose.Schema({
     availableQty: {type: Number, required: true},
     size: {type: String},
     mqty: {type: Number, default:"1"},
+    mqty2: {type: Number, default:"1"},
     unit: {type: String},
     // size2: {type: String},
     // size3: {type: String},

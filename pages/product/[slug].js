@@ -548,14 +548,14 @@ if(!error){
                 <div className="flex flex-row">
                 <button disabled={product.availableQty <=0?true:false} 
                   onClick={() => {
-                    addToCart(slug, product.mqty, product.price, product.title, size, color,product.del_ch,product.img,product.unit);
+                    addToCart(slug, 1, product.price, product.title, size, color,product.del_ch,product.img,product.unit,product.mqty,product.mqty2);
                   }}
                   className="animate-bounce w-[16rem] ml-1 mb-5 text-white bg-blue-500 disabled:bg-blue-300  border-0 py-2 px-2 md:px-6 focus:outline-none hover:bg-blue-800 rounded"
                 >
                   Add To Cart
                 </button>
                 <button onClick={() => {
-                    addTowishlist(slug, product.mqty, product.price, product.title, size, color,product.del_ch,product.img,product.unit);
+                    addTowishlist(slug, 1, product.price, product.title, size, color,product.del_ch,product.img,product.unit,product.mqty,product.mqty2);
                   }} className=" rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4">
                   <svg
                     fill="currentColor"
@@ -570,7 +570,7 @@ if(!error){
                 </button>
                 </div>
                 <button disabled={product.availableQty <=0?true:false} onClick={() =>
-                    buyNow(slug, product.mqty, product.price, product.title, size, color,product.del_ch,product.img,product.unit)
+                    buyNow(slug, 1, product.price, product.title, size, color,product.del_ch,product.img,product.unit,product.mqty,product.mqty2)
                   } className="w-[16rem] ml-1 mb-5  text-white bg-red-500 disabled:bg-red-300  border-0 py-2 px-2 md:px-6 focus:outline-none hover:bg-red-800 rounded">
                   Buy Now
                 </button>

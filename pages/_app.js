@@ -100,12 +100,12 @@ const Logout=()=>{
 
   }
 
-  const addToCart=(itemCode, qty, price, name, size, variant,del_ch,img,unit)=>{
+  const addToCart=(itemCode, qty, price, name, size, variant,del_ch,img,unit,mqty,mqty2)=>{
     let newCart=cart;
     if(itemCode in cart){
-      newCart[itemCode].qty=cart[itemCode].qty + qty
+      newCart[itemCode].mqty=cart[itemCode].mqty + 1
     }else{
-      newCart[itemCode]={qty: 1,price,name,size,variant,del_ch,img,unit}
+      newCart[itemCode]={qty:1,price,name,size,variant,del_ch,img,unit,mqty,mqty2}
     }
     setCart(newCart)
     toast.success('Added To Cart Successfully', {
@@ -119,13 +119,15 @@ const Logout=()=>{
       theme: "light",
       });
     saveCart(newCart)
+    router.push(window.location.href)
+  
   }
-  const addTowishlist=(itemCode, qty, price, name, size, variant,del_ch,img,unit)=>{
+  const addTowishlist=(itemCode, qty, price, name, size, variant,del_ch,img,unit,mqty,mqty2)=>{
     let newwishlist=wishlist;
     if(itemCode in wishlist){
-      newwishlist[itemCode].qty=wishlist[itemCode].qty + qty
+      newwishlist[itemCode].mqty=wishlist[itemCode].mqty + 1
     }else{
-      newwishlist[itemCode]={qty: 1,price,name,size,variant,del_ch,img,unit}
+      newwishlist[itemCode]={qty: 1,price,name,size,variant,del_ch,img,unit,mqty,mqty2}
     }
     setwishlist(newwishlist)
     toast.success('Added To Wishlist Successfully', {
@@ -139,10 +141,12 @@ const Logout=()=>{
       theme: "light",
       });
     savewishlist(newwishlist)
+    router.push(window.location.href)
+    
   }
-  const buyNow = (itemCode, qty, price, name, size, variant,del_ch,img,unit) => {
+  const buyNow = (itemCode, qty, price, name, size, variant,del_ch,img,unit,mqty,mqty2) => {
     let newCart={}
-    newCart[itemCode]={ qty: 1, price, name, size, variant ,del_ch,img,unit};
+    newCart[itemCode]={ qty: 1, price, name, size, variant ,del_ch,img,unit,mqty,mqty2};
     setCart(newCart);
     saveCart(newCart);
     router.push("/checkout");
@@ -154,13 +158,14 @@ const Logout=()=>{
   const clearwishlist=()=>{
     setwishlist({})
     savewishlist({})
+    router.push(window.location.href)
   }
-  const removeFromCart=(itemCode, qty, price, name, size, variant,del_ch,img,unit)=>{
+  const removeFromCart=(itemCode,mqty, mqty2, price, name, size, variant,del_ch,img,unit)=>{
     let newCart=cart;
     if(itemCode in cart){
-      newCart[itemCode].qty=cart[itemCode].qty - qty
+      newCart[itemCode].mqty=cart[itemCode].mqty - 1
     }
-    if(newCart[itemCode]["qty"]<=0){
+    if(newCart[itemCode]["mqty"]<cart[itemCode].mqty2){
       delete newCart[itemCode]
     }
     setCart(newCart)
@@ -175,13 +180,15 @@ const Logout=()=>{
       theme: "light",
       });
     saveCart(newCart)
+    router.push(window.location.href)
+   
   }
   const removeFromwishlist=(itemCode, qty, price, name, size, variant,del_ch,img,unit)=>{
     let newwishlist=wishlist;
     if(itemCode in wishlist){
-      newwishlist[itemCode].qty=wishlist[itemCode].qty - qty
+      newwishlist[itemCode].mqty=wishlist[itemCode].mqty - 1
     }
-    if(newwishlist[itemCode]["qty"]<=0){
+    if(newwishlist[itemCode]["mqty"]<wishlist[itemCode].mqty2){
       delete newwishlist[itemCode]
     }
     setwishlist(newwishlist)
@@ -196,6 +203,8 @@ const Logout=()=>{
       theme: "light",
       });
     savewishlist(newwishlist)
+    router.push(window.location.href)
+    
   }
   return <>
         <ToastContainer

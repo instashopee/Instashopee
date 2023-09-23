@@ -3,9 +3,12 @@ import Link from "next/link";
 import React, { useRef } from "react";
 import { AiOutlineShoppingCart,AiOutlineHeart,AiFillPlusCircle, AiFillMinusCircle, AiFillCloseCircle,AiOutlineSearch } from "react-icons/ai";
 import {MdAccountCircle} from "react-icons/md"
+import Router, { useRouter } from "next/router";
 import {BsFillBagCheckFill} from "react-icons/bs"
 import Head from "next/head";
 const cart = ({cart,addToCart,removeFromCart,clearCart,subTotal,addTowishlist}) => {
+  const router=useRouter()
+  const a=()=>{}
   return (
     <div>
     <Head>
@@ -34,7 +37,7 @@ const cart = ({cart,addToCart,removeFromCart,clearCart,subTotal,addTowishlist}) 
   <tr>
     <td>Price</td>
   
-    <td>Rs.{cart[k].price}/-</td>
+    <td>Rs.{cart[k].price* cart[k].mqty}/-</td>
   </tr>
   <tr>
     <td>Delivery Charge</td>
@@ -44,7 +47,7 @@ const cart = ({cart,addToCart,removeFromCart,clearCart,subTotal,addTowishlist}) 
   <tr>
     <td>Total Amount</td>
   
-    <td>Rs.{cart[k].del_ch + (cart[k].price * cart[k].qty)}/-</td>
+    <td>Rs.{cart[k].del_ch + (cart[k].price * cart[k].mqty)}/-</td>
   </tr>
 </tbody>
 </table>
@@ -52,11 +55,11 @@ const cart = ({cart,addToCart,removeFromCart,clearCart,subTotal,addTowishlist}) 
             </div>
             <div class="mt-4 flex justify-between sm:space-y-6 sm:mt-0 sm:block sm:space-x-6">
               <div class="flex items-center border-gray-100">
-                <span onClick={()=>{removeFromCart(k,1,cart[k].price,cart[k].name,cart[k].size,cart[k].variant,cart[k].del_ch,cart[k].img,cart[k].unit)}} class="cursor-pointer rounded-l bg-gray-100 py-1 px-3.5 duration-100 hover:bg-blue-500 hover:text-blue-50"> - </span>
-                <span className="mx-1">{cart[k].qty}</span>
-                <span onClick={()=>{addToCart(k,1,cart[k].price,cart[k].name,cart[k].size,cart[k].variant,cart[k].del_ch,cart[k].img,cart[k].unit)}} class="cursor-pointer rounded-r bg-gray-100 py-1 px-3 duration-100 hover:bg-blue-500 hover:text-blue-50"> + </span>
+                <span onClick={()=>{removeFromCart(k,1,cart[k].price,cart[k].name,cart[k].size,cart[k].variant,cart[k].del_ch,cart[k].img,cart[k].unit,cart[k].mqty,cart[k].mqty2)}} class="cursor-pointer rounded-l bg-gray-100 py-1 px-3.5 duration-100 hover:bg-blue-500 hover:text-blue-50"> - </span>
+                <span className="mx-1">{cart[k].mqty}</span>
+                <span onClick={()=>{addToCart(k,1,cart[k].price,cart[k].name,cart[k].size,cart[k].variant,cart[k].del_ch,cart[k].img,cart[k].unit,cart[k].mqty,cart[k].mqty2)}} class="cursor-pointer rounded-r bg-gray-100 py-1 px-3 duration-100 hover:bg-blue-500 hover:text-blue-50"> + </span>
                 <span class="hover:text-gray-700"><AiOutlineHeart onClick={() => {
-                    addTowishlist(k,1,cart[k].price,cart[k].name,cart[k].size,cart[k].variant,cart[k].del_ch,cart[k].img,cart[k].unit);
+                    addTowishlist(k,1,cart[k].price,cart[k].name,cart[k].size,cart[k].variant,cart[k].del_ch,cart[k].img,cart[k].unit,cart[k].mqty,cart[k].mqty2);
                   }} className="text-2xl cursor-pointer" />
                            </span>
 

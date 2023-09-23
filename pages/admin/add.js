@@ -19,6 +19,7 @@ const add = () => {
   const [unit, setUnit] = useState("");
   const [size, setSize] = useState("");
   const [mqty, setmqty] = useState("");
+  const [mqty2, setmqty2] = useState("");
   const [color, setColor] = useState("");
   const [availableQty, setAvailableQty] = useState("");
   const [img, setImg] = useState("");
@@ -35,8 +36,9 @@ const add = () => {
     if (!myuser) {
       router.push("/");
     }
-    settype("normal");
-    setmqty("1")
+    // settype("normal");
+    // setmqty(1)
+    // setmqty2(1)
 
   
   }, []);
@@ -47,22 +49,9 @@ const add = () => {
   const [createObjectURL2, setCreateObjectURL2] = useState(null);
   const [createObjectURL3, setCreateObjectURL3] = useState(null);
 
-  // const myFunction= () => {
-  //   // var x = document.getElementById("image").src;
-  //   // document.getElementById("cancel").innerHTML = x;
-    
-  //   // document.getElementById('fileInput').onchange = function () {
-  //   //   alert('Selected file: ' + this.value);
-  //   // };
-  // }
   const refresh= () => {
     window.location=`${process.env.NEXT_PUBLIC_HOST}/admin/add`
-    // var x = document.getElementById("image").src;
-    // document.getElementById("cancel").innerHTML = x;
-    
-    // document.getElementById('fileInput').onchange = function () {
-    //   alert('Selected file: ' + this.value);
-    // };
+
   }
   const uploadToClient = (event) => {
     if (event.target.files && event.target.files[0]) {
@@ -138,6 +127,7 @@ const add = () => {
       mrp,
       availableQty,
       size,
+      mqty2,
       unit,
       mqty,
       color,
@@ -161,8 +151,9 @@ const add = () => {
 
 
     setTitle("");
-    settype("normal");
-    setmqty("1");
+    settype("");
+    setmqty('');
+    setmqty2('');
     setSlug("");
     setDesc("");
     setCategory("");
@@ -219,6 +210,7 @@ const add = () => {
       edt,
       availableQty,
       size,
+      mqty2,
       unit,
       color,
       img,
@@ -249,8 +241,8 @@ const add = () => {
     
     setSize("");
     setMrp("");
-    settype("");
-    setmqty("1");
+    // settype("");
+    // setmqty("1");
     setColor("");
     setAvailableQty("");
     // setImg("");
@@ -296,7 +288,10 @@ const add = () => {
     } else if (e.target.name == "desc") {
       setDesc(e.target.value);
     } else if (e.target.name == "mqty") {
-      setmqty(e.target.value);
+      setmqty2(e.target.value);
+      setmqty(e.target.value)
+    } else if (e.target.name == "mqty2") {
+      setmqty2(e.target.value);
     } else if (e.target.name == "category") {
       setCategory(e.target.value);
     } else if (e.target.name == "sub_category") {
@@ -484,6 +479,22 @@ const add = () => {
                placeholder="Min Order Qty"
                id="mqty"
                name="mqty"
+               class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+             />
+           </div>
+         </div>
+         <div className="px-2 w-1/2 hidden">
+           <div class=" mb-4">
+             <label for="mqty2" class="leading-7 text-sm text-gray-600">
+             Min Qty2
+             </label>
+             <input
+               onChange={handleChange}
+               value={mqty2}
+               type="mqty2"
+               placeholder="Min Order Qty"
+               id="mqty2"
+               name="mqty2"
                class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
              />
            </div>
