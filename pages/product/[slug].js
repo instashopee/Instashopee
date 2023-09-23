@@ -340,7 +340,7 @@ if(!error){
                     )}
                 </div>
 
-                <div className="flex ml-6 items-center -z-10">
+                <div className="flex ml-6 items-center">
                   <span className="mr-3">Size</span>
                   <div className="relative">
                     <select
