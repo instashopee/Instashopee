@@ -90,7 +90,9 @@ return <Link key={products[item].id} passHref={true} legacyBehavior href={`produ
         {products[item].size.includes("100") && (<span className="border border-gray-300 px-1 mx-1">100</span>)}
         {products[item].size.includes("128") && (<span className="border border-gray-300 px-1 mx-1">128</span>)}
         {products[item].size.includes("150") && (<span className="border border-gray-300 px-1 mx-1">150</span>)}
+        {products[item].size.includes("160") && (<span className="border border-gray-300 px-1 mx-1">160</span>)}
         {products[item].size.includes("182") && (<span className="border border-gray-300 px-1 mx-1">182</span>)}
+        {products[item].size.includes("224") && (<span className="border border-gray-300 px-1 mx-1">224</span>)}
         {products[item].size.includes("288") && (<span className="border border-gray-300 px-1 mx-1">288</span>)}
         {products[item].size.includes("450") && (<span className="border border-gray-300 px-1 mx-1">450</span>)}
         {products[item].size.includes("600") && (<span className="border border-gray-300 px-1 mx-1">600</span>)}
@@ -137,7 +139,7 @@ return <Link key={products[item].id} passHref={true} legacyBehavior href={`produ
       
      </div>
              <div className='my-4'>
-            <img className="w-full 2xl:h-full h-[16rem]" src="/banners/gif/banner2.gif" alt="" />
+            <img className="w-full 2xl:h-full h-[20rem]" src="/banners/gif/banner2.gif" alt="" />
             </div> </div>
    )
   }
