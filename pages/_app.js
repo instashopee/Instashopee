@@ -48,12 +48,12 @@ function MyApp({ Component, pageProps }) {
         setCart(JSON.parse(localStorage.getItem("cart")))
         saveCart(JSON.parse(localStorage.getItem("cart")))
       }
-      if(!(localStorage.getItem("myuser"))){
-        setCart({})
-    saveCart({})
-    setwishlist({})
-    savewishlist({})
-      }
+    //   if(!(localStorage.getItem("myuser"))){
+    //     setCart({})
+    // saveCart({})
+    // setwishlist({})
+    // savewishlist({})
+    //   }
       if(localStorage.getItem("wishlist")){
         setwishlist(JSON.parse(localStorage.getItem("wishlist")))
         savewishlist(JSON.parse(localStorage.getItem("wishlist")))
