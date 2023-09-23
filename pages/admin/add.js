@@ -390,7 +390,7 @@ const add = () => {
              </label>
              <input
                onChange={handleChange}
-               placeholder="normal / top selling"
+               placeholder="normal/top selling/economy"
                value={type}
                type="type"
                id="type"
