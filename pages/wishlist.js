@@ -53,7 +53,7 @@ const wishlist = ({wishlist,cart,addTowishlist,removeFromwishlist,clearwishlist,
             <div class="mt-4 flex justify-between sm:space-y-6 sm:mt-0 sm:block sm:space-x-6">
               <div class="flex items-center border-gray-100">
                 <span onClick={()=>{removeFromwishlist(k,1,wishlist[k].price,wishlist[k].name,wishlist[k].size,wishlist[k].variant,wishlist[k].del_ch,wishlist[k].img,wishlist[k].unit,wishlist[k].mqty,wishlist[k].mqty2)}} class="cursor-pointer rounded-l bg-gray-100 py-1 px-3.5 duration-100 hover:bg-blue-500 hover:text-blue-50"> - </span>
-                <span className="mx-1">{wishlist[k].qty}</span>
+                <span className="mx-1">{wishlist[k].mqty}</span>
                 <span onClick={()=>{addTowishlist(k,1,wishlist[k].price,wishlist[k].name,wishlist[k].size,wishlist[k].variant,wishlist[k].del_ch,wishlist[k].img,wishlist[k].unit,wishlist[k].mqty,wishlist[k].mqty2)}} class="cursor-pointer rounded-r bg-gray-100 py-1 px-3 duration-100 hover:bg-blue-500 hover:text-blue-50"> + </span>
                 <span class="hover:text-gray-700"><AiOutlineShoppingCart onClick={() => {
                     addToCart(k,1,wishlist[k].price,wishlist[k].name,wishlist[k].size,wishlist[k].variant,wishlist[k].del_ch,wishlist[k].img,wishlist[k].unit,wishlist[k].mqty,wishlist[k].mqty2);

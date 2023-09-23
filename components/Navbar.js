@@ -29,7 +29,7 @@ import { Avatar } from "@mui/material";
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
-const Navbar = ({Logout,user,cart,addToCart,removeFromCart,clearCart,subTotal}) => {
+const Navbar = ({Logout,user,cart,addToCart,removeFromCart,clearCart,subTotal,wishlist}) => {
   const [dropdown, setDropdown] = useState(false)
 
   const [open, setOpen] = useState(false);
@@ -397,11 +397,13 @@ const Navbar = ({Logout,user,cart,addToCart,removeFromCart,clearCart,subTotal}) 
 
         </div></a></Link>} */}
         {<Link legacyBehavior href={'/cart'}><a><div className=" flex   rounded-lg px-2 ">
-        <AiOutlineShoppingCart  className="text-2xl text-gray-500 mx-1 m-auto" />
+        <AiOutlineShoppingCart  className="text-2xl text-gray-500 mx-1 cursor-pointer font-semibold mt-1" />
+        <div class="inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-red-400 border-2 border-white rounded-full -top-2 -right-2 dark:border-gray-900">{Object.keys(cart).length}</div>
         {/* <label className="text-sm md:text-md mx-1 cursor-pointer font-semibold" htmlFor="">Cart</label> */}
         </div></a></Link>}
         {<Link legacyBehavior href={'/wishlist'}><a><div className="flex  rounded-lg px-2 ">
         <AiOutlineHeart className="text-2xl text-gray-500 mx-1 cursor-pointer font-semibold mt-1" />
+        <div class="inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-red-400 border-2 border-white rounded-full -top-2 -right-2 dark:border-gray-900">{Object.keys(wishlist).length}</div>
         {/* <label className="text-sm md:text-md mx-1 cursor-pointer font-semibold" htmlFor="">Wishlist</label> */}
         </div></a></Link>}
 

@@ -84,7 +84,7 @@ const Logout=()=>{
     let subt=0
     let keys=Object.keys(myCart)
     for(let i=0;i<keys.length;i++){
-      subt+=(myCart[keys[i]].price * myCart[keys[i]].qty)+myCart[keys[i]].del_ch
+      subt+=(myCart[keys[i]].price * myCart[keys[i]].mqty)+myCart[keys[i]].del_ch
     }
     setsubTotal(subt)
 
@@ -94,7 +94,7 @@ const Logout=()=>{
     let subtt=0
     let keys=Object.keys(mywishlist)
     for(let i=0;i<keys.length;i++){
-      subtt+=(mywishlist[keys[i]].price * mywishlist[keys[i]].qty)+mywishlist[keys[i]].del_ch
+      subtt+=(mywishlist[keys[i]].price * mywishlist[keys[i]].mqty)+mywishlist[keys[i]].del_ch
     }
     setsubTotalwishlist(subtt)
 
