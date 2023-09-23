@@ -51,9 +51,8 @@ const Forgot = () => {
         theme: "light",
         });
         
-        const url = `${process.env.NEXT_PUBLIC_HOST}/forgot_success`;
+        const url = `${process.env.NEXT_PUBLIC_HOST}`;
         window.location = url;
-        router.push('/forgot_success')
     } else {
       toast.error('Forgot Password Email Was Not Sent, Try Again Later', {
         position: "top-center",
@@ -67,6 +66,7 @@ const Forgot = () => {
         });
     }
     router.push("/")
+
 
   };
   const resetPassword = async () => {
@@ -91,9 +91,8 @@ const Forgot = () => {
           progress: undefined,
           theme: "light",
           });
-          const url = `${process.env.NEXT_PUBLIC_HOST}/forgot_success`;
-          window.location = url;
-          router.push('/forgot_success')
+          const url = `${process.env.NEXT_PUBLIC_HOST}`;
+        window.location = url;
       } else {
         toast.error('Password Was Not Reset, Try Again Later', {
           position: "top-center",
@@ -106,8 +105,8 @@ const Forgot = () => {
           theme: "light",
           });
       }
-      router.push("/")
     } 
+    router.push("/")
   };
   return (
     <div class="flex  flex-col justify-center px-6 py-12 lg:px-8">
