@@ -105,7 +105,7 @@ const Logout=()=>{
     if(itemCode in cart){
       newCart[itemCode].qty=cart[itemCode].qty + qty
     }else{
-      newCart[itemCode]={qty: mqty,price,name,size,variant,del_ch,img,unit}
+      newCart[itemCode]={qty:mqty,price,name,size,variant,del_ch,img,unit}
     }
     setCart(newCart)
     toast.success('Added To Cart Successfully', {
@@ -125,7 +125,7 @@ const Logout=()=>{
     if(itemCode in wishlist){
       newwishlist[itemCode].qty=wishlist[itemCode].qty + qty
     }else{
-      newwishlist[itemCode]={qty: mqty,price,name,size,variant,del_ch,img,unit}
+      newwishlist[itemCode]={qty:mqty,price,name,size,variant,del_ch,img,unit}
     }
     setwishlist(newwishlist)
     toast.success('Added To Wishlist Successfully', {
@@ -142,7 +142,7 @@ const Logout=()=>{
   }
   const buyNow = (itemCode, qty, price, name, size, variant,del_ch,img,unit,mqty) => {
     let newCart={}
-    newCart[itemCode]={ qty: mqty, price, name, size, variant ,del_ch,img,unit};
+    newCart[itemCode]={ qty:mqty, price, name, size, variant ,del_ch,img,unit};
     setCart(newCart);
     saveCart(newCart);
     router.push("/checkout");
