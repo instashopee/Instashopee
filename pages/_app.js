@@ -100,12 +100,12 @@ const Logout=()=>{
 
   }
 
-  const addToCart=(itemCode, qty, price, name, size, variant,del_ch,img)=>{
+  const addToCart=(itemCode, qty, price, name, size, variant,del_ch,img,unit)=>{
     let newCart=cart;
     if(itemCode in cart){
       newCart[itemCode].qty=cart[itemCode].qty + qty
     }else{
-      newCart[itemCode]={qty: 1,price,name,size,variant,del_ch,img}
+      newCart[itemCode]={qty: 1,price,name,size,variant,del_ch,img,unit}
     }
     setCart(newCart)
     toast.success('Added To Cart Successfully', {
@@ -120,12 +120,12 @@ const Logout=()=>{
       });
     saveCart(newCart)
   }
-  const addTowishlist=(itemCode, qty, price, name, size, variant,del_ch,img)=>{
+  const addTowishlist=(itemCode, qty, price, name, size, variant,del_ch,img,unit)=>{
     let newwishlist=wishlist;
     if(itemCode in wishlist){
       newwishlist[itemCode].qty=wishlist[itemCode].qty + qty
     }else{
-      newwishlist[itemCode]={qty: 1,price,name,size,variant,del_ch,img}
+      newwishlist[itemCode]={qty: 1,price,name,size,variant,del_ch,img,unit}
     }
     setwishlist(newwishlist)
     toast.success('Added To Wishlist Successfully', {
@@ -140,9 +140,9 @@ const Logout=()=>{
       });
     savewishlist(newwishlist)
   }
-  const buyNow = (itemCode, qty, price, name, size, variant,del_ch,img) => {
+  const buyNow = (itemCode, qty, price, name, size, variant,del_ch,img,unit) => {
     let newCart={}
-    newCart[itemCode]={ qty: 1, price, name, size, variant ,del_ch,img};
+    newCart[itemCode]={ qty: 1, price, name, size, variant ,del_ch,img,unit};
     setCart(newCart);
     saveCart(newCart);
     router.push("/checkout");
@@ -155,7 +155,7 @@ const Logout=()=>{
     setwishlist({})
     savewishlist({})
   }
-  const removeFromCart=(itemCode, qty, price, name, size, variant,del_ch,img)=>{
+  const removeFromCart=(itemCode, qty, price, name, size, variant,del_ch,img,unit)=>{
     let newCart=cart;
     if(itemCode in cart){
       newCart[itemCode].qty=cart[itemCode].qty - qty
@@ -176,7 +176,7 @@ const Logout=()=>{
       });
     saveCart(newCart)
   }
-  const removeFromwishlist=(itemCode, qty, price, name, size, variant,del_ch,img)=>{
+  const removeFromwishlist=(itemCode, qty, price, name, size, variant,del_ch,img,unit)=>{
     let newwishlist=wishlist;
     if(itemCode in wishlist){
       newwishlist[itemCode].qty=wishlist[itemCode].qty - qty

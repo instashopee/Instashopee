@@ -223,7 +223,7 @@ const getpincode=async(pin)=>{
         <div class="sm:ml-4 sm:flex sm:w-full sm:justify-between">
           <div class="mt-5 sm:mt-0">
           <p className="font-semibold text-xl">{cart[k].name}</p>
-          <p className="font-semibold text-xl">({cart[k].size}/{cart[k].variant})</p>
+          <p className="font-semibold text-xl">({cart[k].size}{cart[k].unit}/{cart[k].variant} color)</p>
           <div class="flex flex-col mt-5">
           <table class="table-fixed">
 
@@ -254,9 +254,9 @@ const getpincode=async(pin)=>{
           </div>
           <div class="mt-4 flex justify-between sm:space-y-6 sm:mt-0 sm:block sm:space-x-6">
             <div class="flex items-center border-gray-100">
-              <span onClick={()=>{removeFromCart(k,1,cart[k].price,cart[k].name,cart[k].size,cart[k].variant,cart[k].del_ch,cart[k].img)}} class="cursor-pointer rounded-l bg-gray-100 py-1 px-3.5 duration-100 hover:bg-blue-500 hover:text-blue-50"> - </span>
+              <span onClick={()=>{removeFromCart(k,1,cart[k].price,cart[k].name,cart[k].size,cart[k].variant,cart[k].del_ch,cart[k].img,cart[k].unit)}} class="cursor-pointer rounded-l bg-gray-100 py-1 px-3.5 duration-100 hover:bg-blue-500 hover:text-blue-50"> - </span>
               <span className="mx-1">{cart[k].qty}</span>
-              <span onClick={()=>{addToCart(k,1,cart[k].price,cart[k].name,cart[k].size,cart[k].variant,cart[k].del_ch,cart[k].img)}} class="cursor-pointer rounded-r bg-gray-100 py-1 px-3 duration-100 hover:bg-blue-500 hover:text-blue-50"> + </span>
+              <span onClick={()=>{addToCart(k,1,cart[k].price,cart[k].name,cart[k].size,cart[k].variant,cart[k].del_ch,cart[k].img,cart[k].unit)}} class="cursor-pointer rounded-r bg-gray-100 py-1 px-3 duration-100 hover:bg-blue-500 hover:text-blue-50"> + </span>
              
 
             </div>

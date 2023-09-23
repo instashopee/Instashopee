@@ -193,7 +193,7 @@ if(!error){
                 INSTASHOPEE
               </h2>
               <h1 className="text-gray-900 text-3xl title-font font-medium mb-1">
-                {product.title} ({product.size}/{product.color})
+                {product.title} ({product.size}{product.unit}/{product.color} color)
               </h1>
 
               <p className="leading-relaxed">{product.desc}
@@ -548,14 +548,14 @@ if(!error){
                 <div className="flex flex-row">
                 <button disabled={product.availableQty <=0?true:false} 
                   onClick={() => {
-                    addToCart(slug, 1, product.price, product.title, size, color,product.del_ch,product.img);
+                    addToCart(slug, 1, product.price, product.title, size, color,product.del_ch,product.img,product.unit);
                   }}
                   className="animate-bounce w-[16rem] ml-1 mb-5 text-white bg-blue-500 disabled:bg-blue-300  border-0 py-2 px-2 md:px-6 focus:outline-none hover:bg-blue-800 rounded"
                 >
                   Add To Cart
                 </button>
                 <button onClick={() => {
-                    addTowishlist(slug, 1, product.price, product.title, size, color,product.del_ch,product.img);
+                    addTowishlist(slug, 1, product.price, product.title, size, color,product.del_ch,product.img,product.unit);
                   }} className=" rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4">
                   <svg
                     fill="currentColor"
@@ -570,7 +570,7 @@ if(!error){
                 </button>
                 </div>
                 <button disabled={product.availableQty <=0?true:false} onClick={() =>
-                    buyNow(slug, 1, product.price, product.title, size, color,product.del_ch,product.img)
+                    buyNow(slug, 1, product.price, product.title, size, color,product.del_ch,product.img,product.unit)
                   } className="w-[16rem] ml-1 mb-5  text-white bg-red-500 disabled:bg-red-300  border-0 py-2 px-2 md:px-6 focus:outline-none hover:bg-red-800 rounded">
                   Buy Now
                 </button>

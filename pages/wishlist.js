@@ -26,20 +26,37 @@ const wishlist = ({wishlist,cart,addTowishlist,removeFromwishlist,clearwishlist,
           <img src={wishlist[k].img} alt="product-image" class="w-full h-72 rounded-lg sm:w-40 sm:h-40" />
           <div class="sm:ml-4 sm:flex sm:w-full sm:justify-between">
             <div class="mt-5 sm:mt-0">
-            <div className="font-semibold text-xl">{wishlist[k].name}({wishlist[k].size}/{wishlist[k].variant})</div>
+            <div className="font-semibold text-xl">{wishlist[k].name}({wishlist[k].size}{wishlist[k].unit}/{wishlist[k].variant} color)</div>
             <div class="flex flex-col mt-5">
-                <p class="text-sm">Price - Rs.{wishlist[k].price}/-</p>
-                
-                <p class="text-sm">Delivery Charge - Rs.{wishlist[k].del_ch}/-</p>
+            <table class="table-fixed">
+
+<tbody>
+  <tr>
+    <td>Price</td>
+  
+    <td>Rs.{cart[k].price}/-</td>
+  </tr>
+  <tr>
+    <td>Delivery Charge</td>
+
+    <td>Rs.{cart[k].del_ch}/-</td>
+  </tr>
+  <tr>
+    <td>Total Amount</td>
+  
+    <td>Rs.{cart[k].del_ch + (cart[k].price * cart[k].qty)}/-</td>
+  </tr>
+</tbody>
+</table>
               </div>
             </div>
             <div class="mt-4 flex justify-between sm:space-y-6 sm:mt-0 sm:block sm:space-x-6">
               <div class="flex items-center border-gray-100">
-                <span onClick={()=>{removeFromwishlist(k,1,wishlist[k].price,wishlist[k].name,wishlist[k].size,wishlist[k].variant,wishlist[k].del_ch,wishlist[k].img)}} class="cursor-pointer rounded-l bg-gray-100 py-1 px-3.5 duration-100 hover:bg-blue-500 hover:text-blue-50"> - </span>
+                <span onClick={()=>{removeFromwishlist(k,1,wishlist[k].price,wishlist[k].name,wishlist[k].size,wishlist[k].variant,wishlist[k].del_ch,wishlist[k].img,wishlist[k].unit)}} class="cursor-pointer rounded-l bg-gray-100 py-1 px-3.5 duration-100 hover:bg-blue-500 hover:text-blue-50"> - </span>
                 <span className="mx-1">{wishlist[k].qty}</span>
-                <span onClick={()=>{addTowishlist(k,1,wishlist[k].price,wishlist[k].name,wishlist[k].size,wishlist[k].variant,wishlist[k].del_ch,wishlist[k].img)}} class="cursor-pointer rounded-r bg-gray-100 py-1 px-3 duration-100 hover:bg-blue-500 hover:text-blue-50"> + </span>
+                <span onClick={()=>{addTowishlist(k,1,wishlist[k].price,wishlist[k].name,wishlist[k].size,wishlist[k].variant,wishlist[k].del_ch,wishlist[k].img,wishlist[k].unit)}} class="cursor-pointer rounded-r bg-gray-100 py-1 px-3 duration-100 hover:bg-blue-500 hover:text-blue-50"> + </span>
                 <span class="hover:text-gray-700"><AiOutlineShoppingCart onClick={() => {
-                    addToCart(k,1,wishlist[k].price,wishlist[k].name,wishlist[k].size,wishlist[k].variant,wishlist[k].del_ch,wishlist[k].img);
+                    addToCart(k,1,wishlist[k].price,wishlist[k].name,wishlist[k].size,wishlist[k].variant,wishlist[k].del_ch,wishlist[k].img,wishlist[k].unit);
                   }} className="text-2xl cursor-pointer" />
                            </span>
               </div>
