@@ -18,7 +18,7 @@ const ProductSchema = new mongoose.Schema({
     mrp: {type: Number, required: true},
     availableQty: {type: Number, required: true},
     size: {type: String},
-    mqty: {type: String, default:"1"},
+    mqty: {type: Number, default:"1"},
     unit: {type: String},
     // size2: {type: String},
     // size3: {type: String},
