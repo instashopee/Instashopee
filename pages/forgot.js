@@ -23,11 +23,7 @@ const Forgot = () => {
       setEmail(e.target.value);
     }
   }
-  useEffect(() => {
-    if (localStorage.getItem("token")) {
-      router.push("/");
-    }
-  }, []);
+  
   const sendEmail = async () => {
   
     let data = { email, sendMail: true };
@@ -64,8 +60,11 @@ const Forgot = () => {
         progress: undefined,
         theme: "light",
         });
+        const url = `${process.env.NEXT_PUBLIC_HOST}`;
+        window.location = url;
     }
-    router.push("/")
+    const url = `${process.env.NEXT_PUBLIC_HOST}`;
+        window.location = url;
 
 
   };
@@ -104,9 +103,12 @@ const Forgot = () => {
           progress: undefined,
           theme: "light",
           });
+          const url = `${process.env.NEXT_PUBLIC_HOST}`;
+        window.location = url;
       }
     } 
-    router.push("/")
+    const url = `${process.env.NEXT_PUBLIC_HOST}`;
+        window.location = url;
   };
   return (
     <div class="flex  flex-col justify-center px-6 py-12 lg:px-8">
