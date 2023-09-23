@@ -34,17 +34,17 @@ const wishlist = ({wishlist,cart,addTowishlist,removeFromwishlist,clearwishlist,
   <tr>
     <td>Price</td>
   
-    <td>Rs.{cart[k].price* cart[k].mqty}/-</td>
+    <td>Rs.{wishlist[k].price* wishlist[k].mqty}/-</td>
   </tr>
   <tr>
     <td>Delivery Charge</td>
 
-    <td>Rs.{cart[k].del_ch}/-</td>
+    <td>Rs.{wishlist[k].del_ch}/-</td>
   </tr>
   <tr>
     <td>Total Amount</td>
   
-    <td>Rs.{cart[k].del_ch + (cart[k].price * cart[k].mqty)}/-</td>
+    <td>Rs.{wishlist[k].del_ch + (wishlist[k].price * wishlist[k].mqty)}/-</td>
   </tr>
 </tbody>
 </table>

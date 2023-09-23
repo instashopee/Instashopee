@@ -71,8 +71,8 @@ function MyApp({ Component, pageProps }) {
   
 const Logout=()=>{
   localStorage.removeItem("myuser")
-  localStorage.removeItem("cart")
-  localStorage.removeItem("wishlist")
+  // localStorage.removeItem("cart")
+  // localStorage.removeItem("wishlist")
   setUser({value:null})
   setKey(Math.random())
   router.push('/')
