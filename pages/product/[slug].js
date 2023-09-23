@@ -143,7 +143,7 @@ if(!error){
                         // lensStyle: { backgroundColor: 'rgba(0,0,0,0)' }
                         
                     }} /> */}
-        <img src={image} className="sm:h-[35rem] h-72 sm:w-[35rem]  w-80 mx-3" alt="" />
+        <img src={image} className="sm:h-[35rem] h-72 sm:w-[35rem] w-64 mx-3" alt="" />
        </div>
         <div
           className=" flex items-center justify-center w-full gap-2 mt-10"

@@ -330,7 +330,7 @@ const add = () => {
     // } 
   };
   return (
-    <div className="fixed top-0 left-0 bg-white w-full h-screen z-40 overflow-y-auto">
+    <div className="fixed top-0 left-0 bg-white w-full h-screen z-40 overflow-y-auto mt-16">
 
         <ToastContainer
         position="top-left"
@@ -347,9 +347,9 @@ const add = () => {
 
 
     <Admin_sidebar/>
-    <h1 className="text-2xl text-center font-bold">ADD PRODUCTS</h1>
+    <h1 className="text-2xl text-center font-bold mt-12">ADD PRODUCTS</h1>
     <br />
-    <div class="lg:w-1/2 md:w-1/2 bg-white flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0 float-right p-5 shadow-2xl">
+    <div class="lg:w-1/2 md:w-1/2 bg-white flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0 float-right p-5 shadow-2xl mr-16">
       <h2 class="text-gray-900 text-lg mb-1 font-medium title-font">Add Product Details</h2>
       <div className="flex">
       <div className="px-2 w-1/2 ">
@@ -659,7 +659,7 @@ const add = () => {
 
 
    
-      <div className="mx-72">
+      <div className="ml-16">
         <div className="border-2 mx-14 w-[25rem] mt-5">
         <main class="container w-[25rem]">
        
