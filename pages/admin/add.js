@@ -374,7 +374,7 @@ const add = () => {
              </label>
              <input
                onChange={handleChange}
-               // placeholder="Title_SizeNumber"
+             
                value={slug}
                type="slug"
                id="slug"
