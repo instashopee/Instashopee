@@ -139,7 +139,7 @@ return <Link key={products[item].id} passHref={true} legacyBehavior href={`produ
       
      </div>
              <div className='my-4'>
-            <img className="w-full 2xl:h-full h-[20rem]" src="/banners/gif/banner2.gif" alt="" />
+            <img className="w-full 2xl:h-[40rem] h-[20rem]" src="/banners/gif/banner2.gif" alt="" />
             </div> </div>
    )
   }
