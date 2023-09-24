@@ -35,9 +35,9 @@ const cart = ({cart,addToCart,removeFromCart,clearCart,subTotal,addTowishlist}) 
 
 <tbody>
   <tr>
-    <td>Price</td>
+    <td>Price Rs.{cart[k].price}/- X Qty {cart[k].mqty}</td>
   
-    <td>Rs.{cart[k].price* cart[k].mqty}/-</td>
+    <td>Rs.{cart[k].price*cart[k].mqty}/-</td>
   </tr>
   <tr>
     <td>Delivery Charge</td>
