@@ -312,6 +312,32 @@ if(!error){
                         }`}
                       ></button>
                     )}
+                       {Object.keys(variants).includes("brown") &&
+                    Object.keys(variants["brown"]).includes(size) && (
+                      <button
+                        onClick={() => {
+                          refreshVariant(size, "brown");
+                        }}
+                        className={`border-2 rounded-full bg-[#964B00] hover:bg-[#964B00] w-6 h-6 focus:outline-none ${
+                          color === "brown"
+                            ? "border-black"
+                            : "border-yellow-300"
+                        }`}
+                      ></button>
+                    )}
+                    {Object.keys(variants).includes("wood") &&
+                    Object.keys(variants["wood"]).includes(size) && (
+                      <button
+                        onClick={() => {
+                          refreshVariant(size, "wood");
+                        }}
+                        className={`border-2 rounded-full bg-[#966F33] hover:bg-[#966F33] w-6 h-6 focus:outline-none ${
+                          color === "wood"
+                            ? "border-black"
+                            : "border-yellow-300"
+                        }`}
+                      ></button>
+                    )}
                   {Object.keys(variants).includes("wenge") &&
                     Object.keys(variants["wenge"]).includes(size) && (
                       <button
