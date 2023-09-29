@@ -44,7 +44,7 @@ const All_Users = () => {
      
 }, [])
   return (
-    <div className="fixed top-0 left-0 bg-white w-full h-screen z-40 mt-16">
+    <div className="fixed top-0 left-0 bg-white w-full h-screen z-40 overflow-y-auto">
     <ToastContainer
       position="top-left"
       autoClose={3000}
@@ -61,7 +61,7 @@ const All_Users = () => {
 
     <Admin_sidebar/>
   
-  <div className="shadow-none">
+  <div className="shadow-none mt-16">
     <DashboardCard title={'All Users'}>
       <TableContainer className="min-h-screen"
         sx={{
@@ -173,6 +173,9 @@ const All_Users = () => {
       </TableContainer>
     </DashboardCard>
     </div>
+    <br />
+    <br />
+    <br />
     </div>
   )
 }

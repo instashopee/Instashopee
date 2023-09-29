@@ -23,13 +23,13 @@ const All_Order = () => {
   const [orders, setOrders] = useState({})
   
   useEffect(() => {
-    const fetchOrders=async()=>{
-      let a= await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/myorders`, {
+    const fetchUsers=async()=>{
+      let a= await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/get_all_orders`, {
         method: "POST", // or 'PUT'
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({token:JSON.parse(localStorage.getItem('myuser')).token}),
+        body: JSON.stringify({orders}),
       });
     
       let res=await a.json()
@@ -38,150 +38,43 @@ const All_Order = () => {
     if(!localStorage.getItem("myuser")){
       router.push('/')
     }else{
-      fetchOrders()
+      fetchUsers()
   }
 
      
 }, [])
   return (
-    <div className="fixed top-0 left-0 bg-white w-full h-screen z-40 mt-16">
-    <ToastContainer
-      position="top-left"
-      autoClose={3000}
-      hideProgressBar={false}
-      newestOnTop={false}
-      closeOnClick
-      rtl={false}
-      pauseOnFocusLoss
-      draggable
-      pauseOnHover
-      theme="light"
-    />
+    <div className="h-screen overflow-y-auto">
+      <Admin_sidebar/>
+      <br />
 
+     <div class="mx-auto max-w-10xl justify-center px-6 md:flex md:space-x-6 xl:px-0">
 
-    <Admin_sidebar/>
-  
-  <div className="shadow-none">
-    <DashboardCard title={'All Orders'}>
-      <TableContainer className="min-h-screen"
-        sx={{
-          width: {
-            xs: "274px",
-            sm: "100%"
-          }
-        }}
-      >
-        <Table 
-          aria-label="simple table"
-          sx={{
-            whiteSpace: "nowrap",
-            mt: 2
-          }}
-        >
-          <TableHead>
-            <TableRow>
-              <TableCell>
-                <Typography color="textSecondary" variant="h6">
-                  Email
-                </Typography>
-              </TableCell>
-              <TableCell>
-                <Typography color="textSecondary" variant="h6">
-                  Name
-                </Typography>
-              </TableCell>
+     <div class="rounded-lg md:w-2/3">
+                 {Object.values(orders).map((item)=>{
+                   
              
-              <TableCell>
-                <Typography color="textSecondary" variant="h6">
-                  Phone
-                </Typography>
-              </TableCell>
-              <TableCell>
-                <Typography color="textSecondary" variant="h6">
-                  Address
-                </Typography>
-              </TableCell>
-              
-              <TableCell>
-                <Typography color="textSecondary" variant="h6">
-                  Amount
-                </Typography>
-              </TableCell>
-              <TableCell>
-                <Typography color="textSecondary" variant="h6">
-                  View All Details
-                </Typography>
-              </TableCell>
-              
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {Object.values(orders).map(item => (
-              <TableRow key={item.OrderId}>
-                <TableCell>
-                  <Typography fontSize="15px" fontWeight={500}>
-                    {item.email}
-                  </Typography>
-                </TableCell>
-
-                <TableCell>
-                  <Box display="flex" alignItems="center">
-                    <Box>
-                      <Typography variant="h6" fontWeight={600}>
-                        {item.name}
-                      </Typography>
-                    </Box>
-                  </Box>
-                </TableCell>
-                <TableCell>
-                  <Box display="flex" alignItems="center">
-                    <Box>
-                      <Typography variant="h6" fontWeight={600}>
-                        {item.phone}
-                      </Typography>
-                    </Box>
-                  </Box>
-                </TableCell>
-                <TableCell>
-                  <Box display="flex" alignItems="center">
-                    <Box>
-                      <Typography variant="h6" fontWeight={600}>
-                        {item.address}
-                      </Typography>
-                    </Box>
-                  </Box>
-                </TableCell>
-                <TableCell>
-                  <Box display="flex" alignItems="center">
-                    <Box>
-                      <Typography variant="h6" fontWeight={600}>
-                        Rs.{item.amount}/-
-                      </Typography>
-                    </Box>
-                  </Box>
-                </TableCell>
-                <TableCell>
-                  <Box display="flex" alignItems="center">
-                    <Box>
-                      <Typography variant="h6" fontWeight={600}>
-                        <Link legacyBehavior href={'/admin/admin_all_orders'}><a><button className="text-rose-500">More Details</button></a></Link>
-                      </Typography>
-                    </Box>
-                  </Box>
-                </TableCell>
+                   return <div key={item._id} class="">
+                     <div class="justify-between mb-6 rounded-lg bg-gray-100 p-6 shadow-md sm:flex sm:justify-start">
                 
-               
+                     <div class="px-6 py-4 font-bold underline hover:text-red-500 cursor-pointer">ORDER ID # {item.orderId}</div>
+                     <div class="px-6 py-4 font-semibold">Name: {item.name}</div>
+                     <div class="px-6 py-4 font-semibold">Email: {item.email}</div>
+                     <div class="px-6 py-4 font-semibold">Total Amount To Pay: Rs.{item.amount}/-</div>
+                     <Link legacyBehavior href={'/order?id='+item._id}><div class="px-6 py-4 bg-red-200 font-semibold rounded-lg cursor-pointer hover:text-red-500"><a>View Order Details</a></div></Link>
+               </div>
+                   </div>
+                 })}
+                   
+                 
+             </div>
+             </div>
 
-              
-              </TableRow>
-            ))}
-          </TableBody>
-        </Table>
-      </TableContainer>
-    </DashboardCard>
-    </div>
-    </div>
+</div>
+  
+
   )
 }
 
 export default All_Order
+

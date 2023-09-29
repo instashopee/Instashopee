@@ -47,7 +47,7 @@ const All_Products = () => {
      
 }, [])
   return (
-    <div className="fixed top-0 left-0 bg-white w-full h-screen z-40  mt-16">
+    <div className="fixed top-0 left-0 bg-white w-full h-screen z-40 overflow-y-auto ">
       <ToastContainer
         position="top-left"
         autoClose={3000}
@@ -64,7 +64,7 @@ const All_Products = () => {
 
       <Admin_sidebar/>
     
-    <div className="shadow-none">
+    <div className="shadow-none mt-16">
     <DashboardCard  title={'All Products'}>
       <TableContainer className="min-h-screen"
         sx={{
@@ -103,7 +103,11 @@ const All_Products = () => {
                   UniqueId
                 </Typography>
               </TableCell>
-             
+              <TableCell>
+                <Typography color="textSecondary" variant="h6">
+                  Stock
+                </Typography>
+              </TableCell>
               <TableCell>
                 <Typography color="textSecondary" variant="h6">
                   Image
@@ -150,6 +154,11 @@ const All_Products = () => {
                     </Box>
                   </Box>
                 </TableCell>
+                <TableCell>
+                  <Typography fontSize="15px" fontWeight={500}>
+                    {item.availableQty}
+                  </Typography>
+                </TableCell>
                 <TableCell className="flex items-center">
 
                   <img style={{height:'50px'}} src={item.img} alt="" />
@@ -173,7 +182,11 @@ const All_Products = () => {
           </TableBody>
         </Table>
       </TableContainer>
-    </DashboardCard></div>
+    </DashboardCard>
+    </div>
+    <br />
+    <br />
+    <br />
     </div>
   )
 }
