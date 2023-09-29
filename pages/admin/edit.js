@@ -1,12 +1,15 @@
+import Admin_sidebar from '@/components/Admin_sidebar'
+
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Admin_sidebar from "@/components/Admin_sidebar";
-
 
 const edit = () => {
+  const [_id, set_id] = useState("");
   const [title, setTitle] = useState("");
+  const [del_ch, setdel_ch] = useState("");
+  const [edt, setedt] = useState("");
   const [type, settype] = useState("");
   const [slug, setSlug] = useState("");
   const [desc, setDesc] = useState("");
@@ -14,15 +17,16 @@ const edit = () => {
   const [sub_category, setSub_Category] = useState("");
   const [price, setPrice] = useState("");
   const [mrp, setMrp] = useState("");
+  const [unit, setUnit] = useState("");
   const [size, setSize] = useState("");
+  const [mqty, setmqty] = useState("");
+  const [mqty2, setmqty2] = useState("");
   const [color, setColor] = useState("");
   const [availableQty, setAvailableQty] = useState("");
   const [img, setImg] = useState("");
   const [img1, setImg1] = useState("");
   const [img2, setImg2] = useState("");
-  const [_id, set_id] = useState("");
-  // const [img3, setImg3] = useState("");
-  // const [img4, setImg4] = useState("");
+
 
   const router = useRouter();
   let email='abhishekjain4548@gmail.com'
@@ -32,10 +36,7 @@ const edit = () => {
     if (!myuser) {
       router.push("/");
     }
-
   
-    settype("normal");
- 
   }, []);
   const [image, setImage] = useState(null);
   const [image2, setImage2] = useState(null);
@@ -44,9 +45,9 @@ const edit = () => {
   const [createObjectURL2, setCreateObjectURL2] = useState(null);
   const [createObjectURL3, setCreateObjectURL3] = useState(null);
 
-
   const refresh= () => {
-    window.location=`${process.env.NEXT_PUBLIC_HOST}/admin/add`
+    window.location=`${process.env.NEXT_PUBLIC_HOST}/admin/edit`
+
   }
   const uploadToClient = (event) => {
     if (event.target.files && event.target.files[0]) {
@@ -82,7 +83,7 @@ const edit = () => {
         
   };
   const succes = () => {
-    toast.success("Successfully Added Image", {
+    toast.success("Successfully Changed Image", {
       position: "top-left",
       autoClose: 3000,
       hideProgressBar: false,
@@ -92,11 +93,11 @@ const edit = () => {
       progress: undefined,
       theme: "light",
     });
-   
+    //jquery already added
   };
   const uploadToServer = async (event) => {
     const body = new FormData();
-   
+    // console.log("file", image)
     body.append("file", image);
     body.append("file", image2);
     body.append("file", image3);
@@ -111,21 +112,27 @@ const edit = () => {
 
   const handleUserSubmit = async () => {
     let data = {
+      _id,
       title,
-      type,
+      del_ch,
       slug,
       desc,
       category,
       sub_category,
       price,
+      edt,
       mrp,
       availableQty,
       size,
+      mqty2,
+      unit,
+      mqty,
       color,
       img,
       img1,
       img2,
-      _id,
+      type,
+    
       
    
     };
@@ -136,32 +143,32 @@ const edit = () => {
       },
       body: JSON.stringify(data),
     });
-    console.log(data)
-    
+
     let res = await a.json();
 
-
-
+    set_id("");
     setTitle("");
-    settype("normal");
+    settype("");
+    setmqty('');
+    setmqty2('');
     setSlug("");
     setDesc("");
     setCategory("");
     setSub_Category("");
+    setedt("");
     setPrice("");
     setSize("");
+    setUnit("");
     setMrp("");
+    setdel_ch("");
     setColor("");
     setAvailableQty("");
-    set_id("");
-    // setImg("");
-    // setImg("");
-    // setImg("");
-    // setImg("");
-    // setImg("");
+    setImg("")
+    setImg1("")
+    setImg2("")
 
     if (res.success) {
-      toast.success("Successfully Updated Product", {
+      toast.success("Successfully Edited Product", {
         position: "top-left",
         autoClose: 3000,
         hideProgressBar: false,
@@ -172,7 +179,7 @@ const edit = () => {
         theme: "light",
       });
     } else {
-      toast.error("Error Updating Product", {
+      toast.error("Error Edditing Product", {
         position: "top-left",
         autoClose: 5000,
         hideProgressBar: false,
@@ -184,90 +191,24 @@ const edit = () => {
       });
     }
   };
-  const handleSizeSubmit = async () => {
-    let data = {
-      title,
-      slug,
-      desc,
-      category,
-      sub_category,
-      price,
-      mrp,
-      availableQty,
-      size,
-      color,
-      img,
-      type,
-      img1,
-      img2,
-      _id,
-      
-   
-    };
-    let a = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/updateproduct`, {
-      method: "POST", // or 'PUT'
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    });
-    
-    let res = await a.json();
-
-
-
-    // setTitle("");
-    setSlug("");
-    set_id("");
-    // setDesc("");
-    // setCategory("");
-    // setSub_Category("");
-    setPrice("");
-    setSize("");
-    settype("");
-    setMrp("");
-    setColor("");
-    setAvailableQty("");
-    // setImg("");
-    // setImg("");
-    // setImg("");
-    // setImg("");
-    // setImg("");
-
-    if (res.success) {
-      toast.success("Successfully Added Size & Other Details", {
-        position: "top-left",
-        autoClose: 3000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-      });
-    } else {
-      toast.error("Error Adding Size & Other Details", {
-        position: "top-left",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-      });
-    }
-  };
-
   const handleChange = (e) => {
     if (e.target.name == "title") {
       setTitle(e.target.value);
     } else if (e.target.name == "slug") {
       setSlug(e.target.value);
+     } else if (e.target.name == "_id") {
+        set_id(e.target.value);
     } else if (e.target.name == "type") {
       settype(e.target.value);
+    } else if (e.target.name == "del_ch") {
+      setdel_ch(e.target.value);
     } else if (e.target.name == "desc") {
       setDesc(e.target.value);
+    } else if (e.target.name == "mqty") {
+      setmqty2(e.target.value);
+      setmqty(e.target.value)
+    } else if (e.target.name == "mqty2") {
+      setmqty2(e.target.value);
     } else if (e.target.name == "category") {
       setCategory(e.target.value);
     } else if (e.target.name == "sub_category") {
@@ -276,12 +217,14 @@ const edit = () => {
       setPrice(e.target.value);
     } else if (e.target.name == "mrp") {
       setMrp(e.target.value);
-    // } else if (e.target.name == "discount") {
-    //   setDiscount(e.target.value);
     } else if (e.target.name == "size") {
       setSize(e.target.value);
+    } else if (e.target.name == "unit") {
+      setUnit(e.target.value);
     } else if (e.target.name == "color") {
       setColor(e.target.value);
+    } else if (e.target.name == "edt") {
+      setedt(e.target.value);
     } else if (e.target.name == "availableQty") {
       setAvailableQty(e.target.value);
     } else if (e.target.name == "img") {
@@ -289,42 +232,21 @@ const edit = () => {
     } else if (e.target.name == "img1") {
       setImg1(e.target.value);
     } else if (e.target.name == "img2") {
-      setImg2(e.target.value);
-    } else if (e.target.name == "_id") {
-      set_id(e.target.value);}
-    // } else if (e.target.name == "img3") {
-    //   setImg3(e.target.value);
-    // } else if (e.target.name == "img4") {
-    //   setImg4(e.target.value);
-    // } 
+      setImg2(e.target.value);}
+
   };
   return (
-    <div className="fixed top-0 left-0 bg-white w-full h-screen z-40 overflow-y-auto">
-
-        <ToastContainer
-        position="top-left"
-        autoClose={3000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="light"
-      />
-
-
-    <Admin_sidebar/>
-    <h1 className="text-2xl text-center font-bold">EDIT PRODUCTS</h1>
-    <br />
-    <div class="lg:w-1/2 md:w-1/2 bg-white flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0 float-right p-5 shadow-2xl">
-      <h2 class="text-gray-900 text-lg mb-1 font-medium title-font">Update Product Details</h2>
-      <div className="flex">
-      <div className="px-2 w-1/2 ">
+    <div className='min-h-screen'>
+      <Admin_sidebar/>
+      <div className='justify-center text-center items-center'>
+        <p className='text-2xl mt-2 text-black font-bold'>EDIT PRODUCTS</p>
+      </div>
+      <br />
+    <div class="lg:w-1/2 md:w-1/2 bg-white flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0 float-right p-5 shadow-2xl mr-16">
+    <div className="px-2 w-1/2 ">
            <div class=" mb-4">
              <label for="_id" class="leading-7 text-sm text-gray-600">
-               Given Id
+               _id
              </label>
              <input
                onChange={handleChange}
@@ -336,6 +258,7 @@ const edit = () => {
              />
            </div>
          </div>
+      <div className="flex">
       <div className="px-2 w-1/2 ">
            <div class=" mb-4">
              <label for="title" class="leading-7 text-sm text-gray-600">
@@ -351,22 +274,6 @@ const edit = () => {
              />
            </div>
          </div>
-      <div className="px-2 w-1/2 ">
-           <div class=" mb-4">
-             <label for="type" class="leading-7 text-sm text-gray-600">
-             Type
-             </label>
-             <input
-               onChange={handleChange}
-               value={type}
-               placeholder="normal / top selling"
-               type="type"
-               id="type"
-               name="type"
-               class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-             />
-           </div>
-         </div>
       <div className="px-2 w-1/2">
            <div class=" mb-4">
              <label for="slug" class="leading-7 text-sm text-gray-600">
@@ -374,11 +281,27 @@ const edit = () => {
              </label>
              <input
                onChange={handleChange}
-               // placeholder="Title_SizeNumber"
+             
                value={slug}
                type="slug"
                id="slug"
                name="slug"
+               class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+             />
+           </div>
+         </div>
+      <div className="px-2 w-1/2">
+           <div class=" mb-4">
+             <label for="type" class="leading-7 text-sm text-gray-600">
+             Type
+             </label>
+             <input
+               onChange={handleChange}
+               placeholder="normal/top selling/economy"
+               value={type}
+               type="type"
+               id="type"
+               name="type"
                class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
              />
            </div>
@@ -438,9 +361,69 @@ const edit = () => {
          </div>
       <div className="flex">
       <div className="mt-8 w-8 cursor-pointer">
-      <svg onClick={handleSizeSubmit} xmlns="http://www.w3.org/2000/svg"  width="30" height="30" viewBox="0 0 50 50">
-<path d="M 25 2 C 12.309295 2 2 12.309295 2 25 C 2 37.690705 12.309295 48 25 48 C 37.690705 48 48 37.690705 48 25 C 48 12.309295 37.690705 2 25 2 z M 25 4 C 36.609824 4 46 13.390176 46 25 C 46 36.609824 36.609824 46 25 46 C 13.390176 46 4 36.609824 4 25 C 4 13.390176 13.390176 4 25 4 z M 24 13 L 24 24 L 13 24 L 13 26 L 24 26 L 24 37 L 26 37 L 26 26 L 37 26 L 37 24 L 26 24 L 26 13 L 24 13 z"></path>
-</svg></div>
+      </div>
+<div className="px-2 w-1/2">
+           <div class=" mb-4">
+             <label for="size" class="leading-7 text-sm text-gray-600">
+               Size
+             </label>
+             <input
+               onChange={handleChange}
+               value={size}
+               type="size"
+               id="size"
+               name="size"
+               class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+             />
+           </div>
+         </div>
+<div className="px-2 w-1/2">
+           <div class=" mb-4">
+             <label for="mqty" class="leading-7 text-sm text-gray-600">
+             Min Qty
+             </label>
+             <input
+               onChange={handleChange}
+               value={mqty}
+               type="mqty"
+               placeholder="Min Order Qty"
+               id="mqty"
+               name="mqty"
+               class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+             />
+           </div>
+         </div>
+         <div className="px-2 w-1/2 hidden">
+           <div class=" mb-4">
+             <label for="mqty2" class="leading-7 text-sm text-gray-600">
+             Min Qty2
+             </label>
+             <input
+               onChange={handleChange}
+               value={mqty2}
+               type="mqty2"
+               placeholder="Min Order Qty"
+               id="mqty2"
+               name="mqty2"
+               class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+             />
+           </div>
+         </div>
+<div className="px-2 w-1/2">
+           <div class=" mb-4">
+             <label for="unit" class="leading-7 text-sm text-gray-600">
+               Unit
+             </label>
+             <input
+               onChange={handleChange}
+               value={unit}
+               type="unit"
+               id="unit"
+               name="unit"
+               class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+             />
+           </div>
+         </div>
       <div className="px-2 w-1/2">
            <div class=" mb-4">
 
@@ -472,21 +455,7 @@ const edit = () => {
             />
           </div>
         </div>
-        <div className="px-2 w-1/2">
-           <div class=" mb-4">
-             <label for="size" class="leading-7 text-sm text-gray-600">
-               Size
-             </label>
-             <input
-               onChange={handleChange}
-               value={size}
-               type="size"
-               id="size"
-               name="size"
-               class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-             />
-           </div>
-         </div>
+        
          <div className="px-2 w-1/2">
            <div class=" mb-4">
              <label for="color" class="leading-7 text-sm text-gray-600">
@@ -570,13 +539,48 @@ const edit = () => {
                class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
              />
            </div>
-         </div></div>
+         </div>
 
+         </div>
+<div className="flex">
+         <div className="px-2 w-1/2">
+         <div class="mb-4">
+           <label for="edt" class="leading-7 text-sm text-gray-600">
+             Estimated Delivery Time For This Product
+           </label>
+           <input
+             onChange={handleChange}
+             value={edt}
+             id="edt"
+             name="edt"
+             class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+           ></input>
+         </div>
+       </div>
+         <div className="px-2 w-1/2">
+         <div class="mb-4">
+           <label for="del_ch" class="leading-7 text-sm text-gray-600">
+             Delivery Charge For This Product
+           </label>
+           <input
+             onChange={handleChange}
+             value={del_ch}
+             id="del_ch"
+             name="del_ch"
+             class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+           ></input>
+         </div>
+       </div>
+    
+         </div>
       <button onClick={handleUserSubmit} class="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">FINAL SUBMIT</button>
       
     </div>
 
-      <div className="mx-72">
+
+
+   
+      <div className="ml-16">
         <div className="border-2 mx-14 w-[25rem] mt-5">
         <main class="container w-[25rem]">
        
@@ -611,7 +615,9 @@ const edit = () => {
             <button onClick={uploadToServer} id="submit" class="rounded-sm px-3 py-1 bg-blue-700 hover:bg-blue-500 text-white focus:shadow-outline focus:outline-none">
               Upload now
             </button>
-         
+            {/* <button onClick={myFunction} id="cancel" class="ml-3 rounded-sm px-3 py-1 hover:bg-gray-300 focus:shadow-outline focus:outline-none">
+              Cancel
+            </button> */}
           </footer>
         </article>
       </main>
@@ -621,6 +627,7 @@ const edit = () => {
     
       </div>
 
-  );
-  };
-export default edit;
+  )
+}
+
+export default edit
