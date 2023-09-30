@@ -46,11 +46,13 @@ const All_Order = () => {
   return (
     <div className="h-screen overflow-y-auto">
       <Admin_sidebar/>
-      <br />
-
+ 
+        <div className="text-black font-semibold text-3xl">All Orders</div>
+     {Object.values(orders)==0&&<div className="text-3xl text-center">NO ORDERS TO SHOW</div>}
      <div class="mx-auto max-w-10xl justify-center px-6 md:flex md:space-x-6 xl:px-0">
 
      <div class="rounded-lg md:w-2/3">
+
                  {Object.values(orders).map((item)=>{
                    
              
