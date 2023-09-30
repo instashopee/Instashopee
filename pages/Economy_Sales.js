@@ -30,7 +30,7 @@ export default function Economy_Sales({products3}){
 
   <div className="containerpy-3 mx-auto  ">
     <div className="flex flex-wrap justify-center">
-     
+      
      <Size_Color/>
 
 
