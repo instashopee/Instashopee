@@ -33,7 +33,7 @@ export default function Top_selling({products}){
     <div className="flex flex-wrap justify-center">
      
       
-    <Size_Color/>
+    <Size_Color products={products}/>
 
 
 

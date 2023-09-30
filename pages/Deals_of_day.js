@@ -31,7 +31,7 @@ export default function Deals_of_day({products2}){
   <div className="containerpy-3 mx-auto  ">
     <div className="flex flex-wrap  justify-center">
      
-   <Size_Color/>
+   <Size_Color products={product2}/>
 
 
       
