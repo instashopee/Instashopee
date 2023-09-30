@@ -325,7 +325,7 @@ const add = () => {
     // } 
   };
   return (
-    <div className="fixed top-0 left-0 bg-white w-full min-h-screen z-40  mt-24 mb-24 overflow-y-auto">
+    <div className=" top-0 left-0 bg-white w-full min-h-screen z-40  mt-8 mb-24 overflow-y-auto">
 
         <ToastContainer
         position="top-left"
