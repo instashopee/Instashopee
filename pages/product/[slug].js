@@ -10,6 +10,7 @@ import Error from "next/error";
 // import ReactImageMagnify from 'react-image-magnify';
 import Product from "@/models/Product";
 import Head from "next/head";
+import ReactImageMagnify from "react-image-magnify";
 const Post = ({buyNow, addToCart,addTowishlist, product, variants,error,cart ,removeFromCart}) => {
   const router = useRouter();
   const { slug } = router.query;
@@ -118,7 +119,7 @@ if(!error){
 
 
        <div className="items-center justify-center text-center ml-5 ">
-       {/* <ReactImageMagnify  {...{
+       <ReactImageMagnify  {...{
                         smallImage: {
                             alt: '',
                             src: image,
@@ -129,8 +130,8 @@ if(!error){
                         },
                         largeImage: {
                             src: image,
-                            width: 850,
-                            height: 850
+                            width: 1550,
+                            height: 1050
                           },
                           enlargedImageContainerStyle: {
                             zIndex: "1500",
@@ -142,8 +143,10 @@ if(!error){
                         
                         // lensStyle: { backgroundColor: 'rgba(0,0,0,0)' }
                         
-                    }} /> */}
-        <img src={image} className="sm:h-[44rem] sm:w-[32rem] h-[28rem] w-72 " alt="" />
+                    }} />
+                            {/* <img src={image} className="sm:h-[44rem] sm:w-[32rem] h-[28rem] w-72 " alt="" /> */}
+
+        {/* <img src={image} className="sm:h-[44rem] sm:w-[32rem] h-[28rem] w-72 " alt="" /> */}
        </div>
         <div
           className=" flex items-center justify-center w-full gap-2 "

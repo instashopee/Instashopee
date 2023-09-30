@@ -27,6 +27,83 @@ const edit = () => {
   const [img1, setImg1] = useState("");
   const [img2, setImg2] = useState("");
 
+  const [products, setProducts] = useState({})
+  
+  useEffect(() => {
+    
+    const fetchProducts=async()=>{
+      let a= await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/getproducts`, {
+        method: "POST", // or 'PUT'
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({products}),
+      });
+    
+      let res=await a.json()
+      setProducts(res.products)
+    }
+    if(!localStorage.getItem("myuser")){
+      router.push('/')
+    }else{
+      fetchProducts()
+  }
+
+     
+}, [])
+  const b=()=>{
+    window.open(`${process.env.NEXT_PUBLIC_HOST}/admin/allproducts`, '_blank')
+  }
+  const ba=()=>{
+    window.location=(`${process.env.NEXT_PUBLIC_HOST}/admin/edit`)
+  }
+  const a=()=>{
+
+    // let _id="6516b9f18917db9044ee0013"
+    let data = {
+      _id
+   
+    };
+    const fetchUsers=async()=>{
+      let a= await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/get_one_product`, {
+        method: "POST", // or 'PUT'
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+      let res=await a.json()
+
+      setTitle(res.products.title)
+      setdel_ch(res.products.del_ch)
+      setedt(res.products.edt)
+      settype(res.products.type)
+      setSlug(res.products.slug)
+      setDesc(res.products.desc)
+      setCategory(res.products.category)
+      setSub_Category(res.products.sub_category)
+      setPrice(res.products.price)
+      setMrp(res.products.mrp)
+      setUnit(res.products.unit)
+      setSize(res.products.size)
+      setmqty(res.products.mqty)
+      setmqty2(res.products.mqty2)
+      setColor(res.products.color)
+      setAvailableQty(res.products.availableQty)
+      setImg(res.products.img)
+      setImg1(res.products.img1)
+      setImg2(res.products.img2)
+   
+    }
+    if(!localStorage.getItem("myuser")){
+      router.push('/')
+    }else{
+      fetchUsers()
+  }
+     
+
+  }
+     
 
   const router = useRouter();
   let email='abhishekjain4548@gmail.com'
@@ -178,6 +255,7 @@ const edit = () => {
         progress: undefined,
         theme: "light",
       });
+        window.location=`${process.env.NEXT_PUBLIC_HOST}/admin/edit`
     } else {
       toast.error("Error Edditing Product", {
         position: "top-left",
@@ -236,28 +314,50 @@ const edit = () => {
 
   };
   return (
-    <div className='min-h-screen'>
+    <div className='min-h-screen overflow-y-auto'>
       <Admin_sidebar/>
       <div className='justify-center text-center items-center'>
         <p className='text-2xl mt-2 text-black font-bold'>EDIT PRODUCTS</p>
       </div>
       <br />
     <div class="lg:w-1/2 md:w-1/2 bg-white flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0 float-right p-5 shadow-2xl mr-16">
-    <div className="px-2 w-1/2 ">
+             <div className="flex">
+
+             <div className="px-2 w-1/2 ">
            <div class=" mb-4">
              <label for="_id" class="leading-7 text-sm text-gray-600">
                _id
              </label>
-             <input
+             <select 
+              value={_id}
+              type="_id"
+              id="_id"
+              name="_id"
+              class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+              onChange={handleChange}>
+             {Object.values(products).map(item => (
+
+    <option value={item._id}>{item.title}</option>))}
+  </select>
+             {/* <input
+             required
                onChange={handleChange}
                value={_id}
                type="_id"
                id="_id"
                name="_id"
                class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-             />
+             /> */}
            </div>
          </div>
+      <div className="px-2 w-1/2 mt-6 space-x-2 space-y-2">
+          <button className='bg-blue-300 p-2 rounded-lg' onClick={a}>CHECK _id</button>
+          
+          <button className='bg-blue-300 p-2 rounded-lg' onClick={b}>VIEW PRODUCTS</button>
+
+          <button className='bg-blue-300 p-2 rounded-lg' onClick={ba}>REFRESH</button>
+
+         </div> </div>
       <div className="flex">
       <div className="px-2 w-1/2 ">
            <div class=" mb-4">
@@ -612,9 +712,9 @@ const edit = () => {
             <button onClick={refresh} id="submit" class="rounded-sm px-3 py-1 bg-gray-500 hover:bg-gray-400 text-white focus:shadow-outline focus:outline-none">
               Refresh
             </button>
-            <button onClick={uploadToServer} id="submit" class="rounded-sm px-3 py-1 bg-blue-700 hover:bg-blue-500 text-white focus:shadow-outline focus:outline-none">
+            {/* <button onClick={uploadToServer} id="submit" class="rounded-sm px-3 py-1 bg-blue-700 hover:bg-blue-500 text-white focus:shadow-outline focus:outline-none">
               Upload now
-            </button>
+            </button> */}
             {/* <button onClick={myFunction} id="cancel" class="ml-3 rounded-sm px-3 py-1 hover:bg-gray-300 focus:shadow-outline focus:outline-none">
               Cancel
             </button> */}
@@ -624,7 +724,11 @@ const edit = () => {
     </div>
     
         </div>
-    
+    <div className='flex space-x-2 ml-24 mt-8'>
+      <img className='h-40 w-40' src={img} alt="Old Image will be shown after you submit _id" />
+      <img className='h-40 w-40' src={img1} alt="Old Image will be shown after you submit _id" />
+      <img className='h-40 w-40' src={img2} alt="Old Image will be shown after you submit _id" />
+    </div>
       </div>
 
   )

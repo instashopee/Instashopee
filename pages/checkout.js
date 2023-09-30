@@ -229,7 +229,7 @@ const getpincode=async(pin)=>{
 
   <tbody>
     <tr>
-    <td>Price Rs.{cart[k].price}/- X Qty {cart[k].mqty}</td>
+    <td>Price ({cart[k].price}X{cart[k].mqty})</td>
   
     <td>Rs.{cart[k].price*cart[k].mqty}/-</td>
     </tr>
@@ -243,6 +243,9 @@ const getpincode=async(pin)=>{
     
       <td>Rs.{cart[k].del_ch + (cart[k].price * cart[k].mqty)}/-</td>
     </tr>
+    {/* <div>
+    {cart[k].availableQty}
+    </div> */}
   </tbody>
 </table>
               {/* <p class="">Price - Rs.{cart[k].price}/-</p>
