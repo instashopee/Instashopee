@@ -119,7 +119,7 @@ if(!error){
 
 
        <div className="items-center justify-center text-center ml-5 ">
-       <ReactImageMagnify  {...{
+       {/* <ReactImageMagnify  {...{
                         smallImage: {
                             alt: '',
                             src: image,
@@ -143,10 +143,10 @@ if(!error){
                         
                         // lensStyle: { backgroundColor: 'rgba(0,0,0,0)' }
                         
-                    }} />
+                    }} /> */}
                             {/* <img src={image} className="sm:h-[44rem] sm:w-[32rem] h-[28rem] w-72 " alt="" /> */}
 
-        {/* <img src={image} className="sm:h-[44rem] sm:w-[32rem] h-[28rem] w-72 " alt="" /> */}
+        <img src={image} className="sm:h-[44rem] sm:w-[32rem] h-[28rem] w-72 " alt="" />
        </div>
         <div
           className=" flex items-center justify-center w-full gap-2 "
