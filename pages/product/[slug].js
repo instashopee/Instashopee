@@ -109,16 +109,16 @@ if(!error){
         pauseOnHover
         theme="light"
         />
-        <div className="container px-5 mx-auto ">
+        <div className="container mx-auto ">
           <div className="mx-auto flex flex-wrap">
           <div className="sm:py-8 py-2">
      
       {/*<!-- Component: Slider with indicators & controls inside --> */}
-      <div className="items-center w-full ">
+      <div className="items-center justify-center text-center ">
      
 
 
-       <div className="items-center justify-center text-center ml-5 ">
+       <div className="items-center justify-center text-center">
        {/* <ReactImageMagnify  {...{
                         smallImage: {
                             alt: '',
@@ -146,7 +146,7 @@ if(!error){
                     }} /> */}
                             {/* <img src={image} className="sm:h-[44rem] sm:w-[32rem] h-[28rem] w-72 " alt="" /> */}
 
-        <img src={image} className="sm:h-[44rem] sm:w-[32rem] h-[28rem] w-72 " alt="" />
+        <img src={image} className="sm:h-[38rem] sm:w-[32rem] h-[28rem] w-full sm:px-0 px-5 " alt="" />
        </div>
         <div
           className=" flex items-center justify-center w-full gap-2 "
@@ -191,7 +191,7 @@ if(!error){
               className="lg:w-1/2 w-full lg:h-auto px-24 object-cover object-top rounded"
               src={product.img}
             /> */}
-            <div className="md:w-[60vh] 2xl:w-[80vh] w-full md:pl-10 md:py-6 md:mt-5">
+            <div className="md:w-[60vh] 2xl:w-[80vh] w-full px-5 md:pl-10 md:py-6 md:mt-5">
               <h2 className="text-sm title-font text-gray-500 tracking-widest">
                 INSTASHOPEE
               </h2>
