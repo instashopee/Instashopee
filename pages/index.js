@@ -56,7 +56,7 @@ export default function Home({products,products2,products3}){
      </div>
    )
   }
-
+ 
 
   export async function getServerSideProps(context) {
     if(!mongoose.connections[0].readystate){
