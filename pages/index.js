@@ -38,7 +38,19 @@ export default function Home({products,products2,products3}){
        <SliderIndicatorsControlsInside/>
        </div>
 
+       <div class="relative mx-16 my-5">
+		<div class="absolute -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg blur opacity-25"></div>
+ 
+		<div class="relative px-7 py-6 bg-white ring-1 ring-gray-900/5 rounded-lg leading-none flex items-top justify-center space-x-6 ">
+    <div class="neon">
+  <span class="text" data-text="!! SALE IS LIVE !!">!! SALE IS LIVE !!</span>
+  <span class="gradient"></span>
+  <span class="spotlight"></span>
+</div>    </div>
+  </div>
       <Top_selling products={products} />
+      {/* <div class="logo"><b>d<span>ri</span>bb<span>b</span>le</b></div> */}
+
       <Deals_of_day products2={products2}/>
       <Economy_Sales products3={products3}/>
      </div>

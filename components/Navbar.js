@@ -4,15 +4,6 @@ import React, { useRef, useState } from "react";
 import { AiOutlineShoppingCart,AiOutlineHeart, AiFillMinusCircle, AiFillCloseCircle,AiOutlineSearch } from "react-icons/ai";
 import {MdAccountCircle} from "react-icons/md"
 
-import {BsFillBagCheckFill} from "react-icons/bs"
-import Hardware_Fittings from "@/sub_category_pg/hardware_fittings";
-import Kitchen_Acc from "@/sub_category_pg/kitchen_acc";
-// import sidebar from "@/sub_category_pg/sidebar";
-import Deco_Panel from "@/sub_category_pg/decorative_panel";
-import Ward_fitt from "@/sub_category_pg/wardrobe_fitt";
-import Garments from "@/sub_category_pg/garments";
-import Bathroom_Acc from "@/sub_category_pg/bathroom_fitt";
-import Home_Automation from "@/sub_category_pg/home_auto";
 import { Fragment } from "react";
 import { Dialog, Popover, Tab, Transition } from "@headlessui/react";
 import {

@@ -24,8 +24,8 @@ export default function Top_selling({products}){
    return(
     <div>
      <div className='bg-white min-h-screen'>
-
-        <div className='border rounded-sm sm:m-1'>
+        
+        <div className='border-8 rounded-lg sm:m-1'>
           <h1 className='text-2xl font-extrabold text-gray-800 p-5'>TOP SELLING PRODUCTS</h1>
           <section className="text-gray-600 body-font ">
 
