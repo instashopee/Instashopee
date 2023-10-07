@@ -470,8 +470,17 @@ if(!error){
                       {color && Object.keys(variants[color]).includes('48') && (
                         <option value={'48'}>48</option>
                       )}
+                      {color && Object.keys(variants[color]).includes('65') && (
+                        <option value={'65'}>65</option>
+                      )}
+                      {color && Object.keys(variants[color]).includes('70') && (
+                        <option value={'70'}>70</option>
+                      )}
                       {color && Object.keys(variants[color]).includes('86') && (
                         <option value={'86'}>86</option>
+                      )}
+                      {color && Object.keys(variants[color]).includes('90') && (
+                        <option value={'90'}>90</option>
                       )}
                       {color && Object.keys(variants[color]).includes('96') && (
                         <option value={'96'}>96</option>
