@@ -12,8 +12,9 @@ import Deals_of_day from './Deals_of_day';
 import Top_selling from './Top_selling';
 import Economy_Sales from './Economy_Sales';
 import Chimney_Appliances from './Chimney_Appliances';
+import Decorative_Items from './Decorative_Items';
 
-export default function Home({products,products2,products3,products4}){
+export default function Home({products,products2,products3,products4,products5}){
   const router=useRouter()
   const [user, setUser] = useState({value:null})
     const [key, setKey] = useState()
@@ -54,6 +55,9 @@ export default function Home({products,products2,products3,products4}){
       <Chimney_Appliances products4={products4}/>
       <Deals_of_day products2={products2}/>
       <Economy_Sales products3={products3}/>
+      <Decorative_Items products5={products5}/>
+      <br />
+      <br />
      </div>
    )
   }
@@ -68,10 +72,12 @@ export default function Home({products,products2,products3,products4}){
     let products2 = await Product.find({type:'deals'})
     let products3 = await Product.find({type:'economy'})
     let products4 = await Product.find({type:'chimney'})
+    let products5 = await Product.find({type:'decorative'})
     let hinges = {}
     let hinges2 = {}
     let hinges3 = {}
     let hinges4 = {}
+    let hinges5 = {}
     for(let item of products){
       if(item.title in hinges){
           if(!hinges[item.title].color.includes(item.color) && item.availableQty > 0){
@@ -156,9 +162,30 @@ export default function Home({products,products2,products3,products4}){
             }
       }
     }
+    for(let item of products5){
+      if(item.title in hinges5){
+          if(!hinges5[item.title].color.includes(item.color) && item.availableQty > 0){
+            hinges5[item.title].color.push(item.color)
+          }
+          if(!hinges5[item.title].size.includes(item.size) && item.availableQty > 0){
+            hinges5[item.title].size.push(item.size)
+          }
+      }
+  
+      else{
+        hinges5[item.title] = JSON.parse(JSON.stringify(item))
+        if(item.availableQty >0){
+              hinges5[item.title].color = [item.color]
+              hinges5[item.title].size = [item.size]
+            }else{
+              hinges5[item.title].color = []
+              hinges5[item.title].size = []
+            }
+      }
+    }
   
     return{
-      props:{products:JSON.parse(JSON.stringify(hinges)),products2:JSON.parse(JSON.stringify(hinges2)),products3:JSON.parse(JSON.stringify(hinges3)),products4:JSON.parse(JSON.stringify(hinges4))},
+      props:{products:JSON.parse(JSON.stringify(hinges)),products2:JSON.parse(JSON.stringify(hinges2)),products3:JSON.parse(JSON.stringify(hinges3)),products4:JSON.parse(JSON.stringify(hinges4)),products5:JSON.parse(JSON.stringify(hinges5))},
     }
 
     }
