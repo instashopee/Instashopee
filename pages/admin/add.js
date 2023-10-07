@@ -383,7 +383,24 @@ const add = () => {
              <label for="type" class="leading-7 text-sm text-gray-600">
              Type
              </label>
-             <input
+             <select
+             
+             value={type}
+             type="type"
+             id="type"
+             name="type"
+             class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+             onChange={handleChange}>
+               
+            {/* {Object.values(products).map(item => ( */}
+
+   <option value='normal'>normal</option>
+   <option value='top selling'>top selling</option>
+   <option value='deals'>deals</option>
+   <option value='economy'>economy</option>
+   <option value='decorative'>decorative</option>
+ </select>
+             {/* <input
                onChange={handleChange}
                placeholder="normal/top selling/economy"
                value={type}
@@ -391,7 +408,7 @@ const add = () => {
                id="type"
                name="type"
                class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-             />
+             /> */}
            </div>
          </div>
          </div>

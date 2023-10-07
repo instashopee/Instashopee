@@ -22,7 +22,7 @@ const Admin_sidebar = () => {
     </button>
   </div>
   <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
-    <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border rounded-lg  md:flex-row md:space-x-8 md:mt-0 md:border-0 ">
+    <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border rounded-lg  md:flex-row md:space-x-2 md:mt-0 md:border-0 ">
       <li>
         <Link legacyBehavior href={"/admin"}><a class="block py-2 pl-3 pr-4 text-white" aria-current="page">Home</a></Link>
       </li>
@@ -34,6 +34,9 @@ const Admin_sidebar = () => {
       </li>
       <li>
         <Link legacyBehavior href={"/admin/edit"}><a class="block py-2 pl-3 pr-4 text-white">Edit Products</a></Link>
+      </li>
+      <li>
+        <Link legacyBehavior href={"/admin/delete"}><a class="block py-2 pl-3 pr-4 text-white">Delete Products</a></Link>
       </li>
       <li>
         <Link legacyBehavior href={"/admin/allproducts"}><a class="block py-2 pl-3 pr-4 text-white">View All Products</a></Link>
