@@ -114,10 +114,7 @@ export const navigation = {
               { name: 'Tandem Box',id:'bh', href: 'tandom_box' },
               { name: 'Corner units',id:'ah', href: 'corner_units' },
               { name: 'Tall Units',id:'hh', href: 'tall_units' },
-              { name: 'Uplifts',id:'ps', href: 'uplifts' },
-              { name: 'Rolling Shutters',id:'os', href: 'rolling_shutters' },
-              { name: 'ACP Baskets',id:'os', href: 'acp_baskets' },
-              { name: 'Wire Baskets',id:'os', href: 'wire_baskets' },
+              { name: 'Uplifts',id:'ps', href: 'uplifts' }
 
             ],
           },
@@ -174,6 +171,30 @@ export const navigation = {
       //     }
       //   ],
       // },
+      {
+        id: 'chimeny_and_cooktops',
+        name: 'Chimney & Cooktops',
+
+        sections: [
+          {
+            id: 'chimeny',
+            name: 'Chimney & Cooktops',
+            items: [
+              { name: 'Chimney',id:'ch', href: 'chimney' },
+              { name: 'Cooktop',id:'ct', href: 'cooktop' },
+              { name: 'Microwave',id:'mw', href: 'microwave' },
+              { name: 'Oven',id:'ov', href: 'oven' },
+              { name: 'Other Appliances',id:'oa', href: 'other_appliances' },
+          
+
+            ],
+          },
+         
+     
+         
+
+        ],
+      },
       {
         id: 'decorative_panels',
         name: 'Decorative Panels',
@@ -255,30 +276,7 @@ export const navigation = {
       //     }
       //   ],
       // },
-      {
-        id: 'chimeny_and_cooktops',
-        name: 'Chimney & Cooktops',
-
-        sections: [
-          {
-            id: 'chimeny',
-            name: 'Chimney & Cooktops',
-            items: [
-              { name: 'Chimney',id:'ch', href: 'chimney' },
-              { name: 'Cooktop',id:'ct', href: 'cooktop' },
-              { name: 'Microwave',id:'mw', href: 'microwave' },
-              { name: 'Oven',id:'ov', href: 'oven' },
-              { name: 'Other Appliances',id:'oa', href: 'other_appliances' },
-          
-
-            ],
-          },
-         
-     
-         
-
-        ],
-      },
+   
     ],
     pages: [
       // { name: 'Company', href: '#' },
