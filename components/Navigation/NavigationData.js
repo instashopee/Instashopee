@@ -139,6 +139,7 @@ export const navigation = {
 
         ],
       },
+
       // {
       //   id: 'bathroom_fittings',
       //   name: 'Bathroom Fittings',
@@ -254,7 +255,30 @@ export const navigation = {
       //     }
       //   ],
       // },
+      {
+        id: 'chimeny_and_cooktops',
+        name: 'Chimeny And Cooktops',
 
+        sections: [
+          {
+            id: 'chimeny',
+            name: 'Chimeny And Cooktops',
+            items: [
+              { name: 'Chimeny',id:'ch', href: 'chimeny' },
+              { name: 'Cooktop',id:'ct', href: 'cooktop' },
+              { name: 'Microwave',id:'mw', href: 'microwave' },
+              { name: 'Oven',id:'ov', href: 'oven' },
+              { name: 'Other Appliances',id:'oa', href: 'other_appliances' },
+          
+
+            ],
+          },
+         
+     
+         
+
+        ],
+      },
     ],
     pages: [
       // { name: 'Company', href: '#' },
