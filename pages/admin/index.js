@@ -9,7 +9,76 @@ import Admin_sidebar from "@/components/Admin_sidebar";
 
 const index = () => {
   const router=useRouter()
- 
+  const [orders, setOrders] = useState({})
+  
+  useEffect(() => {
+    const fetchOrders=async()=>{
+      let a= await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/get_all_orders`, {
+        method: "POST", // or 'PUT'
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({orders}),
+      });
+    
+      let res=await a.json()
+      setOrders(res.orders)
+    }
+    if(!localStorage.getItem("myuser")){
+      router.push('/')
+    }else{
+      fetchOrders()
+  }
+
+     
+}, [])
+const [products, setProducts] = useState({})
+  
+useEffect(() => {
+  
+  const fetchProducts=async()=>{
+    let a= await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/getproducts`, {
+      method: "POST", // or 'PUT'
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({products}),
+    });
+  
+    let res=await a.json()
+    setProducts(res.products)
+  }
+  if(!localStorage.getItem("myuser")){
+    router.push('/')
+  }else{
+    fetchProducts()
+}
+
+   
+}, [])
+const [users, setUsers] = useState({})
+  
+useEffect(() => {
+  const fetchUsers=async()=>{
+    let a= await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/get_all_users`, {
+      method: "POST", // or 'PUT'
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({users}),
+    });
+  
+    let res=await a.json()
+    setUsers(res.users)
+  }
+  if(!localStorage.getItem("myuser")){
+    router.push('/')
+  }else{
+    fetchUsers()
+}
+
+   
+}, [])
   useEffect(() => {
     const myuser = JSON.parse(localStorage.getItem("myuser"));
     if (!myuser) {
@@ -43,13 +112,13 @@ const index = () => {
 <div className="flex m-4 mt-6 space-x-5 justify-center">
 
     <div className="rounded-lg p-5 shadow-lg w-auto cursor-pointer bg-red-100">
-      <h2>TOTAL PRODUCTS:</h2>
+      <h2>TOTAL PRODUCTS: {Object.values(products).length}</h2>
     </div>
     <div className="rounded-lg p-5 shadow-lg w-auto cursor-pointer bg-red-100">
-      <h2>TOTAL ORDERS:</h2>
+      <h2>TOTAL ORDERS: {Object.values(orders).length}</h2>
     </div>
     <div className="rounded-lg p-5 shadow-lg w-auto cursor-pointer bg-red-100">
-      <h2>TOTAL USERS:</h2>
+      <h2>TOTAL USERS: {Object.values(users).length}</h2>
     </div>
 </div>
 

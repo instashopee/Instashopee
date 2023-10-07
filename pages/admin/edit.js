@@ -489,7 +489,7 @@ const edit = () => {
                onChange={handleChange}
                value={mqty}
                type="mqty"
-               placeholder="Min Order Qty"
+               placeholder="Min Qty"
                id="mqty"
                name="mqty"
                class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
@@ -505,7 +505,7 @@ const edit = () => {
                onChange={handleChange}
                value={mqty2}
                type="mqty2"
-               placeholder="Min Order Qty"
+               placeholder="Min Qty"
                id="mqty2"
                name="mqty2"
                class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
