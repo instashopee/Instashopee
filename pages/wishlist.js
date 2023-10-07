@@ -32,14 +32,14 @@ const wishlist = ({wishlist,cart,addTowishlist,removeFromwishlist,clearwishlist,
 
 <tbody>
   <tr>
-  <td>Price Rs.{wishlist[k].price}/- X Qty {wishlist[k].mqty}</td>
+  <td>Price {wishlist[k].price}X{wishlist[k].mqty}</td>
   
   <td>Rs.{wishlist[k].price*wishlist[k].mqty}/-</td>
   </tr>
   <tr>
     <td>Delivery Charge</td>
 
-    <td>Rs.{wishlist[k].del_ch}/-</td>
+    {wishlist[k].del_ch>0?<td>Rs.{wishlist[k].del_ch}/-</td>:<td>FREE</td>}
   </tr>
   <tr>
     <td>Total Amount</td>

@@ -236,7 +236,7 @@ const getpincode=async(pin)=>{
     <tr>
       <td>Delivery Charge</td>
  
-      <td>Rs.{cart[k].del_ch}/-</td>
+      {cart[k].del_ch>0?<td>Rs.{cart[k].del_ch}/-</td>:<td>FREE</td>}
     </tr>
     <tr>
       <td>Amount</td>
