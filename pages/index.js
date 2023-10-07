@@ -37,7 +37,7 @@ export default function Home({products,products2,products3}){
        <div >
        <SliderIndicatorsControlsInside/>
        </div>
-
+{/* 
        <div class="relative mx-16 my-5">
 		<div class="absolute -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg blur opacity-25"></div>
  
@@ -47,7 +47,7 @@ export default function Home({products,products2,products3}){
   <span class="gradient"></span>
   <span class="spotlight"></span>
 </div>    </div>
-  </div>
+  </div> */}
       <Top_selling products={products} />
       {/* <div class="logo"><b>d<span>ri</span>bb<span>b</span>le</b></div> */}
 
