@@ -112,7 +112,7 @@ useEffect(() => {
 <div className="flex m-4 mt-6 space-x-5 justify-center">
 
     <div className="rounded-lg p-5 shadow-lg w-auto cursor-pointer bg-red-100">
-      <h2>TOTAL PRODUCTS: {Object.values(products).length}</h2>
+      <h2>TOTAL PRODUCTS(Including Size): {Object.values(products).length}</h2>
     </div>
     <div className="rounded-lg p-5 shadow-lg w-auto cursor-pointer bg-red-100">
       <h2>TOTAL ORDERS: {Object.values(orders).length}</h2>
