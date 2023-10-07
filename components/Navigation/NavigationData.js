@@ -257,12 +257,12 @@ export const navigation = {
       // },
       {
         id: 'chimeny_and_cooktops',
-        name: 'Chimeny & Cooktops',
+        name: 'Chimney & Cooktops',
 
         sections: [
           {
             id: 'chimeny',
-            name: 'Chimeny & Cooktops',
+            name: 'Chimney & Cooktops',
             items: [
               { name: 'Chimney',id:'ch', href: 'chimney' },
               { name: 'Cooktop',id:'ct', href: 'cooktop' },
