@@ -11,8 +11,9 @@ import { useRouter } from 'next/router'
 import Deals_of_day from './Deals_of_day';
 import Top_selling from './Top_selling';
 import Economy_Sales from './Economy_Sales';
+import Chimney_Appliances from './Chimney_Appliances';
 
-export default function Home({products,products2,products3}){
+export default function Home({products,products2,products3,products4}){
   const router=useRouter()
   const [user, setUser] = useState({value:null})
     const [key, setKey] = useState()
@@ -50,7 +51,7 @@ export default function Home({products,products2,products3}){
   </div> */}
       <Top_selling products={products} />
       {/* <div class="logo"><b>d<span>ri</span>bb<span>b</span>le</b></div> */}
-
+      <Chimney_Appliances products4={products4}/>
       <Deals_of_day products2={products2}/>
       <Economy_Sales products3={products3}/>
      </div>
@@ -66,9 +67,11 @@ export default function Home({products,products2,products3}){
     let products = await Product.find({type:'top selling'})
     let products2 = await Product.find({type:'deals'})
     let products3 = await Product.find({type:'economy'})
+    let products4 = await Product.find({type:'chimney'})
     let hinges = {}
     let hinges2 = {}
     let hinges3 = {}
+    let hinges4 = {}
     for(let item of products){
       if(item.title in hinges){
           if(!hinges[item.title].color.includes(item.color) && item.availableQty > 0){
@@ -132,9 +135,30 @@ export default function Home({products,products2,products3}){
             }
       }
     }
+    for(let item of products4){
+      if(item.title in hinges4){
+          if(!hinges4[item.title].color.includes(item.color) && item.availableQty > 0){
+            hinges4[item.title].color.push(item.color)
+          }
+          if(!hinges4[item.title].size.includes(item.size) && item.availableQty > 0){
+            hinges4[item.title].size.push(item.size)
+          }
+      }
+  
+      else{
+        hinges4[item.title] = JSON.parse(JSON.stringify(item))
+        if(item.availableQty >0){
+              hinges4[item.title].color = [item.color]
+              hinges4[item.title].size = [item.size]
+            }else{
+              hinges4[item.title].color = []
+              hinges4[item.title].size = []
+            }
+      }
+    }
   
     return{
-      props:{products:JSON.parse(JSON.stringify(hinges)),products2:JSON.parse(JSON.stringify(hinges2)),products3:JSON.parse(JSON.stringify(hinges3))},
+      props:{products:JSON.parse(JSON.stringify(hinges)),products2:JSON.parse(JSON.stringify(hinges2)),products3:JSON.parse(JSON.stringify(hinges3)),products4:JSON.parse(JSON.stringify(hinges4))},
     }
 
     }

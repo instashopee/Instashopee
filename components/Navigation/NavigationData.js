@@ -46,7 +46,7 @@ export const navigation = {
             name: 'Aluminium Profile',
             items: [
               { name: 'Frame Profile',id:'tc', href: 'frame_profile' },
-              { name: 'Frame With Handle Profile',id:'scc', href: 'frame_with_hadle_profile' },
+              { name: 'Frame With Handle Profile',id:'scc', href: 'frame_with_handle_profile' },
               { name: 'Handle profile',id:'scc', href: 'handle_profile' },
 
             ],

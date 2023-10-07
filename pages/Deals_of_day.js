@@ -23,7 +23,14 @@ export default function Deals_of_day({products2}){
 
    return(
      <div className='bg-white min-h-screen'>
+  <div className='my-4'>
+            <img className="w-full 2xl:h-[40rem] h-[20rem]" src="/banners/gif/banner5.gif" alt="" />
 
+            {/* <video ref={vidRef} className="w-full h-full" muted  autoPlay={true} loop src="/banners/banner3.mp4" ></video> */}
+         
+ 
+            </div> 
+       
         <div className='border rounded-sm sm:m-1'>
           <h1 className='text-2xl font-extrabold text-gray-800 p-5'>Deals Of Day</h1>
           <section className="text-gray-600 body-font ">
@@ -134,14 +141,7 @@ return <Link key={products2[item].id} passHref={true} legacyBehavior href={`prod
 </section>
     </div>
   
-             <div className='my-4'>
-            <img className="w-full 2xl:h-[40rem] h-[20rem]" src="/banners/gif/banner5.gif" alt="" />
-
-            {/* <video ref={vidRef} className="w-full h-full" muted  autoPlay={true} loop src="/banners/banner3.mp4" ></video> */}
-         
- 
-            </div> 
-       
+           
        
       
      </div>
