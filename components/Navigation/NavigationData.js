@@ -257,14 +257,14 @@ export const navigation = {
       // },
       {
         id: 'chimeny_and_cooktops',
-        name: 'Chimeny And Cooktops',
+        name: 'Chimeny & Cooktops',
 
         sections: [
           {
             id: 'chimeny',
-            name: 'Chimeny And Cooktops',
+            name: 'Chimeny & Cooktops',
             items: [
-              { name: 'Chimeny',id:'ch', href: 'chimeny' },
+              { name: 'Chimney',id:'ch', href: 'chimney' },
               { name: 'Cooktop',id:'ct', href: 'cooktop' },
               { name: 'Microwave',id:'mw', href: 'microwave' },
               { name: 'Oven',id:'ov', href: 'oven' },

@@ -6,7 +6,7 @@ function uploadImage(data) {
       method: "PUT",
       headers: {
         Accept: "application/vnd.github+json",
-        Authorization: `Bearer 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`
+        Authorization: `Bearer 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`
       },
       body: JSON.stringify({
         message: "upload image from api",
