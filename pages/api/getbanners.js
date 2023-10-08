@@ -3,9 +3,9 @@ import Banner from "@/models/Banner";
 import connectDb from "@/middleware/mongoose";
 
 const handler = async (req, res) => {
-  let banner = await Banner.find()
+  let banners = await Banner.find()
 
 
-  res.status(200).json({banner})
+  res.status(200).json({banners})
 }
 export default connectDb(handler);

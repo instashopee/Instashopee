@@ -7,64 +7,85 @@ import Admin_sidebar from "@/components/Admin_sidebar";
 
 const Add_Banner = () => {
 
-    const handleUserSubmit = async () => {
-        let data = {
 
-            banner1,
-            banner2,
-            banner3,
-            banner4,
-          
-       
-        };
-        let a = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/banners`, {
-          method: "POST", // or 'PUT'
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(data),
-        });
-        
-        let res = await a.json();
-    
-    
-    
-        // setbanner1("");
-        // setbanner2("");
-        // setbanner3("");
-        // setbanner4("");
-
-
-
-    
-        if (res.success) {
-          toast.success("Successfully Changed Banner", {
-            position: "top-left",
-            autoClose: 3000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "light",
-          });
-        } else {
-          toast.error("Error Adding Banner", {
-            position: "top-left",
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "light",
-          });
-        }
-      };
   const [banner1, setbanner1] = useState("");
   const [banner2, setbanner2] = useState("");
   const [banner3, setbanner3] = useState("");
   const [banner4, setbanner4] = useState("");
+  const [static_banner1, setstatic_banner1] = useState("");
+  const [static_banner2, setstatic_banner2] = useState("");
+  const [static_banner3, setstatic_banner3] = useState("");
+  const [static_banner4, setstatic_banner4] = useState("");
+  const [static_banner5, setstatic_banner5] = useState("");
+  const [static_banner6, setstatic_banner6] = useState("");
+  const [static_banner7, setstatic_banner7] = useState("");
+  const [static_banner8, setstatic_banner8] = useState("");
+  const [static_banner9, setstatic_banner9] = useState("");
+  const [static_banner10, setstatic_banner10] = useState("");
+  const handleUserSubmit = async () => {
+          let data = {
+  
+              banner1,
+              banner2,
+              banner3,
+              banner4,
+              static_banner1,
+              static_banner2,
+              static_banner3,
+              static_banner4,
+              static_banner5,
+              static_banner6,
+              static_banner7,
+              static_banner8,
+              static_banner9,
+              static_banner10,
+            
+         
+          };
+          let a = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/banners`, {
+            method: "POST", // or 'PUT'
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data),
+          });
+          
+          let res = await a.json();
+      
+      
+      
+          // setbanner1("");
+          // setbanner2("");
+          // setbanner3("");
+          // setbanner4("");
+  
+  
+  
+      
+          if (res.success) {
+            toast.success("Successfully Changed Banner", {
+              position: "top-left",
+              autoClose: 3000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "light",
+            });
+          } else {
+            toast.error("Error Adding Banner", {
+              position: "top-left",
+              autoClose: 5000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "light",
+            });
+          }
+        };
 
 
   const router = useRouter();
@@ -80,6 +101,16 @@ const Add_Banner = () => {
   const [image2, setImage2] = useState(null);
   const [image3, setImage3] = useState(null);
   const [image4, setImage4] = useState(null);
+  const [image5, setImage5] = useState(null);
+  const [image6, setImage6] = useState(null);
+  const [image7, setImage7] = useState(null);
+  const [image8, setImage8] = useState(null);
+  const [image9, setImage9] = useState(null);
+  const [image10, setImage10] = useState(null);
+  const [image11, setImage11] = useState(null);
+  const [image12, setImage12] = useState(null);
+  const [image13, setImage13] = useState(null);
+  const [image14, setImage14] = useState(null);
   const [createObjectURL, setCreateObjectURL] = useState(null);
   const [createObjectURL2, setCreateObjectURL2] = useState(null);
   const [createObjectURL3, setCreateObjectURL3] = useState(null);
@@ -175,7 +206,7 @@ const Add_Banner = () => {
   };
  
   return (
-    <div className="fixed top-0 left-0 bg-white w-full h-screen z-40 overflow-y-auto">
+    <div className="top-0 left-0 bg-white w-full min-h-screen z-40  mt-8 mb-24 overflow-y-auto">
 
         <ToastContainer
         position="top-left"
@@ -235,9 +266,9 @@ const Add_Banner = () => {
             <button onClick={uploadToServer} id="submit" class="rounded-sm px-3 py-1 bg-blue-700 hover:bg-blue-500 text-white focus:shadow-outline focus:outline-none">
               Upload now
             </button>
-            {/* <button onClick={handleUserSubmit} id="submit" class="rounded-sm px-3 py-1 bg-blue-700 hover:bg-blue-500 text-white focus:shadow-outline focus:outline-none">
+            <button onClick={handleUserSubmit} id="submit" class="rounded-sm px-3 py-1 bg-blue-700 hover:bg-blue-500 text-white focus:shadow-outline focus:outline-none">
               Change Banners
-            </button> */}
+            </button>
             {/* <button onClick={myFunction} id="cancel" class="ml-3 rounded-sm px-3 py-1 hover:bg-gray-300 focus:shadow-outline focus:outline-none">
               Cancel
             </button> */}

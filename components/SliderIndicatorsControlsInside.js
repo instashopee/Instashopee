@@ -1,8 +1,32 @@
-import React, { useEffect, useRef } from "react"
+import React, { useEffect, useRef, useState } from "react"
 import Glide from "@glidejs/glide"
 import ReactPlayer from "react-player"
 
 export default function SliderIndicatorsControlsInside() {
+  const [banners, setbanners] = useState({})
+  
+  useEffect(() => {
+    
+    const fetchProducts=async()=>{
+      let a= await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/getbanners`, {
+        method: "POST", // or 'PUT'
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({banners}),
+      });
+    
+      let res=await a.json()
+      setbanners(res.banners)
+    }
+    if(!localStorage.getItem("myuser")){
+      router.push('/')
+    }else{
+      fetchProducts()
+  }
+
+     
+}, [])
   useEffect(() => {
     const slider = new Glide(".glide-03", {
       type: "slider",
@@ -22,9 +46,9 @@ export default function SliderIndicatorsControlsInside() {
       slider.destroy()
     }
   }, [])
- const vidRef=useRef();
+//  const vidRef=useRef();
 
-  useEffect(() => { vidRef.current.play(); },[]); 
+//   useEffect(() => { vidRef.current.play(); },[]); 
   return (
    
    
@@ -37,9 +61,12 @@ export default function SliderIndicatorsControlsInside() {
           <ul className="whitespace-no-wrap flex-no-wrap [backface-visibility: hidden] [transform-style: preserve-3d] [touch-action: pan-Y] [will-change: transform] relative flex w-full overflow-hidden p-0">
             <li >
               
-            <img className="sm:hidden w-full h-[90%]" src="/banners/gif/banner1.gif" alt="" />
+          {Object.values(banners).map(item => ( <img className="w-full h-[40rem]" src={item.banner1} alt="" />
 
-            <video ref={vidRef} className="sm:hidden 2xl:inline-block xl:inline-block lg:inline-block md:inline-block w-full h-full" muted  autoPlay={true} loop src="/banners/banner3.mp4" ></video>
+))}
+            {/* <img className="sm:hidden w-full h-[90%]" src="/banners/gif/banner1.gif" alt="" /> */}
+
+            {/* <video ref={vidRef} className="sm:hidden 2xl:inline-block xl:inline-block lg:inline-block md:inline-block w-full h-full" muted  autoPlay={true} loop src="/banners/banner3.mp4" ></video> */}
 
             {/* <ReactPlayer url='/banners/banner_vid.mp4' /> */}
 
@@ -50,9 +77,12 @@ export default function SliderIndicatorsControlsInside() {
             </li>
             <li>
             {/* <img className="2xl:hidden w-full h-[5rem]" src="/banners/st_b2.png" alt="" /> */}
-            <img className="sm:hidden w-full h-[90%]" src="/banners/gif/banner2.gif" alt="" />
+            {Object.values(banners).map(item => ( <img className="w-full h-[40rem]" src={item.banner2} alt="" />
 
-            <video ref={vidRef} className="sm:hidden 2xl:inline-block xl:inline-block lg:inline-block md:inline-block w-full h-full" muted  autoPlay={true} loop src="/banners/banner2.mp4" ></video>
+))}
+            {/* <img className="sm:hidden w-full h-[90%]" src="/banners/gif/banner2.gif" alt="" /> */}
+
+            {/* <video ref={vidRef} className="sm:hidden 2xl:inline-block xl:inline-block lg:inline-block md:inline-block w-full h-full" muted  autoPlay={true} loop src="/banners/banner2.mp4" ></video> */}
 
               {/* <img
                 src="/banners/banner2.jpg"
@@ -61,9 +91,12 @@ export default function SliderIndicatorsControlsInside() {
             </li>
             <li>
             {/* <img className="2xl:hidden w-full h-[5rem]" src="/banners/st_b3.png" alt="" /> */}
-            <img className="sm:hidden w-full h-[90%]" src="/banners/gif/banner3.gif" alt="" />
+            {Object.values(banners).map(item => ( <img className="w-full h-[40rem]" src={item.banner3} alt="" />
 
-            <video ref={vidRef} className="sm:hidden 2xl:inline-block xl:inline-block lg:inline-block md:inline-block w-full h-full" muted  autoPlay={true} loop src="/banners/banner1.mp4" ></video>
+))}
+            {/* <img className="sm:hidden w-full h-[90%]" src="/banners/gif/banner3.gif" alt="" />
+
+            <video ref={vidRef} className="sm:hidden 2xl:inline-block xl:inline-block lg:inline-block md:inline-block w-full h-full" muted  autoPlay={true} loop src="/banners/banner1.mp4" ></video> */}
 
               {/* <img
                 src="/banners/banner1.gif"
@@ -77,9 +110,12 @@ export default function SliderIndicatorsControlsInside() {
                 className="hover:scale-105 transition-all duration-500 cursor-pointer w-full max-w-full max-h-full m-auto"
               /> */}
                           {/* <img className="2xl:hidden w-full h-[5rem]" src="/banners/st_b4.png" alt="" /> */}
-                          <img className="sm:hidden w-full h-[90%]" src="/banners/gif/banner4.gif" alt="" />
+                          {Object.values(banners).map(item => ( <img className="w-full h-[40rem]" src={item.banner4} alt="" />
 
-            <video ref={vidRef} className="sm:hidden 2xl:inline-block xl:inline-block lg:inline-block md:inline-block w-full h-full" muted  autoPlay={true} loop src="/banners/banner4.mp4" ></video>
+))}
+                          {/* <img className="sm:hidden w-full h-[90%]" src="/banners/gif/banner4.gif" alt="" />
+
+            <video ref={vidRef} className="sm:hidden 2xl:inline-block xl:inline-block lg:inline-block md:inline-block w-full h-full" muted  autoPlay={true} loop src="/banners/banner4.mp4" ></video> */}
 
             </li>
          

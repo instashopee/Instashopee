@@ -26,7 +26,30 @@ export default function Home({products,products2,products3,products4,products5})
     }
     setKey(Math.random())
   }, [router.query])
+  const [banners, setbanners] = useState({})
+  
+  useEffect(() => {
+    
+    const fetchProducts=async()=>{
+      let a= await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/getbanners`, {
+        method: "POST", // or 'PUT'
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({banners}),
+      });
+    
+      let res=await a.json()
+      setbanners(res.banners)
+    }
+    if(!localStorage.getItem("myuser")){
+      router.push('/')
+    }else{
+      fetchProducts()
+  }
 
+     
+}, [])
 
   
    return(
@@ -51,13 +74,22 @@ export default function Home({products,products2,products3,products4,products5})
 </div>    </div>
   </div> */}
       <Top_selling products={products} />
-      {/* <div class="logo"><b>d<span>ri</span>bb<span>b</span>le</b></div> */}
+      <div className='my-4'>
+      {Object.values(banners).map(item => ( <img className="w-full 2xl:h-[40rem] h-[20rem]" src={item.static_banner1} alt="" />))}
+            </div> 
       <Chimney_Appliances products4={products4}/>
+      <div className='my-4'>
+      {Object.values(banners).map(item => ( <img className="w-full 2xl:h-[40rem] h-[20rem]" src={item.static_banner2} alt="" />))}
+            </div> 
       <Deals_of_day products2={products2}/>
+      <div className='my-4'>
+      {Object.values(banners).map(item => ( <img className="w-full 2xl:h-[40rem] h-[20rem]" src={item.static_banner3} alt="" />))}
+            </div> 
       <Economy_Sales products3={products3}/>
+      <div className='my-4'>
+      {Object.values(banners).map(item => ( <img className="w-full 2xl:h-[40rem] h-[20rem]" src={item.static_banner4} alt="" />))}
+            </div> 
       <Decorative_Items products5={products5}/>
-      <br />
-      <br />
      </div>
    )
   }
