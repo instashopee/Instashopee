@@ -128,6 +128,8 @@ export const navigation = {
               { name: 'Trouser Pullout',id:'scc', href: 'trouser_pullout' },
               { name: 'Shoe Rack',id:'scc', href: 'shoe_rack' },
               { name: 'Pulldown',id:'scc', href: 'pulldown' },
+              { name: 'Sliding Fittings',id:'sf', href: 'sliding_fittings' },
+
 
             ],
           },
