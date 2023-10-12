@@ -126,7 +126,7 @@ export async function getServerSideProps(context) {
           hinges[item.title].size.push(item.size)
         }
     }
-
+ 
     else{
       hinges[item.title] = JSON.parse(JSON.stringify(item))
       if(item.availableQty >0){
