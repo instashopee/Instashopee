@@ -414,6 +414,8 @@ const edit = () => {
    <option value='deals'>deals</option>
    <option value='economy'>economy</option>
    <option value='decorative'>decorative</option>
+   <option value='chimney'>chimney</option>
+
  </select>
              {/* <input
                onChange={handleChange}
