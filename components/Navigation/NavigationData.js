@@ -127,7 +127,7 @@ export const navigation = {
               { name: 'Shirt Pullout',id:'scc', href: 'shirt_pullout' },
               { name: 'Trouser Pullout',id:'scc', href: 'trouser_pullout' },
               { name: 'Shoe Rack',id:'scc', href: 'shoe_rack' },
-              { name: 'Pulldown',id:'scc', href: 'pulldown' },
+              // { name: 'Pulldown',id:'scc', href: 'pulldown' },
               { name: 'Sliding Fittings',id:'sf', href: 'sliding_fittings' },
 
 

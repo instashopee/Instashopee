@@ -583,14 +583,41 @@ const edit = () => {
              <label for="color" class="leading-7 text-sm text-gray-600">
                Color
              </label>
-             <input
+             <select
+             
+            
+             value={color}
+             type="colors"
+             id="color"
+             name="color"
+             class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+             onChange={handleChange}>
+               
+            {/* {Object.values(products).map(item => ( */}
+
+   <option value='zinc'>zinc</option>
+   <option value='rose gold'>rose gold</option>
+   <option value='antique'>antique</option>
+   <option value='black'>black</option>
+   <option value='white'>white</option>
+   <option value='gold'>gold</option>
+   <option value='aluminium'>aluminium</option>
+   <option value='wenge'>wenge</option>
+   <option value='ss'>ss</option>
+   <option value='mocha brown'>mocha brown</option>
+   <option value='brown'>brown</option>
+   <option value='grey'>grey</option>
+   <option value='wood'>wood</option>
+
+ </select>
+             {/* <input
                onChange={handleChange}
                value={color}
                type="colors"
                id="color"
                name="color"
                class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-             />
+             /> */}
            </div>
          </div>
        
