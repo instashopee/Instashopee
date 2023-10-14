@@ -73,6 +73,98 @@ export default function Home({products,products2,products3,products4,products5})
   <span class="spotlight"></span>
 </div>    </div>
   </div> */}
+
+  <h1 className='text-2xl font-black p-3 mx-5 mt-5'>TOP BRANDS!!</h1>
+  <div className='hidden 2xl:flex my-3 p-5 shadow-2xl'>
+  
+  <div className='2xl:flex-col justify-center text-center animate-bounce mx-auto font-semibold cursor-pointer'>
+  <img className='h-24 w-32' src="/kaff.png" alt="" />
+  </div>
+  <div className='2xl:flex-col justify-center text-center animate-bounce mx-auto font-semibold cursor-pointer'>
+  <img className='h-24 w-32' src="/dorset.png" alt="" />
+  </div>
+  <div className='2xl:flex-col justify-center text-center animate-bounce mx-auto font-semibold cursor-pointer'>
+  <img className='h-24 w-32' src="/avis.png" alt="" />
+  </div>
+  <div className='2xl:flex-col justify-center text-center animate-bounce mx-auto font-semibold cursor-pointer'>
+  <img className='h-24 w-32' src="/stelocasa.png" alt="" />
+  </div> 
+  <div className='2xl:flex-col justify-center text-center animate-bounce mx-auto font-semibold cursor-pointer'>
+  <img className='h-24 w-32' src="/hettich.png" alt="" />
+  </div> 
+  <div className='2xl:flex-col justify-center text-center animate-bounce mx-auto font-semibold cursor-pointer'>
+  <img className='h-24 w-32' src="/sris_ma_fils.jpeg" alt="" />
+  </div>
+  <div className='2xl:flex-col justify-center text-center animate-bounce mx-auto font-semibold cursor-pointer'>
+  <img className='h-24 w-32' src="/fevicol.png" alt="" />
+  </div>
+  <div className='2xl:flex-col justify-center text-center animate-bounce mx-auto font-semibold cursor-pointer'>
+  <img className='h-24 w-32' src="/ozone.png" alt="" />
+  </div>
+  
+</div>
+  <div className='sm:hidden'>
+  <div className='flex my-3 p-5'>
+
+<div className='2xl:flex-col justify-center text-center animate-bounce mx-auto font-semibold cursor-pointer'>
+  <img className='h-24 w-32' src="/stelocasa.png" alt="" />
+  </div> 
+  <div className='2xl:flex-col justify-center text-center animate-bounce mx-auto font-semibold cursor-pointer'>
+  <img className='h-24 w-32' src="/hettich.png" alt="" />
+  </div> 
+  
+  </div>
+<div className='flex my-3 p-5'>
+<div className='2xl:flex-col justify-center text-center animate-bounce mx-auto font-semibold cursor-pointer'>
+  <img className='h-24 w-32' src="/kaff.png" alt="" />
+  </div>
+  <div className='2xl:flex-col justify-center text-center animate-bounce mx-auto font-semibold cursor-pointer'>
+  <img className='h-24 w-32' src="/dorset.png" alt="" />
+  </div>
+  <div className='2xl:flex-col justify-center text-center animate-bounce mx-auto font-semibold cursor-pointer'>
+  <img className='h-24 w-32' src="/avis.png" alt="" />
+  </div>
+
+  
+</div>
+<div className='flex my-3 p-5'>
+<div className='2xl:flex-col justify-center text-center animate-bounce mx-auto font-semibold cursor-pointer'>
+  <img className='h-24 w-32' src="/fevicol.png" alt="" />
+  </div>
+  <div className='2xl:flex-col justify-center text-center animate-bounce mx-auto font-semibold cursor-pointer'>
+  <img className='h-24 w-32' src="/ozone.png" alt="" />
+  </div>
+  <div className='2xl:flex-col justify-center text-center animate-bounce mx-auto font-semibold cursor-pointer'>
+  <img className='h-24 w-32' src="/sris_ma_fils.jpeg" alt="" />
+  </div>
+
+  
+</div>
+</div>
+
+{/*
+<div className='2xl:hidden flex my-3 p-5'>
+  
+  <div className='2xl:flex-col text-center p-5 rounded-full bg-red-300 underline animate-bounce mx-auto text-sm font-semibold border-4 shadow-lg cursor-pointer border-black'>
+    BUTT HINGES
+  </div>
+  <div className='2xl:flex-col text-center p-5 rounded-full bg-blue-300 underline animate-bounce mx-auto text-sm font-semibold border-4 shadow-lg cursor-pointer border-black'>
+    MS DRAWER CHANNEL
+  </div>
+  <div className='2xl:flex-col text-center p-5 rounded-full bg-yellow-300 underline animate-bounce mx-auto text-sm font-semibold border-4 shadow-lg cursor-pointer border-black'>
+    DOOR STOPPER
+  </div>
+  </div>
+  <div className='2xl:hidden flex my-3 p-5'>
+  <div className='2xl:flex-col text-center p-5 rounded-full bg-orange-300 underline animate-bounce mx-auto text-sm font-semibold border-4 shadow-lg cursor-pointer border-black'>
+    SHOE RACK
+  </div>
+  <div className='2xl:flex-col text-center p-5 rounded-full bg-green-300 underline animate-bounce mx-auto text-sm font-semibold border-4 shadow-lg cursor-pointer border-black'>
+    KNOBS
+  </div>
+  <div className='2xl:flex-col text-center p-5 rounded-full bg-violet-300 underline animate-bounce mx-auto text-sm font-semibold border-4 shadow-lg cursor-pointer border-black'>
+    3D HINGES
+  </div></div> */}
       <Top_selling products={products} />
       <div className='my-4'>
       {Object.values(banners).map(item => ( <img className="w-full 2xl:h-[40rem] h-[20rem]" src={item.static_banner1} alt="" />))}

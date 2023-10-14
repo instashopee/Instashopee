@@ -34,7 +34,7 @@ export default function Economy_Sales({products3}){
     <div className="flex flex-wrap justify-center">
       
    
-    {Object.keys(products3).length==0 && <p>Sorry, All Items Out Of Stock, New Products Comming Soon !!</p>}
+    {Object.keys(products3).length==0 && <p>Sorry, All Items Out Of Stock, New products3 Comming Soon !!</p>}
     {Object.keys(products3).map((item)=>{
 // _id inside key of link
 return <Link key={products3[item].id} passHref={true} legacyBehavior href={`product/${products3[item].slug}`}>
@@ -67,18 +67,22 @@ return <Link key={products3[item].id} passHref={true} legacyBehavior href={`prod
         {products3[item].size.includes("9") && (<span className="border border-gray-300 px-1 mx-1">9</span>)}
         {products3[item].size.includes("10") && (<span className="border border-gray-300 px-1 mx-1">10</span>)}
         {products3[item].size.includes("12") && (<span className="border border-gray-300 px-1 mx-1">12</span>)}
-        {products3[item].size.includes("14") && (<span className="border border-gray-300 px-1 mx-1">15</span>)}
-        {products3[item].size.includes("15") && (<span className="border border-gray-300 px-1 mx-1">14</span>)}
+        {products3[item].size.includes("14") && (<span className="border border-gray-300 px-1 mx-1">14</span>)}
+        {products3[item].size.includes("15") && (<span className="border border-gray-300 px-1 mx-1">15</span>)}
         {products3[item].size.includes("16") && (<span className="border border-gray-300 px-1 mx-1">16</span>)}
         {products3[item].size.includes("18") && (<span className="border border-gray-300 px-1 mx-1">18</span>)}
+        {products3[item].size.includes("19") && (<span className="border border-gray-300 px-1 mx-1">19</span>)}
         {products3[item].size.includes("20") && (<span className="border border-gray-300 px-1 mx-1">20</span>)}
+        {products3[item].size.includes("21") && (<span className="border border-gray-300 px-1 mx-1">21</span>)}
         {products3[item].size.includes("22") && (<span className="border border-gray-300 px-1 mx-1">22</span>)}
         {products3[item].size.includes("24") && (<span className="border border-gray-300 px-1 mx-1">24</span>)}
+        {products3[item].size.includes("25") && (<span className="border border-gray-300 px-1 mx-1">25</span>)}
         {products3[item].size.includes("26") && (<span className="border border-gray-300 px-1 mx-1">26</span>)}
         {products3[item].size.includes("28") && (<span className="border border-gray-300 px-1 mx-1">28</span>)}
         {products3[item].size.includes("30") && (<span className="border border-gray-300 px-1 mx-1">30</span>)}
         {products3[item].size.includes("32") && (<span className="border border-gray-300 px-1 mx-1">32</span>)}
         {products3[item].size.includes("34") && (<span className="border border-gray-300 px-1 mx-1">34</span>)}
+        {products3[item].size.includes("35") && (<span className="border border-gray-300 px-1 mx-1">35</span>)}
         {products3[item].size.includes("36") && (<span className="border border-gray-300 px-1 mx-1">36</span>)}
         {products3[item].size.includes("38") && (<span className="border border-gray-300 px-1 mx-1">38</span>)}
         {products3[item].size.includes("40") && (<span className="border border-gray-300 px-1 mx-1">40</span>)}
@@ -87,13 +91,24 @@ return <Link key={products3[item].id} passHref={true} legacyBehavior href={`prod
         {products3[item].size.includes("44") && (<span className="border border-gray-300 px-1 mx-1">44</span>)}
         {products3[item].size.includes("46") && (<span className="border border-gray-300 px-1 mx-1">46</span>)}
         {products3[item].size.includes("48") && (<span className="border border-gray-300 px-1 mx-1">48</span>)}
+        {products3[item].size.includes("50") && (<span className="border border-gray-300 px-1 mx-1">50</span>)}
+        {products3[item].size.includes("60") && (<span className="border border-gray-300 px-1 mx-1">60</span>)}
+        {products3[item].size.includes("65") && (<span className="border border-gray-300 px-1 mx-1">65</span>)}
+        {products3[item].size.includes("70") && (<span className="border border-gray-300 px-1 mx-1">70</span>)}
+        {products3[item].size.includes("75") && (<span className="border border-gray-300 px-1 mx-1">75</span>)}
         {products3[item].size.includes("86") && (<span className="border border-gray-300 px-1 mx-1">86</span>)}
+        {products3[item].size.includes("90") && (<span className="border border-gray-300 px-1 mx-1">90</span>)}
         {products3[item].size.includes("96") && (<span className="border border-gray-300 px-1 mx-1">96</span>)}
         {products3[item].size.includes("100") && (<span className="border border-gray-300 px-1 mx-1">100</span>)}
         {products3[item].size.includes("128") && (<span className="border border-gray-300 px-1 mx-1">128</span>)}
         {products3[item].size.includes("150") && (<span className="border border-gray-300 px-1 mx-1">150</span>)}
+        {products3[item].size.includes("160") && (<span className="border border-gray-300 px-1 mx-1">160</span>)}
         {products3[item].size.includes("182") && (<span className="border border-gray-300 px-1 mx-1">182</span>)}
+        {products3[item].size.includes("200") && (<span className="border border-gray-300 px-1 mx-1">200</span>)}
+        {products3[item].size.includes("224") && (<span className="border border-gray-300 px-1 mx-1">224</span>)}
+        {products3[item].size.includes("250") && (<span className="border border-gray-300 px-1 mx-1">250</span>)}
         {products3[item].size.includes("288") && (<span className="border border-gray-300 px-1 mx-1">288</span>)}
+        {products3[item].size.includes("300") && (<span className="border border-gray-300 px-1 mx-1">300</span>)}
         {products3[item].size.includes("450") && (<span className="border border-gray-300 px-1 mx-1">450</span>)}
         {products3[item].size.includes("600") && (<span className="border border-gray-300 px-1 mx-1">600</span>)}
         {products3[item].size.includes("900") && (<span className="border border-gray-300 px-1 mx-1">900</span>)}

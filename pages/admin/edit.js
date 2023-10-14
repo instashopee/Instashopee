@@ -469,14 +469,28 @@ const edit = () => {
              <label for="sub_category" class="leading-7 text-sm text-gray-600">
                Sub Category
              </label>
-             <input
+             <select
+             
+             onChange={handleChange}
+             value={sub_category}
+             type="sub_category"
+             id="sub_category"
+             name="sub_category"
+              class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+              >
+                
+             {Object.values(products).map(item => (
+
+    <option value={item.sub_category}>{item.sub_category}</option>))}
+  </select>
+             {/* <input
                onChange={handleChange}
                value={sub_category}
                type="sub_category"
                id="sub_category"
                name="sub_category"
                class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-             />
+             /> */}
            </div>
          </div>
      

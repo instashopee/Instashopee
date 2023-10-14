@@ -36,7 +36,7 @@ export default function Chimney_Appliances({products4}){
   <div className="flex flex-wrap justify-center">
    
     
-  {Object.keys(products4).length==0 && <p>Sorry, All Items Out Of Stock, New products Comming Soon !!</p>}
+  {Object.keys(products4).length==0 && <p>Sorry, All Items Out Of Stock, New products4 Comming Soon !!</p>}
   {Object.keys(products4).map((item)=>{
 // _id inside key of link
 return <Link key={products4[item].id} passHref={true} legacyBehavior href={`product/${products4[item].slug}`}>
@@ -57,61 +57,70 @@ return <Link key={products4[item].id} passHref={true} legacyBehavior href={`prod
              
               </div>
               <div className="mt-1 textPart">
-      {products4[item].size.includes("0") && (<span className="border border-gray-300 px-1 mx-1">0</span>)}
-      {products4[item].size.includes("1") && (<span className="border border-gray-300 px-1 mx-1">1</span>)}
-      {products4[item].size.includes("2") && (<span className="border border-gray-300 px-1 mx-1">2</span>)}
-      {products4[item].size.includes("3") && (<span className="border border-gray-300 px-1 mx-1">3</span>)}
-      {products4[item].size.includes("4") && (<span className="border border-gray-300 px-1 mx-1">4</span>)}
-      {products4[item].size.includes("5") && (<span className="border border-gray-300 px-1 mx-1">5</span>)}
-      {products4[item].size.includes("6") && (<span className="border border-gray-300 px-1 mx-1">6</span>)}
-      {products4[item].size.includes("7") && (<span className="border border-gray-300 px-1 mx-1">7</span>)}
-      {products4[item].size.includes("8") && (<span className="border border-gray-300 px-1 mx-1">8</span>)}
-      {products4[item].size.includes("9") && (<span className="border border-gray-300 px-1 mx-1">9</span>)}
-      {products4[item].size.includes("10") && (<span className="border border-gray-300 px-1 mx-1">10</span>)}
-      {products4[item].size.includes("12") && (<span className="border border-gray-300 px-1 mx-1">12</span>)}
-      {products4[item].size.includes("14") && (<span className="border border-gray-300 px-1 mx-1">15</span>)}
-      {products4[item].size.includes("15") && (<span className="border border-gray-300 px-1 mx-1">14</span>)}
-      {products4[item].size.includes("16") && (<span className="border border-gray-300 px-1 mx-1">16</span>)}
-      {products4[item].size.includes("18") && (<span className="border border-gray-300 px-1 mx-1">18</span>)}
-      {products4[item].size.includes("20") && (<span className="border border-gray-300 px-1 mx-1">20</span>)}
-      {products4[item].size.includes("22") && (<span className="border border-gray-300 px-1 mx-1">22</span>)}
-      {products4[item].size.includes("24") && (<span className="border border-gray-300 px-1 mx-1">24</span>)}
-      {products4[item].size.includes("26") && (<span className="border border-gray-300 px-1 mx-1">26</span>)}
-      {products4[item].size.includes("28") && (<span className="border border-gray-300 px-1 mx-1">28</span>)}
-      {products4[item].size.includes("30") && (<span className="border border-gray-300 px-1 mx-1">30</span>)}
-      {products4[item].size.includes("32") && (<span className="border border-gray-300 px-1 mx-1">32</span>)}
-      {products4[item].size.includes("34") && (<span className="border border-gray-300 px-1 mx-1">34</span>)}
-      {products4[item].size.includes("36") && (<span className="border border-gray-300 px-1 mx-1">36</span>)}
-      {products4[item].size.includes("38") && (<span className="border border-gray-300 px-1 mx-1">38</span>)}
-      {products4[item].size.includes("40") && (<span className="border border-gray-300 px-1 mx-1">40</span>)}
-      {products4[item].size.includes("40") && (<span className="border border-gray-300 px-1 mx-1">40</span>)}
-      {products4[item].size.includes("42") && (<span className="border border-gray-300 px-1 mx-1">42</span>)}
-      {products4[item].size.includes("44") && (<span className="border border-gray-300 px-1 mx-1">44</span>)}
-      {products4[item].size.includes("46") && (<span className="border border-gray-300 px-1 mx-1">46</span>)}
-      {products4[item].size.includes("48") && (<span className="border border-gray-300 px-1 mx-1">48</span>)}
-      {products4[item].size.includes("60") && (<span className="border border-gray-300 px-1 mx-1">60</span>)}
-      {products4[item].size.includes("65") && (<span className="border border-gray-300 px-1 mx-1">65</span>)}
-      {products4[item].size.includes("70") && (<span className="border border-gray-300 px-1 mx-1">70</span>)}
-      {products4[item].size.includes("86") && (<span className="border border-gray-300 px-1 mx-1">86</span>)}
-      {products4[item].size.includes("90") && (<span className="border border-gray-300 px-1 mx-1">90</span>)}
-      {products4[item].size.includes("96") && (<span className="border border-gray-300 px-1 mx-1">96</span>)}
-      {products4[item].size.includes("100") && (<span className="border border-gray-300 px-1 mx-1">100</span>)}
-      {products4[item].size.includes("128") && (<span className="border border-gray-300 px-1 mx-1">128</span>)}
-      {products4[item].size.includes("150") && (<span className="border border-gray-300 px-1 mx-1">150</span>)}
-      {products4[item].size.includes("160") && (<span className="border border-gray-300 px-1 mx-1">160</span>)}
-      {products4[item].size.includes("182") && (<span className="border border-gray-300 px-1 mx-1">182</span>)}
-      {products4[item].size.includes("224") && (<span className="border border-gray-300 px-1 mx-1">224</span>)}
-      {products4[item].size.includes("288") && (<span className="border border-gray-300 px-1 mx-1">288</span>)}
-      {products4[item].size.includes("450") && (<span className="border border-gray-300 px-1 mx-1">450</span>)}
-      {products4[item].size.includes("600") && (<span className="border border-gray-300 px-1 mx-1">600</span>)}
-      {products4[item].size.includes("900") && (<span className="border border-gray-300 px-1 mx-1">900</span>)}
-      {products4[item].size.includes("S") && (<span className="border border-gray-300 px-1 mx-1">S</span>)}
-      {products4[item].size.includes("M") && (<span className="border border-gray-300 px-1 mx-1">M</span>)}
-      {products4[item].size.includes("L") && (<span className="border border-gray-300 px-1 mx-1">L</span>)}
-      {products4[item].size.includes("XL") && (<span className="border border-gray-300 px-1 mx-1">XL</span>)}
-      {products4[item].size.includes("2XL") && (<span className="border border-gray-300 px-1 mx-1">2XL</span>)}
-      {products4[item].size.includes("3XL") && (<span className="border border-gray-300 px-1 mx-1">3XL</span>)}
-      </div>
+        {products4[item].size.includes("0") && (<span className="border border-gray-300 px-1 mx-1">0</span>)}
+        {products4[item].size.includes("1") && (<span className="border border-gray-300 px-1 mx-1">1</span>)}
+        {products4[item].size.includes("2") && (<span className="border border-gray-300 px-1 mx-1">2</span>)}
+        {products4[item].size.includes("3") && (<span className="border border-gray-300 px-1 mx-1">3</span>)}
+        {products4[item].size.includes("4") && (<span className="border border-gray-300 px-1 mx-1">4</span>)}
+        {products4[item].size.includes("5") && (<span className="border border-gray-300 px-1 mx-1">5</span>)}
+        {products4[item].size.includes("6") && (<span className="border border-gray-300 px-1 mx-1">6</span>)}
+        {products4[item].size.includes("7") && (<span className="border border-gray-300 px-1 mx-1">7</span>)}
+        {products4[item].size.includes("8") && (<span className="border border-gray-300 px-1 mx-1">8</span>)}
+        {products4[item].size.includes("9") && (<span className="border border-gray-300 px-1 mx-1">9</span>)}
+        {products4[item].size.includes("10") && (<span className="border border-gray-300 px-1 mx-1">10</span>)}
+        {products4[item].size.includes("12") && (<span className="border border-gray-300 px-1 mx-1">12</span>)}
+        {products4[item].size.includes("14") && (<span className="border border-gray-300 px-1 mx-1">14</span>)}
+        {products4[item].size.includes("15") && (<span className="border border-gray-300 px-1 mx-1">15</span>)}
+        {products4[item].size.includes("16") && (<span className="border border-gray-300 px-1 mx-1">16</span>)}
+        {products4[item].size.includes("18") && (<span className="border border-gray-300 px-1 mx-1">18</span>)}
+        {products4[item].size.includes("19") && (<span className="border border-gray-300 px-1 mx-1">19</span>)}
+        {products4[item].size.includes("20") && (<span className="border border-gray-300 px-1 mx-1">20</span>)}
+        {products4[item].size.includes("21") && (<span className="border border-gray-300 px-1 mx-1">21</span>)}
+        {products4[item].size.includes("22") && (<span className="border border-gray-300 px-1 mx-1">22</span>)}
+        {products4[item].size.includes("24") && (<span className="border border-gray-300 px-1 mx-1">24</span>)}
+        {products4[item].size.includes("25") && (<span className="border border-gray-300 px-1 mx-1">25</span>)}
+        {products4[item].size.includes("26") && (<span className="border border-gray-300 px-1 mx-1">26</span>)}
+        {products4[item].size.includes("28") && (<span className="border border-gray-300 px-1 mx-1">28</span>)}
+        {products4[item].size.includes("30") && (<span className="border border-gray-300 px-1 mx-1">30</span>)}
+        {products4[item].size.includes("32") && (<span className="border border-gray-300 px-1 mx-1">32</span>)}
+        {products4[item].size.includes("34") && (<span className="border border-gray-300 px-1 mx-1">34</span>)}
+        {products4[item].size.includes("35") && (<span className="border border-gray-300 px-1 mx-1">35</span>)}
+        {products4[item].size.includes("36") && (<span className="border border-gray-300 px-1 mx-1">36</span>)}
+        {products4[item].size.includes("38") && (<span className="border border-gray-300 px-1 mx-1">38</span>)}
+        {products4[item].size.includes("40") && (<span className="border border-gray-300 px-1 mx-1">40</span>)}
+        {products4[item].size.includes("40") && (<span className="border border-gray-300 px-1 mx-1">40</span>)}
+        {products4[item].size.includes("42") && (<span className="border border-gray-300 px-1 mx-1">42</span>)}
+        {products4[item].size.includes("44") && (<span className="border border-gray-300 px-1 mx-1">44</span>)}
+        {products4[item].size.includes("46") && (<span className="border border-gray-300 px-1 mx-1">46</span>)}
+        {products4[item].size.includes("48") && (<span className="border border-gray-300 px-1 mx-1">48</span>)}
+        {products4[item].size.includes("50") && (<span className="border border-gray-300 px-1 mx-1">50</span>)}
+        {products4[item].size.includes("60") && (<span className="border border-gray-300 px-1 mx-1">60</span>)}
+        {products4[item].size.includes("65") && (<span className="border border-gray-300 px-1 mx-1">65</span>)}
+        {products4[item].size.includes("70") && (<span className="border border-gray-300 px-1 mx-1">70</span>)}
+        {products4[item].size.includes("75") && (<span className="border border-gray-300 px-1 mx-1">75</span>)}
+        {products4[item].size.includes("86") && (<span className="border border-gray-300 px-1 mx-1">86</span>)}
+        {products4[item].size.includes("90") && (<span className="border border-gray-300 px-1 mx-1">90</span>)}
+        {products4[item].size.includes("96") && (<span className="border border-gray-300 px-1 mx-1">96</span>)}
+        {products4[item].size.includes("100") && (<span className="border border-gray-300 px-1 mx-1">100</span>)}
+        {products4[item].size.includes("128") && (<span className="border border-gray-300 px-1 mx-1">128</span>)}
+        {products4[item].size.includes("150") && (<span className="border border-gray-300 px-1 mx-1">150</span>)}
+        {products4[item].size.includes("160") && (<span className="border border-gray-300 px-1 mx-1">160</span>)}
+        {products4[item].size.includes("182") && (<span className="border border-gray-300 px-1 mx-1">182</span>)}
+        {products4[item].size.includes("200") && (<span className="border border-gray-300 px-1 mx-1">200</span>)}
+        {products4[item].size.includes("224") && (<span className="border border-gray-300 px-1 mx-1">224</span>)}
+        {products4[item].size.includes("250") && (<span className="border border-gray-300 px-1 mx-1">250</span>)}
+        {products4[item].size.includes("288") && (<span className="border border-gray-300 px-1 mx-1">288</span>)}
+        {products4[item].size.includes("300") && (<span className="border border-gray-300 px-1 mx-1">300</span>)}
+        {products4[item].size.includes("450") && (<span className="border border-gray-300 px-1 mx-1">450</span>)}
+        {products4[item].size.includes("600") && (<span className="border border-gray-300 px-1 mx-1">600</span>)}
+        {products4[item].size.includes("900") && (<span className="border border-gray-300 px-1 mx-1">900</span>)}
+        {products4[item].size.includes("S") && (<span className="border border-gray-300 px-1 mx-1">S</span>)}
+        {products4[item].size.includes("M") && (<span className="border border-gray-300 px-1 mx-1">M</span>)}
+        {products4[item].size.includes("L") && (<span className="border border-gray-300 px-1 mx-1">L</span>)}
+        {products4[item].size.includes("XL") && (<span className="border border-gray-300 px-1 mx-1">XL</span>)}
+        {products4[item].size.includes("2XL") && (<span className="border border-gray-300 px-1 mx-1">2XL</span>)}
+        {products4[item].size.includes("3XL") && (<span className="border border-gray-300 px-1 mx-1">3XL</span>)}
+        </div>
 
       
       <div className="mt-1 text-gray-600 text-sm space-x-1 textPart">
