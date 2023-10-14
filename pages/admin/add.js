@@ -27,7 +27,30 @@ const add = () => {
   const [img2, setImg2] = useState("");
   // const [img3, setImg3] = useState("");
   // const [img4, setImg4] = useState("");
+  const [products, setProducts] = useState({})
+  
+  useEffect(() => {
+    
+    const fetchProducts=async()=>{
+      let a= await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/getproducts`, {
+        method: "POST", // or 'PUT'
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({products}),
+      });
+    
+      let res=await a.json()
+      setProducts(res.products)
+    }
+    if(!localStorage.getItem("myuser")){
+      router.push('/')
+    }else{
+      fetchProducts()
+  }
 
+     
+}, [])
   const router = useRouter();
   let email='abhishekjain4548@gmail.com'
 
