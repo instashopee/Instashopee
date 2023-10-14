@@ -408,6 +408,7 @@ const edit = () => {
              onChange={handleChange}>
                
             {/* {Object.values(products).map(item => ( */}
+            <option selected value='Choose Type'>Choose Type</option>
 
    <option value='normal'>normal</option>
    <option value='top selling'>top selling</option>
@@ -478,7 +479,8 @@ const edit = () => {
              name="sub_category"
               class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
               >
-                
+                                            <option selected value='Choose Sub Category'>Choose Sub Category</option>
+
              {Object.values(products).map(item => (
 
     <option value={item.sub_category}>{item.sub_category}</option>))}
@@ -608,6 +610,7 @@ const edit = () => {
              onChange={handleChange}>
                
             {/* {Object.values(products).map(item => ( */}
+            <option selected value='Choose Color'>Choose Color</option>
 
    <option value='zinc'>zinc</option>
    <option value='rose gold'>rose gold</option>
