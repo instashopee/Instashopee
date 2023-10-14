@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import { AiOutlineShoppingCart,AiOutlineHeart, AiFillMinusCircle, AiFillCloseCircle,AiOutlineSearch } from "react-icons/ai";
 import {MdAccountCircle} from "react-icons/md"
 
@@ -28,42 +28,7 @@ const Navbar = ({Logout,user,cart,addToCart,removeFromCart,clearCart,subTotal,wi
   const [anchorEl, setAnchorEl] = useState(null);
   const openUserMenu = Boolean(anchorEl);
   const jwt = localStorage.getItem("jwt");
-  const [_id, set_id] = useState("");
-  const [title, setTitle] = useState("");
-
-  const [products, setProducts] = useState({})
-  const handleChange = (e) => {
-
-      if (e.target.name == "_id") {
-        set_id(e.target.value);
-      }
-        else if (e.target.name == "title") {
-          setTitle(e.target.value);
-        }
-
-  };
-  useEffect(() => {
-    
-    const fetchProducts=async()=>{
-      let a= await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/getproducts`, {
-        method: "POST", // or 'PUT'
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({products}),
-      });
-    
-      let res=await a.json()
-      setProducts(res.products)
-    }
-    if(!localStorage.getItem("myuser")){
-      router.push('/')
-    }else{
-      fetchProducts()
-  }
-
-     
-}, [])
+ 
   
   return (
     <div>
@@ -417,25 +382,11 @@ const Navbar = ({Logout,user,cart,addToCart,removeFromCart,clearCart,subTotal,wi
       <label className="text-sm md:text-md mx-1 cursor-pointer font-semibold" htmlFor="">Search</label>
         </div></a></Link> */}
 
-        {/* <input type="search" id="default-search" class="" placeholder="Search" required/>  */}
-        {/* <select
-             
-              value={_id}
-              type="_id"
-              id="_id"
-              name="_id"
-              class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-              onChange={handleChange}>
-                
-             {Object.values(products).map(item => (
-
-    <option value={item._id}>{item.title}</option>))}
-  </select>
- 
-          {<Link legacyBehavior href={'/search'}><a><div className=" flex  rounded-lg px-2 ">
+        {/* <input type="search" id="default-search" class="" placeholder="Type Here..." required/> */}
+        {/* {<Link legacyBehavior href={'/search'}><a><div className=" flex  rounded-lg px-2 ">
         <AiOutlineSearch className="text-2xl text-gray-500 mx-1 m-auto"/>
 
-        </div></a></Link>}  */}
+        </div></a></Link>} */}
         {<Link legacyBehavior href={'/cart'}><a><div className=" flex   rounded-lg px-2 ">
         <AiOutlineShoppingCart  className="text-2xl text-gray-500 mx-1 cursor-pointer font-semibold mt-1" />
         <div class="inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-red-400 border-2 border-white rounded-full -top-2 -right-2 dark:border-gray-900">{Object.keys(cart).length}</div>
