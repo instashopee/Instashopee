@@ -418,7 +418,7 @@ const Navbar = ({Logout,user,cart,addToCart,removeFromCart,clearCart,subTotal,wi
         </div></a></Link> */}
 
         {/* <input type="search" id="default-search" class="" placeholder="Search" required/>  */}
-        <select
+        {/* <select
              
               value={_id}
               type="_id"
@@ -435,7 +435,7 @@ const Navbar = ({Logout,user,cart,addToCart,removeFromCart,clearCart,subTotal,wi
           {<Link legacyBehavior href={'/search'}><a><div className=" flex  rounded-lg px-2 ">
         <AiOutlineSearch className="text-2xl text-gray-500 mx-1 m-auto"/>
 
-        </div></a></Link>} 
+        </div></a></Link>}  */}
         {<Link legacyBehavior href={'/cart'}><a><div className=" flex   rounded-lg px-2 ">
         <AiOutlineShoppingCart  className="text-2xl text-gray-500 mx-1 cursor-pointer font-semibold mt-1" />
         <div class="inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-red-400 border-2 border-white rounded-full -top-2 -right-2 dark:border-gray-900">{Object.keys(cart).length}</div>
