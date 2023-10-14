@@ -74,7 +74,7 @@ export default function Home({products,products2,products3,products4,products5})
 </div>    </div>
   </div> */}
 
-  <h1 className='text-2xl font-black p-3 mx-5 mt-5'>TOP BRANDS!!</h1>
+  {/* <h1 className='text-2xl font-black p-3 mx-5 mt-5'>TOP BRANDS!!</h1>
   <div className='hidden 2xl:flex my-3 p-5 shadow-2xl'>
   
   <div className='2xl:flex-col justify-center text-center animate-bounce mx-auto font-semibold cursor-pointer'>
@@ -140,7 +140,7 @@ export default function Home({products,products2,products3,products4,products5})
 
   
 </div>
-</div>
+</div> */}
 
 {/*
 <div className='2xl:hidden flex my-3 p-5'>
