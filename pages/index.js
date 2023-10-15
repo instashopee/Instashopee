@@ -63,8 +63,73 @@ export default function Home({products,products2,products3,products4,products5})
        <SliderIndicatorsControlsInside/>
        </div>
 
+       <h1 className='text-2xl font-black p-3 mx-5 mt-5'>TOP BRANDS</h1>
+  <div className='hidden md:flex my-3 p-5 shadow-2xl'>
+
+  <div className='flex justify-center text-center animate-bounce mx-auto font-semibold cursor-pointer'>
+  <img className='h-24 w-32' src="/kaff.png" alt="" />
+  </div>
+  <div className='flex justify-center text-center animate-bounce mx-auto font-semibold cursor-pointer'>
+  <img className='h-24 w-32' src="/dorset.png" alt="" />
+  </div>
+  <div className='flex justify-center text-center animate-bounce mx-auto font-semibold cursor-pointer'>
+  <img className='h-24 w-32' src="/avis.png" alt="" />
+  </div>
+  <div className='flex justify-center text-center animate-bounce mx-auto font-semibold cursor-pointer'>
+  <img className='h-24 w-32' src="/stelocasa.png" alt="" />
+  </div> 
+  <div className='flex justify-center text-center animate-bounce mx-auto font-semibold cursor-pointer'>
+  <img className='h-24 w-32' src="/hettich.png" alt="" />
+  </div> 
+  <div className='flex justify-center text-center animate-bounce mx-auto font-semibold cursor-pointer'>
+  <img className='h-24 w-32' src="/sris_ma_fils.jpeg" alt="" />
+  </div>
+  <div className='flex justify-center text-center animate-bounce mx-auto font-semibold cursor-pointer'>
+  <img className='h-24 w-32' src="/fevicol.png" alt="" />
+  </div>
+  <div className='flex justify-center text-center animate-bounce mx-auto font-semibold cursor-pointer'>
+  <img className='h-24 w-32' src="/ozone.png" alt="" />
+  </div>
+
+</div>
+  <div className='sm:hidden'>
+  <div className='flex my-3 p-5'>
+
+<div className='flex justify-center text-center animate-bounce mx-auto font-semibold cursor-pointer'>
+  <img className='h-24 w-32' src="/stelocasa.png" alt="" />
+  </div> 
+  <div className='flex justify-center text-center animate-bounce mx-auto font-semibold cursor-pointer'>
+  <img className='h-24 w-32' src="/hettich.png" alt="" />
+  </div> 
+
+  </div>
+<div className='flex my-3 p-5'>
+<div className='flex justify-center text-center animate-bounce mx-auto font-semibold cursor-pointer'>
+  <img className='h-24 w-32' src="/kaff.png" alt="" />
+  </div>
+  <div className='flex justify-center text-center animate-bounce mx-auto font-semibold cursor-pointer'>
+  <img className='h-24 w-32' src="/dorset.png" alt="" />
+  </div>
+  <div className='flex justify-center text-center animate-bounce mx-auto font-semibold cursor-pointer'>
+  <img className='h-24 w-32' src="/avis.png" alt="" />
+  </div>
 
 
+</div>
+<div className='flex my-3 p-5'>
+<div className='flex justify-center text-center animate-bounce mx-auto font-semibold cursor-pointer'>
+  <img className='h-24 w-32' src="/fevicol.png" alt="" />
+  </div>
+  <div className='flex justify-center text-center animate-bounce mx-auto font-semibold cursor-pointer'>
+  <img className='h-24 w-32' src="/ozone.png" alt="" />
+  </div>
+  <div className='flex justify-center text-center animate-bounce mx-auto font-semibold cursor-pointer'>
+  <img className='h-24 w-32' src="/sris_ma_fils.jpeg" alt="" />
+  </div>
+
+
+</div>
+</div>
       <Top_selling products={products} />
       <div className='my-4'>
       {/* {Object.values(banners).map(item => ( <img className="w-full 2xl:h-[40rem] h-[20rem]" src={item.static_banner1} alt="" />))} */}
