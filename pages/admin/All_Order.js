@@ -49,7 +49,7 @@ const All_Order = () => {
  
         <div className="text-black font-semibold text-3xl">All Orders</div>
      {Object.values(orders)==0&&<div className="text-3xl text-center">NO ORDERS TO SHOW</div>}
-     <div class="mx-auto max-w-12xl justify-center px-6 md:flex md:space-x-6 xl:px-0">
+     <div class="mx-auto max-w-14xl justify-center px-6 md:flex md:space-x-6 xl:px-0">
 
      <div class="rounded-lg md:w-2/3">
 
