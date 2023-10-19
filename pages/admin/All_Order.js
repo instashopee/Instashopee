@@ -49,7 +49,7 @@ const All_Order = () => {
  
         <div className="text-black font-semibold text-3xl">All Orders</div>
      {Object.values(orders)==0&&<div className="text-3xl text-center">NO ORDERS TO SHOW</div>}
-     <div class="mx-auto max-w-10xl justify-center px-6 md:flex md:space-x-6 xl:px-0">
+     <div class="mx-auto max-w-12xl justify-center px-6 md:flex md:space-x-6 xl:px-0">
 
      <div class="rounded-lg md:w-2/3">
 
@@ -62,6 +62,9 @@ const All_Order = () => {
                      <div class="px-6 py-4 font-bold underline hover:text-red-500 cursor-pointer">ORDER ID # {item.orderId}</div>
                      <div class="px-6 py-4 font-semibold">Name: {item.name}</div>
                      <div class="px-6 py-4 font-semibold">Email: {item.email}</div>
+                     <div class="px-6 py-4 font-semibold">Phone: {item.phone}</div>
+                     <div class="px-6 py-4 font-semibold">Address: {item.address}</div>
+                     <div class="px-6 py-4 font-semibold">Pincode: {item.pincode}</div>
                      <div class="px-6 py-4 font-semibold">Total Amount To Pay: Rs.{item.amount}/-</div>
                      <Link legacyBehavior href={'/order?id='+item._id}><div class="px-6 py-4 bg-red-200 font-semibold rounded-lg cursor-pointer hover:text-red-500"><a>View Order Details</a></div></Link>
                </div>
