@@ -485,14 +485,80 @@ const edit = () => {
 
     <option value={item.sub_category}>{item.sub_category}</option>))}
   </select> */}
-             <input
+             {/* <input
                onChange={handleChange}
                value={sub_category}
                type="sub_category"
                id="sub_category"
                name="sub_category"
                class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-             />
+             /> */}
+             <div class=" mb-4">
+             <label for="sub_category" class="leading-7 text-sm text-gray-600">
+               Sub Category
+             </label>
+             <select
+             
+             onChange={handleChange}
+             value={sub_category}
+             type="sub_category"
+             id="sub_category"
+             name="sub_category"
+              class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+              >
+                            <option selected value='Choose Sub Category'>Choose Sub Category</option>
+
+             {/* {Object.values(products).map(item => (
+
+    <option selected value={item.sub_category}>{item.sub_category}</option>))} */}
+    <option selected value="acp baskets">acp baskets</option>
+    <option selected value="acrylic sheets">acrylic sheets</option>
+    <option selected value="auto hinges">auto hinges</option>
+    <option selected value="butt hinges">butt hinges</option>
+    <option selected value="cabinet handles">cabinet handles</option>
+    <option selected value="chimney">chimney</option>
+    <option selected value="cooktop">cooktop</option>
+    <option selected value="corner units">corner units</option>
+    <option selected value="door closer">door closer</option>
+    <option selected value="door stopper">door stopper</option>
+    <option selected value="frame profile">frame profile</option>
+    <option selected value="frame with handle profile">frame with handle profile</option>
+    <option selected value="glass door handles">glass door handles</option>
+    <option selected value="handle profile">handle profile</option>
+    <option selected value="hydraulic hinges">hydraulic hinges</option>
+    <option selected value="knobs">knobs</option>
+    <option selected value="laminates">laminates</option>
+    <option selected value="louvers">louvers</option>
+    <option selected value="main door handles">main door handles</option>
+    <option selected value="microwave">microwave</option>
+    <option selected value="mortice handles">mortice handles</option>
+    <option selected value="mouldings">mouldings</option>
+    <option selected value="ms drawer channel">ms drawer channel</option>
+    <option selected value="other appliances">other appliances</option>
+    <option selected value="other slides">other slides</option>
+    <option selected value="oven">oven</option>
+    <option selected value="piano slides">piano slides</option>
+    <option selected value="pulldown">pulldown</option>
+    <option selected value="rolling shutters">rolling shutters</option>
+    <option selected value="shirt pullout">shirt pullout</option>
+    <option selected value="shoe rack">shoe rack</option>
+    <option selected value="sliding fittings">sliding fittings</option>
+    <option selected value="ss drawer channel">ss drawer channel</option>
+    <option selected value="tall units">tall units</option>
+    <option selected value="tandem box">tandem box</option>
+    <option selected value="trouser pullout">trouser pullout</option>
+    <option selected value="uplifts">uplifts</option>
+    <option selected value="wire baskets">wire baskets</option>
+  </select>
+             {/* <input
+               onChange={handleChange}
+               value={sub_category}
+               type="sub_category"
+               id="sub_category"
+               name="sub_category"
+               class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+             /> */}
+           </div>
            </div>
          </div>
      

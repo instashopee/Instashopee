@@ -62,7 +62,7 @@ const All_Users = () => {
     <Admin_sidebar/>
   
   <div className="shadow-none mt-16">
-    <DashboardCard title={'All Users'}>
+  <div className="text-black font-semibold text-3xl text-center mt-24">All Users
       <TableContainer className="min-h-screen"
         sx={{
           width: {
@@ -171,11 +171,11 @@ const All_Users = () => {
           </TableBody>
         </Table>
       </TableContainer>
-    </DashboardCard>
     </div>
     <br />
     <br />
     <br />
+    </div>
     </div>
   )
 }

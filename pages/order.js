@@ -42,9 +42,11 @@ const MyOrder = ({ order, clearCart }) => {
               </span></div>
             <div className="text-black font-semibold">ORDER ID: #{order.orderId}</div>
             <div className="text-black font-semibold">ORDER TOTAL: Rs.{order.amount}/-</div>
-            <div className="text-black font-semibold">ADDRESS: {order.address}/-</div>
-            <div className="text-black font-semibold">PINCODE: {order.pincode}/-</div>
-            <div className="text-black font-semibold">PHONE: {order.phone}/-</div>
+            <br />
+            <div className="text-black font-semibold">ADDRESS: {order.address}</div>
+            <div className="text-black font-semibold">PINCODE: {order.pincode}</div>
+            <div className="text-black font-semibold">PHONE: {order.phone}</div>
+            <br />
             <div className="text-green-500 font-semibold">YOUR PAYMENT STATUS: {order.status}</div>
             <div className="text-red-500 font-semibold">YOUR DELIVERY STATUS: {order.deliveryStatus}</div>
         </div>

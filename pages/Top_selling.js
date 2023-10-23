@@ -53,7 +53,7 @@ return <Link key={products[item].id} passHref={true} legacyBehavior href={`produ
         <span className="textPart md:text-lg text-green-600 font-semibold">₹{products[item].price}/-</span>
                
                 </div>
-                <div className="mt-1 textPart">
+                <div className="mt-1 textPart py-2">
         {products[item].size.includes("0") && (<span className="border border-gray-300 px-1 mx-1">0</span>)}
         {products[item].size.includes("1") && (<span className="border border-gray-300 px-1 mx-1">1</span>)}
         {products[item].size.includes("2") && (<span className="border border-gray-300 px-1 mx-1">2</span>)}
@@ -108,6 +108,7 @@ return <Link key={products[item].id} passHref={true} legacyBehavior href={`produ
         {products[item].size.includes("250") && (<span className="border border-gray-300 px-1 mx-1">250</span>)}
         {products[item].size.includes("288") && (<span className="border border-gray-300 px-1 mx-1">288</span>)}
         {products[item].size.includes("300") && (<span className="border border-gray-300 px-1 mx-1">300</span>)}
+        <br />
         {products[item].size.includes("450") && (<span className="border border-gray-300 px-1 mx-1">450</span>)}
         {products[item].size.includes("600") && (<span className="border border-gray-300 px-1 mx-1">600</span>)}
         {products[item].size.includes("900") && (<span className="border border-gray-300 px-1 mx-1">900</span>)}

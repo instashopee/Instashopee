@@ -65,7 +65,9 @@ const All_Products = () => {
       <Admin_sidebar/>
     
     <div className="shadow-none mt-16">
-    <DashboardCard  title={'All Products'}>
+    <div className="text-black font-semibold text-3xl text-center mt-24">All Products
+
+    {/* <DashboardCard className="text-center"  title={'All Products'}> */}
       <TableContainer className="min-h-screen"
         sx={{
           width: {
@@ -182,12 +184,12 @@ const All_Products = () => {
           </TableBody>
         </Table>
       </TableContainer>
-    </DashboardCard>
+    {/* </DashboardCard> */}
     </div>
     <br />
     <br />
     <br />
-    </div>
+    </div></div>
   )
 }
 

@@ -109,47 +109,55 @@ if(!error){
         pauseOnHover
         theme="light"
         />
-        <div className="container mx-auto ">
+        
+
+        <div className="sm:hidden flex items-center justify-center text-center">
+  
+
+  <img src={image} className="sm:h-[38rem] sm:w-[32rem] h-[28rem] w-full sm:px-0 px-5 " alt="" />
+ </div>
+  <div className="sm:hidden flex items-center justify-center gap-2 "
+  
+  >
+    <button
+      className="p-4 group"
+      onClick={handleImage}
+     
+    >
+      <img
+          src={product.img}
+          className="border-2 p-3 border-black hover:scale-105 transition-all duration-500 cursor-pointer  h-20 w-20 "
+        />          </button>
+    <button
+      className="p-4 group"
+      onClick={handleImage1}
+    >
+              <img
+          src={product.img1}
+          className="border-2 p-3 border-black hover:scale-105 transition-all duration-500 cursor-pointer  h-20 w-20 "
+        />          </button>
+    <button
+      className="p-4 group"
+      onClick={handleImage2}
+    >
+    <img
+          src={product.img2}
+          className="border-2 border-black p-3 hover:scale-105 transition-all duration-500 cursor-pointer  h-20 w-20 "
+        />         
+        </button>
+ 
+  </div>
+
+        <div className="container mx-auto mt-2">
           <div className="mx-auto flex flex-wrap">
           <div className="sm:py-8 py-2">
      
-      {/*<!-- Component: Slider with indicators & controls inside --> */}
-      <div className="items-center justify-center text-center ">
-     
-
-
-       <div className="items-center justify-center text-center">
-       {/* <ReactImageMagnify  {...{
-                        smallImage: {
-                            alt: '',
-                            src: image,
-                           
-                            sizes: '(max-width: 480px) 100vw, (max-width: 1200px) 30vw, 360px',
-                            width: 500,
-                            height: 550
-                        },
-                        largeImage: {
-                            src: image,
-                            width: 1550,
-                            height: 1050
-                          },
-                          enlargedImageContainerStyle: {
-                            zIndex: "1500",
-                          },
-                          enlargedImageContainerDimensions: {
-                            width: "100%",
-                            height: "100%",
-                          },
-                        
-                        // lensStyle: { backgroundColor: 'rgba(0,0,0,0)' }
-                        
-                    }} /> */}
-                            {/* <img src={image} className="sm:h-[44rem] sm:w-[32rem] h-[28rem] w-72 " alt="" /> */}
+       <div className="hidden 2xl:flex items-center justify-center text-center">
+  
 
         <img src={image} className="sm:h-[38rem] sm:w-[32rem] h-[28rem] w-full sm:px-0 px-5 " alt="" />
        </div>
-        <div
-          className=" flex items-center justify-center w-full gap-2 "
+        <div className="hidden 2xl:flex items-center justify-center gap-2 "
         
         >
           <button
@@ -180,10 +188,12 @@ if(!error){
               </button>
        
         </div>
-      </div>
+    
+     
+
+
      
             
-      {/*<!-- End Slider with indicators & controls inside --> */}
    
             </div>
             {/* <img
@@ -198,8 +208,8 @@ if(!error){
               <h1 className="text-gray-900 text-3xl title-font font-medium mb-1">
                 {product.title} ({product.size}{product.unit}/{product.color} color)
               </h1>
-
-              <p className="leading-relaxed">{product.desc}
+              <br />
+              <p className="leading-relaxed p-2 rounded-lg border bg-gray-50">Description: {product.desc}
               </p>
               <div className="flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5">
                 <div className="flex">
@@ -575,22 +585,58 @@ if(!error){
                 
                 </div>
                 <br />
-              <span className="mx-2 border-2 p-2 text-green-500 font-semibold text-sm">Min Order Qty - {product.mqty}</span>
+                <div className="flex mx-auto">
+              <span className="mx-2 border-2 my-auto bg-green-50 rounded-lg p-2 text-green-500 font-semibold text-sm">Min Order Qty - {product.mqty}</span>
               <br/>
                 <br/>
-              {product.del_ch>0?<span className="mx-2 border-2 p-2 text-blue-500 font-semibold text-sm">Delivery Charge - Rs.{product.del_ch}/-</span>:
-              <span className="mx-2 border-2 p-2 text-blue-500 font-semibold text-sm">HURRAY! FREE DELIVERY</span>}
+              {product.del_ch>0?<span className="mx-2 my-auto border-2 bg-blue-50 rounded-lg p-2 text-blue-500 font-semibold text-sm">Delivery Charge - Rs.{product.del_ch}/-</span>:
+              <span className="mx-2 border-2 p-2 bg-blue-50 rounded-lg my-auto text-blue-500 font-semibold text-sm">HURRAY! FREE DELIVERY</span>}
+              </div>
                 <br />
-                <br />
-              <span className="mx-2 border-2 p-2 text-red-500 font-semibold text-sm">Estimated Delivery Time - {product.edt}</span>
+              <span className="mx-2 border-2 p-2 bg-red-50 rounded-lg my-auto text-red-500 font-semibold text-sm">Estimated Delivery Time - {product.edt}</span>
               <br />
                 <br />
                 <div className="flex flex-col">
                 {product.availableQty <=0 &&<span className="title-font font-medium text-2xl text-red-700">
                 OUT OF STOCK !
                 </span>}
-                
-                <div className="flex flex-row">
+                <div id="bottom-banner" tabindex="-1" class="sm:hidden fixed bottom-0 left-0 z-50 flex justify-between w-full h-20 p-4 border-t border-gray-200 bg-gray-50">
+    <div class="flex items-center mx-auto my-auto space-x-1">
+       
+             
+                <button disabled={product.availableQty <=0?true:false} 
+                  onClick={() => {
+                    addToCart(slug, 1, product.price, product.title, size, color,product.del_ch,product.img,product.unit,product.mqty,product.mqty2);
+                  }}
+                  className="w-[10rem] ml-1 text-white bg-blue-500 disabled:bg-blue-300  border-0 py-2 px-2 md:px-6 focus:outline-none hover:bg-blue-800 rounded"
+                >
+                  Add To Cart
+                </button>
+              
+             
+                <button disabled={product.availableQty <=0?true:false} onClick={() =>
+                    buyNow(slug, 1, product.price, product.title, size, color,product.del_ch,product.img,product.unit,product.mqty,product.mqty2)
+                  } className="w-[10rem] ml-1  text-white bg-red-500 disabled:bg-red-300  border-0 py-2 px-2 md:px-6 focus:outline-none hover:bg-red-800 rounded">
+                  Buy Now
+                </button>
+                <button onClick={() => {
+                    addTowishlist(slug, 1, product.price, product.title, size, color,product.del_ch,product.img,product.unit,product.mqty,product.mqty2);
+                  }} className="rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4">
+                  <svg
+                    fill="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    className="w-5 h-5"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"></path>
+                  </svg>
+                </button>
+    </div>
+ 
+</div>
+                <div className="hidden md:flex flex-row">
                 <button disabled={product.availableQty <=0?true:false} 
                   onClick={() => {
                     addToCart(slug, 1, product.price, product.title, size, color,product.del_ch,product.img,product.unit,product.mqty,product.mqty2);
@@ -616,15 +662,15 @@ if(!error){
                 </div>
                 <button disabled={product.availableQty <=0?true:false} onClick={() =>
                     buyNow(slug, 1, product.price, product.title, size, color,product.del_ch,product.img,product.unit,product.mqty,product.mqty2)
-                  } className="w-[16rem] ml-1 mb-5  text-white bg-red-500 disabled:bg-red-300  border-0 py-2 px-2 md:px-6 focus:outline-none hover:bg-red-800 rounded">
+                  } className="hidden md:block w-[16rem] ml-1 mb-5  text-white bg-red-500 disabled:bg-red-300  border-0 py-2 px-2 md:px-6 focus:outline-none hover:bg-red-800 rounded">
                   Buy Now
                 </button>
               </div>
-              <div className="hidden pin mt-8  space-x-2 text-sm">
-                <input
+              <div className="pin mt-2 mb-4  space-x-2 text-sm">
+                <input 
                   placeholder="Enter your pincode"
                   onChange={onChangePin}
-                  className="border-2 px-2 border-gray-400 rounded-md"
+                  className="border-2 px-2 py-2 border-gray-400 rounded-md"
                   type="text"
                   />
                 <button

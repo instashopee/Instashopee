@@ -6,6 +6,7 @@ import Admin_sidebar from "@/components/Admin_sidebar";
 
 
 const add = () => {
+  const [_id, set_id] = useState("");
   const [title, setTitle] = useState("");
   const [del_ch, setdel_ch] = useState("");
   const [edt, setedt] = useState("");
@@ -26,7 +27,109 @@ const add = () => {
   const [img1, setImg1] = useState("");
   const [img2, setImg2] = useState("");
   // const [img3, setImg3] = useState("");
+  const b=()=>{
+    window.open(`${process.env.NEXT_PUBLIC_HOST}/admin/allproducts`, '_blank')
+  }
+  const ba=()=>{
+    window.location=(`${process.env.NEXT_PUBLIC_HOST}/admin/edit`)
+  }
+  const a=()=>{
+
+    // let _id="6516b9f18917db9044ee0013"
+    let data = {
+      _id
+   
+    };
+    const fetchUsers=async()=>{
+      let a= await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/get_one_product`, {
+        method: "POST", // or 'PUT'
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+      let res=await a.json()
+
+      setTitle(res.products.title)
+      setdel_ch(res.products.del_ch)
+      setedt(res.products.edt)
+      settype(res.products.type)
+      setSlug(res.products.slug)
+      setDesc(res.products.desc)
+      setCategory(res.products.category)
+      setSub_Category(res.products.sub_category)
+      setPrice(res.products.price)
+      setMrp(res.products.mrp)
+      setUnit(res.products.unit)
+      setSize(res.products.size)
+      setmqty(res.products.mqty)
+      setmqty2(res.products.mqty2)
+      setColor(res.products.color)
+      setAvailableQty(res.products.availableQty)
+      setImg(res.products.img)
+      setImg1(res.products.img1)
+      setImg2(res.products.img2)
+   
+    }
+    if(!localStorage.getItem("myuser")){
+      router.push('/')
+    }else{
+      fetchUsers()
+  }
+     
+
+  }
+     
+
   // const [img4, setImg4] = useState("");
+  const [sizes, setsizes] = useState({})
+  
+  useEffect(() => {
+
+    const fetch_size=async()=>{
+      let a= await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/get_size`, {
+        method: "POST", // or 'PUT'
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({sizes}),
+      });
+    
+      let res=await a.json()
+      setsizes(res.sizes)
+    }
+    if(!localStorage.getItem("myuser")){
+      router.push('/')
+    }else{
+        fetch_size()
+  }
+
+     
+}, [])
+const [colors, setcolors] = useState({})
+  
+useEffect(() => {
+
+  const fetch_color=async()=>{
+    let a= await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/get_color`, {
+      method: "POST", // or 'PUT'
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({color}),
+    });
+  
+    let res=await a.json()
+    setcolors(res.colors)
+  }
+  if(!localStorage.getItem("myuser")){
+    router.push('/')
+  }else{
+      fetch_color()
+}
+
+   
+}, [])
   const [products, setProducts] = useState({})
   
   useEffect(() => {
@@ -326,7 +429,10 @@ const add = () => {
     // } else if (e.target.name == "discount") {
     //   setDiscount(e.target.value);
     } else if (e.target.name == "size") {
-      setSize(e.target.value);
+      setSize(e.target.value);}
+      else if (e.target.name == "_id") {
+        set_id(e.target.value);
+    
     } else if (e.target.name == "unit") {
       setUnit(e.target.value);
     } else if (e.target.name == "color") {
@@ -370,6 +476,47 @@ const add = () => {
     <div class="lg:w-1/2 md:w-1/2 bg-white flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0 float-right p-5 shadow-2xl mr-16">
       <h2 class="text-gray-900 text-lg mb-1 font-medium title-font">Add Product Details</h2>
       <div className="flex">
+
+<div className="px-2 w-1/2 ">
+<div class=" mb-4">
+<label for="_id" class="leading-7 text-sm text-gray-600">
+  _id
+</label>
+<select
+
+ value={_id}
+ type="_id"
+ id="_id"
+ name="_id"
+ class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+ onChange={handleChange}>
+   
+{Object.values(products).map(item => (
+
+<option value={item._id}>{item.title}</option>))}
+</select>
+
+{/* <input
+required
+  onChange={handleChange}
+  value={_id}
+  type="_id"
+  id="_id"
+  name="_id"
+  class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+/> */}
+</div>
+</div>
+<div className="px-2 w-1/2 mt-6 space-x-2 space-y-2">
+<button className='bg-blue-300 p-2 rounded-lg' onClick={a}>CHECK _id</button>
+
+<button className='bg-blue-300 p-2 rounded-lg' onClick={b}>VIEW PRODUCTS</button>
+
+<button className='bg-blue-300 p-2 rounded-lg' onClick={ba}>REFRESH</button>
+
+</div> </div>
+      <div className="flex">
+     
       <div className="px-2 w-1/2 ">
            <div class=" mb-4">
              <label for="title" class="leading-7 text-sm text-gray-600">
@@ -478,7 +625,7 @@ const add = () => {
              <label for="sub_category" class="leading-7 text-sm text-gray-600">
                Sub Category
              </label>
-             {/* <select
+             <select
              
              onChange={handleChange}
              value={sub_category}
@@ -489,18 +636,56 @@ const add = () => {
               >
                             <option selected value='Choose Sub Category'>Choose Sub Category</option>
 
-             {Object.values(products).map(item => (
+             {/* {Object.values(products).map(item => (
 
-    <option selected value={item.sub_category}>{item.sub_category}</option>))}
-  </select> */}
-             <input
+    <option selected value={item.sub_category}>{item.sub_category}</option>))} */}
+    <option selected value="acp baskets">acp baskets</option>
+    <option selected value="acrylic sheets">acrylic sheets</option>
+    <option selected value="auto hinges">auto hinges</option>
+    <option selected value="butt hinges">butt hinges</option>
+    <option selected value="cabinet handles">cabinet handles</option>
+    <option selected value="chimney">chimney</option>
+    <option selected value="cooktop">cooktop</option>
+    <option selected value="corner units">corner units</option>
+    <option selected value="door closer">door closer</option>
+    <option selected value="door stopper">door stopper</option>
+    <option selected value="frame profile">frame profile</option>
+    <option selected value="frame with handle profile">frame with handle profile</option>
+    <option selected value="glass door handles">glass door handles</option>
+    <option selected value="handle profile">handle profile</option>
+    <option selected value="hydraulic hinges">hydraulic hinges</option>
+    <option selected value="knobs">knobs</option>
+    <option selected value="laminates">laminates</option>
+    <option selected value="louvers">louvers</option>
+    <option selected value="main door handles">main door handles</option>
+    <option selected value="microwave">microwave</option>
+    <option selected value="mortice handles">mortice handles</option>
+    <option selected value="mouldings">mouldings</option>
+    <option selected value="ms drawer channel">ms drawer channel</option>
+    <option selected value="other appliances">other appliances</option>
+    <option selected value="other slides">other slides</option>
+    <option selected value="oven">oven</option>
+    <option selected value="piano slides">piano slides</option>
+    <option selected value="pulldown">pulldown</option>
+    <option selected value="rolling shutters">rolling shutters</option>
+    <option selected value="shirt pullout">shirt pullout</option>
+    <option selected value="shoe rack">shoe rack</option>
+    <option selected value="sliding fittings">sliding fittings</option>
+    <option selected value="ss drawer channel">ss drawer channel</option>
+    <option selected value="tall units">tall units</option>
+    <option selected value="tandem box">tandem box</option>
+    <option selected value="trouser pullout">trouser pullout</option>
+    <option selected value="uplifts">uplifts</option>
+    <option selected value="wire baskets">wire baskets</option>
+  </select>
+             {/* <input
                onChange={handleChange}
                value={sub_category}
                type="sub_category"
                id="sub_category"
                name="sub_category"
                class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-             />
+             /> */}
            </div>
          </div>
      
@@ -515,6 +700,23 @@ const add = () => {
              <label for="size" class="leading-7 text-sm text-gray-600">
                Size
              </label>
+             {/* <select
+             
+            
+             onChange={handleChange}
+             value={size}
+             type="size"
+             id="size"
+             name="size"
+             class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+            >
+               
+            <option selected value='Size'>Size</option>
+            {Object.values(sizes).map(item => (
+   <option selected value={item.size}>{item.size}</option>))}
+ 
+
+ </select> */}
              <input
                onChange={handleChange}
                value={size}
@@ -619,10 +821,10 @@ const add = () => {
              class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
              onChange={handleChange}>
                
-            {/* {Object.values(products).map(item => ( */}
-            <option selected value='Choose Color'>Choose Color</option>
-   <option selected value='zinc'>zinc</option>
-   <option value='rose gold'>rose gold</option>
+            <option selected value='Color'>Color</option>
+            {/* {Object.values(colors).map(item => (
+   <option selected value={item.color}>{item.color}</option>))} */}
+    <option value='rose gold'>rose gold</option>
    <option value='antique'>antique</option>
    <option value='black'>black</option>
    <option value='white'>white</option>
