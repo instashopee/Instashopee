@@ -551,22 +551,23 @@ if(!error){
                       )}
                      
                     </select>
-                    <span className="absolute right-0 top-0 h-full w-10 text-center text-gray-600 pointer-events-none flex items-center justify-center">
+                    <div className="absolute right-0 top-0 h-full w-auto text-center text-gray-600 pointer-events-none flex items-center justify-center">
+                      <span className="mx-1">{product.unit}</span>
                       <svg
                         fill="none"
                         stroke="currentColor"
                         stroke-linecap="round"
                         stroke-linejoin="round"
                         stroke-width="2"
-                        className="w-4 h-4"
+                        className="w-4 h-4 mr-1"
                         viewBox="0 0 24 24"
                         >
                         <path d="M6 9l6 6 6-6"></path>
                       </svg>
-                    </span>
+                      
+                    </div>
                   </div>
                 </div>
-              <span className="mx-2 border-2 p-2">{product.unit}</span>
               </div>
           
         
