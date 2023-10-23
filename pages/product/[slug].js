@@ -551,23 +551,22 @@ if(!error){
                       )}
                      
                     </select>
-                    <div className="absolute right-0 top-0 h-full text-center text-gray-600 pointer-events-none flex items-center justify-center">
-                      <span className="mx-1">{product.unit}</span>
+                    <span className="absolute right-0 top-0 h-full w-10 text-center text-gray-600 pointer-events-none flex items-center justify-center">
                       <svg
                         fill="none"
                         stroke="currentColor"
                         stroke-linecap="round"
                         stroke-linejoin="round"
                         stroke-width="2"
-                        className="w-4 h-4 mr-1"
+                        className="w-4 h-4"
                         viewBox="0 0 24 24"
                         >
                         <path d="M6 9l6 6 6-6"></path>
                       </svg>
-                      
-                    </div>
+                    </span>
                   </div>
                 </div>
+              <span className="mx-2 border-2 p-2">{product.unit}</span>
               </div>
           
         
@@ -586,7 +585,7 @@ if(!error){
                 
                 </div>
                 <br />
-                <div className="mx-auto">
+                <div className="flex mx-auto">
               <span className="mx-2 border-2 my-auto bg-green-50 rounded-lg p-1 text-green-500 font-semibold text-sm">Min Order Qty - {product.mqty}</span>
               <br/>
                 <br/>
