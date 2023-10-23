@@ -551,7 +551,7 @@ if(!error){
                       )}
                      
                     </select>
-                    <div className="absolute right-0 top-0 h-full w-auto text-center text-gray-600 pointer-events-none flex items-center justify-center">
+                    <div className="absolute right-0 top-0 h-full text-center text-gray-600 pointer-events-none flex items-center justify-center">
                       <span className="mx-1">{product.unit}</span>
                       <svg
                         fill="none"
