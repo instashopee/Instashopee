@@ -586,7 +586,7 @@ if(!error){
                 
                 </div>
                 <br />
-                <div className="flex mx-auto">
+                <div className="mx-auto">
               <span className="mx-2 border-2 my-auto bg-green-50 rounded-lg p-1 text-green-500 font-semibold text-sm">Min Order Qty - {product.mqty}</span>
               <br/>
                 <br/>
