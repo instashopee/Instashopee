@@ -218,7 +218,7 @@ const Navbar = ({Logout,user,cart,addToCart,removeFromCart,clearCart,subTotal,wi
                 <Link legacyBehavior href={"/"}>
                 <a >
                   <span className="sr-only">Instashopee</span>
-                  <img className="invisible md:visible md:left-0 h-12 w-auto" src="/logo3.png" alt="Logo"  />
+                  <img className="hidden md:block md:left-0 h-12 w-auto" src="/logo3.png" alt="Logo"  />
                 </a></Link>
               </div>
           <div className="border-b border-gray-200">
@@ -230,10 +230,10 @@ const Navbar = ({Logout,user,cart,addToCart,removeFromCart,clearCart,subTotal,wi
               >
                 <span className="absolute -inset-0.5" />
                 <span className="sr-only">Open menu</span>
-                <Bars3Icon className="h-8 w-12 -mx-40"  />
+                <Bars3Icon className="h-8 w-12 "  />
               </button>
               <Link legacyBehavior href={"/"}>
-                <img className="sm:hidden -mx-28 h-12 z-10" src="/logo3.png" alt="Logo"  />
+                <img className="sm:hidden  h-12 z-10" src="/logo3.png" alt="Logo"  />
                 </Link>
 
               {/* Logo */}

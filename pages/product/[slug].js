@@ -586,14 +586,14 @@ if(!error){
                 </div>
                 <br />
                 <div className="flex mx-auto">
-              <span className="mx-2 border-2 my-auto bg-green-50 rounded-lg p-2 text-green-500 font-semibold text-sm">Min Order Qty - {product.mqty}</span>
+              <span className="mx-2 border-2 my-auto bg-green-50 rounded-lg p-1 text-green-500 font-semibold text-sm">Min Order Qty - {product.mqty}</span>
               <br/>
                 <br/>
-              {product.del_ch>0?<span className="mx-2 my-auto border-2 bg-blue-50 rounded-lg p-2 text-blue-500 font-semibold text-sm">Delivery Charge - Rs.{product.del_ch}/-</span>:
-              <span className="mx-2 border-2 p-2 bg-blue-50 rounded-lg my-auto text-blue-500 font-semibold text-sm">HURRAY! FREE DELIVERY</span>}
+              {product.del_ch>0?<span className="mx-2 my-auto border-2 bg-blue-50 rounded-lg p-1 text-blue-500 font-semibold text-sm">Delivery Charge - Rs.{product.del_ch}/-</span>:
+              <span className="mx-2 border-2 p-1 bg-blue-50 rounded-lg my-auto text-blue-500 font-semibold text-sm">HURRAY! FREE DELIVERY</span>}
               </div>
                 <br />
-              <span className="mx-2 border-2 p-2 bg-red-50 rounded-lg my-auto text-red-500 font-semibold text-sm">Estimated Delivery Time - {product.edt}</span>
+              <span className="mx-2 border-2 p-1 bg-red-50 rounded-lg my-auto text-red-500 font-semibold text-sm">Estimated Delivery Time - {product.edt}</span>
               <br />
                 <br />
                 <div className="flex flex-col">
