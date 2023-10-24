@@ -237,15 +237,14 @@ if(!error){
                         }`}
                       ></button>
                     )}
-
-                  {Object.keys(variants).includes("rose gold") &&
-                    Object.keys(variants["rose gold"]).includes(size) && (
+                  {Object.keys(variants).includes("RoseGold") &&
+                    Object.keys(variants["RoseGold"]).includes(size) && (
                       <button
                         onClick={() => {
-                          refreshVariant("rose gold");
+                          refreshVariant(size, "RoseGold");
                         }}
                         className={`border-2 rounded-full bg-[#B76E79] hover:bg-[#B76E79] w-6 h-6 focus:outline-none ${
-                          color === "rose gold" ? "border-black" : "border-yellow-200"
+                          color === "RoseGold" ? "border-black" : "border-yellow-200"
                         }`}
                       ></button>
                     )}
