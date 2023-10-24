@@ -46,9 +46,9 @@ export default function SliderIndicatorsControlsInside() {
       slider.destroy()
     }
   }, [])
- const vidRef=useRef();
+//  const vidRef=useRef();
 
-  useEffect(() => { vidRef.current.play(); },[]); 
+  // useEffect(() => { vidRef.current.play(); },[]); 
   return (
    
    
@@ -66,7 +66,8 @@ export default function SliderIndicatorsControlsInside() {
 ))} */}
             <img className="sm:hidden w-full h-[90%]" src="/banners/gif/banner1.gif" alt="" />
 
-            <video ref={vidRef} className="sm:hidden 2xl:inline-block xl:inline-block lg:inline-block md:inline-block w-full h-full" muted  autoPlay={true} loop src="/banners/banner3.mp4" ></video>
+            <video  className="sm:hidden 2xl:inline-block xl:inline-block lg:inline-block md:inline-block w-full h-full" muted  autoPlay={true} loop src="/banners/banner3.mp4" ></video>
+            {/* <video  ref={vidRef} className="sm:hidden 2xl:inline-block xl:inline-block lg:inline-block md:inline-block w-full h-full" muted  autoPlay={true} loop src="/banners/banner3.mp4" ></video> */}
 
             {/* <ReactPlayer url='/banners/banner_vid.mp4' /> */}
 
@@ -82,7 +83,7 @@ export default function SliderIndicatorsControlsInside() {
 ))} */}
             <img className="sm:hidden w-full h-[90%]" src="/banners/gif/banner2.gif" alt="" />
 
-            <video ref={vidRef} className="sm:hidden 2xl:inline-block xl:inline-block lg:inline-block md:inline-block w-full h-full" muted  autoPlay={true} loop src="/banners/banner2.mp4" ></video>
+            <video  className="sm:hidden 2xl:inline-block xl:inline-block lg:inline-block md:inline-block w-full h-full" muted  autoPlay={true} loop src="/banners/banner2.mp4" ></video>
 
               {/* <img
                 src="/banners/banner2.jpg"
@@ -96,7 +97,7 @@ export default function SliderIndicatorsControlsInside() {
 ))} */}
              <img className="sm:hidden w-full h-[90%]" src="/banners/gif/banner3.gif" alt="" />
 
-            <video ref={vidRef} className="sm:hidden 2xl:inline-block xl:inline-block lg:inline-block md:inline-block w-full h-full" muted  autoPlay={true} loop src="/banners/banner1.mp4" ></video> 
+            <video  className="sm:hidden 2xl:inline-block xl:inline-block lg:inline-block md:inline-block w-full h-full" muted  autoPlay={true} loop src="/banners/banner1.mp4" ></video> 
 
               {/* <img
                 src="/banners/banner1.gif"
@@ -115,7 +116,7 @@ export default function SliderIndicatorsControlsInside() {
 ))} */}
                           <img className="sm:hidden w-full h-[90%]" src="/banners/gif/banner4.gif" alt="" />
 
-            <video ref={vidRef} className="sm:hidden 2xl:inline-block xl:inline-block lg:inline-block md:inline-block w-full h-full" muted  autoPlay={true} loop src="/banners/banner4.mp4" ></video>
+            <video  className="sm:hidden 2xl:inline-block xl:inline-block lg:inline-block md:inline-block w-full h-full" muted  autoPlay={true} loop src="/banners/banner4.mp4" ></video>
 
             </li>
          
