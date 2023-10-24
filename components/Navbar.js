@@ -229,6 +229,7 @@ const Navbar = ({Logout,user,cart,addToCart,removeFromCart,clearCart,subTotal,wi
                   <span className="sr-only">Instashopee</span>
                   <img className="hidden md:block md:left-0 h-12 w-auto" src="/logo3.png" alt="Logo"  />
                 </a></Link>
+                
               </div>
           <div className="border-b border-gray-200">
             <div className="flex h-16 items-center">
@@ -244,7 +245,23 @@ const Navbar = ({Logout,user,cart,addToCart,removeFromCart,clearCart,subTotal,wi
               <Link legacyBehavior href={"/"}>
                 <img className="sm:hidden  h-12 z-10" src="/logo3.png" alt="Logo"  />
                 </Link>
-
+                <div className="sm:hidden flex float-left left-0 mt-1">
+        {<Link legacyBehavior href={'/search'}><a><div className=" flex   rounded-lg px-1 ">
+        <AiOutlineSearch  className="text-xl text-gray-500 mx-1 cursor-pointer font-semibold mt-1" />
+        {/* <label className="text-sm md:text-md mx-1 cursor-pointer font-semibold" htmlFor="">Cart</label> */}
+        </div></a></Link>}
+       
+                {<Link legacyBehavior href={'/cart'}><a><div className=" flex   rounded-lg px-1 ">
+        <AiOutlineShoppingCart  className="text-xl text-gray-500 mr-1 cursor-pointer font-semibold mt-1" />
+        <div class="inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-red-400 border-2 border-white rounded-full -top-2 -right-2 dark:border-gray-900">{Object.keys(cart).length}</div>
+        {/* <label className="text-sm md:text-md mx-1 cursor-pointer font-semibold" htmlFor="">Cart</label> */}
+        </div></a></Link>}
+        {<Link legacyBehavior href={'/wishlist'}><a><div className="flex  rounded-lg px-1 ">
+        <AiOutlineHeart className="text-xl text-gray-500 mr-1 cursor-pointer font-semibold mt-1" />
+        <div class="inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-red-400 border-2 border-white rounded-full -top-2 -right-2 dark:border-gray-900">{Object.keys(wishlist).length}</div>
+        {/* <label className="text-sm md:text-md mx-1 cursor-pointer font-semibold" htmlFor="">Wishlist</label> */}
+        </div></a></Link>}
+        </div>
               {/* Logo */}
 
 
