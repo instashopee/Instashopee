@@ -232,10 +232,10 @@ const Logout=()=>{
          <link rel= "icon" href ="/logo_icon.ico" />
        </Head>
   <LoadingBar
-        color='white'
+        color='black'
         progress={progress}
         waitingTimew={400}
-        height={3}
+        height={4}
         shadow={true}
         onLoaderFinished={() => setProgress(0)}
       />
