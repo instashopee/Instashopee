@@ -36,6 +36,12 @@ const Navbar = ({Logout,user,cart,addToCart,removeFromCart,clearCart,subTotal,wi
         // Trigger the button element with a click
         document.getElementById("myBtn").click();
       }
+      else if (event.key === "Return") {
+        // Cancel the default action, if needed
+        event.preventDefault();
+        // Trigger the button element with a click
+        document.getElementById("myBtn").click();
+      }
     });
   }, [])
   
