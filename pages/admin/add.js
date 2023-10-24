@@ -824,7 +824,8 @@ required
             <option selected value='Color'>Color</option>
             {/* {Object.values(colors).map(item => (
    <option selected value={item.color}>{item.color}</option>))} */}
-    <option value='rose gold'>rose gold</option>
+   <option value='zinc'>zinc</option>
+   <option value='RoseGold'>RoseGold</option>
    <option value='antique'>antique</option>
    <option value='black'>black</option>
    <option value='white'>white</option>

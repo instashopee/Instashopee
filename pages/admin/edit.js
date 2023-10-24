@@ -679,7 +679,7 @@ const edit = () => {
             <option selected value='Choose Color'>Choose Color</option>
 
    <option value='zinc'>zinc</option>
-   <option value='rose gold'>rose gold</option>
+   <option value='RoseGold'>RoseGold</option>
    <option value='antique'>antique</option>
    <option value='black'>black</option>
    <option value='white'>white</option>
