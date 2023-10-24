@@ -35,7 +35,6 @@ const search = ({products}) => {
   return (
 
     <div className='min-h-screen'>
-    <form>   
     <Head>
         <title>Search -  Instashopee</title>
         <meta
@@ -65,7 +64,7 @@ const search = ({products}) => {
     </div>
 
 
-</form>
+
 <section className="text-gray-600 body-font ">
 
 <div className="container py-3 mx-auto  ">
