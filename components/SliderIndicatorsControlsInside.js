@@ -64,9 +64,9 @@ export default function SliderIndicatorsControlsInside() {
           {/* {Object.values(banners).map(item => ( <img className="w-full h-[40rem]" src={item.banner1} alt="" />
 
 ))} */}
-            <img className="sm:hidden w-full h-[90%]" src="/banners/gif/banner1.gif" alt="" />
+            <img className="sm:hidden w-full h-[35vh]" src="/banners/gif/banner1.gif" alt="" />
 
-            <video ref={vidRef} className="hidden md:block w-full h-full" muted  autoPlay={true} loop src="/banners/banner3.mp4" ></video>
+            {/* <video ref={vidRef} className="hidden md:block w-full h-full" muted  autoPlay={true} loop src="/banners/banner3.mp4" ></video> */}
             {/* <video  ref={vidRef} className="hidden md:block w-full h-full" muted  autoPlay={true} loop src="/banners/banner3.mp4" ></video> */}
 
             {/* <ReactPlayer url='/banners/banner_vid.mp4' /> */}
@@ -81,7 +81,7 @@ export default function SliderIndicatorsControlsInside() {
             {/* {Object.values(banners).map(item => ( <img className="w-full h-[40rem]" src={item.banner2} alt="" />
 
 ))} */}
-            <img className="sm:hidden w-full h-[90%]" src="/banners/gif/banner2.gif" alt="" />
+            <img className="sm:hidden w-full h-[35vh]" src="/banners/gif/banner2.gif" alt="" />
 
             <video ref={vidRef} className="hidden md:block w-full h-full" muted  autoPlay={true} loop src="/banners/banner2.mp4" ></video>
 
@@ -95,7 +95,7 @@ export default function SliderIndicatorsControlsInside() {
             {/* {Object.values(banners).map(item => ( <img className="w-full h-[40rem]" src={item.banner3} alt="" />
 
 ))} */}
-             <img className="sm:hidden w-full h-[90%]" src="/banners/gif/banner3.gif" alt="" />
+             <img className="sm:hidden w-full h-[35vh]" src="/banners/gif/banner3.gif" alt="" />
 
             <video ref={vidRef} className="hidden md:block w-full h-full" muted  autoPlay={true} loop src="/banners/banner1.mp4" ></video> 
 
@@ -114,7 +114,7 @@ export default function SliderIndicatorsControlsInside() {
                           {/* {Object.values(banners).map(item => ( <img className="w-full h-[40rem]" src={item.banner4} alt="" />
 
 ))} */}
-                          <img className="sm:hidden w-full h-[90%]" src="/banners/gif/banner4.gif" alt="" />
+                          <img className="sm:hidden w-full h-[35vh]" src="/banners/gif/banner4.gif" alt="" />
 
             <video ref={vidRef} className="hidden md:block w-full h-full" muted  autoPlay={true} loop src="/banners/banner4.mp4" ></video>
 
