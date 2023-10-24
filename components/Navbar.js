@@ -243,13 +243,10 @@ const Navbar = ({Logout,user,cart,addToCart,removeFromCart,clearCart,subTotal,wi
                 <Bars3Icon className="h-8 w-12 "  />
               </button>
               <Link legacyBehavior href={"/"}>
-                <img className="sm:hidden  h-12 z-10" src="/logo3.png" alt="Logo"  />
+                <img className="sm:hidden h-12 z-10" src="/logo3.png" alt="Logo"  />
                 </Link>
-                <div className="sm:hidden flex float-left left-0 mt-1">
-        {<Link legacyBehavior href={'/search'}><a><div className=" flex   rounded-lg px-1 ">
-        <AiOutlineSearch  className="text-xl text-gray-500 mx-1 cursor-pointer font-semibold mt-1" />
-        {/* <label className="text-sm md:text-md mx-1 cursor-pointer font-semibold" htmlFor="">Cart</label> */}
-        </div></a></Link>}
+                <div className="sm:hidden flex float-right ml-auto right-0 mt-1">
+        
        
                 {<Link legacyBehavior href={'/cart'}><a><div className=" flex   rounded-lg px-1 ">
         <AiOutlineShoppingCart  className="text-xl text-gray-500 mr-1 cursor-pointer font-semibold mt-1" />
@@ -501,6 +498,24 @@ const Navbar = ({Logout,user,cart,addToCart,removeFromCart,clearCart,subTotal,wi
           </div>
         </nav>
       </header>
+      <div class="sm:hidden relative mt-1 mx-1">
+        <div class="absolute flex items-center pointer-events-none">
+         
+        </div>
+        <div class="mb-1">
+          
+             <input
+               onChange={handleChanged}
+               value={search}
+               type="search"
+               placeholder='Search Here...'
+               id="search"
+               name="search"
+               class="w-full  bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+             />
+           </div>        
+       {<button  type="submit" onClick={submit} class="text-black absolute right-2.5 bottom-1 bg-red-400 font-medium rounded-lg text-sm px-4 py-2 ">Search</button>}
+    </div>
     </div>
     </div>
 //     <div className="flex flex-col md:flex-row md:justify-start justify-center items-center py-2 shadow-xl sticky top-0 bg-white z-10">
