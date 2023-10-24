@@ -152,12 +152,12 @@ if(!error){
           <div className="mx-auto flex flex-wrap">
           <div className="sm:py-8 py-2">
      
-       <div className="hidden 2xl:flex items-center justify-center text-center">
+       <div className="hidden md:flex items-center justify-center text-center">
   
 
         <img src={image} className="sm:h-[38rem] sm:w-[32rem] h-[28rem] w-full sm:px-0 px-5 " alt="" />
        </div>
-        <div className="hidden 2xl:flex items-center justify-center gap-2 "
+        <div className="hidden md:flex items-center justify-center gap-2 "
         
         >
           <button

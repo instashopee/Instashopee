@@ -29,7 +29,7 @@ export default function Top_selling({products}){
           <h1 className='text-2xl font-extrabold text-gray-800 p-5'>TOP SELLING PRODUCTS</h1>
           <section className="text-gray-600 body-font ">
 
-  <div className="container py-3 mx-auto  ">
+  <div className="containerpy-3 mx-auto  ">
     <div className="flex flex-wrap justify-center">
      
       
