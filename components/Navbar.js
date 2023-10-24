@@ -15,6 +15,7 @@ import {
 import { navigation } from "./Navigation/NavigationData";
 import InventoryOutlinedIcon from '@mui/icons-material/InventoryOutlined';
 import { Avatar } from "@mui/material";
+import { useRouter } from "next/router";
 
 
 function classNames(...classes) {
@@ -29,7 +30,15 @@ const Navbar = ({Logout,user,cart,addToCart,removeFromCart,clearCart,subTotal,wi
   const openUserMenu = Boolean(anchorEl);
   const jwt = localStorage.getItem("jwt");
  
-  
+  const router = useRouter();
+  const [search, setsearch] = useState("");
+  const handleChanged = (e) => {
+    if (e.target.name == "search") {
+      setsearch(e.target.value);}}
+  const submit=()=>{
+    router.push(`${process.env.NEXT_PUBLIC_HOST}/search?title=${search}`)
+    console.log(`${search}`)
+  }
   return (
     <div>
          
@@ -381,12 +390,19 @@ const Navbar = ({Logout,user,cart,addToCart,removeFromCart,clearCart,subTotal,wi
       <AiOutlineSearch className="text-sm md:text-md mx-1 m-auto"/>
       <label className="text-sm md:text-md mx-1 cursor-pointer font-semibold" htmlFor="">Search</label>
         </div></a></Link> */}
-
-        {/* <input type="search" id="default-search" class="" placeholder="Type Here..." required/> */}
-        {/* {<Link legacyBehavior href={'/search'}><a><div className=" flex  rounded-lg px-2 ">
-        <AiOutlineSearch className="text-2xl text-gray-500 mx-1 m-auto"/>
-
-        </div></a></Link>} */}
+<div className="border border-gray-300 flex rounded-md">
+<input
+               onChange={handleChanged}
+               value={search}
+               type="search"
+               id="search"
+               placeholder="Search Here..."
+               name="search"
+               class="w-full bg-white rounded   text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+             />        {<Link legacyBehavior href={`${process.env.NEXT_PUBLIC_HOST}/search?title=${search}`}><a><div className=" flex  rounded-lg px-2 ">
+        <AiOutlineSearch className="text-2xl text-gray-500 mt-2"/>
+        </div></a></Link>}
+        </div>
         {<Link legacyBehavior href={'/cart'}><a><div className=" flex   rounded-lg px-2 ">
         <AiOutlineShoppingCart  className="text-2xl text-gray-500 mx-1 cursor-pointer font-semibold mt-1" />
         <div class="inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-red-400 border-2 border-white rounded-full -top-2 -right-2 dark:border-gray-900">{Object.keys(cart).length}</div>
