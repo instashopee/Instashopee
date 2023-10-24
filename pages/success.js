@@ -15,7 +15,7 @@ const success = () => {
         />
       </Head>
         <img className='m-auto h-52' src="/order.png" alt="" />
-        <h1 className='text-3xl font-extrabold text-center mb-5'>YOUR ORDER HAS BEEN PLACED !!</h1>
+        <h1 className='text-3xl font-extrabold text-center mb-5'>YOUR ORDER HAS BEEN RECIEVED !!</h1>
     <div className='text-xl font-medium text-green-500 text-center'>
     Please pay on the UPI Handle below to get order confimed
     </div>

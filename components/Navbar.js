@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { AiOutlineShoppingCart,AiOutlineHeart, AiFillMinusCircle, AiFillCloseCircle,AiOutlineSearch } from "react-icons/ai";
 import {MdAccountCircle} from "react-icons/md"
 
@@ -21,7 +21,24 @@ import { useRouter } from "next/router";
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
+
 const Navbar = ({Logout,user,cart,addToCart,removeFromCart,clearCart,subTotal,wishlist}) => {
+
+  useEffect(() => {
+    var input = document.getElementById("search");
+
+    // Execute a function when the user presses a key on the keyboard
+    input.addEventListener("keypress", function(event) {
+      // If the user presses the "Enter" key on the keyboard
+      if (event.key === "Enter") {
+        // Cancel the default action, if needed
+        event.preventDefault();
+        // Trigger the button element with a click
+        document.getElementById("myBtn").click();
+      }
+    });
+  }, [])
+  
   const [dropdown, setDropdown] = useState(false)
 
   const [open, setOpen] = useState(false);
@@ -502,9 +519,11 @@ const Navbar = ({Logout,user,cart,addToCart,removeFromCart,clearCart,subTotal,wi
         <div class="absolute flex items-center pointer-events-none">
          
         </div>
-        <div class="mb-1">
-          
-             <input
+  <div class="mb-1">
+
+
+
+          <input
                onChange={handleChanged}
                value={search}
                type="search"
@@ -514,7 +533,7 @@ const Navbar = ({Logout,user,cart,addToCart,removeFromCart,clearCart,subTotal,wi
                class="w-full  bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
              />
            </div>        
-       {<button  type="submit" onClick={submit} class="text-black absolute right-2.5 bottom-1 bg-red-400 font-medium rounded-lg text-sm px-4 py-2 ">Search</button>}
+       {<button  id="myBtn" type="submit" onClick={submit} class="text-black absolute right-2.5 bottom-1 bg-red-400 font-medium rounded-lg text-sm px-4 py-2 ">Search</button>}
     </div>
     </div>
     </div>
