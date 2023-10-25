@@ -66,7 +66,7 @@ export default function SliderIndicatorsControlsInside() {
 ))} */}
             <img className="sm:hidden w-full h-[35vh]" src="/banners/gif/banner1.gif" alt="" />
 
-            {/* <video ref={vidRef} className="hidden md:block w-full h-full" muted  autoPlay={true} loop src="/banners/banner3.mp4" ></video> */}
+            <video ref={vidRef} className="hidden md:block w-full h-full" muted  autoPlay={true} loop src="/banners/banner3.mp4" ></video>
             {/* <video  ref={vidRef} className="hidden md:block w-full h-full" muted  autoPlay={true} loop src="/banners/banner3.mp4" ></video> */}
 
             {/* <ReactPlayer url='/banners/banner_vid.mp4' /> */}
