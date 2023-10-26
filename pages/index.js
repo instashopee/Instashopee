@@ -26,30 +26,30 @@ export default function Home({products,products2,products3,products4,products5})
     }
     setKey(Math.random())
   }, [router.query])
-  const [banners, setbanners] = useState({})
+//   const [banners, setbanners] = useState({})
   
-  useEffect(() => {
+//   useEffect(() => {
     
-    const fetchProducts=async()=>{
-      let a= await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/getbanners`, {
-        method: "POST", // or 'PUT'
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({banners}),
-      });
+//     const fetchProducts=async()=>{
+//       let a= await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/getbanners`, {
+//         method: "POST", // or 'PUT'
+//         headers: {
+//           "Content-Type": "application/json",
+//         },
+//         body: JSON.stringify({banners}),
+//       });
     
-      let res=await a.json()
-      setbanners(res.banners)
-    }
-    if(!localStorage.getItem("myuser")){
-      router.push('/')
-    }else{
-      fetchProducts()
-  }
+//       let res=await a.json()
+//       setbanners(res.banners)
+//     }
+//     if(!localStorage.getItem("myuser")){
+//       router.push('/')
+//     }else{
+//       fetchProducts()
+//   }
 
      
-}, [])
+// }, [])
 
   
    return(
@@ -62,7 +62,131 @@ export default function Home({products,products2,products3,products4,products5})
        <div >
        <SliderIndicatorsControlsInside/>
        </div>
+<div className='hidden md:flex mx-auto my-3 space-x-12 justify-center'>
+          
+        <div className='p-2 rounded-md shadow-2xl bg-slate-50 '>
+          <h1 className='font-bold'>Shop Latest Cabinet Handles</h1>
+          <div>
+          <div className='p-2 space-x-2 flex'>
+            <Link legacyBehavior href={`${process.env.NEXT_PUBLIC_HOST}/product/handle1078`}><a>
+              <div title="CLICK TO VIEW" className='cursor-pointer hover:opacity-60'>
+              <img src="/images/IMG-6310.jpg" className='w-40 h-40 rounded-md' alt="" />
+              <h1 className='font-semibold'>Cabinet Handle 1078</h1>
+            </div></a></Link>
+            <Link legacyBehavior href={`${process.env.NEXT_PUBLIC_HOST}/product/handle1077x160`}><a>
+            <div title="CLICK TO VIEW" className='cursor-pointer hover:opacity-60'>
+              <img src="/images/IMG-6306.jpg" className='w-40 h-40 rounded-md' alt="" />
+              <h1 className='font-semibold'>Cabinet Handle 1077</h1>
+            </div></a></Link>
+          </div>
+          <div className='p-2 space-x-2 flex'>
+          <Link legacyBehavior href={`${process.env.NEXT_PUBLIC_HOST}/product/handle1076x160`}><a>
+            <div title="CLICK TO VIEW" className='cursor-pointer hover:opacity-60'>
+              <img src="/images/1076.jpg" className='w-40 h-40 rounded-md' alt="" />
+              <h1 className='font-semibold'>Cabinet Handle 1076</h1>
+            </div></a></Link>
+            <Link legacyBehavior href={`${process.env.NEXT_PUBLIC_HOST}/product/handle1085x96`}><a>
+            <div title="CLICK TO VIEW" className='cursor-pointer hover:opacity-60'>
+              <img src="/images/1085.jpg" className='w-40 h-40 rounded-md' alt="" />
+              <h1 className='font-semibold'>Cabinet Handle 1085</h1>
+            </div></a></Link>
+          </div>
+          
+          </div>
+        </div>
+        <div className='p-2 rounded-md shadow-2xl bg-slate-50 '>
+          <h1 className='font-bold'>Try Shopping New Knobs</h1>
+          <div>
+          <div className='p-2 space-x-2 flex'>
+          <Link legacyBehavior href={`${process.env.NEXT_PUBLIC_HOST}/product/knb175`}><a>
+            <div title="CLICK TO VIEW" className='cursor-pointer hover:opacity-60'>
+              <img src="/images/IMG-8498.jpg" className='w-40 h-40 rounded-md' alt="" />
+              <h1 className='font-semibold'>Knob 175</h1>
+            </div></a></Link>
+            <Link legacyBehavior href={`${process.env.NEXT_PUBLIC_HOST}/product/knb172`}><a>
+            <div title="CLICK TO VIEW" className='cursor-pointer hover:opacity-60'>
+              <img src="/images/IMG-8488.jpg" className='w-40 h-40 rounded-md' alt="" />
+              <h1 className='font-semibold'>Knob 172</h1>
+            </div></a></Link>
+          </div>
+          <div className='p-2 space-x-2 flex'>
+          <Link legacyBehavior href={`${process.env.NEXT_PUBLIC_HOST}/product/knob175rgd`}><a>
+            <div title="CLICK TO VIEW" className='cursor-pointer hover:opacity-60'>
+              <img src="/images/RGDGREY1.jpg" className='w-40 h-40 rounded-md' alt="" />
+              <h1 className='font-semibold'>Knob 175</h1>
+            </div></a></Link>
+            <Link legacyBehavior href={`${process.env.NEXT_PUBLIC_HOST}/product/knob172`}><a>
+            <div title="CLICK TO VIEW" className='cursor-pointer hover:opacity-60'>
+              <img src="/images/KNOB%20RGD6.jpg" className='w-40 h-40 rounded-md' alt="" />
+              <h1 className='font-semibold'>Knob 172</h1>
+            </div></a></Link>
+          </div>
+          
+          </div>
+        </div>
+        <div className='p-2 rounded-md shadow-2xl bg-slate-50 '>
+          <h1 className='font-bold'>Explore Latest Tandem Box</h1>
+          <div>
+          <div className='p-2 space-x-2 flex'>
+          <Link legacyBehavior href={`${process.env.NEXT_PUBLIC_HOST}/product/ssb1`}><a>
+            <div title="CLICK TO VIEW" className='cursor-pointer hover:opacity-60'>
+              <img src="/images/slim_box1.jpg" className='w-40 h-40 rounded-md' alt="" />
+              <h1 className='font-semibold'>Slim Box 86 MM</h1>
+            </div></a></Link>
+            <Link legacyBehavior href={`${process.env.NEXT_PUBLIC_HOST}/product/stsg1`}><a>
+            <div title="CLICK TO VIEW" className='cursor-pointer hover:opacity-60'>
+              <img src="/images/stsg1.jpg" className='w-40 h-40 rounded-md' alt="" />
+              <h1 className='font-semibold'>Single Gallery 6"</h1>
+            </div></a></Link>
+          </div>
+          <div className='p-2 space-x-2 flex'>
+          <Link legacyBehavior href={`${process.env.NEXT_PUBLIC_HOST}/product/stdg1`}><a>
+            <div title="CLICK TO VIEW" className='cursor-pointer hover:opacity-60'>
+              <img src="/images/stdg1.jpg" className='w-40 h-40 rounded-md' alt="" />
+              <h1 className='font-semibold'>Double Gallery 8"</h1>
+            </div></a></Link>
+            <Link legacyBehavior href={`${process.env.NEXT_PUBLIC_HOST}/product/woodcutlery600`}><a>
+            <div title="CLICK TO VIEW" className='cursor-pointer hover:opacity-60'>
+              <img src="/images/WOODEN%20CUTLERY%20ADJUSTABLE%20450-600MM.jpg" className='w-40 h-40 rounded-md' alt="" />
+              <h1 className='font-semibold'>Wooden Cutlery Insert</h1>
+            </div></a></Link>
+          </div>
+          
+          </div>
+        </div>
+        <div className='p-2 rounded-md shadow-2xl bg-slate-50 '>
+          <h1 className='font-bold'>Find Brand New Main Door Handles</h1>
+          <div>
+          <div className='p-2 space-x-2 flex'>
+          <Link legacyBehavior href={`${process.env.NEXT_PUBLIC_HOST}/product/peacock`}><a>
+            <div title="CLICK TO VIEW" className='cursor-pointer hover:opacity-60'>
+              <img src="/images/peacock.jpg" className='w-40 h-40 rounded-md' alt="" />
+              <h1 className='font-semibold'>Peacock Handles</h1>
+            </div></a></Link>
+            <Link legacyBehavior href={`${process.env.NEXT_PUBLIC_HOST}/product/main611`}><a>
+            <div title="CLICK TO VIEW" className='cursor-pointer hover:opacity-60'>
+              <img src="/images/glass%20door%20611.jpg" className='w-40 h-40 rounded-md' alt="" />
+              <h1 className='font-semibold'>Antique Door Handle</h1>
+            </div></a></Link>
+          </div>
+          <div className='p-2 space-x-2 flex'>
+          <Link legacyBehavior href={`${process.env.NEXT_PUBLIC_HOST}/product/handle2123`}><a>
+            <div title="CLICK TO VIEW" className='cursor-pointer hover:opacity-60'>
+              <img src="/images/IMG-6308.jpg" className='w-40 h-40 rounded-md' alt="" />
+              <h1 className='font-semibold'>Main Handle 2123</h1>
+            </div></a></Link>
+            <Link legacyBehavior href={`${process.env.NEXT_PUBLIC_HOST}/product/handle2104x150`}><a>
+            <div title="CLICK TO VIEW" className='cursor-pointer hover:opacity-60'>
+              <img src="/images/2104.jpg" className='w-40 h-40 rounded-md' alt="" />
+              <h1 className='font-semibold'>Main Handle 2104</h1>
+            </div></a></Link>
+          </div>
+          
+          </div>
+        </div>
 
+
+  </div>
        <h1 className='text-2xl font-black p-3 mx-5 mt-5'>TOP BRANDS</h1>
   <div className='hidden md:flex my-3 p-5 shadow-2xl'>
 
@@ -130,6 +254,94 @@ export default function Home({products,products2,products3,products4,products5})
 
 </div>
 </div>
+{/* 
+<section>
+  <div className="flex">
+    <div className="w-0.5/12 flex items-center">
+      <div className='w-full text-right'>
+        <button className='p-3 rounded-full bg-white border border-gray-100 shadow-lg mr-2 ml-2'>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18" />
+</svg>
+
+        </button>
+      </div>
+    </div>
+    <div id='sliderContainer' className="w-full overflow-hidden">
+      <ul id='slider' className='flex w-full border border-red-500 justify-center'>
+        <li className='w-96 p-5'>
+          <div className='border rounded-lg p-5 h-full '>
+          <img className='h-52 w-full object-cover rounded-md' src="/images/peacock.jpg" alt="" />
+          <h2 className='mt-2 text-2xl font-bold text-gray-700'>Heading</h2>
+          <p className='mt-2 text-gray-500'>Lorem ipsum dolor sit.</p>
+          <button className='mt-4 px-4 py-2 rounded-md bg-red-400'>Shop Now</button>
+          </div>
+        </li>
+        <li className='w-96 p-5'>
+          <div className='border rounded-lg p-5 h-full '>
+          <img className='h-52 w-full object-cover rounded-md' src="/images/peacock.jpg" alt="" />
+          <h2 className='mt-2 text-2xl font-bold text-gray-700'>Heading</h2>
+          <p className='mt-2 text-gray-500'>Lorem ipsum dolor sit.</p>
+          <button className='mt-4 px-4 py-2 rounded-md bg-red-400'>Shop Now</button>
+          </div>
+        </li>
+        <li className='w-96 p-5'>
+          <div className='border rounded-lg p-5 h-full '>
+          <img className='h-52 w-full object-cover rounded-md' src="/images/peacock.jpg" alt="" />
+          <h2 className='mt-2 text-2xl font-bold text-gray-700'>Heading</h2>
+          <p className='mt-2 text-gray-500'>Lorem ipsum dolor sit.</p>
+          <button className='mt-4 px-4 py-2 rounded-md bg-red-400'>Shop Now</button>
+          </div>
+        </li>
+        <li className='w-96 p-5'>
+          <div className='border rounded-lg p-5 h-full '>
+          <img className='h-52 w-full object-cover rounded-md' src="/images/peacock.jpg" alt="" />
+          <h2 className='mt-2 text-2xl font-bold text-gray-700'>Heading</h2>
+          <p className='mt-2 text-gray-500'>Lorem ipsum dolor sit.</p>
+          <button className='mt-4 px-4 py-2 rounded-md bg-red-400'>Shop Now</button>
+          </div>
+        </li>
+        <li className='w-96 p-5'>
+          <div className='border rounded-lg p-5 h-full '>
+          <img className='h-52 w-full object-cover rounded-md' src="/images/peacock.jpg" alt="" />
+          <h2 className='mt-2 text-2xl font-bold text-gray-700'>Heading</h2>
+          <p className='mt-2 text-gray-500'>Lorem ipsum dolor sit.</p>
+          <button className='mt-4 px-4 py-2 rounded-md bg-red-400'>Shop Now</button>
+          </div>
+        </li>
+        <li className='w-96 p-5'>
+          <div className='border rounded-lg p-5 h-full '>
+          <img className='h-52 w-full object-cover rounded-md' src="/images/peacock.jpg" alt="" />
+          <h2 className='mt-2 text-2xl font-bold text-gray-700'>Heading</h2>
+          <p className='mt-2 text-gray-500'>Lorem ipsum dolor sit.</p>
+          <button className='mt-4 px-4 py-2 rounded-md bg-red-400'>Shop Now</button>
+          </div>
+        </li>
+        <li className='w-96 p-5'>
+          <div className='border rounded-lg p-5 h-full '>
+          <img className='h-52 w-full object-cover rounded-md' src="/images/peacock.jpg" alt="" />
+          <h2 className='mt-2 text-2xl font-bold text-gray-700'>Heading</h2>
+          <p className='mt-2 text-gray-500'>Lorem ipsum dolor sit.</p>
+          <button className='mt-4 px-4 py-2 rounded-md bg-red-400'>Shop Now</button>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+    <div className="w-0.5/12 flex items-center">
+      <div className='w-full'>
+        <button className='p-3 rounded-full bg-white border border-gray-100 shadow-lg ml-2 mr-2'>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+</svg>
+
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+<script src="./imain.js"></script> */}
+
       <Top_selling products={products} />
       <div className='my-4'>
       {/* {Object.values(banners).map(item => ( <img className="w-full 2xl:h-[40rem] h-[20rem]" src={item.static_banner1} alt="" />))} */}

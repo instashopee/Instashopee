@@ -90,3 +90,16 @@
 html,body{
   height:100%
 }
+
+
+/* multi colors */
+.r_to_b{
+
+  background: linear-gradient(
+    to right,
+    #B76E79 0%,
+    #B76E79 50%,
+    black 50%,
+    black 100%
+  );
+}

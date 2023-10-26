@@ -680,8 +680,9 @@ const edit = () => {
 
    <option value='zinc'>zinc</option>
    <option value='RoseGold'>RoseGold</option>
-   <option value='antique'>antique</option>
    <option value='black'>black</option>
+   <option value='RoseGold/Black'>RoseGold/Black</option>
+   <option value='antique'>antique</option>
    <option value='white'>white</option>
    <option value='gold'>gold</option>
    <option value='aluminium'>aluminium</option>

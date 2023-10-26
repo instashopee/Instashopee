@@ -65,7 +65,7 @@ export const navigation = {
             id: 'handles_knobs',
             name: 'Handles & Knobs',
             items: [
-              { name: 'Cabinet Handles',id:'tc', href: 'cabinet_handles' },
+              { name: 'Cabinet Handles',id:'tc', href: 'cabinet_handles?sub_category=cabinet%20handles' },
               { name: 'Main Door Handles',id:'tc', href: 'main_door_handles' },
               { name: 'Mortice Handles',id:'tc', href: 'mortice_handles' },
               { name: 'Glass Door Handles',id:'tc', href: 'glass_door_handles' },

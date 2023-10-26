@@ -243,8 +243,19 @@ if(!error){
                         onClick={() => {
                           refreshVariant(size, "RoseGold");
                         }}
-                        className={`border-2 rounded-full bg-[#B76E79] hover:bg-[#B76E79] w-6 h-6 focus:outline-none ${
+                        className={`border-2 rounded-full bg-[#B76E79] hover:bg-[#B76E79] w-6 h-6 focus:outline-none bg-blend-saturation ${
                           color === "RoseGold" ? "border-black" : "border-yellow-200"
+                        }`}
+                      ></button>
+                    )}
+                  {Object.keys(variants).includes("RoseGold/Black") &&
+                    Object.keys(variants["RoseGold/Black"]).includes(size) && (
+                      <button
+                        onClick={() => {
+                          refreshVariant(size, "RoseGold/Black");
+                        }}
+                        className={`border-2 rounded-full r_to_b w-6 h-6 focus:outline-none bg-blend-saturation ${
+                          color === "RoseGold/Black" ? "border-black" : "border-yellow-200"
                         }`}
                       ></button>
                     )}
