@@ -14,7 +14,7 @@ const Footer = () => {
         {/* <span className="ml-3 text-xl">Instashopee</span> */}
       </a>
       </Link>
-      <p className="mt-2 text-sm text-gray-500 px-5">Instashopee - A Hardware Ecommerce Store</p>
+      <p className="mt-2 text-sm text-gray-500 px-5">Instashopee</p>
     </div>
     <div className="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
       <div className=" w-full px-4">
@@ -30,15 +30,19 @@ const Footer = () => {
     
         </nav>
       </div>
-      {/* <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-        <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">ABOUT US</h2>
-        <nav className="list-none mb-10">
-          <li>
-            <a className="text-gray-600 hover:text-gray-800">About Instashopee</a>
-          </li>
-
-        </nav>
-      </div> */}
+      <div className="lg:w-1/4 md:w-1/2 w-full px-4">
+        <Link legacyBehavior href={`${process.env.NEXT_PUBLIC_HOST}/policy/about`}><h2 className="cursor-pointer title-font font-medium text-gray-900 tracking-widest text-sm mb-3">About Us</h2></Link>
+        <Link legacyBehavior href={`${process.env.NEXT_PUBLIC_HOST}/policy/contact_us`}><h2 className="cursor-pointer title-font font-medium text-gray-900 tracking-widest text-sm mb-3">Contact Us</h2></Link>
+        <Link legacyBehavior href={`${process.env.NEXT_PUBLIC_HOST}/policy/privacy_policy`}><h2 className="cursor-pointer title-font font-medium text-gray-900 tracking-widest text-sm mb-3">Privacy Policy</h2></Link>
+      </div>
+      <div className="lg:w-1/4 md:w-1/2 w-full px-4">
+        <Link legacyBehavior href={`${process.env.NEXT_PUBLIC_HOST}/policy/shipping_policy`}><h2 className="cursor-pointer title-font font-medium text-gray-900 tracking-widest text-sm mb-3">Shipping Policy</h2></Link>
+        <Link legacyBehavior href={`${process.env.NEXT_PUBLIC_HOST}/policy/return_refund_cancellation_policy`}><h2 className="cursor-pointer title-font font-medium text-gray-900 tracking-widest text-sm mb-3">Return, Refund, Cancellation Policy</h2></Link>
+        <Link legacyBehavior href={`${process.env.NEXT_PUBLIC_HOST}/policy/process_to_flow_purchase`}><h2 className="cursor-pointer title-font font-medium text-gray-900 tracking-widest text-sm mb-3">Process To Flow Purchase</h2></Link>
+      </div>
+      <div className="lg:w-1/4 md:w-1/2 w-full px-4">
+        <Link legacyBehavior href={`${process.env.NEXT_PUBLIC_HOST}/policy/payments_logistics_partner_info`}><h2 className="cursor-pointer title-font font-medium text-gray-900 tracking-widest text-sm mb-3">Payments Logistics Partner Info</h2></Link>
+        </div>
       {/* <div className="lg:w-1/4 md:w-1/2 w-full px-4">
         <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">OUR POLICY</h2>
         <nav className="list-none mb-10">
