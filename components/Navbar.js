@@ -65,7 +65,7 @@ const Navbar = ({Logout,user,cart,addToCart,removeFromCart,clearCart,subTotal,wi
   return (
     <div>
          
-    <div className="bg-white">
+    <div className="bg-white fixed z-50 w-full top-0">
       {/* Mobile menu */}
       <Transition.Root show={open} as={Fragment}>
         <Dialog as="div" className="relative z-40 lg:hidden" onClose={setOpen}>

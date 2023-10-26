@@ -54,7 +54,7 @@ export default function SliderIndicatorsControlsInside() {
    
     <>
       {/*<!-- Component: Slider with indicators & controls inside --> */}
-      <div className="relative w-full glide-03">
+      <div className="relative w-full glide-03 mt-24">
         {/* <img className="sm:hidden w-full h-[5rem]" src="/banners/static_banner.jpg" alt="" /> */}
         {/*    <!-- Slides --> */}
         <div className="overflow-hidden" data-glide-el="track">

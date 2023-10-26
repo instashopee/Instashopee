@@ -115,6 +115,8 @@ const Hinges = ({products}) => {
                   <form className="mt-4 border-t border-gray-200">
                     <h3 className="sr-only">Categories</h3>
                   
+                    <Link legacyBehavior href={`${process.env.NEXT_PUBLIC_HOST}/cabinet_handles?sub_category=cabinet%20handles`}>
+                      <a><button className='underline text-red-600 p-3'>Remove Filters</button></a></Link>
 
                     {filters.map((section) => (
                       <Disclosure as="div" key={section.id} className="border-t border-gray-200 px-4 py-6">
@@ -132,28 +134,21 @@ const Hinges = ({products}) => {
                                 </span>
                               </Disclosure.Button>
                             </h3>
-                            <Disclosure.Panel className="pt-6">
-                              <div className="space-y-6">
-                                {section.options.map((option, optionIdx) => (
-                                  <div key={option.value} className="flex items-center">
-                                    <input
-                                      id={`filter-mobile-${section.id}-${optionIdx}`}
-                                      name={`${section.id}[]`}
-                                      defaultValue={option.value}
-                                      type="checkbox"
-                                      defaultChecked={option.checked}
-                                      className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                                    />
-                                    <label
-                                      htmlFor={`filter-mobile-${section.id}-${optionIdx}`}
-                                      className="ml-3 min-w-0 flex-1 text-gray-500"
-                                    >
-                                      {option.label}
-                                    </label>
-                                  </div>
-                                ))}
+<Disclosure.Panel className="pt-6">
+                          <div className="space-y-6">
+                             {section.options.map((option, optionIdx) => (
+                             <div key={option.value} className="flex items-center">
+                              
+                                <Link legacyBehavior href={`cabinet_handles?${section.id}=${option.value}&sub_category=cabinet%20handles`}><a><label
+                                  htmlFor={`filter-${section.id}-${optionIdx}`}
+                                  className="ml-3 cursor-pointer hover:underline text-sm text-gray-600"
+                                >
+                                  {option.label}
+                                </label></a></Link>
                               </div>
-                            </Disclosure.Panel>
+                            ))}
+                          </div>
+                        </Disclosure.Panel>
                           </>
                         )}
                       </Disclosure>
