@@ -146,7 +146,7 @@ setNpassword('')
     }
   };
   return (
-    <div className="container mx-auto my-10">
+    <div className="container mx-auto my-10 min-h-screen">
             <ToastContainer
         position="top-left"
         autoClose={3000}

@@ -142,7 +142,7 @@ return <Link key={products[item].id} passHref={true} legacyBehavior href={`produ
 
 
 
-<section className='mt-12 mb-12 '>
+<section className='hidden md:block mt-12 mb-12 '>
   <h1 className='font-bold text-2xl text-black'>EXCITING DEALS JUST FOR YOU</h1>
   <div className="flex bg-slate-100">
 
