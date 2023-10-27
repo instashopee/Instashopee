@@ -639,9 +639,12 @@ required
              {/* {Object.values(products).map(item => (
 
     <option selected value={item.sub_category}>{item.sub_category}</option>))} */}
-    <option selected value="acp baskets">acp baskets</option>
+    {/* <option selected value="acp baskets">acp baskets</option> */}
+    {/* <option selected value="auto hinges">auto hinges</option> */}
+    {/* <option selected value="piano slides">piano slides</option> */}
+    {/* <option selected value="pulldown">pulldown</option> */}
+    {/* <option selected value="rolling shutters">rolling shutters</option> */}
     <option selected value="acrylic sheets">acrylic sheets</option>
-    <option selected value="auto hinges">auto hinges</option>
     <option selected value="butt hinges">butt hinges</option>
     <option selected value="cabinet handles">cabinet handles</option>
     <option selected value="chimney">chimney</option>
@@ -652,6 +655,7 @@ required
     <option selected value="frame profile">frame profile</option>
     <option selected value="frame with handle profile">frame with handle profile</option>
     <option selected value="glass door handles">glass door handles</option>
+    <option selected value="general hardware">general hardware</option>
     <option selected value="handle profile">handle profile</option>
     <option selected value="hydraulic hinges">hydraulic hinges</option>
     <option selected value="knobs">knobs</option>
@@ -665,9 +669,6 @@ required
     <option selected value="other appliances">other appliances</option>
     <option selected value="other slides">other slides</option>
     <option selected value="oven">oven</option>
-    <option selected value="piano slides">piano slides</option>
-    <option selected value="pulldown">pulldown</option>
-    <option selected value="rolling shutters">rolling shutters</option>
     <option selected value="shirt pullout">shirt pullout</option>
     <option selected value="shoe rack">shoe rack</option>
     <option selected value="sliding fittings">sliding fittings</option>
@@ -824,10 +825,18 @@ required
             <option selected value='Color'>Color</option>
             {/* {Object.values(colors).map(item => (
    <option selected value={item.color}>{item.color}</option>))} */}
+   <option value='RoseGold/Black'>RoseGold/Black</option>
+   <option value='Black/RoseGold'>Black/RoseGold</option>
+   <option value='Black/Gold'>Black/Gold</option>
+   <option value='Wood/RoseGold'>Wood/RoseGold</option>
+   <option value='Wood/Gold'>Wood/Gold</option>
+   <option value='White/RoseGold'>White/RoseGold</option>
+   <option value='White/Gold'>White/Gold</option>
+   <option value='Grey/Gold'>Grey/Gold</option>
+   <option value='Grey/RoseGold'>Grey/RoseGold</option>
    <option value='zinc'>zinc</option>
    <option value='RoseGold'>RoseGold</option>
    <option value='black'>black</option>
-   <option value='RoseGold/Black'>RoseGold/Black</option>
    <option value='antique'>antique</option>
    <option value='white'>white</option>
    <option value='gold'>gold</option>

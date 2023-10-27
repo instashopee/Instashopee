@@ -4,14 +4,9 @@ import React from 'react'
 import connectDb from "@/middleware/mongoose";
 import mongoose from 'mongoose';
 
-const Size_Color = ({products}) => {
+const Size_Color2 = ({products}) => {
   return (
-    <div>
-  <div className="flex flex-wrap -m-4 justify-center">
-        {Object.keys(products).length==0 && <p>Sorry, All Items Out Of Stock, New Products Comming Soon !!</p>}
-  {Object.keys(products).map((item)=>{
-// _id inside key of link
-return <Link key={products[item].id} passHref={true} legacyBehavior href={`product/${products[item].slug}`}>
+
 <div className="lg:w-[20rem] md:w-1/2 p-4 w-1/2 h-[26rem] cursor-pointer shadow-lg  productCard transition-all">
   <a className="block relative rounded overflow-hidden">
     <img alt="" className="w-40 h-40 m-auto block" src={products[item].img}/>
@@ -125,10 +120,8 @@ return <Link key={products[item].id} passHref={true} legacyBehavior href={`produ
 
   </div>
 </div>
-</Link>})}
-</div>
-    </div>
+
   )
 }
 
-export default Size_Color
+export default Size_Color2

@@ -103,3 +103,83 @@ html,body{
     black 100%
   );
 }
+.b_to_r{
+
+  background: linear-gradient(
+    to right,
+    black 0%,
+    black 50%,
+    #B76E79 50%,
+    #B76E79 100%
+  );
+}
+.b_to_g{
+
+  background: linear-gradient(
+    to right,
+    black 0%,
+    black 50%,
+    gold 50%,
+    gold 100%
+  );
+}
+.wo_to_r{
+
+  background: linear-gradient(
+    to right,
+    #966F33 0%,
+    #966F33 50%,
+    #B76E79 50%,
+    #B76E79 100%
+  );
+}
+.wo_to_g{
+
+  background: linear-gradient(
+    to right,
+    #966F33 0%,
+    #966F33 50%,
+    gold 50%,
+    gold 100%
+  );
+}
+.wh_to_r{
+
+  background: linear-gradient(
+    to right,
+    white 0%,
+    white 50%,
+    #B76E79 50%,
+    #B76E79 100%
+  );
+}
+.wh_to_g{
+
+  background: linear-gradient(
+    to right,
+    white 0%,
+    white 50%,
+    gold 50%,
+    gold 100%
+  );
+}
+.gr_to_r{
+
+  background: linear-gradient(
+    to right,
+    gray 0%,
+    gray 50%,
+    #B76E79 50%,
+    #B76E79 100%
+  );
+}
+.gr_to_g{
+
+  background: linear-gradient(
+    to right,
+    gray 0%,
+    gray 50%,
+    gold 50%,
+    gold 100%
+  );
+}

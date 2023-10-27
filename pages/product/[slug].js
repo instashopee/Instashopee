@@ -259,6 +259,94 @@ if(!error){
                         }`}
                       ></button>
                     )}
+                  {Object.keys(variants).includes("Black/RoseGold") &&
+                    Object.keys(variants["Black/RoseGold"]).includes(size) && (
+                      <button
+                        onClick={() => {
+                          refreshVariant(size, "Black/RoseGold");
+                        }}
+                        className={`border-2 rounded-full b_to_r w-6 h-6 focus:outline-none bg-blend-saturation ${
+                          color === "Black/RoseGold" ? "border-black" : "border-yellow-200"
+                        }`}
+                      ></button>
+                    )}
+                  {Object.keys(variants).includes("Black/Gold") &&
+                    Object.keys(variants["Black/Gold"]).includes(size) && (
+                      <button
+                        onClick={() => {
+                          refreshVariant(size, "Black/Gold");
+                        }}
+                        className={`border-2 rounded-full b_to_g w-6 h-6 focus:outline-none bg-blend-saturation ${
+                          color === "Black/Gold" ? "border-black" : "border-yellow-200"
+                        }`}
+                      ></button>
+                    )}
+                  {Object.keys(variants).includes("Wood/RoseGold") &&
+                    Object.keys(variants["Wood/RoseGold"]).includes(size) && (
+                      <button
+                        onClick={() => {
+                          refreshVariant(size, "Wood/RoseGold");
+                        }}
+                        className={`border-2 rounded-full wo_to_r w-6 h-6 focus:outline-none bg-blend-saturation ${
+                          color === "Wood/RoseGold" ? "border-black" : "border-yellow-200"
+                        }`}
+                      ></button>
+                    )}
+                  {Object.keys(variants).includes("Wood/Gold") &&
+                    Object.keys(variants["Wood/Gold"]).includes(size) && (
+                      <button
+                        onClick={() => {
+                          refreshVariant(size, "Wood/Gold");
+                        }}
+                        className={`border-2 rounded-full wo_to_g w-6 h-6 focus:outline-none bg-blend-saturation ${
+                          color === "Wood/Gold" ? "border-black" : "border-yellow-200"
+                        }`}
+                      ></button>
+                    )}
+                  {Object.keys(variants).includes("White/RoseGold") &&
+                    Object.keys(variants["White/RoseGold"]).includes(size) && (
+                      <button
+                        onClick={() => {
+                          refreshVariant(size, "White/RoseGold");
+                        }}
+                        className={`border-2 rounded-full wh_to_r w-6 h-6 focus:outline-none bg-blend-saturation ${
+                          color === "White/RoseGold" ? "border-black" : "border-yellow-200"
+                        }`}
+                      ></button>
+                    )}
+                  {Object.keys(variants).includes("White/Gold") &&
+                    Object.keys(variants["White/Gold"]).includes(size) && (
+                      <button
+                        onClick={() => {
+                          refreshVariant(size, "White/Gold");
+                        }}
+                        className={`border-2 rounded-full wh_to_g w-6 h-6 focus:outline-none bg-blend-saturation ${
+                          color === "White/Gold" ? "border-black" : "border-yellow-200"
+                        }`}
+                      ></button>
+                    )}
+                  {Object.keys(variants).includes("Grey/Gold") &&
+                    Object.keys(variants["Grey/Gold"]).includes(size) && (
+                      <button
+                        onClick={() => {
+                          refreshVariant(size, "Grey/Gold");
+                        }}
+                        className={`border-2 rounded-full gr_to_g w-6 h-6 focus:outline-none bg-blend-saturation ${
+                          color === "Grey/Gold" ? "border-black" : "border-yellow-200"
+                        }`}
+                      ></button>
+                    )}
+                  {Object.keys(variants).includes("Grey/RoseGold") &&
+                    Object.keys(variants["Grey/RoseGold"]).includes(size) && (
+                      <button
+                        onClick={() => {
+                          refreshVariant(size, "Grey/RoseGold");
+                        }}
+                        className={`border-2 rounded-full gr_to_r w-6 h-6 focus:outline-none bg-blend-saturation ${
+                          color === "Grey/RoseGold" ? "border-black" : "border-yellow-200"
+                        }`}
+                      ></button>
+                    )}
                   {Object.keys(variants).includes("antique") &&
                     Object.keys(variants["antique"]).includes(size) && (
                       <button
