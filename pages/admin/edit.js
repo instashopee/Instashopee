@@ -467,9 +467,7 @@ const edit = () => {
          </div>
       <div className="px-2 w-1/2 ">
            <div class=" mb-4">
-             <label for="sub_category" class="leading-7 text-sm text-gray-600">
-               Sub Category
-             </label>
+          
              {/* <select
              
              onChange={handleChange}
