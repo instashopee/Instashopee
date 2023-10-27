@@ -532,7 +532,7 @@ const edit = () => {
     <option selected value="mouldings">mouldings</option>
     <option selected value="ms drawer channel">ms drawer channel</option>
     <option selected value="other appliances">other appliances</option>
-    <option selected value="other slides">other slides</option>
+    <option selected value="other hinges">other hinges</option>
     <option selected value="oven">oven</option>
     <option selected value="shirt pullout">shirt pullout</option>
     <option selected value="shoe rack">shoe rack</option>
@@ -673,7 +673,7 @@ const edit = () => {
             <option selected value='Choose Color'>Choose Color</option>
 
             <option value='RoseGold/Black'>RoseGold/Black</option>
-   <option value='Black/RoseGold'>Black/RoseGold</option>
+   {/* <option value='Black/RoseGold'>Black/RoseGold</option> */}
    <option value='Black/Gold'>Black/Gold</option>
    <option value='Wood/RoseGold'>Wood/RoseGold</option>
    <option value='Wood/Gold'>Wood/Gold</option>

@@ -474,7 +474,7 @@ useEffect(() => {
     <h1 className="text-2xl text-center font-bold">ADD PRODUCTS</h1>
     <br />
     <div class="lg:w-1/2 md:w-1/2 bg-white flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0 float-right p-5 shadow-2xl mr-16">
-      <h2 class="text-gray-900 text-lg mb-1 font-medium title-font">Add Product Details</h2>
+      <h2 class="text-gray-900 text-lg mb-1 font-medium title-font">Add Product Details  (Make Sure To Change Unique Id in Every Entry)</h2>
       <div className="flex">
 
 <div className="px-2 w-1/2 ">
@@ -667,7 +667,7 @@ required
     <option selected value="mouldings">mouldings</option>
     <option selected value="ms drawer channel">ms drawer channel</option>
     <option selected value="other appliances">other appliances</option>
-    <option selected value="other slides">other slides</option>
+    <option selected value="other hinges">other hinges</option>
     <option selected value="oven">oven</option>
     <option selected value="shirt pullout">shirt pullout</option>
     <option selected value="shoe rack">shoe rack</option>
@@ -826,7 +826,7 @@ required
             {/* {Object.values(colors).map(item => (
    <option selected value={item.color}>{item.color}</option>))} */}
    <option value='RoseGold/Black'>RoseGold/Black</option>
-   <option value='Black/RoseGold'>Black/RoseGold</option>
+   {/* <option value='Black/RoseGold'>Black/RoseGold</option> */}
    <option value='Black/Gold'>Black/Gold</option>
    <option value='Wood/RoseGold'>Wood/RoseGold</option>
    <option value='Wood/Gold'>Wood/Gold</option>

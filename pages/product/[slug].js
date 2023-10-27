@@ -259,7 +259,7 @@ if(!error){
                         }`}
                       ></button>
                     )}
-                  {Object.keys(variants).includes("Black/RoseGold") &&
+                  {/* {Object.keys(variants).includes("Black/RoseGold") &&
                     Object.keys(variants["Black/RoseGold"]).includes(size) && (
                       <button
                         onClick={() => {
@@ -269,7 +269,7 @@ if(!error){
                           color === "Black/RoseGold" ? "border-black" : "border-yellow-200"
                         }`}
                       ></button>
-                    )}
+                    )} */}
                   {Object.keys(variants).includes("Black/Gold") &&
                     Object.keys(variants["Black/Gold"]).includes(size) && (
                       <button
