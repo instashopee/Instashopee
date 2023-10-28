@@ -1,77 +1,56 @@
-import React, { useState } from "react";
-import AliceCarousel from 'react-alice-carousel';
-import 'react-alice-carousel/lib/alice-carousel.css';
-
-const handleDragStart = (e) => e.preventDefault();
-
-
-import HomeSectionCard from "../HomeSectionCard/HomeSectionCard";
-import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
-import { Button } from "@mui/material";
+import React, { Component } from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+import Head from "next/head";
 
 
+export default class MultipleItems extends Component {
+  render() {
+    const settings = {
+      dots: true,
+      infinite: true,
+      speed: 100,
+      arrows:true,
+      slidesToShow: 4,
+      slidesToScroll: 3
+    };
+    return (
+      <div>
 
-const HomeSectionCarousel = ({data,sectionName}) => {
-  const[activeIndex,setActiveIndex]=useState(0);
-const responsive = {
-  0: { items: 1.25 },
-  720: { items: 3 },
-  1024: { items: 5.5 },
-};
-const slidePrev=()=>setActiveIndex(activeIndex-1)
-const slideNext=()=>setActiveIndex(activeIndex+1)
-const syncActiveIndex=({item})=>setActiveIndex(item)
-const items = data.slice(0,10).map((item) => <HomeSectionCard product={item}/>);
-return (
-  <div className="border">
-      <h2 className="text-2xl font-extrabold text-gray-800 p-5">{sectionName}</h2>
-    <div className="relative p-5">
-      <AliceCarousel
-        items={items}
-        disableButtonsControls
-        responsive={responsive}
-        disableDotsControls
-        onSlideChanged={syncActiveIndex}
-        activeIndex={activeIndex}
-      />
-      {activeIndex !==items.length-5 && <Button
-        variant="contained"
-        className="z-50 bg-white"
-        onClick={slideNext}
-        sx={{
-          position: "absolute",
-          top: "8rem",
-          right: "0rem",
-          transform: "translateX(50%) rotate(90deg)",
-          bgcolor: "white",
-        }}
-        aria-label="next"
-      >
-        <KeyboardArrowLeftIcon
-          sx={{ transform: "rotate(90deg)", color: "black" }}
-        />
-      </Button>}
-      {activeIndex !==0 && <Button
-          onClick={slidePrev}
-        variant="contained"
-        className="z-50 bg-white"
-        sx={{
-          position: "absolute",
-          top: "8rem",
-          left: "0rem",
-          transform: "translateX(-50%) rotate(-90deg)",
-          bgcolor: "white",
-        }}
-        aria-label="next"
-      >
-        <KeyboardArrowLeftIcon
-          sx={{ transform: "rotate(90deg)", color: "black" }}
-        />
-      </Button>}
-    </div>
-  </div>
-);
-};
+        <h2> Multiple items </h2>
+        <Slider {...settings}>
+          <div>
+            <h3>1</h3>
+          </div>
+          <div>
+            <h3>2</h3>
+          </div>
+          <div>
+            <h3>3</h3>
+          </div>
+          <div>
+            <h3>4</h3>
+          </div>
+          <div>
+            <h3>5</h3>
+          </div>
+          <div>
+            <h3>6</h3>
+          </div>
+          <div>
+            <h3>7</h3>
+          </div>
+          <div>
+            <h3>8</h3>
+          </div>
+          <div>
+            <h3>9</h3>
+          </div>
+        </Slider>
 
-export default HomeSectionCarousel;
-
+      </div>
+      
+    );
+  }
+}

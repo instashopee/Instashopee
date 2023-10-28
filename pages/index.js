@@ -7,12 +7,14 @@ import connectDb from "@/middleware/mongoose";
 import mongoose from 'mongoose';
 import { useEffect, useRef, useState } from 'react'
 import { useRouter } from 'next/router'
-
+import { hinges } from '@/Data/hinges';
 import Deals_of_day from './Deals_of_day';
 import Top_selling from './Top_selling';
 import Economy_Sales from './Economy_Sales';
 import Chimney_Appliances from './Chimney_Appliances';
 import Decorative_Items from './Decorative_Items';
+import HomeSectionCarousel from '@/components/HomeSectionCarousel/HomeSectionCarousel';
+import Responsive from '@/components/HomeSectionCarousel/HomeSectionCarousel';
 
 export default function Home({products,products2,products3,products4,products5}){
   const router=useRouter()
@@ -62,13 +64,16 @@ export default function Home({products,products2,products3,products4,products5})
        <div >
        <SliderIndicatorsControlsInside/>
        </div>
+       {/* <div className=''>
+        <Responsive/>
+       </div> */}
 <div className='flex flex-wrap mx-auto my-3 sm:space-x-12 space-y-3 md:space-y-0 justify-center'>
           
         <div className='p-2 rounded-md shadow-2xl bg-slate-50 '>
           <h1 className='font-bold'>Shop Latest Cabinet Handles</h1>
           <div>
           <div className='p-2 space-x-2 flex'>
-            <Link legacyBehavior href={`${process.env.NEXT_PUBLIC_HOST}/product/handle1078`}><a>
+            <Link legacyBehavior href={`${process.env.NEXT_PUBLIC_HOST}/product/handle1078x160`}><a>
               <div title="CLICK TO VIEW" className='cursor-pointer hover:opacity-60'>
               <img src="/images/IMG-6310.jpg" className='w-40 h-40 rounded-md' alt="" />
               <h1 className='font-semibold'>Cabinet Handle 1078</h1>

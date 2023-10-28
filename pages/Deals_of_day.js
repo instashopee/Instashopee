@@ -95,6 +95,7 @@ return <Link key={products2[item].id} passHref={true} legacyBehavior href={`prod
         {products2[item].size.includes("65") && (<span className="border border-gray-300 px-1 mx-1">65</span>)}
         {products2[item].size.includes("70") && (<span className="border border-gray-300 px-1 mx-1">70</span>)}
         {products2[item].size.includes("75") && (<span className="border border-gray-300 px-1 mx-1">75</span>)}
+        {products2[item].size.includes("80") && (<span className="border border-gray-300 px-1 mx-1">80</span>)}
         {products2[item].size.includes("86") && (<span className="border border-gray-300 px-1 mx-1">86</span>)}
         {products2[item].size.includes("90") && (<span className="border border-gray-300 px-1 mx-1">90</span>)}
         {products2[item].size.includes("96") && (<span className="border border-gray-300 px-1 mx-1">96</span>)}

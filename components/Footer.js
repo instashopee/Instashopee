@@ -25,7 +25,7 @@ const Footer = () => {
             <a className="text-gray-600 text-center hover:text-gray-800">Address: 326, Industrial Area, Patparganj, Delhi - 110092, India</a>
           </li>
           <li>
-            <a className="text-gray-600 text-center hover:text-gray-800">Phone: 9871525579,011 35004656   Email: varunjainhome@gmail.com, abhishekjain4548@gmail.com</a>
+            <a className="text-gray-600 text-center hover:text-gray-800">Phone: 9871525579,011 35004656   Customer Support Email: instashopeeonline@gmail.com, varunjainhome@gmail.com</a>
           </li>
     
         </nav>
@@ -74,14 +74,14 @@ const Footer = () => {
       </div>*/}
     </div> 
     <div className='flex flex-col items-center my-5'>
-      {<Link legacyBehavior href={'https://wa.me/qr/VM4H563QVXNOL1'} target="_blank"><a target="_blank"><div className="flex sticky cursor-pointer mr-4 float-right shadow-xl py-3 border rounded-3xl p-10 bg-green-500 ">
+      {<Link legacyBehavior href={'https://wa.me/qr/VM4H563QVXNOL1'} target="_blank"><a target="_blank"><div className="flex sticky cursor-pointer mr-4 mt-5 float-right shadow-xl py-3 border rounded-3xl p-10 bg-green-500 ">
         <Image className='px-1' width={30} height={20} src="/icon.png" alt="" />
         <h4 className='font-semibold'>Whataspp Us</h4>
       </div></a></Link>}
       <br />
       {<Link legacyBehavior href={'https://www.instagram.com/instashopeeonline/'} target="_blank"><a target="_blank"><div className="flex sticky cursor-pointer mr-4 float-right shadow-xl py-3 border rounded-3xl p-10 bg-pink-500 ">
         <Image className='px-1' width={30} height={20} src="/instagram.webp" alt="" />
-        <h4 className='font-semibold'>Instagram Us</h4>
+        <h4 className='font-semibold'>Instagram</h4>
       </div></a></Link>}
       <br />
       {/* {<Link legacyBehavior href={'https://facebook.com/'} target="_blank"><a target="_blank"><div className="flex sticky cursor-pointer mr-4 float-right shadow-xl py-3 border rounded-3xl p-10 bg-blue-500 ">

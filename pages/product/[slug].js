@@ -587,6 +587,9 @@ if(!error){
                       {color && Object.keys(variants[color]).includes('70') && (
                         <option value={'70'}>70</option>
                       )}
+                      {color && Object.keys(variants[color]).includes('80') && (
+                        <option value={'80'}>80</option>
+                      )}
                       {color && Object.keys(variants[color]).includes('86') && (
                         <option value={'86'}>86</option>
                       )}
