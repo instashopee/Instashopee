@@ -152,8 +152,8 @@ return <Link key={products[item].id} passHref={true} legacyBehavior href={`produ
   </Link>})}
 
 
-
-<section className='hidden md:block mt-12 mb-12 '>
+{/* 
+<section className='hidden md:block mt-12 mb-12 mx-auto'>
   <h1 className='font-bold text-2xl text-black'>EXCITING DEALS JUST FOR YOU</h1>
   <div className="flex bg-slate-100">
 
@@ -191,14 +191,14 @@ return <Link key={products[item].id} passHref={true} legacyBehavior href={`produ
           <Link legacyBehavior href={`${process.env.NEXT_PUBLIC_HOST}/cabinet_handles`}><button className='mt-4 px-4 py-2 rounded-md bg-red-400'>Shop Now</button></Link>
           </div>
         </li>
-        <li className='w-80 p-5'>
+       <li className='w-80 p-5'>
           <div className='border rounded-lg p-5 h-full '>
           <img className='h-52 w-full object-cover rounded-md' src="/images/rayplus%20blk.jpg" alt="" />
           <h2 className='mt-2 text-xl font-bold text-gray-700'>CHIMNEY'S</h2>
           <p className='mt-2 text-gray-500'>Get the best chimney for your home from our Website.</p>
           <Link legacyBehavior href={`${process.env.NEXT_PUBLIC_HOST}/chimney`}><button className='mt-4 px-4 py-2 rounded-md bg-red-400'>Shop Now</button></Link>
           </div>
-        </li>
+        </li> 
 
 
       </ul>
@@ -206,7 +206,7 @@ return <Link key={products[item].id} passHref={true} legacyBehavior href={`produ
  
   </div>
 </section >
-
+ */}
 
 
   {Object.keys(products).length==0 && <p>Sorry, All Items Out Of Stock, New Products Comming Soon !!</p>}

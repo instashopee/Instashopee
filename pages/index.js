@@ -62,7 +62,7 @@ export default function Home({products,products2,products3,products4,products5})
        <div >
        <SliderIndicatorsControlsInside/>
        </div>
-<div className='hidden md:flex mx-auto my-3 space-x-12 justify-center'>
+<div className='flex flex-wrap mx-auto my-3 sm:space-x-12 space-y-3 md:space-y-0 justify-center'>
           
         <div className='p-2 rounded-md shadow-2xl bg-slate-50 '>
           <h1 className='font-bold'>Shop Latest Cabinet Handles</h1>
