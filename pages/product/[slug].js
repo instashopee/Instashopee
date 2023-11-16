@@ -11,7 +11,8 @@ import Error from "next/error";
 import Product from "@/models/Product";
 import Head from "next/head";
 import ReactImageMagnify from "react-image-magnify";
-const Post = ({buyNow, addToCart,addTowishlist, product, variants,error,cart ,removeFromCart}) => {
+import Recommended from "@/components/Recommended";
+const Post = ({buyNow, addToCart,addTowishlist, product, variants,error,cart ,products5}) => {
   const router = useRouter();
   const { slug } = router.query;
   const [pin, setPin] = useState();
@@ -797,6 +798,9 @@ if(!error){
           </div>
        
       </section>
+      <div>
+      <Recommended products={products5}/>
+    </div>
     </>
   );
 };
@@ -826,11 +830,35 @@ export async function getServerSideProps(context) {
       colorSizeSlug[item.color][item.size] = { slug: item.slug };
     }
   }
+  let products5 = await Product.find({sub_category:product.sub_category})
+  let hinges2 = {}
+  for(let item of products5){
+    if(item.title in hinges2){
+        if(!hinges2[item.title].color.includes(item.color) && item.availableQty > 0){
+          hinges2[item.title].color.push(item.color)
+        }
+        if(!hinges2[item.title].size.includes(item.size) && item.availableQty > 0){
+          hinges2[item.title].size.push(item.size)
+        }
+    }
+
+    else{
+      hinges2[item.title] = JSON.parse(JSON.stringify(item))
+      if(item.availableQty >0){
+            hinges2[item.title].color = [item.color]
+            hinges2[item.title].size = [item.size]
+          }else{
+            hinges2[item.title].color = []
+            hinges2[item.title].size = []
+          }
+    }
+  }
   return {
     props: {
       error:error,
       product: JSON.parse(JSON.stringify(product)),
       variants: JSON.parse(JSON.stringify(colorSizeSlug)),
+      products5:JSON.parse(JSON.stringify(hinges2))
     }, //
   };
 }

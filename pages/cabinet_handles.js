@@ -9,8 +9,9 @@ import { XMarkIcon } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, FunnelIcon, MinusIcon, PlusIcon, Squares2X2Icon } from '@heroicons/react/20/solid'
 import Head from "next/head";
 import Size_Color from '@/components/Size_Color';
+import Recommended from '@/components/Recommended';
 
-const Hinges = ({products}) => {
+const Hinges = ({products,products5}) => {
   useEffect(() => {
     
   }, [])
@@ -316,6 +317,7 @@ let products = await Product.find(context.query)
           }
     }
   }
+
 
   return{
     props:{products:JSON.parse(JSON.stringify(hinges))},
