@@ -74,7 +74,8 @@ const Footer = () => {
       </div>*/}
     </div> 
     <div className='flex flex-col items-center my-5'>
-      {<Link legacyBehavior href={'https://wa.me/qr/VM4H563QVXNOL1'} target="_blank"><a target="_blank"><div className="flex sticky cursor-pointer mr-4 mt-5 float-right shadow-xl py-3 border rounded-3xl p-10 bg-green-500 ">
+    
+      {<Link legacyBehavior href={'https://wa.me/qr/VM4H563QVXNOL1'} target="_blank"><a target="_blank"><div className="flex sticky cursor-pointer mr-4 mt-5 float-right shadow-xl py-3 border rounded-3xl p-3 bg-green-500 ">
         <Image className='px-1' width={30} height={20} src="/icon.png" alt="" />
         <h4 className='font-semibold'>Whataspp Us</h4>
       </div></a></Link>}
