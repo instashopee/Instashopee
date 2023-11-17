@@ -3,7 +3,7 @@ import connectDb from "@/middleware/mongoose";
 import mongoose from 'mongoose';
 import { useEffect, useRef, useState } from 'react'
 import { useRouter } from 'next/router'
-export default function Recommended({products}){
+const Recommended=({products})=>{
   const router=useRouter()
   const [user, setUser] = useState({value:null})
     const [key, setKey] = useState()
@@ -15,7 +15,9 @@ export default function Recommended({products}){
     }
     setKey(Math.random())
   }, [router.query])
-
+  const refreshVariant = () => {
+    window.open('www.instashopeeonline.com')
+  };
    return(
      <div className='bg-white min-h-screen'>
 
@@ -165,3 +167,4 @@ return <Link key={products[item].id} passHref={true} legacyBehavior href={`/prod
    )
   }
 
+export default Recommended;
