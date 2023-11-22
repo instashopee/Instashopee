@@ -259,6 +259,28 @@ export default function Home({products,products2,products3,products4,products5})
 
 </div>
 </div>
+       <div className='hidden flex flex-wrap mx-auto my-3 sm:space-x-12 space-y-3 md:space-y-0 justify-center mt-4 mb-4'>
+        <div className='bg-white shadow-lg p-5'>
+          <div className='font-semibold text-xl'>Pick up where you left</div>
+          <img src="/images/peacock.jpg" className='w-72 h-72 rounded-md' alt="" />
+          <div></div>
+        </div>
+        <div className='bg-white shadow-lg p-5'>
+          <div className='font-semibold text-xl'>Continue Shopping for</div>
+          <img src="/images/peacock.jpg" className='w-72 h-72 rounded-md' alt="" />
+          <div></div>
+        </div>
+        <div className='bg-white shadow-lg p-5'>
+        <div className='font-semibold text-xl'>Shop now its for you</div>
+        <img src="/images/peacock.jpg" className='w-72 h-72 rounded-md' alt="" />
+          <div></div>
+          </div>
+        <div className='bg-white shadow-lg p-5'>
+        <div className='font-semibold text-xl'>Keep Shopping for</div>
+        <img src="/images/peacock.jpg" className='w-72 h-72 rounded-md' alt="" />
+          <div></div>
+        </div>
+       </div>
 
 
       <Top_selling products={products} />
