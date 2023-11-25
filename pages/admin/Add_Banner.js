@@ -228,15 +228,15 @@ const Add_Banner = () => {
    
       <div className="mx-80">
         <div className="border-2 mx-14 w-full mt-5 p-5">
-        <main class="container w-full">
+        <main className="container w-full">
        
-        <article aria-label="File Upload Modal" class="relative h-full flex flex-col bg-white shadow-xl rounded-md" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);" ondragleave="dragLeaveHandler(event);" ondragenter="dragEnterHandler(event);">
+        <article aria-label="File Upload Modal" className="relative h-full flex flex-col bg-white shadow-xl rounded-md" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);" ondragleave="dragLeaveHandler(event);" ondragenter="dragEnterHandler(event);">
         
      
 
   
-          <section class="p-2 w-full h-full flex flex-wrap">
-            <div class="border-dashed border-2 border-gray-400">
+          <section className="p-2 w-full h-full flex flex-wrap">
+            <div className="border-dashed border-2 border-gray-400">
              
        
              <input id="fileInput" type="file" name="myImage" onChange={uploadToClient} style={{margin:"1.5rem"}}/>
@@ -250,26 +250,26 @@ const Add_Banner = () => {
      
 
           <div className="flex m-2 ">
-            <img src={createObjectURL} style={{ height: "200px",width: "200px",margin:"auto"}} class="imgview"/>
-            <img src={createObjectURL2} style={{ height: "200px",width: "200px",margin:"auto" }}class="imgview" />
-            <img src={createObjectURL3} style={{ height: "200px",width: "200px",margin:"auto" }}class="imgview" />
-            <img src={createObjectURL4} style={{ height: "200px",width: "200px",margin:"auto" }}class="imgview" />
+            <img src={createObjectURL} style={{ height: "200px",width: "200px",margin:"auto"}} className="imgview"/>
+            <img src={createObjectURL2} style={{ height: "200px",width: "200px",margin:"auto" }}className="imgview" />
+            <img src={createObjectURL3} style={{ height: "200px",width: "200px",margin:"auto" }}className="imgview" />
+            <img src={createObjectURL4} style={{ height: "200px",width: "200px",margin:"auto" }}className="imgview" />
 
             </div>
-          <footer class="flex justify-end px-8 pb-8 pt-4 space-x-2">
+          <footer className="flex justify-end px-8 pb-8 pt-4 space-x-2">
           <p className="float-left mx-12 text-gray-500 text-center font-bold">!! Make sure image format is .mp4 and rename your 
           banner name as banner1, banner 2, banner3, banner4 ... !!</p>
         
-            <button onClick={refresh} id="submit" class="rounded-sm px-3 py-1 bg-gray-500 hover:bg-gray-400 text-white focus:shadow-outline focus:outline-none">
+            <button onClick={refresh} id="submit" className="rounded-sm px-3 py-1 bg-gray-500 hover:bg-gray-400 text-white focus:shadow-outline focus:outline-none">
               Refresh
             </button>
-            <button onClick={uploadToServer} id="submit" class="rounded-sm px-3 py-1 bg-blue-700 hover:bg-blue-500 text-white focus:shadow-outline focus:outline-none">
+            <button onClick={uploadToServer} id="submit" className="rounded-sm px-3 py-1 bg-blue-700 hover:bg-blue-500 text-white focus:shadow-outline focus:outline-none">
               Upload now
             </button>
-            <button onClick={handleUserSubmit} id="submit" class="rounded-sm px-3 py-1 bg-blue-700 hover:bg-blue-500 text-white focus:shadow-outline focus:outline-none">
+            <button onClick={handleUserSubmit} id="submit" className="rounded-sm px-3 py-1 bg-blue-700 hover:bg-blue-500 text-white focus:shadow-outline focus:outline-none">
               Change Banners
             </button>
-            {/* <button onClick={myFunction} id="cancel" class="ml-3 rounded-sm px-3 py-1 hover:bg-gray-300 focus:shadow-outline focus:outline-none">
+            {/* <button onClick={myFunction} id="cancel" className="ml-3 rounded-sm px-3 py-1 hover:bg-gray-300 focus:shadow-outline focus:outline-none">
               Cancel
             </button> */}
           </footer>
@@ -282,8 +282,8 @@ const Add_Banner = () => {
         
         <div className="hidden float-right">
          <div className="px-2 w-1/2">
-           <div class=" mb-4">
-             <label for="banner1" class="leading-7 text-sm text-gray-600">
+           <div className=" mb-4">
+             <label for="banner1" className="leading-7 text-sm text-gray-600">
              banner1
              </label>
              <input
@@ -294,13 +294,13 @@ const Add_Banner = () => {
                type="banner1"
                id="banner1"
                name="banner1"
-               class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+               className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
              />
            </div>
          </div>
          <div className="px-2 w-1/2">
-         <div class=" mb-4">
-             <label for="banner2" class="leading-7 text-sm text-gray-600">
+         <div className=" mb-4">
+             <label for="banner2" className="leading-7 text-sm text-gray-600">
              banner2
              </label>
              <input
@@ -311,13 +311,13 @@ const Add_Banner = () => {
                type="banner2"
                id="banner2"
                name="banner2"
-               class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+               className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
              />
            </div>
          </div>
          <div className="px-2 w-1/2">
-           <div class=" mb-4">
-             <label for="banner3" class="leading-7 text-sm text-gray-600">
+           <div className=" mb-4">
+             <label for="banner3" className="leading-7 text-sm text-gray-600">
              banner3
              </label>
              <input
@@ -328,13 +328,13 @@ const Add_Banner = () => {
                type="banner3"
                id="banner3"
                name="banner3"
-               class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+               className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
              />
            </div>
          </div>
          <div className="px-2 w-1/2">
-           <div class=" mb-4">
-             <label for="banner4" class="leading-7 text-sm text-gray-600">
+           <div className=" mb-4">
+             <label for="banner4" className="leading-7 text-sm text-gray-600">
              banner4
              </label>
              <input
@@ -345,7 +345,7 @@ const Add_Banner = () => {
                type="banner4"
                id="banner4"
                name="banner4"
-               class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+               className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
              />
            </div>
          </div>

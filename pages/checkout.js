@@ -213,19 +213,19 @@ const getpincode=async(pin)=>{
         {/* <h2 className="font-bold text-xl text-center">
           Review Your Shopping Cart
         </h2> */}
- <div class=" max-w-6xl justify-center px-6 md:flex md:space-x-6 xl:px-0">
+ <div className=" max-w-6xl justify-center px-6 md:flex md:space-x-6 xl:px-0">
     
-    <div class="rounded-lg md:w-2/3">
+    <div className="rounded-lg md:w-2/3">
     
    {Object.keys(cart).map((k)=>{return <div key={k}>
-      <div class="justify-between mb-6 rounded-lg bg-white p-6 shadow-md sm:flex sm:justify-start">
-        <img src={cart[k].img} alt="product-image" class="w-full h-72 rounded-lg sm:w-40 sm:h-40" />
-        <div class="sm:ml-4 sm:flex sm:w-full sm:justify-between">
-          <div class="mt-5 sm:mt-0">
+      <div className="justify-between mb-6 rounded-lg bg-white p-6 shadow-md sm:flex sm:justify-start">
+        <img src={cart[k].img} alt="product-image" className="w-full h-72 rounded-lg sm:w-40 sm:h-40" />
+        <div className="sm:ml-4 sm:flex sm:w-full sm:justify-between">
+          <div className="mt-5 sm:mt-0">
           <p className="font-semibold text-xl">{cart[k].name}</p>
           <p className="font-semibold text-xl">({cart[k].size}{cart[k].unit}/{cart[k].variant} color)</p>
-          <div class="flex flex-col mt-5">
-          <table class="table-fixed">
+          <div className="flex flex-col mt-5">
+          <table className="table-fixed">
 
   <tbody>
     <tr>
@@ -248,18 +248,18 @@ const getpincode=async(pin)=>{
     </div> */}
   </tbody>
 </table>
-              {/* <p class="">Price - Rs.{cart[k].price}/-</p>
+              {/* <p className="">Price - Rs.{cart[k].price}/-</p>
               
-              <p class="">Delivery Charge - Rs.{cart[k].del_ch}/-</p>
+              <p className="">Delivery Charge - Rs.{cart[k].del_ch}/-</p>
               <p className="">Amount - Rs.{cart[k].del_ch + (cart[k].price * cart[k].qty)}</p> */}
 
             </div>
           </div>
-          <div class="mt-4 flex justify-between sm:space-y-6 sm:mt-0 sm:block sm:space-x-6">
-            <div class="flex items-center border-gray-100">
-              <span onClick={()=>{removeFromCart(k,1,cart[k].price,cart[k].name,cart[k].size,cart[k].variant,cart[k].del_ch,cart[k].img,cart[k].unit,cart[k].mqty,cart[k].mqty2)}} class="cursor-pointer rounded-l bg-gray-100 py-1 px-3.5 duration-100 hover:bg-blue-500 hover:text-blue-50"> - </span>
+          <div className="mt-4 flex justify-between sm:space-y-6 sm:mt-0 sm:block sm:space-x-6">
+            <div className="flex items-center border-gray-100">
+              <span onClick={()=>{removeFromCart(k,1,cart[k].price,cart[k].name,cart[k].size,cart[k].variant,cart[k].del_ch,cart[k].img,cart[k].unit,cart[k].mqty,cart[k].mqty2)}} className="cursor-pointer rounded-l bg-gray-100 py-1 px-3.5 duration-100 hover:bg-blue-500 hover:text-blue-50"> - </span>
               <span className="mx-1">{cart[k].mqty}</span>
-              <span onClick={()=>{addToCart(k,1,cart[k].price,cart[k].name,cart[k].size,cart[k].variant,cart[k].del_ch,cart[k].img,cart[k].unit,cart[k].mqty,cart[k].mqty2)}} class="cursor-pointer rounded-r bg-gray-100 py-1 px-3 duration-100 hover:bg-blue-500 hover:text-blue-50"> + </span>
+              <span onClick={()=>{addToCart(k,1,cart[k].price,cart[k].name,cart[k].size,cart[k].variant,cart[k].del_ch,cart[k].img,cart[k].unit,cart[k].mqty,cart[k].mqty2)}} className="cursor-pointer rounded-r bg-gray-100 py-1 px-3 duration-100 hover:bg-blue-500 hover:text-blue-50"> + </span>
              
 
             </div>
@@ -269,14 +269,14 @@ const getpincode=async(pin)=>{
       </div>
       </div>})}
     </div>
-    <div class="mt-6 h-full rounded-lg border bg-white p-6 shadow-md md:mt-0 md:w-1/3">
-      {/* <div class="mb-2 flex justify-between">
-        <p class="text-gray-700">Subtotal</p>
-        <p class="text-gray-700">$129.99</p>
+    <div className="mt-6 h-full rounded-lg border bg-white p-6 shadow-md md:mt-0 md:w-1/3">
+      {/* <div className="mb-2 flex justify-between">
+        <p className="text-gray-700">Subtotal</p>
+        <p className="text-gray-700">$129.99</p>
       </div>
-      <div class="flex justify-between">
-        <p class="text-gray-700">Delivery Charge</p>
-        <p class="text-gray-700">{cart[del_ch]}</p>
+      <div className="flex justify-between">
+        <p className="text-gray-700">Delivery Charge</p>
+        <p className="text-gray-700">{cart[del_ch]}</p>
       </div> */}
       {Object.keys(cart).length==0&& <div className="font-semibold text-center text-2xl">YOUR CART IS EMPTY !!</div>}
    
@@ -293,7 +293,7 @@ const getpincode=async(pin)=>{
     type="promocode"
     id="promocode"
     name="promocode"
-    class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+    className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
   />
 
 </div>
@@ -302,7 +302,7 @@ const getpincode=async(pin)=>{
 {promocode=='INSTA100'?<span className="font-bold">Subtotal: ₹{subTotal = (subTotal - 100)}</span>:<><span className="text-red-400">No Promocode Entered OR Not Available</span><br/><span className="font-bold">Subtotal: ₹{subTotal}</span></>}
 
 </div>
-<hr class="my-4" />
+<hr className="my-4" />
     
    
   
@@ -319,7 +319,7 @@ const getpincode=async(pin)=>{
               <li key={k}>
                 <div className="item flex my-5 rounded-lg shadow-lg p-5 w-full h-full">
                   <div className="font-semibold flex">
-                  <img class="mx-4 h-32 w-32" src={cart[k].img} alt="Product Image"/>
+                  <img className="mx-4 h-32 w-32" src={cart[k].img} alt="Product Image"/>
                     </div>
 
                   <div className="flex flex-col font-semibold text-lg">
@@ -377,8 +377,8 @@ const getpincode=async(pin)=>{
       <h2 className="font-semibold text-xl">2. Delivery Details</h2>
       <div className="mx-auto flex my-2">
         <div className="px-2 w-1/2">
-          <div class=" mb-4">
-            <label for="name" class="leading-7 text-sm text-gray-600">
+          <div className=" mb-4">
+            <label for="name" className="leading-7 text-sm text-gray-600">
               Name
             </label>
             <input
@@ -387,13 +387,13 @@ const getpincode=async(pin)=>{
               type="name"
               id="name"
               name="name"
-              class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+              className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
             />
           </div>
         </div>
         <div className="px-2 w-1/2">
-          <div class=" mb-4">
-            <label for="email" class="leading-7 text-sm text-gray-600">
+          <div className=" mb-4">
+            <label for="email" className="leading-7 text-sm text-gray-600">
               Email
             </label>
             {user && user.token ? (
@@ -402,7 +402,7 @@ const getpincode=async(pin)=>{
                 type="email"
                 id="email"
                 name="email"
-                class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 readOnly
               />
             ) : (
@@ -412,15 +412,15 @@ const getpincode=async(pin)=>{
                 type="email"
                 id="email"
                 name="email"
-                class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
               />
             )}
           </div>
         </div>
       </div>
       <div className="px-2 w-full">
-        <div class=" mb-4">
-          <label for="address" class="leading-7 text-sm text-gray-600">
+        <div className=" mb-4">
+          <label for="address" className="leading-7 text-sm text-gray-600">
             Address
           </label>
           <textarea
@@ -430,14 +430,14 @@ const getpincode=async(pin)=>{
             rows="2"
             id="address"
             name="address"
-            class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+            className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
           ></textarea>
         </div>
       </div>
       <div className="mx-auto flex my-2">
         <div className="px-2 w-1/2">
-          <div class=" mb-4">
-            <label for="phone" class="leading-7 text-sm text-gray-600">
+          <div className=" mb-4">
+            <label for="phone" className="leading-7 text-sm text-gray-600">
               Phone
             </label>
             <input
@@ -447,13 +447,13 @@ const getpincode=async(pin)=>{
               type="phone"
               id="phone"
               name="phone"
-              class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+              className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
             />
           </div>
         </div>
         <div className="px-2 w-1/2">
-          <div class=" mb-4">
-            <label for="pincode" class="leading-7 text-sm text-gray-600">
+          <div className=" mb-4">
+            <label for="pincode" className="leading-7 text-sm text-gray-600">
               Pincode
             </label>
             <input
@@ -463,15 +463,15 @@ const getpincode=async(pin)=>{
               type="pincode"
               id="pincode"
               name="pincode"
-              class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+              className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
             />
           </div>
         </div>
       </div>
       <div className="mx-auto flex my-2">
         <div className="px-2 w-1/2">
-          <div class=" mb-4">
-            <label for="city" class="leading-7 text-sm text-gray-600">
+          <div className=" mb-4">
+            <label for="city" className="leading-7 text-sm text-gray-600">
               District
             </label>
             <input
@@ -480,13 +480,13 @@ const getpincode=async(pin)=>{
               type="text"
               id="city"
               name="city"
-              class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+              className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
             />
           </div>
         </div>
         <div className="px-2 w-1/2">
-          <div class=" mb-4">
-            <label for="state" class="leading-7 text-sm text-gray-600">
+          <div className=" mb-4">
+            <label for="state" className="leading-7 text-sm text-gray-600">
               State
             </label>
             <input
@@ -495,7 +495,7 @@ const getpincode=async(pin)=>{
               type="text"
               id="state"
               name="state"
-              class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+              className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
             />
           </div>
         </div>

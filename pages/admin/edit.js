@@ -320,12 +320,12 @@ const edit = () => {
         <p className='text-2xl mt-2 text-black font-bold'>EDIT PRODUCTS</p>
       </div>
       <br />
-    <div class="lg:w-1/2 md:w-1/2 bg-white flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0 float-right p-5 shadow-2xl mr-16">
+    <div className="lg:w-1/2 md:w-1/2 bg-white flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0 float-right p-5 shadow-2xl mr-16">
              <div className="flex">
 
              <div className="px-2 w-1/2 ">
-           <div class=" mb-4">
-             <label for="_id" class="leading-7 text-sm text-gray-600">
+           <div className=" mb-4">
+             <label for="_id" className="leading-7 text-sm text-gray-600">
                _id
              </label>
              <select
@@ -334,7 +334,7 @@ const edit = () => {
               type="_id"
               id="_id"
               name="_id"
-              class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+              className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
               onChange={handleChange}>
                 
              {Object.values(products).map(item => (
@@ -349,7 +349,7 @@ const edit = () => {
                type="_id"
                id="_id"
                name="_id"
-               class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+               className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
              /> */}
            </div>
          </div>
@@ -363,8 +363,8 @@ const edit = () => {
          </div> </div>
       <div className="flex">
       <div className="px-2 w-1/2 ">
-           <div class=" mb-4">
-             <label for="title" class="leading-7 text-sm text-gray-600">
+           <div className=" mb-4">
+             <label for="title" className="leading-7 text-sm text-gray-600">
                Title
              </label>
              <input
@@ -373,13 +373,13 @@ const edit = () => {
                type="name"
                id="title"
                name="title"
-               class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+               className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
              />
            </div>
          </div>
       <div className="px-2 w-1/2">
-           <div class=" mb-4">
-             <label for="slug" class="leading-7 text-sm text-gray-600">
+           <div className=" mb-4">
+             <label for="slug" className="leading-7 text-sm text-gray-600">
                Unique Id
              </label>
              <input
@@ -389,13 +389,13 @@ const edit = () => {
                type="slug"
                id="slug"
                name="slug"
-               class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+               className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
              />
            </div>
          </div>
       <div className="px-2 w-1/2">
-           <div class=" mb-4">
-             <label for="type" class="leading-7 text-sm text-gray-600">
+           <div className=" mb-4">
+             <label for="type" className="leading-7 text-sm text-gray-600">
              Type
              </label>
              <select
@@ -404,7 +404,7 @@ const edit = () => {
              type="type"
              id="type"
              name="type"
-             class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+             className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
              onChange={handleChange}>
                
             {/* {Object.values(products).map(item => ( */}
@@ -425,15 +425,15 @@ const edit = () => {
                type="type"
                id="type"
                name="type"
-               class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+               className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
              /> */}
            </div>
          </div>
          </div>
       <div className="flex">
          <div className="px-2 w-full">
-         <div class=" mb-4">
-           <label for="desc" class="leading-7 text-sm text-gray-600">
+         <div className=" mb-4">
+           <label for="desc" className="leading-7 text-sm text-gray-600">
              Dscription
            </label>
            <textarea
@@ -443,7 +443,7 @@ const edit = () => {
              rows="1"
              id="desc"
              name="desc"
-             class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+             className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
            ></textarea>
          </div>
        </div>
@@ -451,8 +451,8 @@ const edit = () => {
          </div>
       <div className="flex">
       <div className="px-2 w-1/2 ">
-           <div class=" mb-4">
-             <label for="category" class="leading-7 text-sm text-gray-600">
+           <div className=" mb-4">
+             <label for="category" className="leading-7 text-sm text-gray-600">
                Category
              </label>
              <input
@@ -461,12 +461,12 @@ const edit = () => {
                type="category"
                id="category"
                name="category"
-               class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+               className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
              />
            </div>
          </div>
       <div className="px-2 w-1/2 ">
-           <div class=" mb-4">
+           <div className=" mb-4">
           
              {/* <select
              
@@ -475,7 +475,7 @@ const edit = () => {
              type="sub_category"
              id="sub_category"
              name="sub_category"
-              class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+              className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
               >
                                             <option selected value='Choose Sub Category'>Choose Sub Category</option>
 
@@ -489,10 +489,10 @@ const edit = () => {
                type="sub_category"
                id="sub_category"
                name="sub_category"
-               class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+               className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
              /> */}
-             <div class=" mb-4">
-             <label for="sub_category" class="leading-7 text-sm text-gray-600">
+             <div className=" mb-4">
+             <label for="sub_category" className="leading-7 text-sm text-gray-600">
                Sub Category
              </label>
              <select
@@ -502,7 +502,7 @@ const edit = () => {
              type="sub_category"
              id="sub_category"
              name="sub_category"
-              class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+              className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
               >
                             <option selected value='Choose Sub Category'>Choose Sub Category</option>
 
@@ -550,7 +550,7 @@ const edit = () => {
                type="sub_category"
                id="sub_category"
                name="sub_category"
-               class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+               className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
              /> */}
            </div>
            </div>
@@ -561,8 +561,8 @@ const edit = () => {
       <div className="mt-8 w-8 cursor-pointer">
       </div>
 <div className="px-2 w-1/2">
-           <div class=" mb-4">
-             <label for="size" class="leading-7 text-sm text-gray-600">
+           <div className=" mb-4">
+             <label for="size" className="leading-7 text-sm text-gray-600">
                Size
              </label>
              <input
@@ -571,13 +571,13 @@ const edit = () => {
                type="size"
                id="size"
                name="size"
-               class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+               className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
              />
            </div>
          </div>
 <div className="px-2 w-1/2">
-           <div class=" mb-4">
-             <label for="mqty" class="leading-7 text-sm text-gray-600">
+           <div className=" mb-4">
+             <label for="mqty" className="leading-7 text-sm text-gray-600">
              Min Qty
              </label>
              <input
@@ -587,13 +587,13 @@ const edit = () => {
                placeholder="Min Qty"
                id="mqty"
                name="mqty"
-               class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+               className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
              />
            </div>
          </div>
          <div className="px-2 w-1/2 hidden">
-           <div class=" mb-4">
-             <label for="mqty2" class="leading-7 text-sm text-gray-600">
+           <div className=" mb-4">
+             <label for="mqty2" className="leading-7 text-sm text-gray-600">
              Min Qty2
              </label>
              <input
@@ -603,13 +603,13 @@ const edit = () => {
                placeholder="Min Qty"
                id="mqty2"
                name="mqty2"
-               class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+               className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
              />
            </div>
          </div>
 <div className="px-2 w-1/2">
-           <div class=" mb-4">
-             <label for="unit" class="leading-7 text-sm text-gray-600">
+           <div className=" mb-4">
+             <label for="unit" className="leading-7 text-sm text-gray-600">
                Unit
              </label>
              <input
@@ -618,14 +618,14 @@ const edit = () => {
                type="unit"
                id="unit"
                name="unit"
-               class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+               className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
              />
            </div>
          </div>
       <div className="px-2 w-1/2">
-           <div class=" mb-4">
+           <div className=" mb-4">
 
-             <label for="mrp" class="leading-7 text-sm text-gray-600">
+             <label for="mrp" className="leading-7 text-sm text-gray-600">
                Mrp
              </label>
              <input
@@ -634,13 +634,13 @@ const edit = () => {
                type="mrp"
                id="mrp"
                name="mrp"
-               class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+               className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
              />
            </div>
          </div>
        <div className="px-2 w-1/2">
-           <div class=" mb-4">
-             <label for="price" class="leading-7 text-sm text-gray-600">
+           <div className=" mb-4">
+             <label for="price" className="leading-7 text-sm text-gray-600">
                Price
              </label>
              <input
@@ -649,14 +649,14 @@ const edit = () => {
                type="price"
                id="price"
                name="price"
-               class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+               className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
             />
           </div>
         </div>
         
          <div className="px-2 w-1/2">
-           <div class=" mb-4">
-             <label for="color" class="leading-7 text-sm text-gray-600">
+           <div className=" mb-4">
+             <label for="color" className="leading-7 text-sm text-gray-600">
                Color
              </label>
              <select
@@ -666,7 +666,7 @@ const edit = () => {
              type="colors"
              id="color"
              name="color"
-             class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+             className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
              onChange={handleChange}>
                
             {/* {Object.values(products).map(item => ( */}
@@ -702,14 +702,14 @@ const edit = () => {
                type="colors"
                id="color"
                name="color"
-               class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+               className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
              /> */}
            </div>
          </div>
        
          <div className="px-2 w-1/2">
-           <div class=" mb-4">
-             <label for="availableQty" class="leading-7 text-sm text-gray-600">
+           <div className=" mb-4">
+             <label for="availableQty" className="leading-7 text-sm text-gray-600">
                Qty
              </label>
              <input
@@ -718,15 +718,15 @@ const edit = () => {
                type="availableQty"
                id="availableQty"
                name="availableQty"
-               class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+               className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
              />
            </div>
          </div>
          </div>
          <div className="hidden">
          <div className="px-2 w-1/2">
-           <div class=" mb-4">
-             <label for="img" class="leading-7 text-sm text-gray-600">
+           <div className=" mb-4">
+             <label for="img" className="leading-7 text-sm text-gray-600">
                Main Image
              </label>
              <input
@@ -737,13 +737,13 @@ const edit = () => {
                type="img"
                id="img"
                name="img"
-               class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+               className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
              />
            </div>
          </div>
          <div className="px-2 w-1/2">
-         <div class=" mb-4">
-             <label for="img1" class="leading-7 text-sm text-gray-600">
+         <div className=" mb-4">
+             <label for="img1" className="leading-7 text-sm text-gray-600">
                Image1
              </label>
              <input
@@ -754,13 +754,13 @@ const edit = () => {
                type="img"
                id="img1"
                name="img1"
-               class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+               className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
              />
            </div>
          </div>
          <div className="px-2 w-1/2">
-           <div class=" mb-4">
-             <label for="img2" class="leading-7 text-sm text-gray-600">
+           <div className=" mb-4">
+             <label for="img2" className="leading-7 text-sm text-gray-600">
                Image2
              </label>
              <input
@@ -771,7 +771,7 @@ const edit = () => {
                type="img"
                id="img2"
                name="img2"
-               class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+               className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
              />
            </div>
          </div>
@@ -779,8 +779,8 @@ const edit = () => {
          </div>
 <div className="flex">
          <div className="px-2 w-1/2">
-         <div class="mb-4">
-           <label for="edt" class="leading-7 text-sm text-gray-600">
+         <div className="mb-4">
+           <label for="edt" className="leading-7 text-sm text-gray-600">
              Estimated Delivery Time For This Product
            </label>
            <input
@@ -788,13 +788,13 @@ const edit = () => {
              value={edt}
              id="edt"
              name="edt"
-             class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+             className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
            ></input>
          </div>
        </div>
          <div className="px-2 w-1/2">
-         <div class="mb-4">
-           <label for="del_ch" class="leading-7 text-sm text-gray-600">
+         <div className="mb-4">
+           <label for="del_ch" className="leading-7 text-sm text-gray-600">
              Delivery Charge For This Product
            </label>
            <input
@@ -802,13 +802,13 @@ const edit = () => {
              value={del_ch}
              id="del_ch"
              name="del_ch"
-             class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+             className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
            ></input>
          </div>
        </div>
     
          </div>
-      <button onClick={handleUserSubmit} class="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">FINAL SUBMIT</button>
+      <button onClick={handleUserSubmit} className="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">FINAL SUBMIT</button>
       
     </div>
 
@@ -817,15 +817,15 @@ const edit = () => {
    
       <div className="ml-16">
         <div className="border-2 mx-14 w-[25rem] mt-5">
-        <main class="container w-[25rem]">
+        <main className="container w-[25rem]">
        
-        <article aria-label="File Upload Modal" class="relative h-full flex flex-col bg-white shadow-xl rounded-md" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);" ondragleave="dragLeaveHandler(event);" ondragenter="dragEnterHandler(event);">
+        <article aria-label="File Upload Modal" className="relative h-full flex flex-col bg-white shadow-xl rounded-md" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);" ondragleave="dragLeaveHandler(event);" ondragenter="dragEnterHandler(event);">
         
      
 
   
-          <section class="p-2 w-full h-full flex flex-wrap">
-            <header class="border-dashed border-2 border-gray-400 ">
+          <section className="p-2 w-full h-full flex flex-wrap">
+            <header className="border-dashed border-2 border-gray-400 ">
              
        
               <input id="fileInput" type="file" name="myImage" onChange={uploadToClient} style={{margin:"1.5rem"}}/>
@@ -838,19 +838,19 @@ const edit = () => {
      
 
           <div className="flex m-2 ">
-            <img src={createObjectURL} style={{ height: "100px",width: "100px",margin:"auto"}} class="imgview" id="image"/>
-            <img src={createObjectURL2} style={{ height: "100px",width: "100px",margin:"auto" }}class="imgview" />
-            <img src={createObjectURL3} style={{ height: "100px",width: "100px",margin:"auto" }}class="imgview" />
+            <img src={createObjectURL} style={{ height: "100px",width: "100px",margin:"auto"}} className="imgview" id="image"/>
+            <img src={createObjectURL2} style={{ height: "100px",width: "100px",margin:"auto" }}className="imgview" />
+            <img src={createObjectURL3} style={{ height: "100px",width: "100px",margin:"auto" }}className="imgview" />
 
             </div>
-          <footer class="flex justify-end px-8 pb-8 pt-4 space-x-2">
-            <button onClick={refresh} id="submit" class="rounded-sm px-3 py-1 bg-gray-500 hover:bg-gray-400 text-white focus:shadow-outline focus:outline-none">
+          <footer className="flex justify-end px-8 pb-8 pt-4 space-x-2">
+            <button onClick={refresh} id="submit" className="rounded-sm px-3 py-1 bg-gray-500 hover:bg-gray-400 text-white focus:shadow-outline focus:outline-none">
               Refresh
             </button>
-            {/* <button onClick={uploadToServer} id="submit" class="rounded-sm px-3 py-1 bg-blue-700 hover:bg-blue-500 text-white focus:shadow-outline focus:outline-none">
+            {/* <button onClick={uploadToServer} id="submit" className="rounded-sm px-3 py-1 bg-blue-700 hover:bg-blue-500 text-white focus:shadow-outline focus:outline-none">
               Upload now
             </button> */}
-            {/* <button onClick={myFunction} id="cancel" class="ml-3 rounded-sm px-3 py-1 hover:bg-gray-300 focus:shadow-outline focus:outline-none">
+            {/* <button onClick={myFunction} id="cancel" className="ml-3 rounded-sm px-3 py-1 hover:bg-gray-300 focus:shadow-outline focus:outline-none">
               Cancel
             </button> */}
           </footer>

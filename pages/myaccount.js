@@ -170,8 +170,8 @@ setNpassword('')
       <h2 className="font-semibold text-xl">Update Your Account Details</h2>
       <div className="mx-auto flex my-2">
         <div className="px-2 w-1/2">
-          <div class=" mb-4">
-            <label for="name" class="leading-7 text-sm text-gray-600">
+          <div className=" mb-4">
+            <label for="name" className="leading-7 text-sm text-gray-600">
               Name
             </label>
             <input
@@ -180,13 +180,13 @@ setNpassword('')
               type="name"
               id="name"
               name="name"
-              class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+              className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
             />
           </div>
         </div>
         <div className="px-2 w-1/2">
-          <div class=" mb-4">
-            <label for="email" class="leading-7 text-sm text-gray-600">
+          <div className=" mb-4">
+            <label for="email" className="leading-7 text-sm text-gray-600">
               Email (Cannot Be Updated)
             </label>
             {user && user.token ? (
@@ -195,7 +195,7 @@ setNpassword('')
                 type="email"
                 id="email"
                 name="email"
-                class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 readOnly
               />
             ) : (
@@ -205,15 +205,15 @@ setNpassword('')
                 type="email"
                 id="email"
                 name="email"
-                class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
               />
             )}
           </div>
         </div>
       </div>
       <div className="px-2 w-full">
-        <div class=" mb-4">
-          <label for="address" class="leading-7 text-sm text-gray-600">
+        <div className=" mb-4">
+          <label for="address" className="leading-7 text-sm text-gray-600">
             Address
           </label>
           <textarea
@@ -223,14 +223,14 @@ setNpassword('')
             rows="2"
             id="address"
             name="address"
-            class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+            className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
           ></textarea>
         </div>
       </div>
       <div className="mx-auto flex my-2">
         <div className="px-2 w-1/2">
-          <div class=" mb-4">
-            <label for="phone" class="leading-7 text-sm text-gray-600">
+          <div className=" mb-4">
+            <label for="phone" className="leading-7 text-sm text-gray-600">
               Phone
             </label>
             <input
@@ -240,13 +240,13 @@ setNpassword('')
               type="phone"
               id="phone"
               name="phone"
-              class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+              className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
             />
           </div>
         </div>
         <div className="px-2 w-1/2">
-          <div class=" mb-4">
-            <label for="pincode" class="leading-7 text-sm text-gray-600">
+          <div className=" mb-4">
+            <label for="pincode" className="leading-7 text-sm text-gray-600">
               Pincode
             </label>
             <input
@@ -256,7 +256,7 @@ setNpassword('')
               type="pincode"
               id="pincode"
               name="pincode"
-              class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+              className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
             />
         </div>
       </div>
@@ -269,8 +269,8 @@ setNpassword('')
       <h2 className="font-semibold text-xl">Update Password</h2>
       <div className="mx-auto flex my-2">
         <div className="px-2 w-1/2">
-          <div class=" mb-4">
-            <label for="password" class="leading-7 text-sm text-gray-600">
+          <div className=" mb-4">
+            <label for="password" className="leading-7 text-sm text-gray-600">
             Old Password
             </label>
             <input
@@ -279,13 +279,13 @@ setNpassword('')
               type="password"
               id="password"
               name="password"
-              class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+              className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
             />
           </div>
         </div>
         <div className="px-2 w-1/2">
-          <div class=" mb-4">
-          <label for="npassword" class="leading-7 text-sm text-gray-600">
+          <div className=" mb-4">
+          <label for="npassword" className="leading-7 text-sm text-gray-600">
             New Password
             </label>
             <input
@@ -294,16 +294,16 @@ setNpassword('')
               type="password"
               id="npassword"
               name="npassword"
-              class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+              className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
             />
 
             
           </div>
         </div>
         <div className="px-2 w-1/2">
-          <div class=" mb-4">
+          <div className=" mb-4">
 
-          <label for="cpassword" class="leading-7 text-sm text-gray-600">
+          <label for="cpassword" className="leading-7 text-sm text-gray-600">
             Confirm New Password
             </label>
             <input
@@ -312,7 +312,7 @@ setNpassword('')
               type="password"
               id="cpassword"
               name="cpassword"
-              class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+              className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
             />
           </div>
         </div>

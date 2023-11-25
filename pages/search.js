@@ -43,12 +43,12 @@ const search = ({products}) => {
         />
       </Head>
 
-    {/* <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
-    <div class="relative">
-        <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+    {/* <label for="default-search" className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
+    <div className="relative">
+        <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
          
         </div>
-        <div class="mx-24 mb-4">
+        <div className="mx-24 mb-4">
           
              <input
                onChange={handleChanged}
@@ -57,10 +57,10 @@ const search = ({products}) => {
                placeholder='YOU CAN SEARCH HERE ALSO...'
                id="search"
                name="search"
-               class="w-full mt-6 bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+               className="w-full mt-6 bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
              />
            </div>        
-       {<button  type="submit" onClick={submit} class="text-black absolute right-2.5 bottom-1 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>}
+       {<button  type="submit" onClick={submit} className="text-black absolute right-2.5 bottom-1 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>}
     </div> */}
 
 
@@ -76,7 +76,7 @@ const search = ({products}) => {
 // _id inside key of link
 return <Link key={products[item].id} passHref={true} legacyBehavior href={`product/${products[item].slug}`}>
 <div className="lg:w-[20rem] md:w-1/2 p-4 w-1/2 sm:h-[30rem] h-[28rem] sm:m-2 cursor-pointer shadow-lg  productCard transition-all">
-   <div className='z-50 textPart'><span class="rounded-md bg-red-500 p-1 text-sm text-white ">{Math.floor(((products[item].price-products[item].mrp)/products[item].mrp)*100)}% Off</span></div>
+   <div className='z-50 textPart'><span className="rounded-md bg-red-500 p-1 text-sm text-white ">{Math.floor(((products[item].price-products[item].mrp)/products[item].mrp)*100)}% Off</span></div>
   <div className="block relative rounded textPart mt-1">
     <img alt="Instashopee" className="w-56 sm:h-64 h-52 m-auto block" src={products[item].img}/>
   </div>

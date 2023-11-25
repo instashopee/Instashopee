@@ -23,7 +23,7 @@
      
 // }, [])
 
-
+ 
 <section class="px-12">
     <div class="max-w-lg mx-auto relative">
 

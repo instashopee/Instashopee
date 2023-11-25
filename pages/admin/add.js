@@ -473,13 +473,13 @@ useEffect(() => {
     <Admin_sidebar/>
     <h1 className="text-2xl text-center font-bold">ADD PRODUCTS</h1>
     <br />
-    <div class="lg:w-1/2 md:w-1/2 bg-white flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0 float-right p-5 shadow-2xl mr-16">
-      <h2 class="text-gray-900 text-lg mb-1 font-medium title-font">Add Product Details  (Make Sure To Change Unique Id in Every Entry)</h2>
+    <div className="lg:w-1/2 md:w-1/2 bg-white flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0 float-right p-5 shadow-2xl mr-16">
+      <h2 className="text-gray-900 text-lg mb-1 font-medium title-font">Add Product Details  (Make Sure To Change Unique Id in Every Entry)</h2>
       <div className="flex">
 
 <div className="px-2 w-1/2 ">
-<div class=" mb-4">
-<label for="_id" class="leading-7 text-sm text-gray-600">
+<div className=" mb-4">
+<label for="_id" className="leading-7 text-sm text-gray-600">
   _id
 </label>
 <select
@@ -488,7 +488,7 @@ useEffect(() => {
  type="_id"
  id="_id"
  name="_id"
- class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+ className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
  onChange={handleChange}>
    
 {Object.values(products).map(item => (
@@ -503,7 +503,7 @@ required
   type="_id"
   id="_id"
   name="_id"
-  class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+  className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
 /> */}
 </div>
 </div>
@@ -518,8 +518,8 @@ required
       <div className="flex">
      
       <div className="px-2 w-1/2 ">
-           <div class=" mb-4">
-             <label for="title" class="leading-7 text-sm text-gray-600">
+           <div className=" mb-4">
+             <label for="title" className="leading-7 text-sm text-gray-600">
                Title
              </label>
              <input
@@ -528,13 +528,13 @@ required
                type="name"
                id="title"
                name="title"
-               class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+               className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
              />
            </div>
          </div>
       <div className="px-2 w-1/2">
-           <div class=" mb-4">
-             <label for="slug" class="leading-7 text-sm text-gray-600">
+           <div className=" mb-4">
+             <label for="slug" className="leading-7 text-sm text-gray-600">
                Unique Id
              </label>
              <input
@@ -544,13 +544,13 @@ required
                type="slug"
                id="slug"
                name="slug"
-               class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+               className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
              />
            </div>
          </div>
       <div className="px-2 w-1/2">
-           <div class=" mb-4">
-             <label for="type" class="leading-7 text-sm text-gray-600">
+           <div className=" mb-4">
+             <label for="type" className="leading-7 text-sm text-gray-600">
              Type
              </label>
              <select
@@ -559,7 +559,7 @@ required
              type="type"
              id="type"
              name="type"
-             class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+             className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
              onChange={handleChange}>
                
             {/* {Object.values(products).map(item => ( */}
@@ -580,15 +580,15 @@ required
                type="type"
                id="type"
                name="type"
-               class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+               className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
              /> */}
            </div>
          </div>
          </div>
       <div className="flex">
          <div className="px-2 w-full">
-         <div class=" mb-4">
-           <label for="desc" class="leading-7 text-sm text-gray-600">
+         <div className=" mb-4">
+           <label for="desc" className="leading-7 text-sm text-gray-600">
              Dscription
            </label>
            <textarea
@@ -598,7 +598,7 @@ required
              rows="1"
              id="desc"
              name="desc"
-             class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+             className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
            ></textarea>
          </div>
        </div>
@@ -606,8 +606,8 @@ required
          </div>
       <div className="flex">
       <div className="px-2 w-1/2 ">
-           <div class=" mb-4">
-             <label for="category" class="leading-7 text-sm text-gray-600">
+           <div className=" mb-4">
+             <label for="category" className="leading-7 text-sm text-gray-600">
                Category
              </label>
              <input
@@ -616,13 +616,13 @@ required
                type="category"
                id="category"
                name="category"
-               class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+               className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
              />
            </div>
          </div>
       <div className="px-2 w-1/2 ">
-           <div class=" mb-4">
-             <label for="sub_category" class="leading-7 text-sm text-gray-600">
+           <div className=" mb-4">
+             <label for="sub_category" className="leading-7 text-sm text-gray-600">
                Sub Category
              </label>
              <select
@@ -632,7 +632,7 @@ required
              type="sub_category"
              id="sub_category"
              name="sub_category"
-              class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+              className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
               >
                             <option selected value='Choose Sub Category'>Choose Sub Category</option>
 
@@ -685,7 +685,7 @@ required
                type="sub_category"
                id="sub_category"
                name="sub_category"
-               class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+               className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
              /> */}
            </div>
          </div>
@@ -697,8 +697,8 @@ required
 <path d="M 25 2 C 12.309295 2 2 12.309295 2 25 C 2 37.690705 12.309295 48 25 48 C 37.690705 48 48 37.690705 48 25 C 48 12.309295 37.690705 2 25 2 z M 25 4 C 36.609824 4 46 13.390176 46 25 C 46 36.609824 36.609824 46 25 46 C 13.390176 46 4 36.609824 4 25 C 4 13.390176 13.390176 4 25 4 z M 24 13 L 24 24 L 13 24 L 13 26 L 24 26 L 24 37 L 26 37 L 26 26 L 37 26 L 37 24 L 26 24 L 26 13 L 24 13 z"></path>
 </svg></div>
 <div className="px-2 w-1/2">
-           <div class=" mb-4">
-             <label for="size" class="leading-7 text-sm text-gray-600">
+           <div className=" mb-4">
+             <label for="size" className="leading-7 text-sm text-gray-600">
                Size
              </label>
              {/* <select
@@ -709,7 +709,7 @@ required
              type="size"
              id="size"
              name="size"
-             class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+             className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
             >
                
             <option selected value='Size'>Size</option>
@@ -724,13 +724,13 @@ required
                type="size"
                id="size"
                name="size"
-               class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+               className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
              />
            </div>
          </div>
 <div className="px-2 w-1/2">
-           <div class=" mb-4">
-             <label for="mqty" class="leading-7 text-sm text-gray-600">
+           <div className=" mb-4">
+             <label for="mqty" className="leading-7 text-sm text-gray-600">
              Min Qty
              </label>
              <input
@@ -740,13 +740,13 @@ required
                placeholder="Min Qty"
                id="mqty"
                name="mqty"
-               class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+               className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
              />
            </div>
          </div>
          <div className="px-2 w-1/2 hidden">
-           <div class=" mb-4">
-             <label for="mqty2" class="leading-7 text-sm text-gray-600">
+           <div className=" mb-4">
+             <label for="mqty2" className="leading-7 text-sm text-gray-600">
              Min Qty2
              </label>
              <input
@@ -756,13 +756,13 @@ required
                placeholder="Min Qty"
                id="mqty2"
                name="mqty2"
-               class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+               className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
              />
            </div>
          </div>
 <div className="px-2 w-1/2">
-           <div class=" mb-4">
-             <label for="unit" class="leading-7 text-sm text-gray-600">
+           <div className=" mb-4">
+             <label for="unit" className="leading-7 text-sm text-gray-600">
                Unit
              </label>
              <input
@@ -771,14 +771,14 @@ required
                type="unit"
                id="unit"
                name="unit"
-               class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+               className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
              />
            </div>
          </div>
       <div className="px-2 w-1/2">
-           <div class=" mb-4">
+           <div className=" mb-4">
 
-             <label for="mrp" class="leading-7 text-sm text-gray-600">
+             <label for="mrp" className="leading-7 text-sm text-gray-600">
                Mrp
              </label>
              <input
@@ -787,13 +787,13 @@ required
                type="mrp"
                id="mrp"
                name="mrp"
-               class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+               className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
              />
            </div>
          </div>
        <div className="px-2 w-1/2">
-           <div class=" mb-4">
-             <label for="price" class="leading-7 text-sm text-gray-600">
+           <div className=" mb-4">
+             <label for="price" className="leading-7 text-sm text-gray-600">
                Price
              </label>
              <input
@@ -802,14 +802,14 @@ required
                type="price"
                id="price"
                name="price"
-               class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+               className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
             />
           </div>
         </div>
         
          <div className="px-2 w-1/2">
-           <div class=" mb-4">
-             <label for="color" class="leading-7 text-sm text-gray-600">
+           <div className=" mb-4">
+             <label for="color" className="leading-7 text-sm text-gray-600">
                Color
              </label>
              <select
@@ -819,7 +819,7 @@ required
              type="colors"
              id="color"
              name="color"
-             class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+             className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
              onChange={handleChange}>
                
             <option selected value='Color'>Color</option>
@@ -855,14 +855,14 @@ required
                type="colors"
                id="color"
                name="color"
-               class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+               className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
              /> */}
            </div>
          </div>
        
          <div className="px-2 w-1/2">
-           <div class=" mb-4">
-             <label for="availableQty" class="leading-7 text-sm text-gray-600">
+           <div className=" mb-4">
+             <label for="availableQty" className="leading-7 text-sm text-gray-600">
                Qty
              </label>
              <input
@@ -871,15 +871,15 @@ required
                type="availableQty"
                id="availableQty"
                name="availableQty"
-               class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+               className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
              />
            </div>
          </div>
          </div>
          <div className="hidden">
          <div className="px-2 w-1/2">
-           <div class=" mb-4">
-             <label for="img" class="leading-7 text-sm text-gray-600">
+           <div className=" mb-4">
+             <label for="img" className="leading-7 text-sm text-gray-600">
                Main Image
              </label>
              <input
@@ -890,13 +890,13 @@ required
                type="img"
                id="img"
                name="img"
-               class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+               className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
              />
            </div>
          </div>
          <div className="px-2 w-1/2">
-         <div class=" mb-4">
-             <label for="img1" class="leading-7 text-sm text-gray-600">
+         <div className=" mb-4">
+             <label for="img1" className="leading-7 text-sm text-gray-600">
                Image1
              </label>
              <input
@@ -907,13 +907,13 @@ required
                type="img"
                id="img1"
                name="img1"
-               class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+               className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
              />
            </div>
          </div>
          <div className="px-2 w-1/2">
-           <div class=" mb-4">
-             <label for="img2" class="leading-7 text-sm text-gray-600">
+           <div className=" mb-4">
+             <label for="img2" className="leading-7 text-sm text-gray-600">
                Image2
              </label>
              <input
@@ -924,7 +924,7 @@ required
                type="img"
                id="img2"
                name="img2"
-               class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+               className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
              />
            </div>
          </div>
@@ -932,8 +932,8 @@ required
          </div>
 <div className="flex">
          <div className="px-2 w-1/2">
-         <div class="mb-4">
-           <label for="edt" class="leading-7 text-sm text-gray-600">
+         <div className="mb-4">
+           <label for="edt" className="leading-7 text-sm text-gray-600">
              Estimated Delivery Time For This Product
            </label>
            <input
@@ -941,13 +941,13 @@ required
              value={edt}
              id="edt"
              name="edt"
-             class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+             className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
            ></input>
          </div>
        </div>
          <div className="px-2 w-1/2">
-         <div class="mb-4">
-           <label for="del_ch" class="leading-7 text-sm text-gray-600">
+         <div className="mb-4">
+           <label for="del_ch" className="leading-7 text-sm text-gray-600">
              Delivery Charge For This Product
            </label>
            <input
@@ -955,13 +955,13 @@ required
              value={del_ch}
              id="del_ch"
              name="del_ch"
-             class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+             className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
            ></input>
          </div>
        </div>
     
          </div>
-      <button onClick={handleUserSubmit} class="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">FINAL SUBMIT</button>
+      <button onClick={handleUserSubmit} className="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">FINAL SUBMIT</button>
       
     </div>
 
@@ -970,15 +970,15 @@ required
    
       <div className="ml-16">
         <div className="border-2 mx-14 w-[25rem] mt-5">
-        <main class="container w-[25rem]">
+        <main className="container w-[25rem]">
        
-        <article aria-label="File Upload Modal" class="relative h-full flex flex-col bg-white shadow-xl rounded-md" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);" ondragleave="dragLeaveHandler(event);" ondragenter="dragEnterHandler(event);">
+        <article aria-label="File Upload Modal" className="relative h-full flex flex-col bg-white shadow-xl rounded-md" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);" ondragleave="dragLeaveHandler(event);" ondragenter="dragEnterHandler(event);">
         
      
 
   
-          <section class="p-2 w-full h-full flex flex-wrap">
-            <header class="border-dashed border-2 border-gray-400 ">
+          <section className="p-2 w-full h-full flex flex-wrap">
+            <header className="border-dashed border-2 border-gray-400 ">
              
        
               <input id="fileInput" type="file" name="myImage" onChange={uploadToClient} style={{margin:"1.5rem"}}/>
@@ -991,19 +991,19 @@ required
      
 
           <div className="flex m-2 ">
-            <img src={createObjectURL} style={{ height: "100px",width: "100px",margin:"auto"}} class="imgview" id="image"/>
-            <img src={createObjectURL2} style={{ height: "100px",width: "100px",margin:"auto" }}class="imgview" />
-            <img src={createObjectURL3} style={{ height: "100px",width: "100px",margin:"auto" }}class="imgview" />
+            <img src={createObjectURL} style={{ height: "100px",width: "100px",margin:"auto"}} className="imgview" id="image"/>
+            <img src={createObjectURL2} style={{ height: "100px",width: "100px",margin:"auto" }}className="imgview" />
+            <img src={createObjectURL3} style={{ height: "100px",width: "100px",margin:"auto" }}className="imgview" />
 
             </div>
-          <footer class="flex justify-end px-8 pb-8 pt-4 space-x-2">
-            <button onClick={refresh} id="submit" class="rounded-sm px-3 py-1 bg-gray-500 hover:bg-gray-400 text-white focus:shadow-outline focus:outline-none">
+          <footer className="flex justify-end px-8 pb-8 pt-4 space-x-2">
+            <button onClick={refresh} id="submit" className="rounded-sm px-3 py-1 bg-gray-500 hover:bg-gray-400 text-white focus:shadow-outline focus:outline-none">
               Refresh
             </button>
-            {/* <button onClick={uploadToServer} id="submit" class="rounded-sm px-3 py-1 bg-blue-700 hover:bg-blue-500 text-white focus:shadow-outline focus:outline-none">
+            {/* <button onClick={uploadToServer} id="submit" className="rounded-sm px-3 py-1 bg-blue-700 hover:bg-blue-500 text-white focus:shadow-outline focus:outline-none">
               Upload now
             </button> */}
-            {/* <button onClick={myFunction} id="cancel" class="ml-3 rounded-sm px-3 py-1 hover:bg-gray-300 focus:shadow-outline focus:outline-none">
+            {/* <button onClick={myFunction} id="cancel" className="ml-3 rounded-sm px-3 py-1 hover:bg-gray-300 focus:shadow-outline focus:outline-none">
               Cancel
             </button> */}
           </footer>
@@ -1045,8 +1045,8 @@ required
     //   </div>
     //   <div className="mx-auto flex my-2">
     //     <div className="px-2 w-1/2">
-    //       <div class=" mb-4">
-    //         <label for="title" class="leading-7 text-sm text-gray-600">
+    //       <div className=" mb-4">
+    //         <label for="title" className="leading-7 text-sm text-gray-600">
     //           Title
     //         </label>
     //         <input
@@ -1055,13 +1055,13 @@ required
     //           type="name"
     //           id="title"
     //           name="title"
-    //           class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+    //           className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
     //         />
     //       </div>
     //     </div>
     //     <div className="px-2 w-1/2">
-    //       <div class=" mb-4">
-    //         <label for="slug" class="leading-7 text-sm text-gray-600">
+    //       <div className=" mb-4">
+    //         <label for="slug" className="leading-7 text-sm text-gray-600">
     //           Unique Id
     //         </label>
     //         <input
@@ -1071,14 +1071,14 @@ required
     //           type="slug"
     //           id="slug"
     //           name="slug"
-    //           class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+    //           className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
     //         />
     //       </div>
     //     </div>
     //   </div>
     //   <div className="px-2 w-full">
-    //     <div class=" mb-4">
-    //       <label for="desc" class="leading-7 text-sm text-gray-600">
+    //     <div className=" mb-4">
+    //       <label for="desc" className="leading-7 text-sm text-gray-600">
     //         Dscription
     //       </label>
     //       <textarea
@@ -1088,14 +1088,14 @@ required
     //         rows="2"
     //         id="desc"
     //         name="desc"
-    //         class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+    //         className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
     //       ></textarea>
     //     </div>
     //   </div>
     //   <div className="mx-auto flex my-2">
     //   <div className="px-2 w-1/2">
-    //       <div class=" mb-4">
-    //          <label for="category" class="leading-7 text-sm text-gray-600">
+    //       <div className=" mb-4">
+    //          <label for="category" className="leading-7 text-sm text-gray-600">
     //           Category
     //         </label>
 
@@ -1105,7 +1105,7 @@ required
     //           type="category"
     //           id="category"
     //           name="category"
-    //           class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+    //           className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
     //         />
     //       </div>
     //     </div>
@@ -1113,8 +1113,8 @@ required
     //   </div>
     //   <div className="mx-auto flex my-2">
     //     <div className="px-2 w-1/2">
-    //       <div class=" mb-4">
-    //         <label for="mrp" class="leading-7 text-sm text-gray-600">
+    //       <div className=" mb-4">
+    //         <label for="mrp" className="leading-7 text-sm text-gray-600">
     //           MRP
     //         </label>
     //         <input
@@ -1123,13 +1123,13 @@ required
     //           type="mrp"
     //           id="mrp"
     //           name="mrp"
-    //           class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+    //           className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
     //         />
     //       </div>
     //     </div>
     //   <div className="px-2 w-1/2">
-    //       <div class=" mb-4">
-    //         <label for="price" class="leading-7 text-sm text-gray-600">
+    //       <div className=" mb-4">
+    //         <label for="price" className="leading-7 text-sm text-gray-600">
     //           Price
     //         </label>
     //         <input
@@ -1138,15 +1138,15 @@ required
     //           type="price"
     //           id="price"
     //           name="price"
-    //           class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+    //           className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
     //         />
     //       </div>
     //     </div>
     //   </div>
     //   <div className="mx-auto flex my-2">
     //     <div className="px-2 w-1/2">
-    //       <div class=" mb-4">
-    //         <label for="size" class="leading-7 text-sm text-gray-600">
+    //       <div className=" mb-4">
+    //         <label for="size" className="leading-7 text-sm text-gray-600">
     //           Size
     //         </label>
     //         <input
@@ -1155,13 +1155,13 @@ required
     //           type="size"
     //           id="size"
     //           name="size"
-    //           class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+    //           className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
     //         />
     //       </div>
     //     </div>
     //     <div className="px-2 w-1/2">
-    //       <div class=" mb-4">
-    //         <label for="color" class="leading-7 text-sm text-gray-600">
+    //       <div className=" mb-4">
+    //         <label for="color" className="leading-7 text-sm text-gray-600">
     //           Color
     //         </label>
     //         <input
@@ -1170,15 +1170,15 @@ required
     //           type="colors"
     //           id="color"
     //           name="color"
-    //           class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+    //           className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
     //         />
     //       </div>
     //     </div>
     //   </div>
     //   <div className="mx-auto flex my-2">
     //     <div className="px-2 w-1/2">
-    //       <div class=" mb-4">
-    //         <label for="availableQty" class="leading-7 text-sm text-gray-600">
+    //       <div className=" mb-4">
+    //         <label for="availableQty" className="leading-7 text-sm text-gray-600">
     //           Available Qty
     //         </label>
     //         <input
@@ -1187,13 +1187,13 @@ required
     //           type="availableQty"
     //           id="availableQty"
     //           name="availableQty"
-    //           class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+    //           className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
     //         />
     //       </div>
     //     </div>
     //     <div className="px-2 w-1/2">
-    //       <div class=" mb-4">
-    //         <label for="img" class="leading-7 text-sm text-gray-600">
+    //       <div className=" mb-4">
+    //         <label for="img" className="leading-7 text-sm text-gray-600">
     //           Main Image
     //         </label>
     //         <input
@@ -1204,15 +1204,15 @@ required
     //           type="img"
     //           id="img"
     //           name="img"
-    //           class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+    //           className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
     //         />
     //       </div>
     //     </div>
     //   </div>
     //   <div className="mx-auto flex my-2">
     //     <div className="px-2 w-1/2">
-    //     <div class=" mb-4">
-    //         <label for="img1" class="leading-7 text-sm text-gray-600">
+    //     <div className=" mb-4">
+    //         <label for="img1" className="leading-7 text-sm text-gray-600">
     //           Image1
     //         </label>
     //         <input
@@ -1223,13 +1223,13 @@ required
     //           type="img"
     //           id="img1"
     //           name="img1"
-    //           class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+    //           className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
     //         />
     //       </div>
     //     </div>
     //     <div className="px-2 w-1/2">
-    //       <div class=" mb-4">
-    //         <label for="img2" class="leading-7 text-sm text-gray-600">
+    //       <div className=" mb-4">
+    //         <label for="img2" className="leading-7 text-sm text-gray-600">
     //           Image2
     //         </label>
     //         <input
@@ -1240,15 +1240,15 @@ required
     //           type="img"
     //           id="img2"
     //           name="img2"
-    //           class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+    //           className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
     //         />
     //       </div>
     //     </div>
     //   </div>
     //   <div className="mx-auto flex my-2">
     //     <div className="px-2 w-1/2">
-    //     <div class=" mb-4">
-    //         <label for="img3" class="leading-7 text-sm text-gray-600">
+    //     <div className=" mb-4">
+    //         <label for="img3" className="leading-7 text-sm text-gray-600">
     //           Image3
     //         </label>
     //         <input
@@ -1259,13 +1259,13 @@ required
     //           type="img"
     //           id="img3"
     //           name="img3"
-    //           class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+    //           className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
     //         />
     //       </div>
     //     </div>
     //     <div className="px-2 w-1/2">
-    //       <div class=" mb-4">
-    //         <label for="img4" class="leading-7 text-sm text-gray-600">
+    //       <div className=" mb-4">
+    //         <label for="img4" className="leading-7 text-sm text-gray-600">
     //           Image4
     //         </label>
     //         <input
@@ -1276,7 +1276,7 @@ required
     //           type="img"
     //           id="img4"
     //           name="img4"
-    //           class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+    //           className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
     //         />
     //       </div>
     //     </div>

@@ -702,8 +702,8 @@ if(!error){
                 {product.availableQty <=0 &&<span className="title-font font-medium text-2xl text-red-700">
                 OUT OF STOCK !
                 </span>}
-                <div id="bottom-banner" tabindex="-1" class="sm:hidden fixed bottom-0 left-0 z-50 flex justify-between w-full h-20 p-4 border-t border-gray-200 bg-gray-50">
-    <div class="flex items-center mx-auto my-auto space-x-1">
+                <div id="bottom-banner" tabindex="-1" className="sm:hidden fixed bottom-0 left-0 z-50 flex justify-between w-full h-20 p-4 border-t border-gray-200 bg-gray-50">
+    <div className="flex items-center mx-auto my-auto space-x-1">
        
              
                 <button disabled={product.availableQty <=0?true:false} 

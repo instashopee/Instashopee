@@ -69,6 +69,7 @@ export const navigation = {
               { name: 'Main Door Handles',id:'tc', href: 'main_door_handles' },
               { name: 'Mortice Handles',id:'tc', href: 'mortice_handles' },
               { name: 'Glass Door Handles',id:'tc', href: 'glass_door_handles' },
+              { name: 'Sliding Handles',id:'sh', href: 'sliding_handles' },
               { name: 'Knobs',id:'tc', href: 'knobs' },
              
              

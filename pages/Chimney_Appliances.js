@@ -41,7 +41,7 @@ export default function Chimney_Appliances({products4}){
 // _id inside key of link
 return <Link key={products4[item].id} passHref={true} legacyBehavior href={`product/${products4[item].slug}`}>
 <div className="lg:w-[20rem] md:w-1/2 p-4 w-1/2 sm:h-[33rem] h-[33rem] sm:m-2 cursor-pointer shadow-lg  productCard transition-all">
-   <div className='z-50 textPart'><span class="rounded-md bg-red-500 p-1 text-sm text-white ">{Math.floor(((products4[item].price-products4[item].mrp)/products4[item].mrp)*100)}% Off</span></div>
+   <div className='z-50 textPart'><span className="rounded-md bg-red-500 p-1 text-sm text-white ">{Math.floor(((products4[item].price-products4[item].mrp)/products4[item].mrp)*100)}% Off</span></div>
   <div className="block relative rounded textPart mt-1">
     <img alt="Instashopee" className="w-56 sm:h-64 h-52 m-auto block" src={products4[item].img}/>
   </div>
