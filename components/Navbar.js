@@ -453,7 +453,7 @@ const Navbar = ({Logout,user,cart,addToCart,removeFromCart,clearCart,subTotal,wi
 
         
         <span onMouseOver={()=>{setDropdown(true)}} onMouseLeave={()=>{setDropdown(false)}} >
-          {dropdown&&<div onMouseOver={()=>{setDropdown(true)}} onMouseLeave={()=>{setDropdown(false)}} className="absolute right-0 bg-white shadow-lg py-1 border top-6 rounded-md px-5 w-30 z-50">
+          {dropdown&&<div onMouseOver={()=>{setDropdown(true)}} onMouseLeave={()=>{setDropdown(false)}} className="absolute right-0 bg-white shadow-lg py-1 border top-8 rounded-md px-5 w-30 z-50">
             <ul>
         <Link legacyBehavior href={'/myaccount'}><a><li className="py-1 font-semibold hover:text-red-500 text-center text-md">Account Page</li></a></Link>
         <Link legacyBehavior href={'/orders'}><a><li className="py-1 font-semibold hover:text-red-500 text-center text-md">Orders</li></a></Link>

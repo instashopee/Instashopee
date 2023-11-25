@@ -3,6 +3,8 @@ import { useRouter } from "next/router";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Head from "next/head";
+import Link from "next/link";
+import { MdAccountCircle } from "react-icons/md";
 
 const MyAccount = () => {
   const [name, setName] = useState("");
@@ -14,7 +16,26 @@ const MyAccount = () => {
   const [password, setPassword] = useState('');
   const [cpassword, setCpassword] = useState('');
   const [npassword, setNpassword] = useState('');
+  const [key, setKey] = useState()
   const router = useRouter();
+  const Logout=()=>{
+    localStorage.removeItem("myuser")
+    // localStorage.removeItem("cart")
+    // localStorage.removeItem("wishlist")
+    setUser({value:null})
+    setKey(Math.random())
+    router.push('/')
+    toast('Logged Out Successfully', {
+      position: "top-center",
+      autoClose: 1000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      });
+  }
   useEffect(() => {
     const myuser = JSON.parse(localStorage.getItem("myuser"));
     if (!myuser) {
@@ -167,9 +188,10 @@ setNpassword('')
         />
       </Head>
       <h1 className="text-3xl text-center font-bold">My Account</h1>
+      <div className="shadow-xl m-2 p-3 rounded-md">
       <h2 className="font-semibold text-xl">Update Your Account Details</h2>
       <div className="mx-auto flex my-2">
-        <div className="px-2 w-1/2">
+        <div className="px-2 md:w-1/2 w-full">
           <div className=" mb-4">
             <label for="name" className="leading-7 text-sm text-gray-600">
               Name
@@ -184,7 +206,7 @@ setNpassword('')
             />
           </div>
         </div>
-        <div className="px-2 w-1/2">
+        <div className="hidden md:block px-2 w-1/2">
           <div className=" mb-4">
             <label for="email" className="leading-7 text-sm text-gray-600">
               Email (Cannot Be Updated)
@@ -211,6 +233,32 @@ setNpassword('')
           </div>
         </div>
       </div>
+        <div className="sm:hidden px-2 w-full">
+          <div className=" mb-4">
+            <label for="email" className="leading-7 text-sm text-gray-600">
+              Email (Cannot Be Updated)
+            </label>
+            {user && user.token ? (
+              <input
+                value={user.email}
+                type="email"
+                id="email"
+                name="email"
+                className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                readOnly
+              />
+            ) : (
+              <input
+                onChange={handleChange}
+                value={email}
+                type="email"
+                id="email"
+                name="email"
+                className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+              />
+            )}
+          </div>
+        </div>
       <div className="px-2 w-full">
         <div className=" mb-4">
           <label for="address" className="leading-7 text-sm text-gray-600">
@@ -266,6 +314,9 @@ setNpassword('')
             className="m-3 disabled:bg-red-200 flex mb-5 text-white bg-red-500 border-0 py-2 px-1 focus:outline-none hover:bg-red-600 rounded text-sm">
               SUBMIT
           </button>
+          </div>
+
+          <div className="shadow-xl m-2 p-3 rounded-md">
       <h2 className="font-semibold text-xl">Update Password</h2>
       <div className="mx-auto flex my-2">
         <div className="px-2 w-1/2">
@@ -300,7 +351,7 @@ setNpassword('')
             
           </div>
         </div>
-        <div className="px-2 w-1/2">
+        <div className="hidden md:block px-2 w-1/2">
           <div className=" mb-4">
 
           <label for="cpassword" className="leading-7 text-sm text-gray-600">
@@ -317,11 +368,33 @@ setNpassword('')
           </div>
         </div>
       </div>
+        <div className="sm:hidden px-2 w-1/2">
+          <div className=" mb-4">
+
+          <label for="cpassword" className="leading-7 text-sm text-gray-600">
+            Confirm New Password
+            </label>
+            <input
+              onChange={handleChange}
+              value={cpassword}
+              type="password"
+              id="cpassword"
+              name="cpassword"
+              className="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+            />
+          </div>
+        </div>
       <button
       onClick={handlePasswordSubmit}
             className="m-3 disabled:bg-red-200 flex mb-5 text-white bg-red-500 border-0 py-2 px-1 focus:outline-none hover:bg-red-600 rounded text-sm">
               SUBMIT
           </button>
+          </div>
+
+          <Link legacyBehavior href={'/orders'}><a><div className="flex p-3 m-2 shadow-lg mt-3 w-auto justify-center hover:bg-red-100 rounded-md">
+           <div className="py-1 font-semibold hover:text-red-500 text-center text-2xl">View Orders</div>
+          </div></a></Link>
+        
     </div>
   );
 };
