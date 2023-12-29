@@ -508,7 +508,7 @@ const getpincode=async(pin)=>{
             className="disabled:bg-red-200 flex mx-2 text-white bg-red-500 border-0 p-2 focus:outline-none hover:bg-red-600 rounded text-sm"
           >
             <BsFillBagCheckFill className="m-1" />
-            Pay Online ₹{subTotal}
+            Pay ₹{subTotal}
           </button>
         </Link>
         {/* <br /> */}

@@ -6,7 +6,15 @@ var jwt = require('jsonwebtoken');
 
 
 const handler = async (req, res) => {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'DELETE, POST, GET, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization, X-Requested-With');
 
+  // Handle preflight requests (OPTIONS method)
+  if (req.method === 'OPTIONS') {
+    res.status(200).end();
+    return;
+  }
   
   try {
     if (req.method == "POST") {
