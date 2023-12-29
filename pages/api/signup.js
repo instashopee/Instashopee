@@ -1,8 +1,9 @@
 import User from "@/models/User";
 import connectDb from "@/middleware/mongoose";
 var CryptoJS = require("crypto-js");
+import cors from 'micro-cors';
 
-const handler = async (req, res) => {
+const handler = cors()(async(req, res) => {
   try {
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Methods', 'DELETE, POST, GET, OPTIONS');
@@ -27,6 +28,6 @@ const handler = async (req, res) => {
     console.error(error);
     res.status(500).json({ error: "Server Error" });
   }
-};
+});
 
 export default connectDb(handler);
