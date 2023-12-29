@@ -3,16 +3,16 @@ import connectDb from "@/middleware/mongoose";
 var CryptoJS = require("crypto-js");
 
 const handler = async (req, res) => {
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Methods', 'DELETE, POST, GET, OPTIONS');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization, X-Requested-With');
-
-  // Handle preflight requests (OPTIONS method)
-  if (req.method === 'OPTIONS') {
-    res.status(200).end();
-    return;
-  }
   try {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'DELETE, POST, GET, OPTIONS');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization, X-Requested-With');
+  
+    // Handle preflight requests (OPTIONS method)
+    if (req.method === 'OPTIONS') {
+      res.status(200).end();
+      return;
+    }
     //await connectDb();
     if (req.method == "POST") {
       const {name, email} = req.body;
