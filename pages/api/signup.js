@@ -1,14 +1,18 @@
 import User from "@/models/User";
 import connectDb from "@/middleware/mongoose";
-var CryptoJS = require("crypto-js");
-import cors from 'micro-cors';
-import corss from '../../middleware/cors';
-const handler = cors()(async(req, res) => {
+import CryptoJS from "crypto-js";
+import cors from 'micro-cors';  // Correct import for micro-cors
+
+const handler = cors()(async (req, res) => {
   try {
     //await connectDb();
     if (req.method == "POST") {
-      const {name, email} = req.body;
-      const u = new User({name, email, password: CryptoJS.AES.encrypt(req.body.password, process.env.AES_SECRET).toString()});
+      const { name, email } = req.body;
+      const u = new User({
+        name,
+        email,
+        password: CryptoJS.AES.encrypt(req.body.password, process.env.AES_SECRET).toString(),
+      });
       await u.save();
 
       res.status(200).json({ success: "success!" });
@@ -21,4 +25,4 @@ const handler = cors()(async(req, res) => {
   }
 });
 
-export default corss(connectDb(handler));
+export default connectDb(handler);  // Removed "corss" middleware
