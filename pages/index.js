@@ -61,6 +61,19 @@ export default function Home({products,products2,products3,products4,products5})
          <meta name ="description" content ="Instashopee" />
          <link rel= "icon" href ="/logo_icon.ico" />
        </Head>
+
+      {/* <div className='w-full h-8 bg-red-500'>
+        <div className='flex justify-center space-x-48 p-1 items-center'>
+            <Link Link legacyBehavior href={'/'}><a><button className='text-white underline'>Button</button></a></Link>
+            <Link Link legacyBehavior href={'/'}><a><button className='text-white underline'>Button</button></a></Link>
+            <Link Link legacyBehavior href={'/'}><a><button className='text-white underline'>Button</button></a></Link>
+            <Link Link legacyBehavior href={'/'}><a><button className='text-white underline'>Button</button></a></Link>
+            <Link Link legacyBehavior href={'/'}><a><button className='text-white underline'>Button</button></a></Link>
+            <Link Link legacyBehavior href={'/'}><a><button className='text-white underline'>Button</button></a></Link>
+            <Link Link legacyBehavior href={'/'}><a><button className='text-white underline'>Button</button></a></Link>
+        </div>
+      </div> */}
+
        <div >
        <SliderIndicatorsControlsInside/>
        </div>
