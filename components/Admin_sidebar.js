@@ -27,7 +27,7 @@ const Admin_sidebar = () => {
         <Link legacyBehavior href={"/admin"}><a className="block py-2 pl-3 pr-4 text-white" aria-current="page">Home</a></Link>
       </li>
       <li>
-        <Link legacyBehavior href={"/index.html"}><a className="block py-2 pl-3 pr-4 text-white ">Add Images</a></Link>
+        <Link legacyBehavior href={"/a.html"}><a className="block py-2 pl-3 pr-4 text-white ">Add Images</a></Link>
       </li>
       <li>
         <Link legacyBehavior href={"/admin/add"}><a className="block py-2 pl-3 pr-4 text-white">Add Products</a></Link>
