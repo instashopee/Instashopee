@@ -38,10 +38,11 @@ return (
         />
       </Head>
     <h1 className="font-bold text-center text-3xl px-8 pt-8">My Orders</h1>
-    <h2 className="mx-auto justify-center text-center pb-6 text-sm underline">(LOGIN AGAIN IF ORDER HISTORY IS NOT VISIBLE)</h2>
+    <h2 className="mx-auto justify-center text-center pb-6 text-xs underline">(LOGIN AGAIN IF ORDER HISTORY IS NOT VISIBLE)</h2>
     <div className="mx-auto max-w-10xl justify-center px-6 md:flex md:space-x-6 xl:px-0">
 
       <div className="rounded-lg md:w-2/3">
+      {Object.values(orders).length==0 && <p className="mx-auto justify-center text-center pt-2 text-2xl font-semibold">NO ORDERS PLACED YET !!</p>}
                   {Object.values(orders).map((item)=>{
                     
               

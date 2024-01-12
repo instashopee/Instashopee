@@ -49,11 +49,11 @@ const details = () => {
       />
     <div className=" bg-white  p-5  mt-3">
       <ul>
-      <Link legacyBehavior href={'/myaccount'}><div className="justify-between mb-6 rounded-lg bg-gray-100 p-6 shadow-md sm:flex sm:justify-start">
-  <a><li className="py-1 font-semibold hover:text-red-500  text-2xl">Account Page</li></a></div></Link>
-  <Link legacyBehavior href={'/orders'}><div className="justify-between mb-6 rounded-lg bg-gray-100 p-6 shadow-md sm:flex sm:justify-start"><a><li className="py-1 font-semibold hover:text-red-500  text-2xl">Orders</li></a></div></Link>
-  {user.email=="abhishekjain4548@gmail.com" &&<Link legacyBehavior href={'/admin'}><div className="justify-between mb-6 rounded-lg bg-gray-100 p-6 shadow-md sm:flex sm:justify-start"><a><li className="py-1 font-semibold hover:text-red-500  text-2xl">Admin</li></a></div></Link>}
-  <div className="justify-between mb-6 rounded-lg bg-gray-100 p-6 shadow-md sm:flex sm:justify-start"><li onClick={Logout} className="py-1 font-semibold hover:text-red-500  text-2xl">Logout</li></div></ul>
+      <Link legacyBehavior href={'/myaccount'}><div className="justify-between cursor-pointer mb-6 rounded-lg bg-gray-100 p-6 shadow-md sm:flex sm:justify-start">
+  <a><li className="py-1 font-semibold hover:text-red-500 cursor-pointer text-2xl">Account Page</li></a></div></Link>
+  <Link legacyBehavior href={'/orders'}><div className="justify-between cursor-pointer mb-6 rounded-lg bg-gray-100 p-6 shadow-md sm:flex sm:justify-start"><a><li className="py-1 font-semibold hover:text-red-500  text-2xl">Orders</li></a></div></Link>
+  {user.email=="abhishekjain4548@gmail.com" &&<Link legacyBehavior href={'/admin'}><div className="justify-between cursor-pointer mb-6 rounded-lg bg-gray-100 p-6 shadow-md sm:flex sm:justify-start"><a><li className="py-1 font-semibold hover:text-red-500  text-2xl">Admin</li></a></div></Link>}
+  <div className="justify-between mb-6 cursor-pointer rounded-lg bg-gray-100 p-6 shadow-md sm:flex sm:justify-start"><li onClick={Logout} className="py-1 font-semibold hover:text-red-500  text-2xl">Logout</li></div></ul>
 </div>
 </span></div>
   )

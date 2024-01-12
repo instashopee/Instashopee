@@ -25,7 +25,23 @@ const SignUp = () => {
       setPassword(e.target.value);
     }
   };
+
+    const [loading, setLoading] = useState(false);
+  
+    const load = () => {
+      // Set loading to true when the button is clicked
+      setLoading(true);
+  
+      // Simulate an asynchronous operation (e.g., an API call)
+      setTimeout(() => {
+        // Reset loading to false when the operation is complete
+        setLoading(false);
+      }, 3000); // Simulating a 3-second operation, replace this with your actual logic
+  
+      // Your actual logic or API call can be placed here
+    };
   const handleSubmit = async (e) => {
+    load()
     e.preventDefault();
     const data = { name, email, password };
 
@@ -37,8 +53,6 @@ const SignUp = () => {
       body: JSON.stringify(data),
     });
     let response = await res.json();
-    
-
     setName("");
     setEmail("");
     setPassword("");
@@ -53,6 +67,25 @@ const SignUp = () => {
       progress: undefined,
       theme: "light",
     });
+
+    const dataa = {email, password };
+
+    let ress = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/login`, {
+      method: "POST", // or 'PUT'
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(dataa),
+    });
+    let responses = await ress.json();
+    // console.log(response);
+
+    setEmail("");
+    setPassword("");
+
+    if(responses.success) {
+      localStorage.setItem('myuser', JSON.stringify({token:responses.token,email:responses.email}))
+    }
     setTimeout(() => {
         
       router.push(process.env.NEXT_PUBLIC_HOST)
@@ -162,11 +195,33 @@ const SignUp = () => {
             </div>
             <div>
               <button
+              disabled={loading}
                 type="submit"
                 className="flex w-full justify-center rounded-md bg-red-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600"
               >
+                {loading ? '' : ''}
                 Sign Up
               </button>
+              {loading && <div className="spinner"></div>}
+      <style jsx>{`
+        .spinner {
+          border: 4px solid rgba(0, 0, 0, 0.1);
+          border-radius: 50%;
+          border-top: 4px solid #3498db;
+          width: 30px;
+          height: 30px;
+          animation: spin 1s linear infinite;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+
+        @keyframes spin {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+        }
+      `}</style>
             </div>
           </form>
 

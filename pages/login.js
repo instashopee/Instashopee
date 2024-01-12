@@ -38,7 +38,7 @@ const Login = () => {
       body: JSON.stringify(data),
     });
     let response = await res.json();
-    console.log(response);
+    // console.log(response);
 
     setEmail("");
     setPassword("");
@@ -61,7 +61,7 @@ const Login = () => {
       }, 1000);
       
     }else{
-      toast.error(response.error, {
+      toast.error("Wrong Credentials Or Server Error", {
         position: "top-center",
         autoClose: 1000,
         hideProgressBar: false,
