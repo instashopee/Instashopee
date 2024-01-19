@@ -799,7 +799,7 @@ if(!error){
           </div>
        
       </section>
-      <h1 className="md:ml-28 :text-center text-3xl font-bold">Product Information</h1>
+      <h1 className="md:ml-28 text-center text-3xl font-bold">Product Information</h1>
       <div className="md:flex items-center text-center justify-center md:space-x-36">
 
               <div class="relative">
@@ -829,16 +829,17 @@ if(!error){
         <div class="border-t-2 border-black w-full"></div>
         <br />
         <h1 className=" text-3xl text-black font-bold mx-14">Some More Items !</h1>
-        <div className="flex flex-wrap justify-center py-3 mx-auto ">
+        <br />
+        <div className="flex flex-wrap -m-4 justify-center">
 
        
         {Object.keys(products).slice(0,10).map((item)=>{
 // _id inside key of link
 return <a key={products[item].id} passHref={true} legacyBehavior href={`${products[item].slug}`}>
-  <div className="lg:w-[20rem] md:w-1/2 p-4 w-1/2 sm:h-[31rem] h-[28rem] sm:m-2 cursor-pointer shadow-lg  productCard transition-all">
+  <div className="lg:w-[20rem] md:w-1/2 p-4 w-80 sm:h-[31rem] h-[28rem] sm:m-2 cursor-pointer shadow-lg  productCard transition-all">
      <div className='z-50 textPart'><span className="rounded-md bg-red-500 p-1 text-sm text-white ">{Math.floor(((products[item].price-products[item].mrp)/products[item].mrp)*100)}% Off</span></div>
     <div className="block relative rounded textPart mt-1">
-      <img alt="Instashopee" className="w-56 sm:h-64 h-52 m-auto block" src={products[item].img}/>
+      <img alt="Instashopee" className="w-60 sm:h-64 h-52 m-auto block" src={products[item].img}/>
     </div>
     <div className="mt-2 text-center md:text-left">
       <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1 textPart">{products[item].category}</h3>
