@@ -56,6 +56,6 @@
     "tailwindcss-image-rendering": "^1.0.2"
   },
   "engines": {
-    "node": "8"
+    "node": "18"
   }
 }
